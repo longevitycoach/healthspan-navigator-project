@@ -43,7 +43,7 @@ const PersonalJourney = () => {
       metrics: ["CGM", "HRV Monitoring", "Sleep Tracking", "Recovery Metrics"]
     },
     {
-      year: "2023",
+      year: "Q3/2025",
       title: "Platform Development",
       description: "Started building LongevityCoa.ch to share insights and help others optimize their healthspan.",
       status: "current",
