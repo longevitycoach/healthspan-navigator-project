@@ -2,15 +2,33 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
+    setIsMenuOpen(false);
+  };
+
+  const navigateToPage = (path: string) => {
+    navigate(path);
     setIsMenuOpen(false);
   };
 
@@ -24,9 +42,12 @@ const Navigation = () => {
               alt="LongevityCoa.ch Logo" 
               className="h-10 w-10 object-contain"
             />
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+            <button 
+              onClick={() => navigateToPage('/')}
+              className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent"
+            >
               LongevityCoa.ch
-            </div>
+            </button>
           </div>
           
           {/* Desktop Navigation */}
@@ -49,6 +70,12 @@ const Navigation = () => {
                 className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Reference Values
+              </button>
+              <button 
+                onClick={() => navigateToPage('/resources')}
+                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+              >
+                Resources
               </button>
               <button 
                 onClick={() => scrollToSection('business-plan')}
@@ -103,6 +130,12 @@ const Navigation = () => {
                 className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
               >
                 Reference Values
+              </button>
+              <button 
+                onClick={() => navigateToPage('/resources')}
+                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+              >
+                Resources
               </button>
               <button 
                 onClick={() => scrollToSection('business-plan')}
