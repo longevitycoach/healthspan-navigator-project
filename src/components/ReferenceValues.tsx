@@ -30,7 +30,7 @@ const ReferenceValues = () => {
           official: "< 160", 
           unit: "mg/dL",
           description: "Low-density lipoprotein, often called 'bad' cholesterol. Primary target for cardiovascular risk reduction.",
-          clinical: "Optimal levels significantly lower than official recommendations. Strunz targets < 70 mg/dL for high-risk patients."
+          clinical: "Optimal levels significantly lower than official recommendations. Strunz targets < 70 mg/dL for high-risk patients. One of the 'bad' lipoproteins that carries ApoB."
         },
         { 
           name: "HDL Cholesterol", 
@@ -46,30 +46,22 @@ const ReferenceValues = () => {
           official: "< 150", 
           unit: "mg/dL",
           description: "Blood fats that increase cardiovascular risk when elevated. Strongly linked to metabolic health.",
-          clinical: "Optimal levels significantly lower than official cutoffs. Strunz targets < 80 mg/dL for metabolic optimization."
+          clinical: "Optimal levels significantly lower than official cutoffs. Strunz targets < 80 mg/dL for metabolic optimization. Another type of fat transported in the blood."
         },
         { 
-          name: "C-Reactive Protein", 
-          optimal: "< 1.0", 
-          official: "< 3.0", 
-          unit: "mg/L",
-          description: "Marker of systemic inflammation. Elevated levels predict cardiovascular events.",
-          clinical: "Lower levels indicate reduced inflammatory burden. Orfanos-Boeckel emphasizes < 0.5 mg/L for longevity."
-        },
-        { 
-          name: "ApoB", 
+          name: "Apolipoprotein B (ApoB)", 
           optimal: "< 80", 
           official: "< 120", 
           unit: "mg/dL",
-          description: "Apolipoprotein B, reflects number of atherogenic particles. Better predictor than LDL-C.",
+          description: "Found on all 'bad' lipoproteins (like LDL) and strongly correlated with increased cardiovascular disease risk. More informative than LDL alone.",
           clinical: "Optimal levels focus on particle count rather than just cholesterol content. Strunz recommends < 70 mg/dL."
         },
         { 
-          name: "Lp(a)", 
+          name: "Lipoprotein (a)", 
           optimal: "< 30", 
           official: "< 50", 
           unit: "mg/dL",
-          description: "Lipoprotein(a), genetically determined cardiovascular risk factor. Independent predictor.",
+          description: "Genetic risk factor for cardiovascular disease. Independent predictor of cardiovascular events.",
           clinical: "Lower levels preferred as this is largely genetically determined and difficult to modify."
         },
         { 
@@ -77,24 +69,32 @@ const ReferenceValues = () => {
           optimal: "< 7", 
           official: "< 15", 
           unit: "μmol/L",
-          description: "Amino acid metabolite, elevated levels associated with cardiovascular and neurodegenerative disease.",
+          description: "Amino acid whose elevated levels are linked to cardiovascular risk. Often correlates with deficiencies in Vitamin B6, B9 (Folic acid), or B12.",
           clinical: "Strunz emphasizes < 6 μmol/L. Lower levels indicate better methylation and B-vitamin status."
         },
         { 
-          name: "Fibrinogen", 
-          optimal: "200-300", 
-          official: "200-400", 
-          unit: "mg/dL",
-          description: "Blood clotting protein, elevated levels increase thrombotic risk and cardiovascular events.",
-          clinical: "Lower levels within normal range reduce clotting risk. Strunz targets 200-280 mg/dL."
+          name: "Blood Pressure (Systolic)", 
+          optimal: "110-120", 
+          official: "< 140", 
+          unit: "mmHg",
+          description: "Critical for cardiovascular health. Hypertension often goes unnoticed in early stages.",
+          clinical: "Regular monitoring especially important for women in/after menopause and men with erectile dysfunction, which can be early warning of blood vessel issues."
         },
         { 
-          name: "D-Dimer", 
-          optimal: "< 0.5", 
-          official: "< 0.5", 
+          name: "Blood Pressure (Diastolic)", 
+          optimal: "70-80", 
+          official: "< 90", 
+          unit: "mmHg",
+          description: "Lower number in blood pressure reading, reflects pressure when heart is resting between beats.",
+          clinical: "Normal values typically around 80. Important to monitor regularly as part of cardiovascular risk assessment."
+        },
+        { 
+          name: "C-Reactive Protein", 
+          optimal: "< 1.0", 
+          official: "< 3.0", 
           unit: "mg/L",
-          description: "Fibrin degradation product, marker of blood clot formation and breakdown.",
-          clinical: "Lower levels indicate less thrombotic activity. Important for cardiovascular risk assessment."
+          description: "Marker of systemic inflammation and general inflammation in the body. Elevated levels predict cardiovascular events.",
+          clinical: "Should always be measured alongside Ferritin as inflammation can falsely elevate ferritin levels. High CRP indicates 'silent inflammation' contributing to aging."
         }
       ]
     },
@@ -116,8 +116,16 @@ const ReferenceValues = () => {
           optimal: "< 5.3", 
           official: "< 5.7", 
           unit: "%",
-          description: "Average blood glucose over 2-3 months. Gold standard for diabetes diagnosis and monitoring.",
-          clinical: "Optimal levels prevent glycation damage. Strunz recommends < 5.2% for longevity optimization."
+          description: "Long-term blood sugar providing average blood glucose over several months. Key diagnostic marker for diabetes and relevant for longevity.",
+          clinical: "Optimal levels prevent glycation damage. Strunz recommends < 5.2% for longevity optimization. Measurement method can influence results."
+        },
+        { 
+          name: "HOMA Index", 
+          optimal: "< 1.0", 
+          official: "< 2.5", 
+          unit: "",
+          description: "Reflects insulin sensitivity and resistance, serving as indicator for pre-diabetic states. Often not routinely measured in conventional medicine.",
+          clinical: "Lower scores indicate better insulin sensitivity. Strunz emphasizes < 0.8 for metabolic optimization."
         },
         { 
           name: "Fasting Insulin", 
@@ -128,12 +136,12 @@ const ReferenceValues = () => {
           clinical: "Lower levels indicate better insulin sensitivity. Strunz targets < 3 μIU/mL for optimal metabolic health."
         },
         { 
-          name: "HOMA-IR", 
-          optimal: "< 1.0", 
-          official: "< 2.5", 
-          unit: "",
-          description: "Homeostatic Model Assessment of Insulin Resistance. Calculated from glucose and insulin.",
-          clinical: "Lower scores indicate better insulin sensitivity. Strunz emphasizes < 0.8 for metabolic optimization."
+          name: "Blood Sugar Spikes", 
+          optimal: "Minimal", 
+          official: "Variable", 
+          unit: "mg/dL",
+          description: "Rapid increases in blood glucose are undesirable as they can lead to energy crashes and cravings. Can be monitored with CGM.",
+          clinical: "Important for stable energy, weight management, and type 2 diabetes prevention. Continuous glucose monitoring recommended."
         },
         { 
           name: "Uric Acid", 
@@ -148,8 +156,8 @@ const ReferenceValues = () => {
           optimal: "50-150 (M), 30-100 (F)", 
           official: "30-400 (M), 15-200 (F)", 
           unit: "ng/mL",
-          description: "Iron storage protein. Reflects iron status and can indicate inflammation.",
-          clinical: "Strunz emphasizes lower ferritin levels to reduce oxidative stress and inflammation."
+          description: "Primary marker for iron stores. Low ferritin indicates iron deficiency even if hemoglobin is normal. Can be falsely elevated by inflammation (CRP).",
+          clinical: "Very common deficiency especially in women of childbearing age, athletes, vegetarians. Optimal ranges: women 100-120 µg/L, men 100-150 µg/L. Always measure with HB, Transferrin Saturation, and CRP."
         },
         { 
           name: "Adiponectin", 
@@ -175,100 +183,203 @@ const ReferenceValues = () => {
       expert: "Dr. Rhonda Patrick, Dr. Michael Holick, Dr. Helena Orfanos-Boeckel",
       markers: [
         { 
-          name: "Vitamin D", 
+          name: "Vitamin D (25-OH)", 
           optimal: "40-60", 
           official: "20-50", 
           unit: "ng/mL",
-          description: "25-hydroxyvitamin D, hormone regulating calcium, immune function, and gene expression.",
-          clinical: "Orfanos-Boeckel recommends 50-70 ng/mL for immune optimization and cancer prevention."
+          description: "Crucial for immune function, bone health, mood regulation, neurotransmitter formation, and hormone modulation. Up to 60% of Germans estimated deficient.",
+          clinical: "Co-factors: Vitamin K2, Magnesium, Calcium, Boron. Higher doses recommended (2500 IU summer, 5000 IU winter). Critical for fertility and egg quality."
         },
         { 
-          name: "B12", 
-          optimal: "> 500", 
-          official: "200-900", 
+          name: "Vitamin D (1,25-OH)", 
+          optimal: "25-65", 
+          official: "19-67", 
           unit: "pg/mL",
-          description: "Vitamin B12, essential for nerve function, DNA synthesis, and red blood cell formation.",
-          clinical: "Higher levels prevent subclinical deficiency. Orfanos-Boeckel targets > 600 pg/mL for neurological health."
+          description: "Active form of Vitamin D. Testing alongside 25-OH particularly relevant for immune system problems or autoimmune diseases.",
+          clinical: "Helps understand Vitamin D metabolism in individuals with immune dysfunction or autoimmune conditions."
         },
         { 
-          name: "Folate", 
-          optimal: "> 15", 
-          official: "3-17", 
+          name: "Vitamin K2 (MK-7)", 
+          optimal: "1.0-8.0", 
+          official: "0.13-1.88", 
           unit: "ng/mL",
-          description: "Vitamin B9, crucial for DNA synthesis, methylation, and preventing neural tube defects.",
-          clinical: "Higher levels support optimal methylation. Orfanos-Boeckel emphasizes > 20 ng/mL for cardiovascular health."
+          description: "Vital for bone health (regulating calcium distribution) and heart health. Works synergistically with Vitamin D to ensure calcium goes to bones, not arteries.",
+          clinical: "Studies exploring effects on immune health, athletic performance, muscle regeneration, inflammation reduction, mental health."
         },
         { 
           name: "Vitamin C", 
           optimal: "> 1.0", 
           official: "0.4-2.0", 
           unit: "mg/dL",
-          description: "Essential antioxidant vitamin, supports immune function and collagen synthesis.",
-          clinical: "Orfanos-Boeckel targets > 1.2 mg/dL for optimal antioxidant protection and immune function."
+          description: "'Queen of all vitamins' - crucial for immune system, collagen formation, nerve cells. Key antioxidant and co-factor for Cortisol and DHEA production.",
+          clinical: "Essential for iron absorption. Often underestimated - people believe they get enough from diet. Important for fertility and egg quality."
         },
         { 
-          name: "Magnesium", 
-          optimal: "2.0-2.6", 
-          official: "1.7-2.2", 
-          unit: "mg/dL",
-          description: "Essential mineral for over 300 enzymatic reactions, energy metabolism, and muscle function.",
-          clinical: "Higher levels support cardiovascular and neurological health. Orfanos-Boeckel recommends upper optimal range."
+          name: "B12 (Holotranscobalamin)", 
+          optimal: "> 500", 
+          official: "200-900", 
+          unit: "pg/mL",
+          description: "Essential for nervous system function and reducing fatigue. Deficiency can cause irreversible nerve damage. More accurate than total B12.",
+          clinical: "Critical for vegetarians/vegans. High doses recommended for neurodegenerative/psychiatric diseases and exhaustion. Works with CoQ10 for mitochondrial function."
         },
         { 
-          name: "Zinc", 
-          optimal: "90-150", 
-          official: "70-120", 
-          unit: "μg/dL",
-          description: "Essential trace element for immune function, wound healing, and protein synthesis.",
-          clinical: "Optimal levels support immune function and tissue repair. Orfanos-Boeckel targets 100-130 μg/dL."
+          name: "Folate (Vitamin B9)", 
+          optimal: "> 15", 
+          official: "3-17", 
+          unit: "ng/mL",
+          description: "Essential for normal blood formation and reducing fatigue. Increased demand in women of childbearing age, pregnancy, and lactation.",
+          clinical: "Higher levels support optimal methylation. Orfanos-Boeckel emphasizes > 20 ng/mL for cardiovascular health."
         },
         { 
-          name: "Selenium", 
-          optimal: "120-150", 
-          official: "70-150", 
-          unit: "μg/L",
-          description: "Essential trace element with antioxidant properties, supports thyroid function.",
-          clinical: "Higher levels within range provide optimal antioxidant protection. Orfanos-Boeckel recommends 130-150 μg/L."
-        },
-        { 
-          name: "Vitamin B1 (Thiamine)", 
-          optimal: "70-180", 
-          official: "66-200", 
-          unit: "nmol/L",
-          description: "Essential for energy metabolism and nervous system function.",
-          clinical: "Optimal levels support neurological health and energy production. Orfanos-Boeckel targets 100-160 nmol/L."
-        },
-        { 
-          name: "Vitamin B6", 
+          name: "Vitamin B6 (Pyridoxine)", 
           optimal: "35-110", 
           official: "20-125", 
           unit: "nmol/L",
-          description: "Important for protein metabolism, neurotransmitter synthesis, and immune function.",
-          clinical: "Higher levels within range support optimal brain function and immune health."
+          description: "Important for steroid hormone synthesis. Deficiency linked to homocysteine levels and can affect mood swings and psychological well-being.",
+          clinical: "Care should be taken with synthetic forms. Higher levels support brain function and immune health."
+        },
+        { 
+          name: "Vitamin B5 (Pantothenic Acid)", 
+          optimal: "200-1800", 
+          official: "200-1800", 
+          unit: "μg/L",
+          description: "Crucial co-factor for Cortisol and DHEA production in adrenal glands, especially beneficial for exhaustion and burnout.",
+          clinical: "Essential for adrenal function and stress response. Works with Vitamin C for DHEA production."
+        },
+        { 
+          name: "Vitamin B3 (Niacin)", 
+          optimal: "2.4-6.4", 
+          official: "2.4-6.4", 
+          unit: "μmol/L",
+          description: "Plays role in formation of NAD+ and ATP (energy molecules). Important for cellular energy production.",
+          clinical: "Critical for energy metabolism and cellular function."
+        },
+        { 
+          name: "Vitamin B2 (Riboflavin)", 
+          optimal: "137-370", 
+          official: "137-370", 
+          unit: "nmol/L",
+          description: "Essential for energy metabolism. Deficiency can manifest as cracked mouth corners.",
+          clinical: "Important for cellular energy production and maintaining healthy mucous membranes."
+        },
+        { 
+          name: "Biotin (Vitamin B7/H)", 
+          optimal: "200-500", 
+          official: "200-500", 
+          unit: "ng/L",
+          description: "Essential for hair root strength, overall hair growth, and nail health. Often used in 'biotin cures' for hair loss.",
+          clinical: "Critical for maintaining healthy hair and nails."
+        },
+        { 
+          name: "Vitamin A", 
+          optimal: "1.05-2.27", 
+          official: "1.05-2.27", 
+          unit: "μmol/L",
+          description: "Essential for vision, immune function, and skin health. Deficiency can contribute to dry and pale skin.",
+          clinical: "Important for maintaining healthy skin and immune function."
         },
         { 
           name: "Vitamin E", 
           optimal: "12-42", 
           official: "5-20", 
           unit: "μmol/L",
-          description: "Fat-soluble antioxidant vitamin protecting cell membranes from oxidative damage.",
-          clinical: "Higher levels provide enhanced antioxidant protection. Orfanos-Boeckel recommends 20-35 μmol/L."
+          description: "Fat-soluble antioxidant protecting cell membranes. Deficiency can contribute to dry skin, but high doses can be harmful.",
+          clinical: "Balance is key - some studies show harm from very high doses. Orfanos-Boeckel recommends 20-35 μmol/L."
+        }
+      ]
+    },
+    {
+      category: "Minerals & Trace Elements",
+      shortName: "Minerals",
+      expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
+      markers: [
+        { 
+          name: "Iron (Ferritin)", 
+          optimal: "100-120 (F), 100-150 (M)", 
+          official: "15-200 (F), 30-400 (M)", 
+          unit: "μg/L",
+          description: "Primary iron storage marker. Symptoms of deficiency: chronic fatigue, hair loss, brittle nails, concentration problems, reduced fertility.",
+          clinical: "Co-factors: Vitamin C, B12, Folic Acid, Copper. Common deficiency in menstruating women, athletes, vegetarians. Can be falsely elevated by inflammation."
         },
         { 
-          name: "Vitamin K2", 
-          optimal: "1.0-8.0", 
-          official: "0.13-1.88", 
-          unit: "ng/mL",
-          description: "Essential for bone health and cardiovascular function, directs calcium to bones.",
-          clinical: "Higher levels support optimal bone mineralization and prevent arterial calcification."
+          name: "Hemoglobin (HB)", 
+          optimal: "12-16 (F), 14-18 (M)", 
+          official: "12-15.5 (F), 13.5-17.5 (M)", 
+          unit: "g/dL",
+          description: "Oxygen-carrying protein in red blood cells. Used to diagnose anemia with cut-offs: women <12, men <13, pregnant women <11 g/dL.",
+          clinical: "Always measure alongside Ferritin, Transferrin Saturation, and CRP for accurate iron status assessment."
+        },
+        { 
+          name: "Magnesium (Whole Blood)", 
+          optimal: "2.0-2.6", 
+          official: "1.7-2.2", 
+          unit: "mg/dL",
+          description: "Involved in 600+ metabolic processes. Crucial for muscle function, nervous system, energy production, neurotransmitter formation, sleep.",
+          clinical: "~80% population deficient. High demand for athletes and high-stress professions. Whole blood more accurate than serum. Various forms offer different benefits."
+        },
+        { 
+          name: "Zinc", 
+          optimal: "90-150", 
+          official: "70-120", 
+          unit: "μg/dL",
+          description: "Important for immune system, cell division, collagen formation, steroid hormone synthesis. Deficiency: hair loss, brittle nails, cracked mouth corners.",
+          clinical: "Critical for vegetarians/vegans due to phytate binding. Recommended for athletes and gut barrier healing."
+        },
+        { 
+          name: "Calcium", 
+          optimal: "9.5-10.2", 
+          official: "8.5-10.5", 
+          unit: "mg/dL",
+          description: "Essential for bone/tooth formation and muscle function. Requires adequate Vitamin D for proper absorption.",
+          clinical: "People avoiding dairy often show deficiency. Works synergistically with Vitamin D and K2."
+        },
+        { 
+          name: "Iodine", 
+          optimal: "100-199", 
+          official: "52-109", 
+          unit: "μg/L",
+          description: "Essential for normal thyroid function and cognitive function. Many regions (like Germany) are iodine-poor.",
+          clinical: "Common deficiency in those consuming little iodized salt or fish. High doses used for thyroid support in fertility contexts."
+        },
+        { 
+          name: "Selenium", 
+          optimal: "120-150", 
+          official: "70-150", 
+          unit: "μg/L",
+          description: "Important for protecting cells from oxidative stress, immune system, and thyroid function. European soil often selenium-poor.",
+          clinical: "Common deficiencies due to poor soil. Higher doses may be needed than standard recommendations, but high doses can be dangerous."
+        },
+        { 
+          name: "Potassium", 
+          optimal: "4.0-4.5", 
+          official: "3.5-5.0", 
+          unit: "mmol/L",
+          description: "Can be supplemented during fasting to help prevent muscle cramps. Essential electrolyte for muscle and nerve function.",
+          clinical: "Higher levels within range support cardiovascular health and blood pressure control."
         },
         { 
           name: "Copper", 
           optimal: "70-140", 
           official: "70-140", 
           unit: "μg/dL",
-          description: "Essential trace element for iron metabolism, connective tissue, and antioxidant enzymes.",
-          clinical: "Balance with zinc is crucial. Orfanos-Boeckel monitors copper:zinc ratio for optimal health."
+          description: "Co-factor whose deficiency can impair iron absorption. Essential for iron metabolism and connective tissue.",
+          clinical: "Balance with zinc crucial. Orfanos-Boeckel monitors copper:zinc ratio for optimal health."
+        },
+        { 
+          name: "Lithium (trace)", 
+          optimal: "5-20", 
+          official: "Variable", 
+          unit: "μg/L",
+          description: "Interesting trace element with positive effects on mood and neuroprotection.",
+          clinical: "Emerging research on benefits for mental health and neuroprotection at trace levels."
+        },
+        { 
+          name: "Boron", 
+          optimal: "20-100", 
+          official: "Variable", 
+          unit: "μg/L",
+          description: "Co-factor for Vitamin D function and can be supplemented for bone health.",
+          clinical: "Supports Vitamin D function and bone mineralization."
         }
       ]
     },
@@ -282,23 +393,23 @@ const ReferenceValues = () => {
           optimal: "1.0-2.0", 
           official: "0.4-4.0", 
           unit: "mIU/L",
-          description: "Thyroid Stimulating Hormone, regulates thyroid function and metabolic rate.",
-          clinical: "Narrower optimal range for maintaining metabolic efficiency. Orfanos-Boeckel targets 1.0-1.5 mIU/L."
+          description: "Thyroid Stimulating Hormone. While commonly measured, TSH alone is insufficient for comprehensive thyroid assessment.",
+          clinical: "Narrower optimal range for metabolic efficiency. Orfanos-Boeckel targets 1.0-1.5 mIU/L. Thyroid issues linked to hair loss, fatigue, fertility problems."
         },
         { 
-          name: "Free T3", 
+          name: "Free T3 (fT3)", 
           optimal: "3.0-4.0", 
           official: "2.3-4.2", 
           unit: "pg/mL",
-          description: "Active thyroid hormone, reflects actual thyroid function better than TSH alone.",
-          clinical: "Optimal levels ensure adequate cellular metabolism. Orfanos-Boeckel emphasizes upper third of range."
+          description: "Active thyroid hormone that reflects actual thyroid function better than TSH alone.",
+          clinical: "Optimal levels ensure adequate cellular metabolism. Orfanos-Boeckel emphasizes upper third of range. Requires Iodine, Selenium, Tyrosine as co-factors."
         },
         { 
-          name: "Free T4", 
+          name: "Free T4 (fT4)", 
           optimal: "1.3-1.8", 
           official: "0.8-1.8", 
           unit: "ng/dL",
-          description: "Thyroid prohormone, converted to active T3 in tissues.",
+          description: "Thyroid prohormone converted to active T3 in tissues.",
           clinical: "Higher end of range often optimal for energy and metabolism. Orfanos-Boeckel targets 1.4-1.7 ng/dL."
         },
         { 
@@ -310,28 +421,60 @@ const ReferenceValues = () => {
           clinical: "Lower levels indicate better thyroid function. Orfanos-Boeckel emphasizes < 15 ng/dL for optimal metabolism."
         },
         { 
-          name: "Testosterone (M)", 
+          name: "Testosterone (Total)", 
           optimal: "500-900", 
           official: "270-1070", 
           unit: "ng/dL",
-          description: "Primary male sex hormone, affects muscle mass, bone density, and overall vitality.",
-          clinical: "Higher levels within range support healthy aging. Strunz targets 600-800 ng/dL for men over 40."
+          description: "Important for dopaminergic system, acetylcholine (learning, memory), prevents depression, irritability, cognitive impairment. Neuroprotective.",
+          clinical: "Men in 30s-40s can experience deficiency. Must measure SHBG to calculate free testosterone. Co-factors: Vitamin D3, B6, Zinc, Magnesium."
         },
         { 
-          name: "Estradiol (F)", 
+          name: "Free Testosterone", 
+          optimal: "9-27", 
+          official: "6.8-21.5", 
+          unit: "pg/mL",
+          description: "Physiologically active testosterone calculated from total testosterone and SHBG.",
+          clinical: "More accurate assessment of testosterone status than total testosterone alone."
+        },
+        { 
+          name: "Estradiol (E2)", 
           optimal: "100-200", 
           official: "15-350", 
           unit: "pg/mL",
-          description: "Primary female sex hormone, varies with menstrual cycle and menopause status.",
-          clinical: "Optimal levels depend on life stage. Orfanos-Boeckel emphasizes bioidentical hormone optimization."
+          description: "Important for happiness, well-being, serotonergic and dopaminergic systems, acetylcholine (learning, memory). Protective against cardiovascular disease.",
+          clinical: "Can be measured in serum or saliva. Decline during menopause can increase blood pressure. Deficiency causes depression, cognitive issues, sleep disturbances."
+        },
+        { 
+          name: "Progesterone", 
+          optimal: "15-25", 
+          official: "1-20", 
+          unit: "ng/mL",
+          description: "Important for relaxation ('natural Valium'), mood stabilization, sleep quality, GABAergic system. Deficiency causes irritability, restlessness, sleep issues.",
+          clinical: "Can be measured in serum or saliva (preferred for free hormones). For women, test on cycle day 19-21. Orfanos-Boeckel targets optimal ratios with estrogen."
         },
         { 
           name: "DHEA-S", 
           optimal: "350-500", 
           official: "80-560", 
           unit: "μg/dL",
-          description: "Dehydroepiandrosterone sulfate, adrenal hormone precursor declining with age.",
-          clinical: "Higher levels within range associated with better stress resilience. Strunz targets 400-450 μg/dL."
+          description: "Precursor hormone for Testosterone and Estrogen production. Often described as 'healing' hormone. Co-factors: Vitamin C and B5.",
+          clinical: "Higher levels associated with stress resilience. Strunz targets 400-450 μg/dL."
+        },
+        { 
+          name: "Estriol (E3)", 
+          optimal: "10-40", 
+          official: "Variable", 
+          unit: "pg/mL",
+          description: "Underrated hormone important for mucous membrane hydration, helping prevent dryness and inflammation.",
+          clinical: "Important for maintaining healthy mucous membranes and preventing inflammatory conditions."
+        },
+        { 
+          name: "SHBG", 
+          optimal: "18-54", 
+          official: "18-54", 
+          unit: "nmol/L",
+          description: "Sex Hormone-Binding Globulin transports sex hormones. Essential for calculating free (bioavailable) testosterone.",
+          clinical: "Must be measured alongside total testosterone for accurate assessment of hormonal status."
         },
         { 
           name: "Cortisol (AM)", 
@@ -340,30 +483,6 @@ const ReferenceValues = () => {
           unit: "μg/dL",
           description: "Primary stress hormone, should be highest in morning and decline throughout day.",
           clinical: "Optimal morning levels indicate healthy adrenal function. Orfanos-Boeckel emphasizes circadian rhythm optimization."
-        },
-        { 
-          name: "Progesterone (F)", 
-          optimal: "15-25", 
-          official: "1-20", 
-          unit: "ng/mL",
-          description: "Hormone essential for reproductive health and neuroprotection in women.",
-          clinical: "Higher levels support mood stability and bone health. Orfanos-Boeckel targets optimal ratios with estrogen."
-        },
-        { 
-          name: "Growth Hormone", 
-          optimal: "0.5-3.0", 
-          official: "0-10", 
-          unit: "ng/mL",
-          description: "Anabolic hormone promoting growth, muscle mass, and metabolic health.",
-          clinical: "Moderate levels support healthy aging without excessive IGF-1 elevation."
-        },
-        { 
-          name: "Melatonin", 
-          optimal: "10-60", 
-          official: "1-20", 
-          unit: "pg/mL",
-          description: "Sleep hormone and powerful antioxidant, declines significantly with age.",
-          clinical: "Higher levels support better sleep quality and antioxidant protection. Orfanos-Boeckel recommends supplementation."
         }
       ]
     },
@@ -389,12 +508,28 @@ const ReferenceValues = () => {
           clinical: "Higher levels associated with better cellular function and longevity. Emerging biomarker for aging."
         },
         { 
-          name: "Klotho", 
-          optimal: "> 800", 
-          official: "500-1200", 
-          unit: "pg/mL",
-          description: "Anti-aging protein that regulates phosphate metabolism and oxidative stress.",
-          clinical: "Higher levels associated with longevity and neuroprotection. Research-based longevity marker."
+          name: "CoQ10 (Ubiquinol)", 
+          optimal: "> 2.5", 
+          official: "0.4-1.9", 
+          unit: "μg/mL",
+          description: "Vital for mitochondrial energy production ('fuel for the furnace'), heart health, combating chronic fatigue and burnout. Levels decline with age.",
+          clinical: "Works with Vitamin B12 for mitochondrial function. Higher levels support energy production and cardiovascular health."
+        },
+        { 
+          name: "Glutathione", 
+          optimal: "> 900", 
+          official: "600-1200", 
+          unit: "μmol/L",
+          description: "Master antioxidant and main detoxification molecule. Protects cells, supports immune system, safeguards gut and brain barriers.",
+          clinical: "Deficiency common due to environmental toxins. Orfanos-Boeckel targets > 1000 μmol/L for optimal detox capacity."
+        },
+        { 
+          name: "Omega-3 Index", 
+          optimal: "> 8", 
+          official: "4-11", 
+          unit: "%",
+          description: "Percentage of EPA and DHA in red blood cell membranes. Low index linked to higher mortality risk - 'the new smoking' due to widespread deficiency.",
+          clinical: "Best measured in EDTA blood. Most people have too much Omega-6 relative to Omega-3. Critical for cardiovascular, brain health, inflammation, fertility."
         },
         { 
           name: "Telomere Length", 
@@ -405,44 +540,107 @@ const ReferenceValues = () => {
           clinical: "Longer telomeres associated with cellular health and longevity. Lifestyle interventions can influence length."
         },
         { 
+          name: "Epigenetic Age", 
+          optimal: "< Chronological", 
+          official: "Variable", 
+          unit: "Years",
+          description: "Biological markers estimating biological age, which may differ from chronological age. Lifestyle factors significantly influence this marker.",
+          clinical: "Lower biological age indicates better health span. Diet and exercise can significantly influence this marker."
+        },
+        { 
+          name: "VO2 Max", 
+          optimal: "> 35 (F), > 42 (M)", 
+          official: "Variable", 
+          unit: "mL/kg/min",
+          description: "Maximum oxygen consumption during intense exercise. Strong correlation with overall physical condition and life expectancy.",
+          clinical: "Being advocated as standard for general medical check-ups due to strong correlation with longevity."
+        },
+        { 
           name: "Advanced Glycation End Products", 
           optimal: "< 2.0", 
           official: "< 3.0", 
           unit: "AU",
           description: "Protein modifications from glucose that accumulate with age and diabetes.",
           clinical: "Lower levels indicate better glucose control and reduced aging acceleration."
+        }
+      ]
+    },
+    {
+      category: "Specialized Testing",
+      shortName: "Specialized",
+      expert: "Various Longevity Experts",
+      markers: [
+        { 
+          name: "Heavy Metals (Mercury)", 
+          optimal: "< 5", 
+          official: "< 20", 
+          unit: "μg/L",
+          description: "Exposure significant concern for brain health, linked to neurodegenerative diseases like Alzheimer's and Parkinson's.",
+          clinical: "Testing recommended due to environmental exposure and brain health implications."
         },
         { 
-          name: "Interleukin-6", 
-          optimal: "< 1.5", 
-          official: "< 3.4", 
-          unit: "pg/mL",
-          description: "Pro-inflammatory cytokine elevated in aging and chronic disease.",
-          clinical: "Lower levels indicate reduced inflammaging. Strunz emphasizes < 1.0 pg/mL for longevity."
+          name: "Heavy Metals (Aluminum)", 
+          optimal: "< 10", 
+          official: "< 50", 
+          unit: "μg/L",
+          description: "Another toxic metal of concern for brain health and neurodegenerative diseases.",
+          clinical: "Environmental exposure common, testing recommended for comprehensive health assessment."
         },
         { 
-          name: "mTOR Activity", 
-          optimal: "Moderate", 
+          name: "Creatine Kinase", 
+          optimal: "< 200", 
+          official: "< 190 (F), < 308 (M)", 
+          unit: "U/L",
+          description: "Enzyme that can indicate muscle damage or inflammation.",
+          clinical: "Elevated levels may indicate muscle damage from exercise or other causes."
+        },
+        { 
+          name: "LDH", 
+          optimal: "< 250", 
+          official: "< 248", 
+          unit: "U/L",
+          description: "Lactate Dehydrogenase - enzyme that can indicate tissue damage or disease.",
+          clinical: "General marker of cellular damage, useful for overall health assessment."
+        },
+        { 
+          name: "Tryptophan", 
+          optimal: "40-80", 
           official: "Variable", 
-          unit: "Relative",
-          description: "Mechanistic target of rapamycin, key pathway regulating cellular growth and autophagy.",
-          clinical: "Balanced mTOR activity supports growth when needed and autophagy for cellular cleanup."
+          unit: "μmol/L",
+          description: "Precursor for Serotonin and Melatonin (mood and sleep regulation).",
+          clinical: "Important for neurotransmitter synthesis and sleep-wake cycle regulation."
         },
         { 
-          name: "Autophagy Markers", 
-          optimal: "Elevated", 
+          name: "Tyrosine", 
+          optimal: "50-120", 
           official: "Variable", 
-          unit: "Relative",
-          description: "Cellular self-cleaning process that removes damaged proteins and organelles.",
-          clinical: "Enhanced autophagy associated with longevity and reduced age-related diseases."
+          unit: "μmol/L",
+          description: "Essential for thyroid hormone production and neurotransmitter synthesis.",
+          clinical: "Critical for thyroid function and cognitive performance."
         },
         { 
-          name: "Mitochondrial Function", 
-          optimal: "High", 
+          name: "GABA", 
+          optimal: "2-20", 
           official: "Variable", 
-          unit: "Relative",
-          description: "Cellular powerhouses that decline with age, affecting energy production.",
-          clinical: "Better mitochondrial function supports healthy aging and energy metabolism."
+          unit: "μmol/L",
+          description: "Inhibitory neurotransmitter for relaxation and anxiety reduction.",
+          clinical: "Important for stress management and nervous system regulation."
+        },
+        { 
+          name: "L-Arginine", 
+          optimal: "80-150", 
+          official: "Variable", 
+          unit: "μmol/L",
+          description: "Widens blood vessels, increases nitric oxide synthesis for better oxygen supply. Referred to as 'natural Viagra'.",
+          clinical: "Important for cardiovascular health, endurance, and circulation."
+        },
+        { 
+          name: "Essential Amino Acids", 
+          optimal: "Within Range", 
+          official: "Variable", 
+          unit: "μmol/L",
+          description: "Nine amino acids the body cannot produce, important for protein synthesis and muscle building.",
+          clinical: "Critical for maintaining muscle mass and overall protein metabolism."
         }
       ]
     },
@@ -539,27 +737,27 @@ const ReferenceValues = () => {
       expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
       markers: [
         { 
-          name: "ALT", 
+          name: "GOT (AST)", 
           optimal: "< 25", 
           official: "< 40", 
           unit: "U/L",
-          description: "Alanine aminotransferase, liver enzyme that indicates hepatocellular damage.",
-          clinical: "Lower levels indicate better liver health. Orfanos-Boeckel targets < 20 U/L for optimal function."
-        },
-        { 
-          name: "AST", 
-          optimal: "< 25", 
-          official: "< 40", 
-          unit: "U/L",
-          description: "Aspartate aminotransferase, enzyme found in liver and other tissues.",
+          description: "Glutamate Oxaloacetate Transaminase (AST), liver enzyme indicating hepatocellular damage and liver function.",
           clinical: "Lower levels within normal range indicate better cellular health and liver function."
         },
         { 
-          name: "GGT", 
+          name: "GPT (ALT)", 
+          optimal: "< 25", 
+          official: "< 40", 
+          unit: "U/L",
+          description: "Glutamate Pyruvate Transaminase (ALT), liver enzyme that indicates hepatocellular damage.",
+          clinical: "Lower levels indicate better liver health. Orfanos-Boeckel targets < 20 U/L for optimal function."
+        },
+        { 
+          name: "Gamma GT", 
           optimal: "< 30", 
           official: "< 60", 
           unit: "U/L",
-          description: "Gamma-glutamyl transferase, enzyme involved in glutathione metabolism and detox.",
+          description: "Gamma-Glutamyl Transferase, enzyme involved in glutathione metabolism and detox. Elevated levels correlated with higher risk of earlier mortality.",
           clinical: "Lower levels indicate better liver function and glutathione status. Strunz targets < 25 U/L."
         },
         { 
@@ -609,6 +807,14 @@ const ReferenceValues = () => {
       shortName: "Kidney",
       expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
       markers: [
+        { 
+          name: "Cystatin C", 
+          optimal: "0.5-0.9", 
+          official: "0.51-0.98", 
+          unit: "mg/L",
+          description: "More accurate marker of kidney function than creatinine, not affected by muscle mass.",
+          clinical: "Better indicator of kidney function, especially in elderly or those with low muscle mass."
+        },
         { 
           name: "Creatinine", 
           optimal: "0.8-1.2", 
@@ -664,14 +870,6 @@ const ReferenceValues = () => {
           unit: "mg/dL",
           description: "Essential mineral for bone health, energy metabolism, and cellular function.",
           clinical: "Optimal levels support bone health and energy production. Orfanos-Boeckel targets 3.2-3.8 mg/dL."
-        },
-        { 
-          name: "Calcium", 
-          optimal: "9.5-10.2", 
-          official: "8.5-10.5", 
-          unit: "mg/dL",
-          description: "Essential mineral for bone health, muscle function, and nerve transmission.",
-          clinical: "Optimal levels support bone health and proper muscle function."
         }
       ]
     }
@@ -708,7 +906,7 @@ const ReferenceValues = () => {
         {/* Desktop Navigation - Compact Tabs */}
         <div className="hidden md:block">
           <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
-            <TabsList className="grid w-full grid-cols-4 xl:grid-cols-8 mb-8 h-auto">
+            <TabsList className="grid w-full grid-cols-5 xl:grid-cols-10 mb-8 h-auto">
               {biomarkerCategories.map((category) => (
                 <TabsTrigger 
                   key={category.category} 
@@ -897,12 +1095,12 @@ const ReferenceValues = () => {
           
           <Card className="bg-gradient-to-br from-blue-50 to-blue-100">
             <CardHeader>
-              <CardTitle className="text-lg text-blue-800">Expert Sources</CardTitle>
+              <CardTitle className="text-lg text-blue-800">Testing Recommendations</CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-sm text-blue-700">
-                Recommendations from leading longevity researchers, functional medicine 
-                practitioners including German experts Dr. Strunz and Dr. Orfanos-Boeckel.
+                "Measure, Do, Measure" - Test first to identify deficiencies, implement changes, 
+                then re-test to evaluate effectiveness. Individualized approach with professional guidance recommended.
               </p>
             </CardContent>
           </Card>
