@@ -16,15 +16,16 @@ const HeroSection = () => {
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
-              Optimize Your
+              Change Your Life
             </span>
             <br />
-            <span className="text-slate-800">Healthspan</span>
+            <span className="text-slate-800">with Small Habits</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            A comprehensive health and wellness platform focused on longevity and preventive care. 
-            Track biomarkers, analyze trends, and receive personalized recommendations for optimal healthspan.
+          <p className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+            <strong>Measure the progress - results in exponential Longevity.</strong>
+            <br />
+            Build your healthspan one atomic habit at a time—powered by secure AI agents that gather your biomarkers, wearable metrics, and lifestyle data. Measure key metrics, act on bite-sized lessons drawn from the latest studies, expert books, and top podcasts, then re-measure to refine your plan. Progress that compounds into lasting vitality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -33,7 +34,7 @@ const HeroSection = () => {
               className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
-              Get Early Access
+              Start Your Journey
             </Button>
             <Button 
               variant="outline" 
