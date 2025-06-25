@@ -1,15 +1,19 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Info } from "lucide-react";
+import { useState } from "react";
 
 const ReferenceValues = () => {
+  const [selectedCategory, setSelectedCategory] = useState("Cardiovascular");
+
   const biomarkerCategories = [
     {
       category: "Cardiovascular",
+      shortName: "Cardio",
       expert: "Dr. Peter Attia, Dr. Thomas Dayspring, Dr. Ulrich Strunz",
       markers: [
         { 
@@ -96,6 +100,7 @@ const ReferenceValues = () => {
     },
     {
       category: "Metabolic",
+      shortName: "Metabolic",
       expert: "Dr. Benjamin Bikman, Dr. Jason Fung, Dr. Ulrich Strunz",
       markers: [
         { 
@@ -166,6 +171,7 @@ const ReferenceValues = () => {
     },
     {
       category: "Vitamins & Nutrients",
+      shortName: "Vitamins",
       expert: "Dr. Rhonda Patrick, Dr. Michael Holick, Dr. Helena Orfanos-Boeckel",
       markers: [
         { 
@@ -268,6 +274,7 @@ const ReferenceValues = () => {
     },
     {
       category: "Hormones & Thyroid",
+      shortName: "Hormones",
       expert: "Dr. David Brownstein, Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
       markers: [
         { 
@@ -362,6 +369,7 @@ const ReferenceValues = () => {
     },
     {
       category: "Advanced Longevity",
+      shortName: "Longevity",
       expert: "Dr. David Sinclair, Dr. Valter Longo, Dr. Ulrich Strunz",
       markers: [
         { 
@@ -440,6 +448,7 @@ const ReferenceValues = () => {
     },
     {
       category: "Immune & Inflammatory",
+      shortName: "Immune",
       expert: "Dr. Mark Hyman, Dr. Terry Wahls, Dr. Helena Orfanos-Boeckel",
       markers: [
         { 
@@ -526,6 +535,7 @@ const ReferenceValues = () => {
     },
     {
       category: "Liver & Detox",
+      shortName: "Liver",
       expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
       markers: [
         { 
@@ -596,6 +606,7 @@ const ReferenceValues = () => {
     },
     {
       category: "Kidney & Electrolytes",
+      shortName: "Kidney",
       expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
       markers: [
         { 
@@ -678,28 +689,124 @@ const ReferenceValues = () => {
           </p>
         </div>
 
-        <Tabs defaultValue="Cardiovascular" className="w-full">
-          <TabsList className="grid w-full grid-cols-3 lg:grid-cols-9 mb-8">
-            {biomarkerCategories.map((category) => (
-              <TabsTrigger 
-                key={category.category} 
-                value={category.category}
-                className="text-xs sm:text-sm px-1 sm:px-2"
-              >
-                {category.category.replace(' & ', ' & ')}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+        {/* Mobile Navigation - Dropdown */}
+        <div className="block md:hidden mb-8">
+          <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+            <SelectTrigger className="w-full">
+              <SelectValue placeholder="Select a category" />
+            </SelectTrigger>
+            <SelectContent>
+              {biomarkerCategories.map((category) => (
+                <SelectItem key={category.category} value={category.category}>
+                  {category.category}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
 
-          {biomarkerCategories.map((category) => (
-            <TabsContent key={category.category} value={category.category}>
-              <Card>
+        {/* Desktop Navigation - Compact Tabs */}
+        <div className="hidden md:block">
+          <Tabs value={selectedCategory} onValueChange={setSelectedCategory} className="w-full">
+            <TabsList className="grid w-full grid-cols-4 xl:grid-cols-8 mb-8 h-auto">
+              {biomarkerCategories.map((category) => (
+                <TabsTrigger 
+                  key={category.category} 
+                  value={category.category}
+                  className="text-xs p-2 h-auto whitespace-nowrap"
+                >
+                  <span className="hidden xl:inline">{category.category}</span>
+                  <span className="xl:hidden">{category.shortName}</span>
+                </TabsTrigger>
+              ))}
+            </TabsList>
+
+            {biomarkerCategories.map((category) => (
+              <TabsContent key={category.category} value={category.category}>
+                <Card>
+                  <CardHeader>
+                    <div className="flex items-center justify-between flex-wrap gap-2">
+                      <CardTitle className="text-2xl text-slate-800">
+                        {category.category} Biomarkers
+                      </CardTitle>
+                      <Badge variant="outline" className="text-xs sm:text-sm">
+                        Experts: {category.expert}
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="overflow-x-auto">
+                      <Table>
+                        <TableHeader>
+                          <TableRow>
+                            <TableHead className="w-[160px] min-w-[160px]">Biomarker</TableHead>
+                            <TableHead className="text-center min-w-[120px]">Optimal Range</TableHead>
+                            <TableHead className="text-center min-w-[120px]">Official Range</TableHead>
+                            <TableHead className="text-center min-w-[80px]">Unit</TableHead>
+                            <TableHead className="w-[50px]"></TableHead>
+                          </TableRow>
+                        </TableHeader>
+                        <TableBody>
+                          {category.markers.map((marker, index) => (
+                            <TableRow key={index} className="hover:bg-slate-50">
+                              <TableCell className="font-medium text-sm">{marker.name}</TableCell>
+                              <TableCell className="text-center">
+                                <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 text-xs">
+                                  {marker.optimal}
+                                </Badge>
+                              </TableCell>
+                              <TableCell className="text-center">
+                                <Badge variant="outline" className="text-slate-600 text-xs">
+                                  {marker.official}
+                                </Badge>
+                              </TableCell>
+                              <TableCell className="text-center text-xs text-slate-500">
+                                {marker.unit}
+                              </TableCell>
+                              <TableCell>
+                                <HoverCard>
+                                  <HoverCardTrigger asChild>
+                                    <button className="text-slate-400 hover:text-slate-600">
+                                      <Info className="h-4 w-4" />
+                                    </button>
+                                  </HoverCardTrigger>
+                                  <HoverCardContent className="w-80">
+                                    <div className="space-y-2">
+                                      <h4 className="text-sm font-semibold">{marker.name}</h4>
+                                      <p className="text-sm text-slate-600">
+                                        {marker.description}
+                                      </p>
+                                      <div className="text-xs text-slate-500 border-t pt-2">
+                                        <strong>Clinical Note:</strong> {marker.clinical}
+                                      </div>
+                                    </div>
+                                  </HoverCardContent>
+                                </HoverCard>
+                              </TableCell>
+                            </TableRow>
+                          ))}
+                        </TableBody>
+                      </Table>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            ))}
+          </Tabs>
+        </div>
+
+        {/* Mobile Content Display */}
+        <div className="block md:hidden">
+          {biomarkerCategories
+            .filter(category => category.category === selectedCategory)
+            .map((category) => (
+              <Card key={category.category}>
                 <CardHeader>
                   <div className="flex items-center justify-between flex-wrap gap-2">
-                    <CardTitle className="text-2xl text-slate-800">
+                    <CardTitle className="text-xl text-slate-800">
                       {category.category} Biomarkers
                     </CardTitle>
-                    <Badge variant="outline" className="text-xs sm:text-sm">
+                    <Badge variant="outline" className="text-xs">
                       Experts: {category.expert}
                     </Badge>
                   </div>
@@ -709,17 +816,17 @@ const ReferenceValues = () => {
                     <Table>
                       <TableHeader>
                         <TableRow>
-                          <TableHead className="w-[160px] min-w-[160px]">Biomarker</TableHead>
-                          <TableHead className="text-center min-w-[120px]">Optimal Range</TableHead>
-                          <TableHead className="text-center min-w-[120px]">Official Range</TableHead>
-                          <TableHead className="text-center min-w-[80px]">Unit</TableHead>
-                          <TableHead className="w-[50px]"></TableHead>
+                          <TableHead className="w-[120px] min-w-[120px]">Biomarker</TableHead>
+                          <TableHead className="text-center min-w-[100px]">Optimal</TableHead>
+                          <TableHead className="text-center min-w-[100px]">Official</TableHead>
+                          <TableHead className="text-center min-w-[60px]">Unit</TableHead>
+                          <TableHead className="w-[40px]"></TableHead>
                         </TableRow>
                       </TableHeader>
                       <TableBody>
                         {category.markers.map((marker, index) => (
                           <TableRow key={index} className="hover:bg-slate-50">
-                            <TableCell className="font-medium text-sm">{marker.name}</TableCell>
+                            <TableCell className="font-medium text-xs">{marker.name}</TableCell>
                             <TableCell className="text-center">
                               <Badge className="bg-emerald-100 text-emerald-800 hover:bg-emerald-200 text-xs">
                                 {marker.optimal}
@@ -737,10 +844,10 @@ const ReferenceValues = () => {
                               <HoverCard>
                                 <HoverCardTrigger asChild>
                                   <button className="text-slate-400 hover:text-slate-600">
-                                    <Info className="h-4 w-4" />
+                                    <Info className="h-3 w-3" />
                                   </button>
                                 </HoverCardTrigger>
-                                <HoverCardContent className="w-80">
+                                <HoverCardContent className="w-72">
                                   <div className="space-y-2">
                                     <h4 className="text-sm font-semibold">{marker.name}</h4>
                                     <p className="text-sm text-slate-600">
@@ -760,9 +867,8 @@ const ReferenceValues = () => {
                   </div>
                 </CardContent>
               </Card>
-            </TabsContent>
-          ))}
-        </Tabs>
+            ))}
+        </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="bg-gradient-to-br from-emerald-50 to-emerald-100">
