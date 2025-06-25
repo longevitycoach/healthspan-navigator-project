@@ -21,8 +21,8 @@ const HeroSection = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      {/* Darker overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/40"></div>
       
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className="animate-fade-in">
@@ -51,7 +51,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-6 rounded-full border-2 border-white/50 hover:border-white hover:bg-white/10 text-white hover:text-white backdrop-blur-sm transition-all duration-300"
+              className="text-lg px-8 py-6 rounded-full border-2 border-white text-white hover:bg-white hover:text-slate-900 transition-all duration-300 shadow-lg"
               onClick={scrollToFeatures}
             >
               Learn More
@@ -59,7 +59,11 @@ const HeroSection = () => {
           </div>
           
           <div className="animate-bounce">
-            <button onClick={scrollToFeatures} className="text-white/70 hover:text-white transition-colors">
+            <button 
+              onClick={scrollToFeatures} 
+              className="text-white/70 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2"
+              aria-label="Scroll to features section"
+            >
               <ArrowDown size={32} />
             </button>
           </div>
