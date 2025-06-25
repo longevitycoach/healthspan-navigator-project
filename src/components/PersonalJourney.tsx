@@ -22,11 +22,11 @@ const PersonalJourney = () => {
       metrics: ["Lipid Panel", "HbA1c", "Vitamin D", "Inflammatory Markers"]
     },
     {
-      year: "2020",
+      year: "2024",
       title: "Advanced Biomarkers",
       description: "Expanded testing to include advanced longevity and metabolic health markers.",
       status: "completed",
-      metrics: ["APOE Genotype", "Homocysteine", "Advanced Lipids", "Micronutrients"]
+      metrics: ["Microbiom Analysis", "Amminogramm", "Homocysteine", "Advanced Lipids", "Micronutrients"]
     },
     {
       year: "2024",
