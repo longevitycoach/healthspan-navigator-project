@@ -9,14 +9,15 @@ const PersonalJourney = () => {
     {
       year: "2018",
       title: "Health Awakening",
-      description: "Started tracking basic health metrics after realizing the importance of preventive care.",
+      description: "Started tracking basic health metrics after realizing the importance of preventive care. 
+      Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time gym, Wim Hof Breathing.",
       status: "completed",
       metrics: ["Weight", "Blood Pressure"]
     },
     {
       year: "2019",
       title: "Comprehensive Testing",
-      description: "Began annual comprehensive blood panels to establish baseline health markers.",
+      description: "Began annual comprehensive blood panels to establish baseline health markers. Corona, daily 5k run or 10k walks",
       status: "completed", 
       metrics: ["Lipid Panel", "HbA1c", "Vitamin D", "Inflammatory Markers"]
     },
