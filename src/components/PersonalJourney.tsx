@@ -29,18 +29,18 @@ const PersonalJourney = () => {
       metrics: ["APOE Genotype", "Homocysteine", "Advanced Lipids", "Micronutrients"]
     },
     {
-      year: "2021",
+      year: "2024",
       title: "Lifestyle Optimization",
-      description: "Implemented targeted interventions based on biomarker insights and genetic data.",
+      description: "Listening Podcasts, Watching YouTube channels, and reading books of leading epi-genetic and molecular medicine experts. Implemented targeted interventions based on biomarker insights and genetic data. Start intermediate fasten.",
       status: "completed",
-      metrics: ["Exercise Protocol", "Nutrition Plan", "Supplement Regimen"]
+      metrics: ["Podcasts", "Expert Books", "Exercise Protocol", "Nutrition Plan", "Supplement Regimen"]
     },
     {
-      year: "2022",
-      title: "Technology Integration",
-      description: "Integrated wearables and continuous monitoring for real-time health insights.",
+      year: "Q1/2025",
+      title: "Nutration and Technology Integration",
+      description: "Change to ketogene Nutrition, continuous monitoring for real-time health insights with Apple watch and glycose and keto device. Weekly habbit of a mix of HIIT, Strenght, endurance, recovery",
       status: "completed",
-      metrics: ["CGM", "HRV Monitoring", "Sleep Tracking", "Recovery Metrics"]
+      metrics: ["Nutation", "HRV Monitoring", "Sleep Tracking", "Recovery Metrics", "Vo2Max", "No Sugar", "Low Carb"]
     },
     {
       year: "Q2/2025",
@@ -52,7 +52,7 @@ const PersonalJourney = () => {
     {
       year: "Q3/2025",
       title: "First MVP on Mabu.red",
-      description: "Evaluating AI Development Cycle with Windsurf, Lovable, Claude Code and MCP Servers like ",
+      description: "Evaluating AI Development Cycle with Windsurf, Lovable, Claude Code and MCP Servers. Preparing for Triathlon",
       status: "current",
       metrics: ["AI Agent Systems", "Epigenetic Knowledge Base", "Molecular Medicine", "Device Testing", "Blood Test Protocols"]
     },
