@@ -51,15 +51,22 @@ const PersonalJourney = () => {
     },
     {
       year: "Q3/2025",
+      title: "First MVP on Mabu.red",
+      description: "Evaluating AI Development Cycle with Windsurf, Lovable, Claude Code and MCP Servers like ",
+      status: "current",
+      metrics: ["AI Agent Systems", "Epigenetic Knowledge Base", "Molecular Medicine", "Device Testing", "Blood Test Protocols"]
+    },
+    {
+      year: "Q3/2025",
       title: "Community Launch",
-      description: "Launch platform for early adopters and begin building a community of health optimizers. Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.",
-      status: "planned",
+      description: "Publish LinkedIn articles. Public Speaking on conferences. Launch platform for early adopters and begin building a community of health optimizers. Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.",
+      status: "current",
       metrics: ["Beta Testing", "User Feedback", "Feature Development", "Community Building"]
     },
     {
-      year: "2024",
+      year: "Q4/2024",
       title: "Platform Development",
-      description: "Full platform development with advanced features, AI-powered insights, and comprehensive health optimization tools.",
+      description: "Full Lifestyle and Longevity platform development with advanced features, AI-powered insights, and comprehensive health optimization MCP Servers.",
       status: "planned",
       metrics: ["AI Integration", "Advanced Analytics", "User Dashboard", "Mobile App"]
     }
