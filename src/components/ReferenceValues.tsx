@@ -14,7 +14,7 @@ const ReferenceValues = () => {
     {
       category: "Cardiovascular",
       shortName: "Cardio",
-      expert: "Dr. Peter Attia, Dr. Thomas Dayspring, Dr. Ulrich Strunz",
+      expert: "Dr. Peter Attia, Dr. Thomas Dayspring, Dr. Ulrich Strunz, Thiemo Osterhaus",
       markers: [
         { 
           name: "Total Cholesterol", 
@@ -22,7 +22,7 @@ const ReferenceValues = () => {
           official: "< 240", 
           unit: "mg/dL",
           description: "Total amount of cholesterol in blood. Lower levels associated with reduced cardiovascular risk.",
-          clinical: "Official ranges allow higher levels but optimal ranges focus on longevity. Strunz recommends < 180 mg/dL for optimal health."
+          clinical: "Official ranges allow higher levels but optimal ranges focus on longevity. Strunz recommends < 180 mg/dL, Osterhaus emphasizes < 200 mg/dL for optimal health."
         },
         { 
           name: "LDL Cholesterol", 
@@ -30,7 +30,7 @@ const ReferenceValues = () => {
           official: "< 160", 
           unit: "mg/dL",
           description: "Low-density lipoprotein, often called 'bad' cholesterol. Primary target for cardiovascular risk reduction.",
-          clinical: "Optimal levels significantly lower than official recommendations. Strunz targets < 70 mg/dL for high-risk patients. One of the 'bad' lipoproteins that carries ApoB."
+          clinical: "Optimal levels significantly lower than official recommendations. Strunz targets < 70 mg/dL for high-risk patients, Osterhaus < 100 mg/dL. One of the 'bad' lipoproteins that carries ApoB."
         },
         { 
           name: "HDL Cholesterol", 
@@ -38,7 +38,7 @@ const ReferenceValues = () => {
           official: "> 40 (M), > 50 (F)", 
           unit: "mg/dL",
           description: "High-density lipoprotein, 'good' cholesterol that helps remove other cholesterol from arteries.",
-          clinical: "Higher levels provide cardioprotective benefits. Strunz emphasizes HDL > 60 mg/dL for both sexes."
+          clinical: "Higher levels provide cardioprotective benefits. Strunz emphasizes HDL > 60 mg/dL for both sexes, Osterhaus recommends > 50 mg/dL for women, > 40 mg/dL for men."
         },
         { 
           name: "Triglycerides", 
@@ -46,7 +46,15 @@ const ReferenceValues = () => {
           official: "< 150", 
           unit: "mg/dL",
           description: "Blood fats that increase cardiovascular risk when elevated. Strongly linked to metabolic health.",
-          clinical: "Optimal levels significantly lower than official cutoffs. Strunz targets < 80 mg/dL for metabolic optimization. Another type of fat transported in the blood."
+          clinical: "Optimal levels significantly lower than official cutoffs. Strunz targets < 80 mg/dL, Osterhaus < 100 mg/dL for metabolic optimization. Another type of fat transported in the blood."
+        },
+        { 
+          name: "Omega-3 Index", 
+          optimal: "> 8", 
+          official: "4-11", 
+          unit: "%",
+          description: "Percentage of EPA and DHA in red blood cell membranes. Critical for cardiovascular health and lipid metabolism.",
+          clinical: "Osterhaus emphasizes > 8% for optimal cardiovascular protection. Low index linked to higher mortality risk - 'the new smoking'. Directly impacts lipid profiles by reducing triglycerides, supporting HDL function, and reducing inflammatory markers. Essential for membrane fluidity and cardiovascular disease prevention."
         },
         { 
           name: "Apolipoprotein B (ApoB)", 
@@ -54,7 +62,7 @@ const ReferenceValues = () => {
           official: "< 120", 
           unit: "mg/dL",
           description: "Found on all 'bad' lipoproteins (like LDL) and strongly correlated with increased cardiovascular disease risk. More informative than LDL alone.",
-          clinical: "Optimal levels focus on particle count rather than just cholesterol content. Strunz recommends < 70 mg/dL."
+          clinical: "Optimal levels focus on particle count rather than just cholesterol content. Strunz recommends < 70 mg/dL, Osterhaus < 80 mg/dL."
         },
         { 
           name: "Lipoprotein (a)", 
@@ -62,15 +70,15 @@ const ReferenceValues = () => {
           official: "< 50", 
           unit: "mg/dL",
           description: "Genetic risk factor for cardiovascular disease. Independent predictor of cardiovascular events.",
-          clinical: "Lower levels preferred as this is largely genetically determined and difficult to modify."
+          clinical: "Lower levels preferred as this is largely genetically determined and difficult to modify. Osterhaus recommends < 30 mg/dL."
         },
         { 
           name: "Homocysteine", 
-          optimal: "< 7", 
+          optimal: "< 8", 
           official: "< 15", 
           unit: "μmol/L",
           description: "Amino acid whose elevated levels are linked to cardiovascular risk. Often correlates with deficiencies in Vitamin B6, B9 (Folic acid), or B12.",
-          clinical: "Strunz emphasizes < 6 μmol/L. Lower levels indicate better methylation and B-vitamin status."
+          clinical: "Strunz emphasizes < 6 μmol/L, Osterhaus < 8 μmol/L. Lower levels indicate better methylation and B-vitamin status."
         },
         { 
           name: "Blood Pressure (Systolic)", 
@@ -78,7 +86,7 @@ const ReferenceValues = () => {
           official: "< 140", 
           unit: "mmHg",
           description: "Critical for cardiovascular health. Hypertension often goes unnoticed in early stages.",
-          clinical: "Regular monitoring especially important for women in/after menopause and men with erectile dysfunction, which can be early warning of blood vessel issues."
+          clinical: "Regular monitoring especially important for women in/after menopause and men with erectile dysfunction, which can be early warning of blood vessel issues. Osterhaus targets < 130 mmHg."
         },
         { 
           name: "Blood Pressure (Diastolic)", 
@@ -86,7 +94,7 @@ const ReferenceValues = () => {
           official: "< 90", 
           unit: "mmHg",
           description: "Lower number in blood pressure reading, reflects pressure when heart is resting between beats.",
-          clinical: "Normal values typically around 80. Important to monitor regularly as part of cardiovascular risk assessment."
+          clinical: "Normal values typically around 80. Important to monitor regularly as part of cardiovascular risk assessment. Osterhaus recommends < 85 mmHg."
         },
         { 
           name: "C-Reactive Protein", 
@@ -94,22 +102,22 @@ const ReferenceValues = () => {
           official: "< 3.0", 
           unit: "mg/L",
           description: "Marker of systemic inflammation and general inflammation in the body. Elevated levels predict cardiovascular events.",
-          clinical: "Should always be measured alongside Ferritin as inflammation can falsely elevate ferritin levels. High CRP indicates 'silent inflammation' contributing to aging."
+          clinical: "Should always be measured alongside Ferritin as inflammation can falsely elevate ferritin levels. High CRP indicates 'silent inflammation' contributing to aging. Osterhaus emphasizes < 1.0 mg/L for optimal health."
         }
       ]
     },
     {
       category: "Metabolic",
       shortName: "Metabolic",
-      expert: "Dr. Benjamin Bikman, Dr. Jason Fung, Dr. Ulrich Strunz",
+      expert: "Dr. Benjamin Bikman, Dr. Jason Fung, Dr. Ulrich Strunz, Thiemo Osterhaus",
       markers: [
         { 
           name: "Fasting Glucose", 
-          optimal: "70-85", 
+          optimal: "70-100", 
           official: "70-99", 
           unit: "mg/dL",
           description: "Blood sugar after 8+ hours fasting. Reflects glucose homeostasis and insulin sensitivity.",
-          clinical: "Optimal range prevents progression to prediabetes. Strunz targets 70-80 mg/dL for metabolic flexibility."
+          clinical: "Optimal range prevents progression to prediabetes. Strunz targets 70-80 mg/dL, Osterhaus < 100 mg/dL for metabolic flexibility."
         },
         { 
           name: "HbA1c", 
@@ -117,7 +125,7 @@ const ReferenceValues = () => {
           official: "< 5.7", 
           unit: "%",
           description: "Long-term blood sugar providing average blood glucose over several months. Key diagnostic marker for diabetes and relevant for longevity.",
-          clinical: "Optimal levels prevent glycation damage. Strunz recommends < 5.2% for longevity optimization. Measurement method can influence results."
+          clinical: "Optimal levels prevent glycation damage. Strunz recommends < 5.2%, Osterhaus < 5.3% for longevity optimization. Measurement method can influence results."
         },
         { 
           name: "HOMA Index", 
@@ -153,11 +161,11 @@ const ReferenceValues = () => {
         },
         { 
           name: "Ferritin", 
-          optimal: "50-150 (M), 30-100 (F)", 
-          official: "30-400 (M), 15-200 (F)", 
+          optimal: "80-150 (F), 100-200 (M)", 
+          official: "15-200 (F), 30-400 (M)", 
           unit: "ng/mL",
           description: "Primary marker for iron stores. Low ferritin indicates iron deficiency even if hemoglobin is normal. Can be falsely elevated by inflammation (CRP).",
-          clinical: "Very common deficiency especially in women of childbearing age, athletes, vegetarians. Optimal ranges: women 100-120 µg/L, men 100-150 µg/L. Always measure with HB, Transferrin Saturation, and CRP."
+          clinical: "Very common deficiency especially in women of childbearing age, athletes, vegetarians. Osterhaus optimal ranges: women 80-150 ng/mL, men 100-200 ng/mL. Always measure with HB, Transferrin Saturation, and CRP."
         },
         { 
           name: "Adiponectin", 
@@ -180,7 +188,7 @@ const ReferenceValues = () => {
     {
       category: "Vitamins & Nutrients",
       shortName: "Vitamins",
-      expert: "Dr. Rhonda Patrick, Dr. Michael Holick, Dr. Helena Orfanos-Boeckel",
+      expert: "Dr. Rhonda Patrick, Dr. Michael Holick, Dr. Helena Orfanos-Boeckel, Thiemo Osterhaus",
       markers: [
         { 
           name: "Vitamin D (25-OH)", 
@@ -188,7 +196,7 @@ const ReferenceValues = () => {
           official: "20-50", 
           unit: "ng/mL",
           description: "Crucial for immune function, bone health, mood regulation, neurotransmitter formation, and hormone modulation. Up to 60% of Germans estimated deficient.",
-          clinical: "Co-factors: Vitamin K2, Magnesium, Calcium, Boron. Higher doses recommended (2500 IU summer, 5000 IU winter). Critical for fertility and egg quality."
+          clinical: "Co-factors: Vitamin K2, Magnesium, Calcium, Boron. Higher doses recommended (2500 IU summer, 5000 IU winter). Critical for fertility and egg quality. Osterhaus targets 40-60 ng/mL."
         },
         { 
           name: "Vitamin D (1,25-OH)", 
@@ -216,19 +224,19 @@ const ReferenceValues = () => {
         },
         { 
           name: "B12 (Holotranscobalamin)", 
-          optimal: "> 500", 
+          optimal: "> 400", 
           official: "200-900", 
           unit: "pg/mL",
           description: "Essential for nervous system function and reducing fatigue. Deficiency can cause irreversible nerve damage. More accurate than total B12.",
-          clinical: "Critical for vegetarians/vegans. High doses recommended for neurodegenerative/psychiatric diseases and exhaustion. Works with CoQ10 for mitochondrial function."
+          clinical: "Critical for vegetarians/vegans. High doses recommended for neurodegenerative/psychiatric diseases and exhaustion. Osterhaus emphasizes > 400 pg/mL. Works with CoQ10 for mitochondrial function."
         },
         { 
           name: "Folate (Vitamin B9)", 
-          optimal: "> 15", 
+          optimal: "> 10", 
           official: "3-17", 
           unit: "ng/mL",
           description: "Essential for normal blood formation and reducing fatigue. Increased demand in women of childbearing age, pregnancy, and lactation.",
-          clinical: "Higher levels support optimal methylation. Orfanos-Boeckel emphasizes > 20 ng/mL for cardiovascular health."
+          clinical: "Higher levels support optimal methylation. Orfanos-Boeckel emphasizes > 20 ng/mL, Osterhaus > 10 ng/mL for cardiovascular health."
         },
         { 
           name: "Vitamin B6 (Pyridoxine)", 
@@ -291,15 +299,15 @@ const ReferenceValues = () => {
     {
       category: "Minerals & Trace Elements",
       shortName: "Minerals",
-      expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
+      expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz, Thiemo Osterhaus",
       markers: [
         { 
           name: "Iron (Ferritin)", 
-          optimal: "100-120 (F), 100-150 (M)", 
+          optimal: "80-150 (F), 100-200 (M)", 
           official: "15-200 (F), 30-400 (M)", 
           unit: "μg/L",
           description: "Primary iron storage marker. Symptoms of deficiency: chronic fatigue, hair loss, brittle nails, concentration problems, reduced fertility.",
-          clinical: "Co-factors: Vitamin C, B12, Folic Acid, Copper. Common deficiency in menstruating women, athletes, vegetarians. Can be falsely elevated by inflammation."
+          clinical: "Co-factors: Vitamin C, B12, Folic Acid, Copper. Common deficiency in menstruating women, athletes, vegetarians. Can be falsely elevated by inflammation. Osterhaus: women 80-150 μg/L, men 100-200 μg/L."
         },
         { 
           name: "Hemoglobin (HB)", 
@@ -386,7 +394,7 @@ const ReferenceValues = () => {
     {
       category: "Hormones & Thyroid",
       shortName: "Hormones",
-      expert: "Dr. David Brownstein, Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
+      expert: "Dr. David Brownstein, Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz, Thiemo Osterhaus",
       markers: [
         { 
           name: "TSH", 
@@ -394,7 +402,7 @@ const ReferenceValues = () => {
           official: "0.4-4.0", 
           unit: "mIU/L",
           description: "Thyroid Stimulating Hormone. While commonly measured, TSH alone is insufficient for comprehensive thyroid assessment.",
-          clinical: "Narrower optimal range for metabolic efficiency. Orfanos-Boeckel targets 1.0-1.5 mIU/L. Thyroid issues linked to hair loss, fatigue, fertility problems."
+          clinical: "Narrower optimal range for metabolic efficiency. Orfanos-Boeckel targets 1.0-1.5 mIU/L, Osterhaus 1.0-2.0 mIU/L. Thyroid issues linked to hair loss, fatigue, fertility problems."
         },
         { 
           name: "Free T3 (fT3)", 
@@ -522,14 +530,6 @@ const ReferenceValues = () => {
           unit: "μmol/L",
           description: "Master antioxidant and main detoxification molecule. Protects cells, supports immune system, safeguards gut and brain barriers.",
           clinical: "Deficiency common due to environmental toxins. Orfanos-Boeckel targets > 1000 μmol/L for optimal detox capacity."
-        },
-        { 
-          name: "Omega-3 Index", 
-          optimal: "> 8", 
-          official: "4-11", 
-          unit: "%",
-          description: "Percentage of EPA and DHA in red blood cell membranes. Low index linked to higher mortality risk - 'the new smoking' due to widespread deficiency.",
-          clinical: "Best measured in EDTA blood. Most people have too much Omega-6 relative to Omega-3. Critical for cardiovascular, brain health, inflammation, fertility."
         },
         { 
           name: "Telomere Length", 
@@ -734,7 +734,7 @@ const ReferenceValues = () => {
     {
       category: "Liver & Detox",
       shortName: "Liver",
-      expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
+      expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz, Thiemo Osterhaus",
       markers: [
         { 
           name: "GOT (AST)", 
@@ -742,7 +742,7 @@ const ReferenceValues = () => {
           official: "< 40", 
           unit: "U/L",
           description: "Glutamate Oxaloacetate Transaminase (AST), liver enzyme indicating hepatocellular damage and liver function.",
-          clinical: "Lower levels within normal range indicate better cellular health and liver function."
+          clinical: "Lower levels within normal range indicate better cellular health and liver function. Osterhaus targets < 25 U/L."
         },
         { 
           name: "GPT (ALT)", 
@@ -750,7 +750,7 @@ const ReferenceValues = () => {
           official: "< 40", 
           unit: "U/L",
           description: "Glutamate Pyruvate Transaminase (ALT), liver enzyme that indicates hepatocellular damage.",
-          clinical: "Lower levels indicate better liver health. Orfanos-Boeckel targets < 20 U/L for optimal function."
+          clinical: "Lower levels indicate better liver health. Orfanos-Boeckel targets < 20 U/L, Osterhaus < 25 U/L for optimal function."
         },
         { 
           name: "Gamma GT", 
@@ -758,7 +758,7 @@ const ReferenceValues = () => {
           official: "< 60", 
           unit: "U/L",
           description: "Gamma-Glutamyl Transferase, enzyme involved in glutathione metabolism and detox. Elevated levels correlated with higher risk of earlier mortality.",
-          clinical: "Lower levels indicate better liver function and glutathione status. Strunz targets < 25 U/L."
+          clinical: "Lower levels indicate better liver function and glutathione status. Strunz targets < 25 U/L, Osterhaus < 30 U/L."
         },
         { 
           name: "Bilirubin", 
@@ -805,7 +805,7 @@ const ReferenceValues = () => {
     {
       category: "Kidney & Electrolytes",
       shortName: "Kidney",
-      expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz",
+      expert: "Dr. Helena Orfanos-Boeckel, Dr. Ulrich Strunz, Thiemo Osterhaus",
       markers: [
         { 
           name: "Cystatin C", 
@@ -837,7 +837,7 @@ const ReferenceValues = () => {
           official: "> 90", 
           unit: "mL/min/1.73m²",
           description: "Estimated glomerular filtration rate, best overall measure of kidney function.",
-          clinical: "Higher levels indicate better kidney function and longevity. Orfanos-Boeckel targets > 100."
+          clinical: "Higher levels indicate better kidney function and longevity. Orfanos-Boeckel targets > 100, Osterhaus > 90."
         },
         { 
           name: "Sodium", 
@@ -1075,7 +1075,7 @@ const ReferenceValues = () => {
             </CardHeader>
             <CardContent>
               <p className="text-sm text-emerald-700">
-                Based on latest longevity research from leading experts including Dr. Strunz and Dr. Orfanos-Boeckel, 
+                Based on latest longevity research from leading experts including Dr. Strunz, Dr. Orfanos-Boeckel, and Thiemo Osterhaus, 
                 representing values associated with healthspan optimization and reduced disease risk.
               </p>
             </CardContent>
