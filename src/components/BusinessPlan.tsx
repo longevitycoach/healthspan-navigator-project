@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ChevronLeft, ChevronRight, Users, Github, Mail, Heart, Target, TrendingUp, DollarSign } from "lucide-react";
+import { ChevronLeft, ChevronRight, Users, Github, Mail, Heart, Target, TrendingUp, DollarSign, Lightbulb, Shield, Globe } from "lucide-react";
 
 const BusinessPlan = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -50,39 +50,55 @@ const BusinessPlan = () => {
       )
     },
     {
-      title: "Market Opportunity",
+      title: "Market Analysis",
       icon: <TrendingUp className="w-8 h-8 text-emerald-600" />,
       content: (
         <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-center mb-6">Growing Market Demand</h3>
+          <h3 className="text-2xl font-bold text-center mb-6">Market Opportunity & Trends</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Card className="text-center">
+            <Card className="text-center border-blue-200">
               <CardContent className="pt-6">
                 <div className="text-3xl font-bold text-blue-600 mb-2">$4.4T</div>
-                <div className="text-sm text-slate-600">Global Healthcare Market</div>
+                <div className="text-sm text-slate-600 mb-2">Global Healthcare Market</div>
+                <div className="text-xs text-slate-500">Growing 5.4% annually</div>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center border-emerald-200">
               <CardContent className="pt-6">
                 <div className="text-3xl font-bold text-emerald-600 mb-2">$659B</div>
-                <div className="text-sm text-slate-600">Wellness Industry</div>
+                <div className="text-sm text-slate-600 mb-2">Wellness Industry</div>
+                <div className="text-xs text-slate-500">Expected 7.8% CAGR</div>
               </CardContent>
             </Card>
-            <Card className="text-center">
+            <Card className="text-center border-purple-200">
               <CardContent className="pt-6">
                 <div className="text-3xl font-bold text-purple-600 mb-2">$27B</div>
-                <div className="text-sm text-slate-600">Longevity Market by 2030</div>
+                <div className="text-sm text-slate-600 mb-2">Longevity Market by 2030</div>
+                <div className="text-xs text-slate-500">44% compound growth</div>
               </CardContent>
             </Card>
           </div>
-          <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg">
-            <h4 className="font-semibold mb-3">Key Market Drivers</h4>
-            <ul className="space-y-2 text-slate-600">
-              <li>• Aging population seeking healthspan optimization</li>
-              <li>• Growing interest in preventive healthcare</li>
-              <li>• Increased adoption of health tracking devices</li>
-              <li>• Rising healthcare costs driving prevention focus</li>
-            </ul>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg">
+              <h4 className="font-semibold mb-3 text-blue-800">Market Drivers</h4>
+              <ul className="space-y-2 text-slate-600 text-sm">
+                <li>• Aging global population (2.1B people 60+ by 2050)</li>
+                <li>• Rising healthcare costs driving prevention focus</li>
+                <li>• Increased adoption of wearable health devices</li>
+                <li>• Growing awareness of personalized medicine</li>
+                <li>• COVID-19 accelerated health consciousness</li>
+              </ul>
+            </div>
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg">
+              <h4 className="font-semibold mb-3 text-purple-800">Target Demographics</h4>
+              <ul className="space-y-2 text-slate-600 text-sm">
+                <li>• Health-conscious millennials (25-40)</li>
+                <li>• Proactive Gen X professionals (40-55)</li>
+                <li>• Tech-savvy health optimizers</li>
+                <li>• Corporate wellness programs</li>
+                <li>• Healthcare professionals</li>
+              </ul>
+            </div>
           </div>
         </div>
       )
@@ -95,46 +111,143 @@ const BusinessPlan = () => {
           <h3 className="text-2xl font-bold text-center mb-6">Comprehensive Health Platform</h3>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Core Features</h4>
+              <h4 className="font-semibold text-lg">Core Platform Features</h4>
               <div className="space-y-3">
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
                   <div>
                     <div className="font-medium">Biomarker Tracking</div>
-                    <div className="text-sm text-slate-600">Comprehensive lab result analysis</div>
+                    <div className="text-sm text-slate-600">Comprehensive lab result analysis with trends</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-emerald-600 rounded-full mt-2"></div>
                   <div>
-                    <div className="font-medium">Trend Analysis</div>
-                    <div className="text-sm text-slate-600">AI-powered health insights</div>
+                    <div className="font-medium">AI-Powered Insights</div>
+                    <div className="text-sm text-slate-600">Machine learning trend analysis and predictions</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-2 h-2 bg-purple-600 rounded-full mt-2"></div>
                   <div>
                     <div className="font-medium">Personalized Recommendations</div>
-                    <div className="text-sm text-slate-600">Tailored lifestyle guidance</div>
+                    <div className="text-sm text-slate-600">Tailored lifestyle and supplement guidance</div>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="w-2 h-2 bg-pink-600 rounded-full mt-2"></div>
+                  <div>
+                    <div className="font-medium">Expert Network</div>
+                    <div className="text-sm text-slate-600">Access to longevity specialists and coaches</div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="space-y-4">
-              <h4 className="font-semibold text-lg">Differentiators</h4>
+              <h4 className="font-semibold text-lg">Competitive Advantages</h4>
               <div className="space-y-3">
-                <div className="bg-blue-50 p-3 rounded-lg">
+                <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-400">
                   <div className="font-medium text-blue-800">Scientific Rigor</div>
-                  <div className="text-sm text-blue-600">Evidence-based recommendations</div>
+                  <div className="text-sm text-blue-600">Evidence-based recommendations from peer-reviewed research</div>
                 </div>
-                <div className="bg-emerald-50 p-3 rounded-lg">
+                <div className="bg-emerald-50 p-4 rounded-lg border-l-4 border-emerald-400">
                   <div className="font-medium text-emerald-800">Holistic Approach</div>
-                  <div className="text-sm text-emerald-600">Beyond just tracking</div>
+                  <div className="text-sm text-emerald-600">Beyond tracking - actionable lifestyle optimization</div>
                 </div>
-                <div className="bg-purple-50 p-3 rounded-lg">
-                  <div className="font-medium text-purple-800">Community Focus</div>
-                  <div className="text-sm text-purple-600">Shared learning platform</div>
+                <div className="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-400">
+                  <div className="font-medium text-purple-800">Community Driven</div>
+                  <div className="text-sm text-purple-600">Peer learning and shared success stories</div>
                 </div>
+                <div className="bg-pink-50 p-4 rounded-lg border-l-4 border-pink-400">
+                  <div className="font-medium text-pink-800">Data Privacy</div>
+                  <div className="text-sm text-pink-600">User-controlled data with transparent policies</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Technology & Innovation",
+      icon: <Lightbulb className="w-8 h-8 text-yellow-600" />,
+      content: (
+        <div className="space-y-6">
+          <h3 className="text-2xl font-bold text-center mb-6">Technical Architecture & Innovation</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-l-4 border-l-blue-600">
+              <CardHeader>
+                <CardTitle className="text-blue-600">Technology Stack</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <div className="font-medium">Frontend</div>
+                  <div className="text-sm text-slate-600">React, TypeScript, Tailwind CSS</div>
+                </div>
+                <div>
+                  <div className="font-medium">Backend</div>
+                  <div className="text-sm text-slate-600">Supabase, PostgreSQL, Edge Functions</div>
+                </div>
+                <div>
+                  <div className="font-medium">AI/ML</div>
+                  <div className="text-sm text-slate-600">TensorFlow, Python, ML pipelines</div>
+                </div>
+                <div>
+                  <div className="font-medium">Integrations</div>
+                  <div className="text-sm text-slate-600">Lab APIs, Wearable devices, Health platforms</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-l-4 border-l-emerald-600">
+              <CardHeader>
+                <CardTitle className="text-emerald-600">Innovation Features</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-3">
+                <div>
+                  <div className="font-medium">Predictive Analytics</div>
+                  <div className="text-sm text-slate-600">AI models predicting health trends</div>
+                </div>
+                <div>
+                  <div className="font-medium">Personalization Engine</div>
+                  <div className="text-sm text-slate-600">Individual optimization algorithms</div>
+                </div>
+                <div>
+                  <div className="font-medium">Real-time Monitoring</div>
+                  <div className="text-sm text-slate-600">Continuous biomarker tracking</div>
+                </div>
+                <div>
+                  <div className="font-medium">Research Platform</div>
+                  <div className="text-sm text-slate-600">Contribute to longevity science</div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="bg-gradient-to-r from-yellow-50 to-orange-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-3 text-yellow-800">Development Roadmap</h4>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div>
+                <div className="font-medium text-sm text-yellow-700">Phase 1 (Q1-Q2 2024)</div>
+                <ul className="text-xs text-slate-600 mt-1 space-y-1">
+                  <li>• MVP launch with core tracking</li>
+                  <li>• Basic AI recommendations</li>
+                  <li>• Community features</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium text-sm text-yellow-700">Phase 2 (Q3-Q4 2024)</div>
+                <ul className="text-xs text-slate-600 mt-1 space-y-1">
+                  <li>• Advanced analytics</li>
+                  <li>• Expert consultations</li>
+                  <li>• Mobile app launch</li>
+                </ul>
+              </div>
+              <div>
+                <div className="font-medium text-sm text-yellow-700">Phase 3 (2025)</div>
+                <ul className="text-xs text-slate-600 mt-1 space-y-1">
+                  <li>• B2B partnerships</li>
+                  <li>• Research collaborations</li>
+                  <li>• International expansion</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -150,42 +263,265 @@ const BusinessPlan = () => {
           <div className="grid md:grid-cols-2 gap-6">
             <Card className="border-l-4 border-l-blue-600">
               <CardHeader>
-                <CardTitle className="text-blue-600">Freemium Model</CardTitle>
+                <CardTitle className="text-blue-600">Consumer Tiers</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="font-medium">Free Tier</div>
-                <ul className="text-sm text-slate-600 space-y-1">
-                  <li>• Basic biomarker tracking</li>
-                  <li>• Standard reference ranges</li>
-                  <li>• Community access</li>
-                </ul>
-                <div className="font-medium mt-3">Premium Tier ($29/month)</div>
-                <ul className="text-sm text-slate-600 space-y-1">
-                  <li>• Advanced analytics</li>
-                  <li>• Personalized recommendations</li>
-                  <li>• Expert consultations</li>
-                </ul>
+              <CardContent className="space-y-4">
+                <div>
+                  <div className="font-medium text-green-600">Free Tier</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Basic biomarker tracking</li>
+                    <li>• Standard reference ranges</li>
+                    <li>• Community access</li>
+                    <li>• Educational content</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium text-blue-600">Premium ($29/month)</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Advanced AI analytics</li>
+                    <li>• Personalized recommendations</li>
+                    <li>• Trend predictions</li>
+                    <li>• Priority support</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium text-purple-600">Pro ($99/month)</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Expert consultations</li>
+                    <li>• Custom protocols</li>
+                    <li>• Lab ordering integration</li>
+                    <li>• Research participation</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
             <Card className="border-l-4 border-l-emerald-600">
               <CardHeader>
-                <CardTitle className="text-emerald-600">Enterprise Solutions</CardTitle>
+                <CardTitle className="text-emerald-600">B2B Revenue Streams</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-2">
-                <div className="font-medium">B2B Partnerships</div>
-                <ul className="text-sm text-slate-600 space-y-1">
-                  <li>• Healthcare providers</li>
-                  <li>• Corporate wellness</li>
-                  <li>• Insurance companies</li>
-                </ul>
-                <div className="font-medium mt-3">Revenue Streams</div>
-                <ul className="text-sm text-slate-600 space-y-1">
-                  <li>• Licensing fees</li>
-                  <li>• Implementation services</li>
-                  <li>• Data insights (anonymized)</li>
-                </ul>
+              <CardContent className="space-y-4">
+                <div>
+                  <div className="font-medium text-emerald-700">Enterprise Solutions</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Corporate wellness programs</li>
+                    <li>• Healthcare provider licensing</li>
+                    <li>• Insurance partnerships</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium text-blue-700">Data & Research</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Anonymized health insights</li>
+                    <li>• Research collaborations</li>
+                    <li>• Pharmaceutical partnerships</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium text-purple-700">Platform Services</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• White-label solutions</li>
+                    <li>• API access licensing</li>
+                    <li>• Custom integrations</li>
+                  </ul>
+                </div>
               </CardContent>
             </Card>
+          </div>
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-3 text-green-800">Financial Projections</h4>
+            <div className="grid md:grid-cols-4 gap-4">
+              <div className="text-center">
+                <div className="text-lg font-bold text-green-600">Year 1</div>
+                <div className="text-sm text-slate-600">$500K ARR</div>
+                <div className="text-xs text-slate-500">1K+ users</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-bold text-blue-600">Year 2</div>
+                <div className="text-sm text-slate-600">$2.5M ARR</div>
+                <div className="text-xs text-slate-500">10K+ users</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-bold text-purple-600">Year 3</div>
+                <div className="text-sm text-slate-600">$8M ARR</div>
+                <div className="text-xs text-slate-500">50K+ users</div>
+              </div>
+              <div className="text-center">
+                <div className="text-lg font-bold text-emerald-600">Year 5</div>
+                <div className="text-sm text-slate-600">$25M ARR</div>
+                <div className="text-xs text-slate-500">200K+ users</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Risk Management",
+      icon: <Shield className="w-8 h-8 text-red-600" />,
+      content: (
+        <div className="space-y-6">
+          <h3 className="text-2xl font-bold text-center mb-6">Risk Assessment & Mitigation</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="space-y-4">
+              <h4 className="font-semibold text-lg text-red-700">Key Risks</h4>
+              <div className="space-y-3">
+                <Card className="border-l-4 border-l-red-400 bg-red-50">
+                  <CardContent className="p-4">
+                    <div className="font-medium text-red-800">Regulatory Changes</div>
+                    <div className="text-sm text-red-600 mt-1">
+                      Healthcare regulations could impact operations
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border-l-4 border-l-orange-400 bg-orange-50">
+                  <CardContent className="p-4">
+                    <div className="font-medium text-orange-800">Data Privacy</div>
+                    <div className="text-sm text-orange-600 mt-1">
+                      Strict requirements for health data handling
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border-l-4 border-l-yellow-400 bg-yellow-50">
+                  <CardContent className="p-4">
+                    <div className="font-medium text-yellow-800">Competition</div>
+                    <div className="text-sm text-yellow-600 mt-1">
+                      Large tech companies entering the space
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <h4 className="font-semibold text-lg text-green-700">Mitigation Strategies</h4>
+              <div className="space-y-3">
+                <Card className="border-l-4 border-l-green-400 bg-green-50">
+                  <CardContent className="p-4">
+                    <div className="font-medium text-green-800">Compliance First</div>
+                    <div className="text-sm text-green-600 mt-1">
+                      Built-in HIPAA, GDPR compliance from day one
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border-l-4 border-l-blue-400 bg-blue-50">
+                  <CardContent className="p-4">
+                    <div className="font-medium text-blue-800">Strategic Partnerships</div>
+                    <div className="text-sm text-blue-600 mt-1">
+                      Healthcare institutions and research organizations
+                    </div>
+                  </CardContent>
+                </Card>
+                <Card className="border-l-4 border-l-purple-400 bg-purple-50">
+                  <CardContent className="p-4">
+                    <div className="font-medium text-purple-800">Innovation Focus</div>
+                    <div className="text-sm text-purple-600 mt-1">
+                      Continuous R&D and feature differentiation
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+          <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-3">Risk Monitoring Framework</h4>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div>
+                <div className="font-medium text-slate-700">Monthly Reviews</div>
+                <div className="text-slate-600">Regulatory landscape monitoring</div>
+              </div>
+              <div>
+                <div className="font-medium text-slate-700">Quarterly Assessments</div>
+                <div className="text-slate-600">Competitive analysis and positioning</div>
+              </div>
+              <div>
+                <div className="font-medium text-slate-700">Annual Audits</div>
+                <div className="text-slate-600">Security and compliance reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Global Expansion",
+      icon: <Globe className="w-8 h-8 text-indigo-600" />,
+      content: (
+        <div className="space-y-6">
+          <h3 className="text-2xl font-bold text-center mb-6">International Growth Strategy</h3>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="border-l-4 border-l-indigo-600">
+              <CardHeader>
+                <CardTitle className="text-indigo-600">Market Expansion Plan</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <div className="font-medium text-indigo-700">Phase 1: DACH Region</div>
+                  <div className="text-sm text-slate-600">Germany, Austria, Switzerland</div>
+                  <div className="text-xs text-slate-500 mt-1">Strong health consciousness, regulatory alignment</div>
+                </div>
+                <div>
+                  <div className="font-medium text-blue-700">Phase 2: EU Expansion</div>
+                  <div className="text-sm text-slate-600">Netherlands, Nordics, UK</div>
+                  <div className="text-xs text-slate-500 mt-1">High digital adoption, preventive care focus</div>
+                </div>
+                <div>
+                  <div className="font-medium text-purple-700">Phase 3: Global Markets</div>
+                  <div className="text-sm text-slate-600">US, Canada, Australia, Japan</div>
+                  <div className="text-xs text-slate-500 mt-1">Large addressable markets, premium positioning</div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-l-4 border-l-emerald-600">
+              <CardHeader>
+                <CardTitle className="text-emerald-600">Localization Strategy</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div>
+                  <div className="font-medium text-emerald-700">Cultural Adaptation</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Local health practices integration</li>
+                    <li>• Regional dietary recommendations</li>
+                    <li>• Cultural wellness approaches</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium text-blue-700">Regulatory Compliance</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Local data protection laws</li>
+                    <li>• Healthcare regulations</li>
+                    <li>• Medical device certifications</li>
+                  </ul>
+                </div>
+                <div>
+                  <div className="font-medium text-purple-700">Partnership Network</div>
+                  <ul className="text-sm text-slate-600 space-y-1 mt-1">
+                    <li>• Local healthcare providers</li>
+                    <li>• Regional lab networks</li>
+                    <li>• Distribution partnerships</li>
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+          <div className="bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg">
+            <h4 className="font-semibold mb-3 text-indigo-800">Market Entry Timeline</h4>
+            <div className="space-y-3">
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium">DACH Market Entry</span>
+                <span className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded">Q2 2024</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium">EU Regulatory Approval</span>
+                <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">Q4 2024</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium">US Market Research</span>
+                <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">Q1 2025</span>
+              </div>
+              <div className="flex justify-between items-center">
+                <span className="text-sm font-medium">Global Platform Launch</span>
+                <span className="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded">Q3 2025</span>
+              </div>
+            </div>
           </div>
         </div>
       )
@@ -206,11 +542,11 @@ const BusinessPlan = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold mb-4">
             <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
-              Business Plan
+              Comprehensive Business Plan
             </span>
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Building the future of personalized longevity science
+            Building the future of personalized longevity science through strategic planning and innovation
           </p>
         </div>
 
@@ -249,6 +585,21 @@ const BusinessPlan = () => {
             {slides[currentSlide].content}
           </CardContent>
         </Card>
+
+        {/* Quick Navigation */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {slides.map((slide, index) => (
+            <Button
+              key={index}
+              variant={currentSlide === index ? "default" : "outline"}
+              size="sm"
+              onClick={() => setCurrentSlide(index)}
+              className="text-xs"
+            >
+              {slide.title}
+            </Button>
+          ))}
+        </div>
 
         {/* Call for Contributors */}
         <Card className="shadow-xl">
