@@ -141,73 +141,184 @@ const BusinessPlan = () => {
       content: (
         <div className="space-y-6">
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">Multi-Tier Revenue Strategy</h3>
-            <p className="text-slate-600">Scalable business model serving both consumers and enterprises</p>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2">Freemium to Enterprise Strategy</h3>
+            <p className="text-slate-600">Tiered access model driving user acquisition and revenue growth</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-blue-900">B2C Consumer Tiers</h4>
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Free Tier */}
+            <div className="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-gray-900">Free Tier</h4>
+                <p className="text-2xl font-bold text-gray-600 mt-2">€0/month</p>
+                <p className="text-sm text-gray-500">Gateway to longevity</p>
+              </div>
               
-              <div className="bg-gray-50 p-4 rounded-lg border">
-                <h5 className="font-semibold text-gray-900">Basic Tier - €29/month</h5>
-                <ul className="text-sm text-gray-700 mt-2 space-y-1">
-                  <li>• Basic biomarker analysis</li>
-                  <li>• General health recommendations</li>
-                  <li>• Monthly progress tracking</li>
+              <div className="space-y-3 mb-6">
+                <h5 className="font-semibold text-gray-800">Access Includes:</h5>
+                <ul className="text-sm text-gray-700 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Basic biomarker reference values</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>General health articles & resources</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Basic health calculators</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Community forum access</span>
+                  </li>
                 </ul>
               </div>
               
-              <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
-                <h5 className="font-semibold text-blue-900">Premium Tier - €99/month</h5>
-                <ul className="text-sm text-blue-800 mt-2 space-y-1">
-                  <li>• Comprehensive biomarker analysis</li>
-                  <li>• AI-powered personalized protocols</li>
-                  <li>• Weekly coaching sessions</li>
-                  <li>• Advanced tracking & analytics</li>
-                </ul>
-              </div>
-              
-              <div className="bg-green-50 p-4 rounded-lg border border-green-200">
-                <h5 className="font-semibold text-green-900">Elite Tier - €299/month</h5>
-                <ul className="text-sm text-green-800 mt-2 space-y-1">
-                  <li>• Complete longevity optimization</li>
-                  <li>• 1-on-1 expert consultations</li>
-                  <li>• Cutting-edge biomarker testing</li>
-                  <li>• Concierge health coordination</li>
+              <div className="border-t pt-4">
+                <h5 className="font-semibold text-gray-800 mb-2">Limitations:</h5>
+                <ul className="text-sm text-gray-600 space-y-1">
+                  <li>• No personalized recommendations</li>
+                  <li>• No biomarker analysis</li>
+                  <li>• No AI coaching</li>
+                  <li>• Limited content access</li>
                 </ul>
               </div>
             </div>
-            
-            <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-blue-900">B2B Enterprise Revenue</h4>
-              
-              <div className="bg-purple-50 p-4 rounded-lg">
-                <h5 className="font-semibold text-purple-900">Corporate Wellness</h5>
-                <p className="text-sm text-purple-800 mt-2">
-                  €50-200/employee/month for company health optimization programs
-                </p>
+
+            {/* Premium Tier */}
+            <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300 relative">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                  MOST POPULAR
+                </span>
               </div>
               
-              <div className="bg-orange-50 p-4 rounded-lg">
-                <h5 className="font-semibold text-orange-900">Healthcare Partnerships</h5>
-                <p className="text-sm text-orange-800 mt-2">
-                  Revenue sharing with clinics and hospitals for preventive care programs
-                </p>
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-blue-900">Premium</h4>
+                <p className="text-2xl font-bold text-blue-600 mt-2">€99/month</p>
+                <p className="text-sm text-blue-700">Personal optimization</p>
               </div>
               
-              <div className="bg-indigo-50 p-4 rounded-lg">
-                <h5 className="font-semibold text-indigo-900">API & Data Licensing</h5>
-                <p className="text-sm text-indigo-800 mt-2">
-                  Licensing our AI algorithms and anonymized health insights to research institutions
-                </p>
+              <div className="space-y-3 mb-6">
+                <h5 className="font-semibold text-blue-800">Everything in Free +</h5>
+                <ul className="text-sm text-blue-800 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>AI-powered personalized protocols</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Comprehensive biomarker analysis</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Weekly coaching sessions</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Advanced tracking & analytics</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Supplement recommendations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Lab test interpretations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Priority support</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Enterprise Tier */}
+            <div className="bg-green-50 p-6 rounded-lg border-2 border-green-300">
+              <div className="text-center mb-4">
+                <h4 className="text-xl font-bold text-green-900">Enterprise</h4>
+                <p className="text-2xl font-bold text-green-600 mt-2">€299/month</p>
+                <p className="text-sm text-green-700">Complete optimization</p>
               </div>
               
-              <div className="bg-teal-50 p-4 rounded-lg">
-                <h5 className="font-semibold text-teal-900">Insurance Integration</h5>
-                <p className="text-sm text-teal-800 mt-2">
-                  Premium reductions for users with improved health metrics
-                </p>
+              <div className="space-y-3 mb-6">
+                <h5 className="font-semibold text-green-800">Everything in Premium +</h5>
+                <ul className="text-sm text-green-800 space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>1-on-1 expert consultations</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Cutting-edge biomarker testing</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Concierge health coordination</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Custom protocol development</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>Direct physician access</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-green-500 mt-1">✓</span>
+                    <span>White-label solutions</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* B2B Revenue Streams */}
+          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg">
+            <h4 className="text-xl font-semibold text-purple-900 mb-4">B2B Revenue Streams</h4>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-lg">
+                <h5 className="font-semibold text-purple-900 mb-2">Corporate Wellness</h5>
+                <p className="text-sm text-purple-800 mb-2">€50-200/employee/month</p>
+                <ul className="text-xs text-purple-700 space-y-1">
+                  <li>• Company-wide health optimization</li>
+                  <li>• Executive health programs</li>
+                  <li>• Employee wellness dashboards</li>
+                  <li>• ROI tracking & reporting</li>
+                </ul>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg">
+                <h5 className="font-semibold text-purple-900 mb-2">Healthcare Partnerships</h5>
+                <p className="text-sm text-purple-800 mb-2">Revenue sharing 20-40%</p>
+                <ul className="text-xs text-purple-700 space-y-1">
+                  <li>• Clinic integration partnerships</li>
+                  <li>• Hospital preventive care programs</li>
+                  <li>• Insurance premium reductions</li>
+                  <li>• API licensing to health tech</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Conversion Strategy */}
+          <div className="bg-yellow-50 p-4 rounded-lg">
+            <h4 className="font-semibold text-yellow-900 mb-2">Freemium Conversion Strategy</h4>
+            <div className="grid md:grid-cols-3 gap-4 text-sm">
+              <div>
+                <div className="font-medium text-yellow-800">Free → Premium</div>
+                <div className="text-yellow-700">Target: 8-12% conversion rate</div>
+              </div>
+              <div>
+                <div className="font-medium text-yellow-800">Premium → Enterprise</div>
+                <div className="text-yellow-700">Target: 15-20% upgrade rate</div>
+              </div>
+              <div>
+                <div className="font-medium text-yellow-800">Average LTV</div>
+                <div className="text-yellow-700">€2,000+ per paid user</div>
               </div>
             </div>
           </div>
