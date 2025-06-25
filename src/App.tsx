@@ -4,11 +4,23 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import Resources from "./pages/Resources";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
+import LazyWrapper from "@/components/LazyWrapper";
 
-const queryClient = new QueryClient();
+// Lazy load pages for better performance
+const Index = lazy(() => import("./pages/Index"));
+const Resources = lazy(() => import("./pages/Resources"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 5 * 60 * 1000, // 5 minutes
+      cacheTime: 10 * 60 * 1000, // 10 minutes
+      refetchOnWindowFocus: false, // Reduce unnecessary refetches
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
@@ -17,10 +29,31 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/resources" element={<Resources />} />
+          <Route 
+            path="/" 
+            element={
+              <LazyWrapper>
+                <Index />
+              </LazyWrapper>
+            } 
+          />
+          <Route 
+            path="/resources" 
+            element={
+              <LazyWrapper>
+                <Resources />
+              </LazyWrapper>
+            } 
+          />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
+          <Route 
+            path="*" 
+            element={
+              <LazyWrapper>
+                <NotFound />
+              </LazyWrapper>
+            } 
+          />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

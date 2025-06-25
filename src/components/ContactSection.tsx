@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Linkedin } from "lucide-react";
+import { Mail, Linkedin, ExternalLink, BookOpen } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -47,6 +47,51 @@ const ContactSection = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Join the waitlist to be among the first to experience LongevityCoa.ch and optimize your healthspan
           </p>
+        </div>
+
+        {/* Educational Disclaimer */}
+        <div className="mb-12 p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border-l-4 border-amber-400">
+          <div className="flex items-start gap-3">
+            <BookOpen className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
+            <div>
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">Educational Purpose & Lifestyle Exploration</h3>
+              <p className="text-amber-700 text-sm leading-relaxed">
+                This project was started for educational purposes and lifestyle exploration. The information and tools provided 
+                are intended to help users learn about longevity science and health optimization. This platform is not intended 
+                to replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare providers 
+                before making changes to your health regimen.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* LinkedIn Article Reference */}
+        <div className="mb-12">
+          <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <Linkedin className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-slate-800 mb-2">
+                    Featured Article: The Science Behind Personalized Health Coaching
+                  </h3>
+                  <p className="text-slate-600 mb-4 text-sm">
+                    Dive deeper into the scientific foundation of our approach with this comprehensive article 
+                    exploring how current longevity research can be applied to create personalized health coaching solutions.
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="text-blue-600 border-blue-200 hover:bg-blue-50"
+                    onClick={() => window.open('https://www.linkedin.com/pulse/build-personalized-health-coach-based-current-state-buchhorn-roth-ptyfe/', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Read: "Build a personalized Health Coach based on the current state of science"
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
