@@ -22,7 +22,7 @@ const Resources = () => {
       title: "Outlive: The Science and Art of Longevity",
       author: "Peter Attia",
       description: "Comprehensive guide to extending healthspan through precision medicine",
-      url: "https://www.amazon.com/Outlive-Science-Art-Longevity-ebook/dp/B0B1BTJLJW"
+      url: "https://www.amazon.com/Outlive-Science-Art-Longevity/dp/0593236599"
     },
     {
       title: "The Blue Zones Solution",
@@ -38,14 +38,14 @@ const Resources = () => {
     },
     {
       title: "Breath: The New Science of a Lost Art",
-      author: "James Astor",
-      description: "Breath turns the conventional wisdom of what we thought we knew about our most basic biological function on its head (2020)",
+      author: "James Nestor",
+      description: "Revolutionary insights into the science of breathing and its impact on health",
       url: "https://www.amazon.com/Breath-New-Science-Lost-Art/dp/0735213615"
     },
     {
-      title: "Wim Hof Method",
+      title: "The Wim Hof Method",
       author: "Wim Hof",
-      description: "The inspired Tummo meditation offers a unique combination of physical strengthening, emotional cleansing. It can help to find inner balance and at the same time prepare the body for extreme conditions (2022)",
+      description: "Activate your full human potential through breathing, cold therapy, and commitment",
       url: "https://www.amazon.com/Wim-Hof-Method-Activate-Potential/dp/1683644766"
     }
   ];
@@ -54,101 +54,77 @@ const Resources = () => {
     {
       title: "Blut – Das Geheimnis unseres flüssigen Organs",
       author: "Dr. Ulrich Strunz",
-      description: "Audiable incl. in membership (2016)",
+      description: "Umfassende Analyse der Bedeutung von Blut für unsere Gesundheit",
       url: "https://www.amazon.de/Blut-Das-Geheimnis-unseres-fl%C3%BCssigen/dp/3453201892"
     },
     {
       title: "Der Schlüssel zur Gesundheit",
       author: "Dr. Ulrich Strunz",
-      description: "Grundlagen der Präventionsmedizin (2016)",
+      description: "Grundlagen der Präventionsmedizin und Gesundheitsoptimierung",
       url: "https://www.amazon.de/Schl%C3%BCssel-zur-Gesundheit-Ulrich-Strunz/dp/3453201973"
     },
     {
       title: "Ab morgen jünger!",
       author: "Nina Ruge",
-      description: "Neueste Erkenntnisse der Longevity-Forschung (2025)",
+      description: "Neueste Erkenntnisse der Longevity-Forschung praktisch angewandt",
       url: "https://www.amazon.de/Ab-morgen-j%C3%BCnger-Erkenntnisse-Longevity-Forschung/dp/3442178827"
     },
     {
-      title: "Die Amino-Revolution: Der Alters-Code entschlüsselt",
+      title: "Die Amino-Revolution",
       author: "Dr. Ulrich Strunz",
-      description: "Wissenschaftliche Ansätze zur Zellregeneration (2021)",
+      description: "Wie Aminosäuren den Alterungsprozess beeinflussen können",
       url: "https://www.amazon.de/Amino-Revolution-Alters-Code-entschl%C3%BCsselt-Strunz/dp/3453207793"
     },
     {
       title: "Nährstoff-Therapie",
       author: "Dr. med. Helena Orfanos-Boeckel",
-      description: "Orthomolekulare Medizin in der Praxis (2021)",
+      description: "Orthomolekulare Medizin in der praktischen Anwendung",
       url: "https://www.amazon.de/N%C3%A4hrstoff-Therapie-Orthomolekulare-Medizin-Praxis/dp/3432114524"
     },
     {
-      title: "Nährstoff-Therapie Praxis",
-      author: "Dr. med. Helena Orfanos-Boeckel",
-      description: "Praktische Anwendung der orthomolekularen Medizin (2023)",
-      url: "https://www.amazon.de/N%C3%A4hrstoff-Therapie-Praxis-Helena-Orfanos-Boeckel/dp/3432117515"
-    },
-    {
-      title: "Neue Wege der Heilung",
-      author: "Dr. Ulrich Strunz",
-      description: "Innovative Ansätze in der Präventivmedizin",
-      url: "https://www.amazon.de/Neue-Wege-Heilung-Ulrich-Strunz/dp/3453605756"
-    },
-    {
-      title: "Stoffwechsel-Kompass",
-      author: "Ingo Frohböse",
-      description: "Wissenschaftlich fundierter Leitfaden für optimalen Stoffwechsel",
-      url: "https://www.amazon.de/Stoffwechsel-Kompass-wissenschaftlich-fundierter-Leitfaden/dp/3833885181"
-    },
-    {
-      title: "Verjünge deine Gene",
-      author: "Prof. Dr. med. Bernd Kleine-Gunk & Bernhard Hobelsberger",
-      description: "Epigenetische Ansätze für gesundes Altern (2023)",
-      url: "https://www.amazon.de/Verj%C3%BCnge-deine-Gene-Kleine-Gunk/dp/3833885203"
-    },
-    {
-      title: "Der Glukose-Trick – Das Praxisbuch",
+      title: "Der Glukose-Trick",
       author: "Jessie Inchauspé",
-      description: "Praktische Strategien für stabilen Blutzucker (2023)",
-      url: "https://www.amazon.de/Glukose-Trick-Praxisbuch-Jessie-Inchausp%C3%A9/dp/3453218558"
+      description: "Praktische Strategien für stabilen Blutzucker und bessere Gesundheit",
+      url: "https://www.amazon.de/Glukose-Trick-Das-Praxisbuch-Jessie-Inchausp%C3%A9/dp/3453218558"
     },
     {
       title: "Darm mit Charme",
       author: "Giulia Enders",
-      description: "Alles über ein unterschätztes Organ (2017)",
+      description: "Alles über ein unterschätztes Organ und seine Bedeutung für die Gesundheit",
       url: "https://www.amazon.de/Darm-mit-Charme-untersch%C3%A4tztes-Organ/dp/3548376959"
     }
   ];
 
   const englishPodcasts = [
     {
-      title: "Lifespan",
+      title: "Lifespan with Dr. David Sinclair",
       host: "Dr. David Sinclair",
-      description: "Harvard professor dives into the science of aging and interventions that may slow or reverse it",
+      description: "Harvard professor explores the science of aging and longevity interventions",
       url: "https://podcasts.apple.com/us/podcast/lifespan-with-dr-david-sinclair/id1517529374"
     },
     {
-      title: "The Drive",
+      title: "The Drive with Dr. Peter Attia",
       host: "Dr. Peter Attia",
-      description: "Deep insights into nutrition, exercise, and disease prevention with health leaders",
+      description: "Deep insights into nutrition, exercise, sleep, and disease prevention",
       url: "https://peterattiamd.com/podcast/"
     },
     {
       title: "Huberman Lab",
       host: "Dr. Andrew Huberman",
-      description: "Stanford neuroscientist explores how neuroscience and lifestyle factors affect healthspan",
-      url: "https://hubermanlab.com/"
+      description: "Stanford neuroscientist explores science-based tools for everyday life",
+      url: "https://hubermanlab.com/podcast/"
     },
     {
       title: "FoundMyFitness",
-      host: "Rhonda Patrick, Ph.D.",
-      description: "Micronutrients, exercise, and evidence-based health optimization",
+      host: "Dr. Rhonda Patrick",
+      description: "Science-focused discussions on nutrition, aging, and health optimization",
       url: "https://www.foundmyfitness.com/podcast"
     },
     {
       title: "Longevity by Design",
       host: "Dr. Gil Blander",
-      description: "Leading scientists discuss the latest in aging research and practical strategies",
-      url: "https://www.insidetracker.com/blog/category/longevity-by-design-podcast"
+      description: "Conversations with leading scientists about aging research and practical strategies",
+      url: "https://www.insidetracker.com/longevity-by-design-podcast/"
     }
   ];
 
@@ -156,38 +132,32 @@ const Resources = () => {
     {
       title: "Healthwise",
       host: "Nils Behrens",
-      description: "Explores what true health means today, featuring conversations with specialists across medicine, therapy, and wellness",
-      url: "https://open.spotify.com/show/healthwise"
+      description: "Gespräche über moderne Gesundheit mit Experten aus Medizin und Wellness",
+      url: "https://open.spotify.com/show/2QiCahwZCkhDbR6zWvGpzc"
     },
     {
-      title: "Flowgrade",
+      title: "Flowgrade Show",
       host: "Max Gotzler",
-      description: "Expert interviews, how-to videos, recipes, and motivational clips to help you achieve your happiest and most powerful flow state",
+      description: "Biohacking, Performance und Gesundheitsoptimierung auf höchstem Niveau",
       url: "https://flowgrade.de/podcast/"
-    },
-    {
-      title: "Modern Medicine",
-      host: "Alessandro Falcone",
-      description: "Science-based longevity strategies with top experts, covering nutrition, fitness, and medical innovations",
-      url: "https://open.spotify.com/show/modern-medicine"
     },
     {
       title: "staYoung – Der Longevity-Podcast",
       host: "Nina Ruge",
-      description: "Expert interviews and practical advice on nutrition, epigenetics, and fitness for lifelong health and vitality",
+      description: "Expertengespräche über Ernährung, Epigenetik und Fitness für Langlebigkeit",
       url: "https://stayoung-podcast.de/"
     },
     {
       title: "Lifestyle of Longevity",
-      host: "Dr. Kati Ernst and Kristine Zeller",
-      description: "Personal longevity journey, offering routines, checklists, and actionable tips for a longer, healthier life",
+      host: "Dr. Kati Ernst & Kristine Zeller",
+      description: "Praktische Tipps und Routinen für ein längeres, gesünderes Leben",
       url: "https://lifestyle-of-longevity.com/podcast/"
     },
     {
-      title: "ERCM Medizin",
-      host: "Alexander Muacevic",
-      description: "Medizinische Expertise und innovative Behandlungsansätze",
-      url: "https://open.spotify.com/show/ercm-medizin"
+      title: "Bio360 - Gesundheit, Biohacking & Selbstoptimierung",
+      host: "Unkas Gemmeker",
+      description: "Ganzheitliche Gesundheit und Performance-Optimierung",
+      url: "https://bio360.de/podcast/"
     }
   ];
 
@@ -205,64 +175,61 @@ const Resources = () => {
       url: "https://www.youtube.com/@PeterAttiaMD"
     },
     {
-      title: "Rhonda Patrick",
-      description: "Nutrition science and healthspan research",
+      title: "FoundMyFitness",
+      description: "Dr. Rhonda Patrick's nutrition science and healthspan research",
       handle: "@FoundMyFitness",
       url: "https://www.youtube.com/@FoundMyFitness"
     },
     {
       title: "Ben Greenfield Life",
-      description: "Biohacking and performance optimization",
+      description: "Biohacking and performance optimization content",
       handle: "@BenGreenfieldLife",
       url: "https://www.youtube.com/@BenGreenfieldLife"
     },
     {
       title: "Thomas DeLauer",
-      description: "Intermittent fasting and metabolic health",
+      description: "Intermittent fasting, keto, and metabolic health education",
       handle: "@ThomasDeLauer",
       url: "https://www.youtube.com/@ThomasDeLauer"
+    },
+    {
+      title: "Huberman Lab Clips",
+      description: "Key insights from the Huberman Lab podcast",
+      handle: "@HubermanLabClips",
+      url: "https://www.youtube.com/@HubermanLabClips"
     }
   ];
 
   const germanYouTube = [
     {
-      title: "Healthwise",
-      description: "Nils Behrens explores what true health means today, featuring conversations with specialists across medicine, therapy, and wellness",
-      url: "https://www.youtube.com/@HealthwiseDE"
-    },
-    {
       title: "Flowgrade",
-      description: "Max Gotzler shared in expert interviews, how-to videos, recipes, and motivational clips to help you achieve your happiest and most powerful flow state",
-      url: "https://www.youtube.com/@FlowgradeDE"
-    },
-    {
-      title: "Modern Medicine",
-      description: "Alessandro Falcone discusses science-based longevity strategies with top experts, covering everything from nutrition and fitness to medical innovations",
-      url: "https://www.youtube.com/@ModernMedicineDE"
-    },
-    {
-      title: "Dr. med. Petra Bracht",
-      description: "Gesundheitstipps und Präventionsmedizin",
-      handle: "@DrPetraBracht",
-      url: "https://www.youtube.com/@DrPetraBracht"
-    },
-    {
-      title: "Max Gotzler",
-      description: "Biohacking und Gesundheitsoptimierung",
-      handle: "@MaxGotzler",
-      url: "https://www.youtube.com/@MaxGotzler"
-    },
-    {
-      title: "Flowgrade",
-      description: "Performance und Longevity auf Deutsch",
+      description: "Max Gotzler teilt Biohacking-Strategien und Gesundheitstipps",
       handle: "@FlowgradeDE",
       url: "https://www.youtube.com/@FlowgradeDE"
     },
     {
+      title: "Dr. med. Petra Bracht",
+      description: "Gesundheitstipps und Präventionsmedizin von der Ärztin",
+      handle: "@DrPetraBracht",
+      url: "https://www.youtube.com/@DrPetraBracht"
+    },
+    {
       title: "Prof. Dr. Spitz",
-      description: "Vitamin D und Präventionsmedizin",
+      description: "Vitamin D und Präventionsmedizin vom Experten",
       handle: "@ProfDrSpitz",
       url: "https://www.youtube.com/@ProfDrSpitz"
+    },
+    {
+      title: "Bio360",
+      description: "Unkas Gemmeker über ganzheitliche Gesundheit und Biohacking",
+      handle: "@Bio360",
+      url: "https://www.youtube.com/@Bio360"
+    },
+    {
+      title: "Healthwise",
+      description: "Nils Behrens diskutiert moderne Gesundheitsansätze",
+      handle: "@HealthwiseDE",
+      url: "https://www.youtube.com/@HealthwiseDE"
     }
   ];
 
