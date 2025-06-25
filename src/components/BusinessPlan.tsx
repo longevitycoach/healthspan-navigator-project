@@ -39,6 +39,30 @@ const BusinessPlan = () => {
     { company: "Opportunity Gap", marketShare: 30, valuation: 0 }
   ];
 
+  // Longevity community trends data
+  const longevityTrendsData = [
+    { year: "2020", searches: 100, podcasts: 45, books: 28, youtube: 35 },
+    { year: "2021", searches: 135, podcasts: 62, books: 41, youtube: 58 },
+    { year: "2022", searches: 180, podcasts: 89, books: 67, youtube: 94 },
+    { year: "2023", searches: 245, podcasts: 124, books: 89, youtube: 156 },
+    { year: "2024", searches: 320, podcasts: 167, books: 118, youtube: 234 }
+  ];
+
+  const contentCreatorsData = [
+    { platform: "YouTube Channels", count: 1200, avgViews: 85000, growth: 145 },
+    { platform: "Podcasts", count: 450, avgListeners: 12000, growth: 189 },
+    { platform: "Books Published", count: 280, avgSales: 8500, growth: 167 },
+    { platform: "Research Papers", count: 2400, citations: 45000, growth: 78 }
+  ];
+
+  const topLongevityInfluencersData = [
+    { name: "Dr. David Sinclair", platform: "Multi", followers: 2800000, engagement: 4.2 },
+    { name: "Dr. Peter Attia", platform: "Podcast/YT", followers: 1500000, engagement: 6.8 },
+    { name: "Dr. Rhonda Patrick", platform: "Podcast/YT", followers: 980000, engagement: 5.4 },
+    { name: "Bryan Johnson", platform: "Social/YT", followers: 850000, engagement: 8.1 },
+    { name: "Dr. Andrew Huberman", platform: "Podcast/YT", followers: 4200000, engagement: 7.9 }
+  ];
+
   const directCompetitors = [
     {
       name: "InsideTracker",
@@ -98,6 +122,38 @@ const BusinessPlan = () => {
     valuation: {
       label: "Valuation ($M)",
       color: "hsl(var(--chart-2))",
+    },
+    searches: {
+      label: "Google Searches",
+      color: "hsl(var(--chart-1))",
+    },
+    podcasts: {
+      label: "Podcasts",
+      color: "hsl(var(--chart-2))",
+    },
+    books: {
+      label: "Books",
+      color: "hsl(var(--chart-3))",
+    },
+    youtube: {
+      label: "YouTube Content",
+      color: "hsl(var(--chart-4))",
+    },
+    count: {
+      label: "Count",
+      color: "hsl(var(--chart-1))",
+    },
+    avgViews: {
+      label: "Avg Views/Listeners",
+      color: "hsl(var(--chart-2))",
+    },
+    followers: {
+      label: "Followers (M)",
+      color: "hsl(var(--chart-3))",
+    },
+    engagement: {
+      label: "Engagement Rate (%)",
+      color: "hsl(var(--chart-4))",
     }
   };
 
@@ -173,6 +229,135 @@ const BusinessPlan = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Longevity Community Trends */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Longevity Community Growth Trends (Indexed to 2020)</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ChartContainer config={chartConfig} className="h-[300px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart data={longevityTrendsData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <Line
+                      type="monotone"
+                      dataKey="searches"
+                      stroke="var(--color-searches)"
+                      strokeWidth={3}
+                      dot={{ r: 4 }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="podcasts"
+                      stroke="var(--color-podcasts)"
+                      strokeWidth={3}
+                      dot={{ r: 4 }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="books"
+                      stroke="var(--color-books)"
+                      strokeWidth={3}
+                      dot={{ r: 4 }}
+                    />
+                    <Line
+                      type="monotone"
+                      dataKey="youtube"
+                      stroke="var(--color-youtube)"
+                      strokeWidth={3}
+                      dot={{ r: 4 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+
+          {/* Content Creator Ecosystem */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Longevity Content Creator Ecosystem</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ChartContainer config={chartConfig} className="h-[250px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={contentCreatorsData}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="platform" angle={-45} textAnchor="end" height={80} />
+                      <YAxis />
+                      <ChartTooltip content={<ChartTooltipContent />} />
+                      <Bar dataKey="count" fill="var(--color-count)" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </ChartContainer>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Top Longevity Influencers & Engagement</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  {topLongevityInfluencersData.map((influencer, index) => (
+                    <div key={index} className="flex justify-between items-center p-3 bg-slate-50 rounded-lg">
+                      <div className="flex-1">
+                        <div className="font-medium text-sm">{influencer.name}</div>
+                        <div className="text-xs text-slate-600">{influencer.platform}</div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm font-medium">{(influencer.followers / 1000000).toFixed(1)}M</div>
+                        <div className="text-xs text-emerald-600">{influencer.engagement}% engagement</div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Community Insights */}
+          <Card className="bg-gradient-to-r from-blue-50 to-purple-50">
+            <CardHeader>
+              <CardTitle className="text-blue-800">Longevity Community Insights</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <h4 className="font-semibold mb-3 text-blue-700">Search Trends</h4>
+                  <ul className="space-y-2 text-sm text-slate-700">
+                    <li>• "Longevity" searches up 220% since 2020</li>
+                    <li>• "Biohacking" up 180% in same period</li>
+                    <li>• "Healthspan" emerging keyword (+340%)</li>
+                    <li>• Peak interest in Q4 (New Year effect)</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-3 text-purple-700">Content Growth</h4>
+                  <ul className="space-y-2 text-sm text-slate-700">
+                    <li>• 1,200+ longevity-focused YouTube channels</li>
+                    <li>• 450+ health optimization podcasts</li>
+                    <li>• 280+ longevity books published (2024)</li>
+                    <li>• 2,400+ peer-reviewed papers annually</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 className="font-semibold mb-3 text-emerald-700">Community Engagement</h4>
+                  <ul className="space-y-2 text-sm text-slate-700">
+                    <li>• Average 6.2% engagement rate</li>
+                    <li>• 78% male, 22% female audience</li>
+                    <li>• Primary age: 35-55 years</li>
+                    <li>• High purchasing intent (65%)</li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Market Growth Trends Chart */}
           <Card>
