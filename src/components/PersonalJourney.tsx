@@ -9,8 +9,7 @@ const PersonalJourney = () => {
     {
       year: "2018",
       title: "Health Awakening",
-      description: "Started tracking basic health metrics after realizing the importance of preventive care. 
-      Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time gym, Wim Hof Breathing.",
+      description: "Started tracking basic health metrics after realizing the importance of preventive care. Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time gym, Wim Hof Breathing.",
       status: "completed",
       metrics: ["Weight", "Blood Pressure"]
     },
