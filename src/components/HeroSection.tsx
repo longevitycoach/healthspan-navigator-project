@@ -40,7 +40,7 @@ const HeroSection = () => {
           })}>
               Start Your Journey
             </Button>
-            <Button variant="outline" size="lg" onClick={scrollToFeatures} className="text-lg px-8 py-6 border-2 border-white hover:border-white/90 transition-all duration-300 shadow-lg backdrop-blur-sm bg-fuchsia-500 hover:bg-fuchsia-400 rounded-sm text-fuchsia-100">
+            <Button variant="outline" size="lg" onClick={scrollToFeatures} className="text-lg px-8 py-6 border-2 border-white hover:border-white/90 transition-all duration-300 shadow-lg backdrop-blur-sm bg-fuchsia-500 hover:bg-fuchsia-400 text-fuchsia-100 rounded-full">
               Learn More
             </Button>
           </div>
