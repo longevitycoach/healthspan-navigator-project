@@ -454,43 +454,108 @@ const BusinessPlan = () => {
             </div>
             
             <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-blue-900">User Growth</h4>
+              <h4 className="text-xl font-semibold text-blue-900">User Growth by Tier</h4>
               
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Q3-Q4 2025</span>
-                    <span className="font-bold">250 users</span>
+                    <span className="font-bold">250 total</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">MVP launch, initial beta</div>
+                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
+                    <div>Free: 200</div>
+                    <div>Premium: 45</div>
+                    <div>Enterprise: 5</div>
+                  </div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 1 (2026)</span>
-                    <span className="font-bold">1,500 users</span>
+                    <span className="font-bold">1,500 total</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">Early adopters, product refinement</div>
+                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
+                    <div>Free: 1,200</div>
+                    <div>Premium: 270</div>
+                    <div>Enterprise: 30</div>
+                  </div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 2 (2027)</span>
-                    <span className="font-bold">7,000 users</span>
+                    <span className="font-bold">7,000 total</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">Marketing scale-up, partnerships</div>
+                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
+                    <div>Free: 5,250</div>
+                    <div>Premium: 1,575</div>
+                    <div>Enterprise: 175</div>
+                  </div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 3 (2028)</span>
-                    <span className="font-bold">22,000 users</span>
+                    <span className="font-bold">22,000 total</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">Market expansion, B2B growth</div>
+                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
+                    <div>Free: 15,400</div>
+                    <div>Premium: 5,720</div>
+                    <div>Enterprise: 880</div>
+                  </div>
                 </div>
                 <div className="p-3 bg-blue-100 rounded border border-blue-200">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 4 (2029)</span>
-                    <span className="font-bold">50,000 users</span>
+                    <span className="font-bold">50,000 total</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">International expansion</div>
+                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
+                    <div>Free: 32,500</div>
+                    <div>Premium: 15,000</div>
+                    <div>Enterprise: 2,500</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* User Distribution Breakdown */}
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
+            <h4 className="text-xl font-semibold mb-4">User Tier Distribution Strategy</h4>
+            <div className="grid md:grid-cols-3 gap-4">
+              <div className="bg-white p-4 rounded-lg">
+                <h5 className="font-semibold text-gray-900 mb-2">Free Users (65%)</h5>
+                <ul className="text-sm text-gray-700 space-y-1">
+                  <li>• Primary acquisition channel</li>
+                  <li>• Community building focus</li>
+                  <li>• Content consumption drivers</li>
+                  <li>• Conversion funnel entry point</li>
+                </ul>
+                <div className="mt-3 text-xs text-gray-600">
+                  Target conversion: 10-15% to Premium
+                </div>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg">
+                <h5 className="font-semibold text-blue-900 mb-2">Premium Users (30%)</h5>
+                <ul className="text-sm text-blue-800 space-y-1">
+                  <li>• Core revenue generators</li>
+                  <li>• Active platform users</li>
+                  <li>• Health optimization focused</li>
+                  <li>• Highest engagement rates</li>
+                </ul>
+                <div className="mt-3 text-xs text-blue-600">
+                  Target upgrade: 15-20% to Enterprise
+                </div>
+              </div>
+              
+              <div className="bg-white p-4 rounded-lg">
+                <h5 className="font-semibold text-green-900 mb-2">Enterprise Users (5%)</h5>
+                <ul className="text-sm text-green-800 space-y-1">
+                  <li>• Highest value customers</li>
+                  <li>• B2B partnerships</li>
+                  <li>• Corporate wellness</li>
+                  <li>• White-label solutions</li>
+                </ul>
+                <div className="mt-3 text-xs text-green-600">
+                  Highest LTV: €10,000+ per user
                 </div>
               </div>
             </div>
@@ -521,6 +586,8 @@ const BusinessPlan = () => {
               <li>• Customer acquisition cost (CAC) decreasing from €180 to €60</li>
               <li>• Customer lifetime value (LTV) increasing to €2,000</li>
               <li>• 12% monthly churn rate improving to 4% by Year 4</li>
+              <li>• Free-to-Premium conversion rate: 10-15%</li>
+              <li>• Premium-to-Enterprise upgrade rate: 15-20%</li>
             </ul>
           </div>
         </div>
