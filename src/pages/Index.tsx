@@ -7,6 +7,7 @@ import ReferenceValues from "@/components/ReferenceValues";
 import ContactSection from "@/components/ContactSection";
 import Navigation from "@/components/Navigation";
 import FeatureShowcase from "@/components/FeatureShowcase";
+import BusinessPlan from "@/components/BusinessPlan";
 
 const Index = () => {
   return (
@@ -16,6 +17,7 @@ const Index = () => {
       <FeatureShowcase />
       <PersonalJourney />
       <ReferenceValues />
+      <BusinessPlan />
       <ContactSection />
     </div>
   );
