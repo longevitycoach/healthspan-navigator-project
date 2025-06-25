@@ -11,7 +11,7 @@ const PersonalJourney = () => {
       title: "Health Awakening",
       description: "Started tracking basic health metrics after realizing the importance of preventive care.",
       status: "completed",
-      metrics: ["Weight", "Blood Pressure", "Sleep"]
+      metrics: ["Weight", "Blood Pressure"]
     },
     {
       year: "2019",
@@ -85,7 +85,7 @@ const PersonalJourney = () => {
           </p>
           
           <p className="text-slate-600 mb-4">
-            Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, gym.
+            Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, gym, Wim Hof Breathing.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
