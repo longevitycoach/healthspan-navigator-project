@@ -1,6 +1,6 @@
+
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Info, User, BookOpen } from "lucide-react";
@@ -11,431 +11,358 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const cardiovascularBiomarkers = [
   {
-    name: "LDL-P",
-    optimalRange: "< 1000 nmol/L",
-    officialRange: "< 130 mg/dL",
-    description: "LDL particle number is a more accurate measure of cardiovascular risk than LDL-C.",
-    clinicalNotes: "High LDL-P is associated with increased risk of cardiovascular disease.",
-    factors: ["Genetics", "Diet", "Exercise"]
-  },
-  {
-    name: "ApoB",
+    name: "ApoB (Apolipoprotein B)",
     optimalRange: "< 80 mg/dL",
     officialRange: "< 130 mg/dL",
-    description: "Apolipoprotein B is a protein found on LDL particles. It is a more accurate measure of cardiovascular risk than LDL-C.",
-    clinicalNotes: "High ApoB is associated with increased risk of cardiovascular disease.",
-    factors: ["Genetics", "Diet", "Exercise"]
+    description: "Found on all 'bad' lipoproteins (like LDL), strongly correlated with increased cardiovascular disease risk. More informative than LDL alone.",
+    clinicalNotes: "Essential marker for cardiovascular risk assessment, superior to LDL-C for risk prediction.",
+    factors: ["Diet", "Exercise", "Statins", "Genetics"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Lp(a)",
+    name: "Lipoprotein(a) [Lp(a)]",
     optimalRange: "< 30 mg/dL",
     officialRange: "< 75 nmol/L",
-    description: "Lipoprotein(a) is a lipoprotein that is associated with increased risk of cardiovascular disease.",
-    clinicalNotes: "High Lp(a) is associated with increased risk of cardiovascular disease.",
-    factors: ["Genetics"]
+    description: "Genetic risk factor for cardiovascular disease, independent of other lipid parameters.",
+    clinicalNotes: "Managing Lp(a) levels may require specialized interventions and monitoring. Genetic component makes it less responsive to lifestyle changes.",
+    factors: ["Genetics", "Niacin", "PCSK9 Inhibitors"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "hs-CRP",
-    optimalRange: "< 1 mg/L",
-    officialRange: "< 3 mg/L",
-    description: "High-sensitivity C-reactive protein is a marker of inflammation in the body.",
-    clinicalNotes: "High hs-CRP is associated with increased risk of cardiovascular disease.",
-    factors: ["Inflammation", "Infection", "Autoimmune disease"]
+    name: "HDL Cholesterol",
+    optimalRange: "> 50 mg/dL (women), > 40 mg/dL (men)",
+    officialRange: "> 40 mg/dL (men), > 50 mg/dL (women)",
+    description: "High-density lipoprotein, often referred to as 'good cholesterol'. Higher levels are generally protective.",
+    clinicalNotes: "Essential component of cardiovascular risk assessment, though quality matters more than quantity.",
+    factors: ["Exercise", "Diet", "Genetics", "Alcohol (moderate)"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "LDL Cholesterol",
+    optimalRange: "< 100 mg/dL",
+    officialRange: "< 130 mg/dL",
+    description: "Low-density lipoprotein, one of the 'bad' lipoproteins that carries ApoB.",
+    clinicalNotes: "Traditional marker for cardiovascular risk, though ApoB is more predictive.",
+    factors: ["Diet", "Exercise", "Genetics", "Medications"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Triglycerides",
+    optimalRange: "< 100 mg/dL",
+    officialRange: "< 150 mg/dL",
+    description: "Type of fat transported in the blood, influenced by diet and metabolic health.",
+    clinicalNotes: "Elevated levels associated with increased cardiovascular risk and metabolic dysfunction.",
+    factors: ["Diet", "Exercise", "Alcohol", "Genetics"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Omega-3 Index",
+    optimalRange: "> 8%",
+    officialRange: "4-8%",
+    description: "Percentage of EPA and DHA in red blood cell membranes. Low levels linked to higher mortality risk, called 'the new smoking'.",
+    clinicalNotes: "Critical for cardiovascular health, brain function, and inflammation control. Most people have insufficient levels due to poor Omega-3 to Omega-6 ratios.",
+    factors: ["Fish consumption", "Supplementation", "Diet quality"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
     name: "Homocysteine",
-    optimalRange: "6-9 umol/L",
-    officialRange: "< 15 umol/L",
-    description: "Homocysteine is an amino acid that is associated with increased risk of cardiovascular disease.",
-    clinicalNotes: "High homocysteine is associated with increased risk of cardiovascular disease.",
-    factors: ["Genetics", "Diet", "Vitamin deficiencies"]
+    optimalRange: "< 8 µmol/L",
+    officialRange: "< 15 µmol/L",
+    description: "Amino acid whose elevated levels are linked to cardiovascular risk. Often correlates with B-vitamin deficiencies.",
+    clinicalNotes: "Elevated levels indicate increased cardiovascular risk and potential B6, B9, or B12 deficiencies.",
+    factors: ["Vitamin B6", "Vitamin B9 (Folate)", "Vitamin B12", "Genetics"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "hs-CRP (High-Sensitivity C-Reactive Protein)",
+    optimalRange: "< 1 mg/L",
+    officialRange: "< 3 mg/L",
+    description: "Marker of general inflammation in the body. High levels indicate 'silent inflammation' contributing to aging.",
+    clinicalNotes: "Should always be measured with ferritin as inflammation can falsely elevate ferritin levels.",
+    factors: ["Diet", "Exercise", "Stress", "Infections"],
+    expertSource: "Thiemo Osterhaus"
   }
 ];
 
 const metabolicBiomarkers = [
   {
     name: "Fasting Glucose",
-    optimalRange: "70-85 mg/dL",
+    optimalRange: "< 100 mg/dL",
     officialRange: "70-99 mg/dL",
-    description: "Fasting glucose is a measure of blood sugar levels after an overnight fast.",
-    clinicalNotes: "High fasting glucose is associated with increased risk of diabetes.",
-    factors: ["Diet", "Exercise", "Insulin resistance"]
+    description: "Blood sugar levels after overnight fast. Values over 100 mg/dL indicate disturbed glucose metabolism.",
+    clinicalNotes: "Key marker for metabolic health and diabetes risk assessment.",
+    factors: ["Diet", "Exercise", "Stress", "Sleep"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "HbA1c",
+    name: "HbA1c (Hemoglobin A1c)",
     optimalRange: "< 5.3%",
     officialRange: "< 5.7%",
-    description: "Hemoglobin A1c is a measure of average blood sugar levels over the past 2-3 months.",
-    clinicalNotes: "High HbA1c is associated with increased risk of diabetes.",
-    factors: ["Diet", "Exercise", "Insulin resistance"]
+    description: "Average blood sugar level over 2-3 months. Key diagnostic marker for diabetes and longevity parameter.",
+    clinicalNotes: "Values from 5.7% indicate beginning disturbance. Measurement method can influence results.",
+    factors: ["Diet", "Exercise", "Medications", "Stress"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Fasting Insulin",
-    optimalRange: "2-5 uIU/mL",
-    officialRange: "2.6-24.9 uIU/mL",
-    description: "Fasting insulin is a measure of insulin levels after an overnight fast.",
-    clinicalNotes: "High fasting insulin is associated with insulin resistance.",
-    factors: ["Diet", "Exercise", "Insulin resistance"]
-  },
-  {
-    name: "HOMA-IR",
-    optimalRange: "< 1",
+    name: "HOMA Index",
+    optimalRange: "< 2.0",
     officialRange: "< 2.5",
-    description: "Homeostatic Model Assessment of Insulin Resistance is a measure of insulin resistance.",
-    clinicalNotes: "High HOMA-IR is associated with insulin resistance.",
-    factors: ["Diet", "Exercise", "Insulin resistance"]
-  },
-  {
-    name: "Triglycerides",
-    optimalRange: "< 70 mg/dL",
-    officialRange: "< 150 mg/dL",
-    description: "Triglycerides are a type of fat in the blood.",
-    clinicalNotes: "High triglycerides are associated with increased risk of cardiovascular disease.",
-    factors: ["Diet", "Exercise", "Genetics"]
+    description: "Reflects insulin sensitivity and resistance, serving as indicator for pre-diabetic states.",
+    clinicalNotes: "Often not routinely measured in conventional medicine but crucial for metabolic assessment.",
+    factors: ["Diet", "Exercise", "Body weight", "Stress"],
+    expertSource: "Thiemo Osterhaus"
   }
 ];
 
 const vitaminsBiomarkers = [
   {
-    name: "Vitamin D",
-    optimalRange: "50-80 ng/mL",
+    name: "Vitamin D (25-OH)",
+    optimalRange: "40-60 ng/mL",
     officialRange: "30-100 ng/mL",
-    description: "Vitamin D is a fat-soluble vitamin that is important for bone health and immune function.",
-    clinicalNotes: "Low vitamin D is associated with increased risk of osteoporosis and immune dysfunction.",
-    factors: ["Sun exposure", "Diet", "Supplementation"]
+    description: "Crucial for immune function, bone health, mood regulation, neurotransmitter formation, and hormone modulation.",
+    clinicalNotes: "Up to 60% of Germans estimated deficient, especially in winter. Higher doses recommended than official guidelines (2500 IU summer, 5000 IU winter).",
+    factors: ["Sun exposure", "Supplementation", "Skin color", "Geographic location"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Vitamin B12",
-    optimalRange: "> 500 pg/mL",
-    officialRange: "200-1100 pg/mL",
-    description: "Vitamin B12 is a water-soluble vitamin that is important for nerve function and red blood cell production.",
-    clinicalNotes: "Low vitamin B12 is associated with increased risk of nerve damage and anemia.",
-    factors: ["Diet", "Absorption", "Supplementation"]
+    name: "Vitamin D (1,25-OH)",
+    optimalRange: "Varies",
+    officialRange: "19-67 pg/mL",
+    description: "Active form of Vitamin D. Testing alongside 25-OH can be relevant for immune system problems or autoimmune diseases.",
+    clinicalNotes: "Helps understand Vitamin D metabolism, particularly important for autoimmune conditions.",
+    factors: ["Kidney function", "PTH levels", "Calcium status"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Folate",
-    optimalRange: "> 20 ng/mL",
-    officialRange: "> 3.1 ng/mL",
-    description: "Folate is a water-soluble vitamin that is important for cell growth and development.",
-    clinicalNotes: "Low folate is associated with increased risk of birth defects and anemia.",
-    factors: ["Diet", "Absorption", "Supplementation"]
-  },
-  {
-    name: "Vitamin K2",
+    name: "Vitamin K2 (MK-7)",
     optimalRange: "> 1 ng/mL",
     officialRange: "No official range",
-    description: "Vitamin K2 is a fat-soluble vitamin that is important for bone health and blood clotting.",
-    clinicalNotes: "Low vitamin K2 is associated with increased risk of osteoporosis and cardiovascular disease.",
-    factors: ["Diet", "Supplementation"]
+    description: "Vital for bone health (calcium distribution) and heart health. Works synergistically with Vitamin D.",
+    clinicalNotes: "Ensures calcium is deposited in bones, not arteries. Studies explore effects on immune health and athletic performance.",
+    factors: ["Diet", "Supplementation", "Gut bacteria"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "CoQ10",
-    optimalRange: "> 1 ug/mL",
-    officialRange: "0.4-1.8 ug/mL",
-    description: "Coenzyme Q10 is an antioxidant that is important for energy production.",
-    clinicalNotes: "Low CoQ10 is associated with increased risk of cardiovascular disease and neurodegenerative diseases.",
-    factors: ["Age", "Medications", "Supplementation"]
+    name: "Vitamin C",
+    optimalRange: "> 12 mg/L",
+    officialRange: "4-15 mg/L",
+    description: "'Queen of vitamins' - crucial for immune system, collagen formation, nerve health. Key antioxidant and co-factor for cortisol/DHEA production.",
+    clinicalNotes: "Essential for iron absorption, often underestimated. Important for fertility and egg quality.",
+    factors: ["Diet", "Supplementation", "Stress", "Smoking"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Vitamin B12 (Holotranscobalamin)",
+    optimalRange: "> 400 pg/mL",
+    officialRange: "200-1100 pg/mL",
+    description: "Essential for nervous system function and reducing fatigue. Deficiency can cause irreversible nerve damage.",
+    clinicalNotes: "Critical for vegetarians/vegans. High doses recommended for neurodegenerative diseases. Holotranscobalamin more accurate than total B12.",
+    factors: ["Diet", "Absorption", "Age", "Medications"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Folate (Vitamin B9)",
+    optimalRange: "> 10 ng/mL",
+    officialRange: "> 3.1 ng/mL",
+    description: "Essential for blood formation and reducing fatigue. Increased demand in women of childbearing age.",
+    clinicalNotes: "Critical during pregnancy and lactation. Works with B12 and B6 to control homocysteine.",
+    factors: ["Diet", "Pregnancy", "Alcohol", "Medications"],
+    expertSource: "Thiemo Osterhaus"
   }
 ];
 
 const mineralsBiomarkers = [
   {
-    name: "Magnesium",
+    name: "Ferritin",
+    optimalRange: "100-120 µg/L (women), 100-150 µg/L (men)",
+    officialRange: "15-150 µg/L (women), 30-400 µg/L (men)",
+    description: "Primary marker for iron stores. Low levels indicate iron deficiency even if hemoglobin is normal.",
+    clinicalNotes: "Very common deficiency, especially in menstruating women, athletes, vegetarians. Can be falsely elevated by inflammation (check CRP).",
+    factors: ["Menstruation", "Diet", "Absorption", "Blood loss"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Magnesium (Whole Blood)",
     optimalRange: "2.2-2.6 mg/dL",
     officialRange: "1.7-2.2 mg/dL",
-    description: "Magnesium is a mineral that is important for bone health, muscle function, and nerve function.",
-    clinicalNotes: "Low magnesium is associated with increased risk of osteoporosis, muscle cramps, and nerve damage.",
-    factors: ["Diet", "Absorption", "Supplementation"]
+    description: "Involved in 600+ metabolic processes. Crucial for muscle function, nervous system, energy production, neurotransmitter formation.",
+    clinicalNotes: "~80% of population deficient. High demand for athletes and high-stress individuals. Whole blood analysis more accurate than serum.",
+    factors: ["Diet", "Stress", "Exercise", "Medications"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
     name: "Zinc",
-    optimalRange: "90-110 ug/dL",
-    officialRange: "60-120 ug/dL",
-    description: "Zinc is a mineral that is important for immune function, wound healing, and cell growth.",
-    clinicalNotes: "Low zinc is associated with increased risk of immune dysfunction and delayed wound healing.",
-    factors: ["Diet", "Absorption", "Supplementation"]
+    optimalRange: "90-110 µg/dL",
+    officialRange: "60-120 µg/dL",
+    description: "Important for immune system, cell division, collagen formation, steroid hormone synthesis. Deficiency causes hair loss, brittle nails.",
+    clinicalNotes: "Critical for vegetarians/vegans due to phytate binding. Recommended for athletes and gut barrier healing.",
+    factors: ["Diet", "Phytates", "Absorption", "Stress"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
     name: "Selenium",
-    optimalRange: "100-150 ug/L",
-    officialRange: "50-200 ug/L",
-    description: "Selenium is a mineral that is important for thyroid function and antioxidant defense.",
-    clinicalNotes: "Low selenium is associated with increased risk of thyroid dysfunction and cancer.",
-    factors: ["Diet", "Absorption", "Supplementation"]
+    optimalRange: "100-150 µg/L",
+    officialRange: "50-200 µg/L",
+    description: "Important for oxidative stress protection, immune system, antioxidant function, and thyroid health.",
+    clinicalNotes: "European soil often selenium-poor, leading to common deficiencies. Higher doses may be needed than standard recommendations.",
+    factors: ["Soil content", "Diet", "Geographic location"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Copper",
-    optimalRange: "80-120 ug/dL",
-    officialRange: "70-175 ug/dL",
-    description: "Copper is a mineral that is important for iron metabolism and nerve function.",
-    clinicalNotes: "Low copper is associated with increased risk of anemia and nerve damage.",
-    factors: ["Diet", "Absorption", "Supplementation"]
-  },
-  {
-    name: "Iron",
-    optimalRange: "50-150 ug/dL",
-    officialRange: "25-150 ug/dL",
-    description: "Iron is a mineral that is important for red blood cell production and oxygen transport.",
-    clinicalNotes: "Low iron is associated with increased risk of anemia.",
-    factors: ["Diet", "Absorption", "Supplementation"]
+    name: "Iodine",
+    optimalRange: "100-199 µg/L",
+    officialRange: "50-125 µg/L",
+    description: "Essential for normal thyroid function and cognitive function.",
+    clinicalNotes: "Many regions (like Germany) are iodine-poor. Common in those consuming little iodized salt or fish.",
+    factors: ["Geographic location", "Salt intake", "Fish consumption"],
+    expertSource: "Thiemo Osterhaus"
   }
 ];
 
 const hormonesBiomarkers = [
   {
-    name: "Testosterone",
-    optimalRange: "600-900 ng/dL (males)",
-    officialRange: "280-1100 ng/dL (males)",
-    description: "Testosterone is a hormone that is important for muscle growth, bone density, and sexual function.",
-    clinicalNotes: "Low testosterone is associated with increased risk of muscle loss, osteoporosis, and sexual dysfunction.",
-    factors: ["Age", "Genetics", "Lifestyle"]
+    name: "TSH (Thyroid Stimulating Hormone)",
+    optimalRange: "1.0-2.0 mIU/L",
+    officialRange: "0.4-4.0 mIU/L",
+    description: "While commonly measured, TSH alone is insufficient for comprehensive thyroid assessment.",
+    clinicalNotes: "Should be evaluated alongside fT3 and fT4 for complete thyroid function assessment.",
+    factors: ["Thyroid disease", "Stress", "Medications", "Age"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Estradiol",
-    optimalRange: "20-40 pg/mL (females)",
-    officialRange: "30-400 pg/mL (females)",
-    description: "Estradiol is a hormone that is important for bone health, cardiovascular health, and sexual function.",
-    clinicalNotes: "Low estradiol is associated with increased risk of osteoporosis and cardiovascular disease.",
-    factors: ["Age", "Genetics", "Lifestyle"]
+    name: "fT3 (Free Triiodothyronine)",
+    optimalRange: "3.0-4.2 pg/mL",
+    officialRange: "2.3-4.2 pg/mL",
+    description: "The active thyroid hormone, critical for metabolism and energy.",
+    clinicalNotes: "More indicative of thyroid function than TSH alone. Essential for comprehensive assessment.",
+    factors: ["Thyroid health", "Iodine", "Selenium", "Stress"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "DHEA-S",
-    optimalRange: "200-400 ug/dL",
-    officialRange: "85-690 ug/dL",
-    description: "Dehydroepiandrosterone sulfate is a hormone that is important for immune function and energy production.",
-    clinicalNotes: "Low DHEA-S is associated with increased risk of immune dysfunction and fatigue.",
-    factors: ["Age", "Genetics", "Lifestyle"]
+    name: "fT4 (Free Thyroxine)",
+    optimalRange: "1.0-1.8 ng/dL",
+    officialRange: "0.8-1.8 ng/dL",
+    description: "Precursor to fT3, important for overall thyroid function assessment.",
+    clinicalNotes: "Should be evaluated with fT3 and TSH for complete picture.",
+    factors: ["Thyroid health", "Medications", "Stress"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Cortisol",
-    optimalRange: "5-15 ug/dL",
-    officialRange: "6-23 ug/dL",
-    description: "Cortisol is a hormone that is important for stress response and energy production.",
-    clinicalNotes: "Low cortisol is associated with increased risk of fatigue and immune dysfunction.",
-    factors: ["Stress", "Sleep", "Lifestyle"]
+    name: "Testosterone (Free)",
+    optimalRange: "15-25 pg/mL (men), 1-4 pg/mL (women)",
+    officialRange: "9-30 pg/mL (men), 0.3-3.2 pg/mL (women)",
+    description: "Important for dopaminergic system, learning, memory, concentration. Has neuroprotective qualities.",
+    clinicalNotes: "Men in 30s-40s can experience deficiency. Measure SHBG alongside total testosterone to calculate free testosterone.",
+    factors: ["Vitamin D3", "Vitamin B6", "Zinc", "Magnesium", "Age"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Thyroid Stimulating Hormone (TSH)",
-    optimalRange: "0.5-2.0 uIU/mL",
-    officialRange: "0.4-4.0 uIU/mL",
-    description: "Thyroid stimulating hormone is a hormone that is important for thyroid function.",
-    clinicalNotes: "High TSH is associated with hypothyroidism.",
-    factors: ["Thyroid disease", "Medications", "Lifestyle"]
-  }
-];
-
-const longevityBiomarkers = [
-  {
-    name: "Fasting Blood Glucose",
-    optimalRange: "70-85 mg/dL",
-    officialRange: "70-99 mg/dL",
-    description: "Fasting blood glucose levels are a key indicator of metabolic health and insulin sensitivity.",
-    clinicalNotes: "Maintaining optimal fasting glucose levels is crucial for preventing insulin resistance and type 2 diabetes.",
-    factors: ["Diet", "Exercise", "Stress Management"]
+    name: "Estradiol (E2)",
+    optimalRange: "20-40 pg/mL (women)",
+    officialRange: "30-400 pg/mL (cycling women)",
+    description: "Important for happiness, well-being, serotonergic/dopaminergic systems, and acetylcholine (learning/memory).",
+    clinicalNotes: "Protective against cardiovascular disease in women. Decline during menopause can increase blood pressure.",
+    factors: ["Age", "Menopause", "Stress", "Body weight"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Hemoglobin A1c (HbA1c)",
-    optimalRange: "< 5.3%",
-    officialRange: "< 5.7%",
-    description: "HbA1c provides an average of blood sugar levels over the past 2-3 months.",
-    clinicalNotes: "Keeping HbA1c in the optimal range is essential for preventing long-term complications of diabetes.",
-    factors: ["Diet", "Exercise", "Medications"]
-  },
-  {
-    name: "High-Sensitivity C-Reactive Protein (hs-CRP)",
-    optimalRange: "< 1 mg/L",
-    officialRange: "< 3 mg/L",
-    description: "hs-CRP is a marker of inflammation in the body.",
-    clinicalNotes: "Lowering hs-CRP levels can reduce the risk of cardiovascular disease and other chronic conditions.",
-    factors: ["Diet", "Exercise", "Stress Reduction"]
-  },
-  {
-    name: "Lipoprotein(a) [Lp(a)]",
-    optimalRange: "< 30 mg/dL",
-    officialRange: "< 75 nmol/L",
-    description: "Lp(a) is a genetic risk factor for cardiovascular disease.",
-    clinicalNotes: "Managing Lp(a) levels may require specialized interventions and monitoring.",
-    factors: ["Genetics", "Niacin", "PCSK9 Inhibitors"]
-  },
-  {
-    name: "Apolipoprotein B (ApoB)",
-    optimalRange: "< 80 mg/dL",
-    officialRange: "< 130 mg/dL",
-    description: "ApoB is a protein found on LDL particles and is a key marker of cardiovascular risk.",
-    clinicalNotes: "Reducing ApoB levels can significantly lower the risk of heart attacks and strokes.",
-    factors: ["Diet", "Exercise", "Statins"]
-  }
-];
-
-const specializedBiomarkers = [
-  {
-    name: "Telomere Length",
-    optimalRange: "Varies by age",
-    officialRange: "Varies by age",
-    description: "Telomere length is a measure of cellular aging.",
-    clinicalNotes: "Shorter telomeres are associated with increased risk of age-related diseases.",
-    factors: ["Genetics", "Lifestyle", "Supplementation"]
-  },
-  {
-    name: "Oxidized LDL",
-    optimalRange: "< 50 U/L",
-    officialRange: "< 100 U/L",
-    description: "Oxidized LDL is a measure of LDL particles that have been damaged by oxidation.",
-    clinicalNotes: "High oxidized LDL is associated with increased risk of cardiovascular disease.",
-    factors: ["Diet", "Antioxidants", "Lifestyle"]
-  },
-  {
-    name: "Advanced Glycation End Products (AGEs)",
-    optimalRange: "< 1000 ng/mL",
-    officialRange: "< 2000 ng/mL",
-    description: "AGEs are compounds that are formed when sugar molecules bind to proteins or fats.",
-    clinicalNotes: "High AGEs are associated with increased risk of diabetes and cardiovascular disease.",
-    factors: ["Diet", "Lifestyle", "Supplementation"]
-  },
-  {
-    name: "Trimethylamine N-oxide (TMAO)",
-    optimalRange: "< 6.2 umol/L",
-    officialRange: "< 10 umol/L",
-    description: "TMAO is a compound that is produced by gut bacteria.",
-    clinicalNotes: "High TMAO is associated with increased risk of cardiovascular disease.",
-    factors: ["Diet", "Gut bacteria", "Supplementation"]
-  },
-  {
-    name: "Uric Acid",
-    optimalRange: "3.0-5.5 mg/dL",
-    officialRange: "2.5-7.0 mg/dL",
-    description: "Uric acid is a waste product that is produced when the body breaks down purines.",
-    clinicalNotes: "High uric acid is associated with increased risk of gout and kidney disease.",
-    factors: ["Diet", "Genetics", "Lifestyle"]
-  }
-];
-
-const immuneBiomarkers = [
-  {
-    name: "White Blood Cell Count",
-    optimalRange: "4,500-11,000 cells/uL",
-    officialRange: "4,500-11,000 cells/uL",
-    description: "White blood cells are immune cells that help the body fight infection.",
-    clinicalNotes: "Abnormal white blood cell counts can indicate infection or immune dysfunction.",
-    factors: ["Infection", "Inflammation", "Autoimmune disease"]
-  },
-  {
-    name: "Vitamin D",
-    optimalRange: "50-80 ng/mL",
-    officialRange: "30-100 ng/mL",
-    description: "Vitamin D is a fat-soluble vitamin that is important for immune function.",
-    clinicalNotes: "Low vitamin D is associated with increased risk of immune dysfunction.",
-    factors: ["Sun exposure", "Diet", "Supplementation"]
-  },
-  {
-    name: "Zinc",
-    optimalRange: "90-110 ug/dL",
-    officialRange: "60-120 ug/dL",
-    description: "Zinc is a mineral that is important for immune function.",
-    clinicalNotes: "Low zinc is associated with increased risk of immune dysfunction.",
-    factors: ["Diet", "Absorption", "Supplementation"]
-  },
-  {
-    name: "Selenium",
-    optimalRange: "100-150 ug/L",
-    officialRange: "50-200 ug/L",
-    description: "Selenium is a mineral that is important for immune function.",
-    clinicalNotes: "Low selenium is associated with increased risk of immune dysfunction.",
-    factors: ["Diet", "Absorption", "Supplementation"]
-  },
-  {
-    name: "Glutathione",
-    optimalRange: "650-950 ug/L",
-    officialRange: "550-1100 ug/L",
-    description: "Glutathione is an antioxidant that is important for immune function.",
-    clinicalNotes: "Low glutathione is associated with increased risk of immune dysfunction.",
-    factors: ["Diet", "Supplementation", "Lifestyle"]
+    name: "Progesterone",
+    optimalRange: "5-20 ng/mL (luteal phase)",
+    officialRange: "0.2-25 ng/mL",
+    description: "Important for relaxation, mood stabilization, sleep quality, GABAergic system. Deficiency causes irritability, sleep issues.",
+    clinicalNotes: "Test on cycle day 19-21 for women. Can be measured in serum or saliva (saliva preferred for free hormones).",
+    factors: ["Stress", "Age", "Cycle phase", "Sleep"],
+    expertSource: "Thiemo Osterhaus"
   }
 ];
 
 const liverBiomarkers = [
   {
-    name: "Alanine Aminotransferase (ALT)",
-    optimalRange: "10-40 U/L",
+    name: "ALT (GPT)",
+    optimalRange: "< 30 U/L",
     officialRange: "7-55 U/L",
-    description: "ALT is an enzyme that is found in the liver.",
-    clinicalNotes: "High ALT is associated with liver damage.",
-    factors: ["Alcohol consumption", "Medications", "Liver disease"]
+    description: "Glutamate Pyruvate Transaminase - enzyme indicating liver function and potential damage.",
+    clinicalNotes: "Elevated levels indicate liver stress or damage.",
+    factors: ["Alcohol", "Medications", "Liver disease", "Diet"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Aspartate Aminotransferase (AST)",
-    optimalRange: "10-35 U/L",
+    name: "AST (GOT)", 
+    optimalRange: "< 30 U/L",
     officialRange: "8-48 U/L",
-    description: "AST is an enzyme that is found in the liver.",
-    clinicalNotes: "High AST is associated with liver damage.",
-    factors: ["Alcohol consumption", "Medications", "Liver disease"]
+    description: "Glutamate Oxaloacetate Transaminase - enzyme indicating liver function and potential damage.",
+    clinicalNotes: "Can also indicate muscle damage, should be interpreted with other liver markers.",
+    factors: ["Alcohol", "Medications", "Liver disease", "Exercise"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Gamma-Glutamyl Transferase (GGT)",
-    optimalRange: "10-40 U/L",
+    name: "Gamma-GT",
+    optimalRange: "< 30 U/L",
     officialRange: "9-48 U/L",
-    description: "GGT is an enzyme that is found in the liver.",
-    clinicalNotes: "High GGT is associated with liver damage.",
-    factors: ["Alcohol consumption", "Medications", "Liver disease"]
-  },
-  {
-    name: "Alkaline Phosphatase (ALP)",
-    optimalRange: "30-100 U/L",
-    officialRange: "20-140 U/L",
-    description: "ALP is an enzyme that is found in the liver.",
-    clinicalNotes: "High ALP is associated with liver damage.",
-    factors: ["Alcohol consumption", "Medications", "Liver disease"]
-  },
-  {
-    name: "Bilirubin",
-    optimalRange: "0.2-1.0 mg/dL",
-    officialRange: "0.3-1.2 mg/dL",
-    description: "Bilirubin is a waste product that is produced when the body breaks down red blood cells.",
-    clinicalNotes: "High bilirubin is associated with liver damage.",
-    factors: ["Alcohol consumption", "Medications", "Liver disease"]
+    description: "Gamma-Glutamyl Transferase - elevated levels correlated with higher risk of earlier mortality.",
+    clinicalNotes: "Sensitive marker for liver stress and alcohol consumption.",
+    factors: ["Alcohol", "Medications", "Liver disease"],
+    expertSource: "Thiemo Osterhaus"
   }
 ];
 
 const kidneyBiomarkers = [
   {
     name: "Creatinine",
-    optimalRange: "0.6-1.0 mg/dL (females)",
-    officialRange: "0.5-1.1 mg/dL (females)",
-    description: "Creatinine is a waste product that is produced by muscle metabolism.",
-    clinicalNotes: "High creatinine is associated with kidney damage.",
-    factors: ["Kidney disease", "Dehydration", "Medications"]
+    optimalRange: "0.7-1.0 mg/dL (women), 0.8-1.2 mg/dL (men)",
+    officialRange: "0.5-1.1 mg/dL (women), 0.7-1.3 mg/dL (men)",
+    description: "Waste product from muscle metabolism, indicates kidney function.",
+    clinicalNotes: "Basic marker for kidney function assessment.",
+    factors: ["Kidney disease", "Dehydration", "Muscle mass"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Blood Urea Nitrogen (BUN)",
-    optimalRange: "8-20 mg/dL",
-    officialRange: "6-24 mg/dL",
-    description: "BUN is a waste product that is produced when the body breaks down protein.",
-    clinicalNotes: "High BUN is associated with kidney damage.",
-    factors: ["Kidney disease", "Dehydration", "Medications"]
+    name: "Cystatin C",
+    optimalRange: "0.5-0.9 mg/L",
+    officialRange: "0.5-1.0 mg/L",
+    description: "More sensitive marker for kidney function than creatinine, less affected by muscle mass.",
+    clinicalNotes: "Superior to creatinine for early kidney function assessment.",
+    factors: ["Kidney function", "Age", "Inflammation"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Estimated Glomerular Filtration Rate (eGFR)",
-    optimalRange: "> 90 mL/min/1.73 m2",
-    officialRange: "> 60 mL/min/1.73 m2",
-    description: "eGFR is a measure of kidney function.",
-    clinicalNotes: "Low eGFR is associated with kidney damage.",
-    factors: ["Kidney disease", "Dehydration", "Medications"]
+    name: "eGFR (Estimated Glomerular Filtration Rate)",
+    optimalRange: "> 90 mL/min/1.73 m²",
+    officialRange: "> 60 mL/min/1.73 m²",
+    description: "Calculated measure of kidney function based on creatinine, age, sex, and race.",
+    clinicalNotes: "Standard measure for assessing kidney function and staging chronic kidney disease.",
+    factors: ["Age", "Kidney health", "Hydration", "Medications"],
+    expertSource: "Thiemo Osterhaus"
+  }
+];
+
+const specializedBiomarkers = [
+  {
+    name: "CoQ10 (Ubiquinol)",
+    optimalRange: "> 2.5 µg/mL",
+    officialRange: "0.4-1.8 µg/mL",
+    description: "Vital for mitochondrial energy production, heart health, combating chronic fatigue. Levels decline with age.",
+    clinicalNotes: "Works with Vitamin B12 for mitochondrial function. Essential for cellular energy production.",
+    factors: ["Age", "Statin use", "Heart disease", "Supplementation"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Sodium",
-    optimalRange: "135-145 mEq/L",
-    officialRange: "135-145 mEq/L",
-    description: "Sodium is an electrolyte that is important for fluid balance.",
-    clinicalNotes: "Abnormal sodium levels can indicate dehydration or kidney disease.",
-    factors: ["Dehydration", "Kidney disease", "Medications"]
+    name: "Glutathione",
+    optimalRange: "900-1400 µmol/L",
+    officialRange: "550-1100 µmol/L",
+    description: "Master antioxidant and main detoxification molecule. Protects cells, supports immune system, guards gut/brain barriers.",
+    clinicalNotes: "Deficiency common due to environmental toxins. Critical for detoxification and cellular protection.",
+    factors: ["Environmental toxins", "Age", "Stress", "Diet"],
+    expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "Potassium",
-    optimalRange: "3.5-4.5 mEq/L",
-    officialRange: "3.5-5.0 mEq/L",
-    description: "Potassium is an electrolyte that is important for muscle function and nerve function.",
-    clinicalNotes: "Abnormal potassium levels can indicate dehydration or kidney disease.",
-    factors: ["Dehydration", "Kidney disease", "Medications"]
+    name: "DHEA (Dehydroepiandrosterone)",
+    optimalRange: "200-400 µg/dL",
+    officialRange: "85-690 µg/dL",
+    description: "Precursor hormone for testosterone and estrogen production. Often described as 'healing' hormone.",
+    clinicalNotes: "Vitamin C and Pantothenic acid (B5) are crucial co-factors for production.",
+    factors: ["Age", "Stress", "Vitamin C", "Vitamin B5"],
+    expertSource: "Thiemo Osterhaus"
   }
 ];
 
@@ -446,14 +373,12 @@ const ReferenceValues = () => {
   const categories = [
     { id: "cardiovascular", label: "Cardiovascular", icon: "❤️" },
     { id: "metabolic", label: "Metabolic", icon: "⚡" },
-    { id: "vitamins", label: "Vitamins & Nutrients", icon: "🍊" },
-    { id: "minerals", label: "Minerals & Trace Elements", icon: "⚗️" },
-    { id: "hormones", label: "Hormones & Thyroid", icon: "🧬" },
-    { id: "longevity", label: "Advanced Longevity", icon: "🔬" },
-    { id: "specialized", label: "Specialized Testing", icon: "🧪" },
-    { id: "immune", label: "Immune & Inflammatory", icon: "🛡️" },
-    { id: "liver", label: "Liver & Detox", icon: "🫘" },
-    { id: "kidney", label: "Kidney & Electrolytes", icon: "💧" }
+    { id: "vitamins", label: "Vitamins", icon: "🍊" },
+    { id: "minerals", label: "Minerals", icon: "⚗️" },
+    { id: "hormones", label: "Hormones", icon: "🧬" },
+    { id: "liver", label: "Liver", icon: "🫘" },
+    { id: "kidney", label: "Kidney", icon: "💧" },
+    { id: "specialized", label: "Specialized", icon: "🧪" }
   ];
 
   const CategoryMenu = ({ categories, activeCategory, setActiveCategory, className = "" }) => (
@@ -561,11 +486,9 @@ const ReferenceValues = () => {
       case "vitamins": return vitaminsBiomarkers;
       case "minerals": return mineralsBiomarkers;
       case "hormones": return hormonesBiomarkers;
-      case "longevity": return longevityBiomarkers;
-      case "specialized": return specializedBiomarkers;
-      case "immune": return immuneBiomarkers;
       case "liver": return liverBiomarkers;
       case "kidney": return kidneyBiomarkers;
+      case "specialized": return specializedBiomarkers;
       default: return [];
     }
   };
@@ -598,9 +521,14 @@ const ReferenceValues = () => {
             <div className="lg:hidden mb-4">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" className="w-full justify-start">
-                    <Menu className="h-4 w-4 mr-2" />
-                    {categories.find(cat => cat.id === activeCategory)?.label || "Select Category"}
+                  <Button variant="outline" className="w-full justify-between">
+                    <div className="flex items-center">
+                      <Menu className="h-4 w-4 mr-2" />
+                      {categories.find(cat => cat.id === activeCategory)?.label || "Select Category"}
+                    </div>
+                    <span className="text-lg">
+                      {categories.find(cat => cat.id === activeCategory)?.icon}
+                    </span>
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="w-80">
@@ -623,7 +551,7 @@ const ReferenceValues = () => {
           ) : (
             /* Desktop Navigation */
             <div className="hidden lg:block w-80 flex-shrink-0">
-              <Card className="sticky top-24">
+              <Card className="sticky top-6">
                 <CardHeader className="pb-3">
                   <CardTitle className="text-lg">Biomarker Categories</CardTitle>
                 </CardHeader>
