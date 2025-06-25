@@ -60,6 +60,21 @@ const Resources = () => {
       description: "Orthomolekulare Medizin in der Praxis (2021)"
     },
     {
+      title: "Nährstoff-Therapie Praxis",
+      author: "Dr. med. Helena Orfanos-Boeckel",
+      description: "Praktische Anwendung der orthomolekularen Medizin (2023)"
+    },
+    {
+      title: "Neue Wege der Heilung",
+      author: "Dr. Ulrich Strunz",
+      description: "Innovative Ansätze in der Präventivmedizin"
+    },
+    {
+      title: "Stoffwechsel-Kompass",
+      author: "Ingo Frohböse",
+      description: "Wissenschaftlich fundierter Leitfaden für optimalen Stoffwechsel"
+    },
+    {
       title: "Verjünge deine Gene",
       author: "Prof. Dr. med. Bernd Kleine-Gunk & Bernhard Hobelsberger",
       description: "Epigenetische Ansätze für gesundes Altern (2023)"
