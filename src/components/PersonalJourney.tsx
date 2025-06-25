@@ -42,11 +42,11 @@ const PersonalJourney = () => {
       metrics: ["CGM", "HRV Monitoring", "Sleep Tracking", "Recovery Metrics"]
     },
     {
-      year: "Q3/2025",
-      title: "Platform Development",
-      description: "Started building LongevityCoa.ch to share insights and help others optimize their healthspan.",
+      year: "Q2/2025",
+      title: "Technology & AI Platform Evaluation",
+      description: "Comprehensive evaluation of cutting-edge technologies and AI agent platforms for personalized health optimization. Testing various monitoring devices, advanced blood testing protocols, and building knowledge bases in epigenetic and molecular medicine to create the foundation for precision longevity interventions.",
       status: "current",
-      metrics: ["Platform Design", "Data Integration", "User Experience"]
+      metrics: ["AI Agent Systems", "Epigenetic Knowledge Base", "Molecular Medicine", "Device Testing", "Blood Test Protocols"]
     },
     {
       year: "2024",
