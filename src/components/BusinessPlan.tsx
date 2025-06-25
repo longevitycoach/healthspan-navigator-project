@@ -311,7 +311,7 @@ const BusinessPlan = () => {
         <div className="space-y-6">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-900 mb-2">5-Year Financial Outlook</h3>
-            <p className="text-slate-600">Conservative projections based on market analysis</p>
+            <p className="text-slate-600">Conservative projections starting Q3/2025</p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
@@ -320,24 +320,24 @@ const BusinessPlan = () => {
               
               <div className="space-y-3">
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Year 1 (2024)</span>
-                  <span className="font-bold text-green-600">€250K</span>
+                  <span className="font-medium">Q3-Q4 2025</span>
+                  <span className="font-bold text-green-600">€125K</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Year 2 (2025)</span>
-                  <span className="font-bold text-green-600">€1.2M</span>
+                  <span className="font-medium">Year 1 (2026)</span>
+                  <span className="font-bold text-green-600">€750K</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Year 3 (2026)</span>
-                  <span className="font-bold text-green-600">€4.8M</span>
+                  <span className="font-medium">Year 2 (2027)</span>
+                  <span className="font-bold text-green-600">€2.8M</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Year 4 (2027)</span>
-                  <span className="font-bold text-green-600">€12.5M</span>
+                  <span className="font-medium">Year 3 (2028)</span>
+                  <span className="font-bold text-green-600">€8.2M</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-green-50 rounded border border-green-200">
-                  <span className="font-medium">Year 5 (2028)</span>
-                  <span className="font-bold text-green-700">€28M</span>
+                  <span className="font-medium">Year 4 (2029)</span>
+                  <span className="font-bold text-green-700">€18.5M</span>
                 </div>
               </div>
             </div>
@@ -348,38 +348,38 @@ const BusinessPlan = () => {
               <div className="space-y-3">
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 1</span>
-                    <span className="font-bold">500 users</span>
+                    <span className="font-medium">Q3-Q4 2025</span>
+                    <span className="font-bold">250 users</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">MVP launch, early adopters</div>
+                  <div className="text-xs text-gray-600 mt-1">MVP launch, initial beta</div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 2</span>
-                    <span className="font-bold">2,500 users</span>
+                    <span className="font-medium">Year 1 (2026)</span>
+                    <span className="font-bold">1,500 users</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">Product refinement, marketing</div>
+                  <div className="text-xs text-gray-600 mt-1">Early adopters, product refinement</div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 3</span>
-                    <span className="font-bold">12,000 users</span>
+                    <span className="font-medium">Year 2 (2027)</span>
+                    <span className="font-bold">7,000 users</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">Scaling, partnerships</div>
+                  <div className="text-xs text-gray-600 mt-1">Marketing scale-up, partnerships</div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 4</span>
-                    <span className="font-bold">35,000 users</span>
+                    <span className="font-medium">Year 3 (2028)</span>
+                    <span className="font-bold">22,000 users</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">International expansion</div>
+                  <div className="text-xs text-gray-600 mt-1">Market expansion, B2B growth</div>
                 </div>
                 <div className="p-3 bg-blue-100 rounded border border-blue-200">
                   <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 5</span>
-                    <span className="font-bold">80,000 users</span>
+                    <span className="font-medium">Year 4 (2029)</span>
+                    <span className="font-bold">50,000 users</span>
                   </div>
-                  <div className="text-xs text-gray-600 mt-1">Market leadership position</div>
+                  <div className="text-xs text-gray-600 mt-1">International expansion</div>
                 </div>
               </div>
             </div>
@@ -387,17 +387,17 @@ const BusinessPlan = () => {
           
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-green-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-green-600">€47M</div>
+              <div className="text-2xl font-bold text-green-600">€30M</div>
               <div className="text-sm text-green-800">Cumulative Revenue</div>
-              <div className="text-xs text-gray-600 mt-1">5-year total</div>
+              <div className="text-xs text-gray-600 mt-1">4.5-year total</div>
             </div>
             <div className="bg-blue-50 p-4 rounded-lg text-center">
               <div className="text-2xl font-bold text-blue-600">65%</div>
               <div className="text-sm text-blue-800">Gross Margin</div>
-              <div className="text-xs text-gray-600 mt-1">Year 5 target</div>
+              <div className="text-xs text-gray-600 mt-1">Year 4 target</div>
             </div>
             <div className="bg-purple-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-purple-600">€5M</div>
+              <div className="text-2xl font-bold text-purple-600">€3M</div>
               <div className="text-sm text-purple-800">Funding Needed</div>
               <div className="text-xs text-gray-600 mt-1">Series A target</div>
             </div>
@@ -406,10 +406,10 @@ const BusinessPlan = () => {
           <div className="bg-yellow-50 p-4 rounded-lg">
             <h4 className="font-semibold text-yellow-900 mb-2">Key Assumptions</h4>
             <ul className="text-sm text-yellow-800 space-y-1">
-              <li>• Average revenue per user (ARPU) of €120/month by Year 3</li>
-              <li>• Customer acquisition cost (CAC) decreasing from €200 to €80</li>
-              <li>• Customer lifetime value (LTV) increasing to €2,400</li>
-              <li>• 15% monthly churn rate improving to 5% by Year 5</li>
+              <li>• Average revenue per user (ARPU) of €100/month by Year 2</li>
+              <li>• Customer acquisition cost (CAC) decreasing from €180 to €60</li>
+              <li>• Customer lifetime value (LTV) increasing to €2,000</li>
+              <li>• 12% monthly churn rate improving to 4% by Year 4</li>
             </ul>
           </div>
         </div>
@@ -498,7 +498,7 @@ const BusinessPlan = () => {
             <h4 className="text-lg font-semibold mb-3">Recruitment Strategy</h4>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <h5 className="font-medium mb-2">Priority Hires (Next 12 months)</h5>
+                <h5 className="font-medium mb-2">Priority Hires (Starting Q3/2025)</h5>
                 <ul className="text-sm space-y-1">
                   <li>• Senior Data Scientist (€80-100K)</li>
                   <li>• DevOps Engineer (€70-90K)</li>
@@ -536,8 +536,8 @@ const BusinessPlan = () => {
               <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
                 <h4 className="text-xl font-semibold text-blue-900 mb-3">For Investors</h4>
                 <ul className="text-blue-800 space-y-2">
-                  <li>• €5M Series A funding round opening Q2 2024</li>
-                  <li>• Target 10x return within 5 years</li>
+                  <li>• €3M Series A funding round opening Q1 2026</li>
+                  <li>• Target 8x return within 4 years</li>
                   <li>• Growing market with 15.7% CAGR</li>
                   <li>• Experienced team with proven track record</li>
                 </ul>
@@ -577,7 +577,7 @@ const BusinessPlan = () => {
               <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
                 <h4 className="text-xl font-semibold text-orange-900 mb-3">For Early Users</h4>
                 <ul className="text-orange-800 space-y-2">
-                  <li>• Beta access to platform features</li>
+                  <li>• Beta access starting Q3/2025</li>
                   <li>• Discounted lifetime membership</li>
                   <li>• Direct input on product development</li>
                   <li>• Community of health optimizers</li>
