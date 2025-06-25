@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -49,11 +50,18 @@ const PersonalJourney = () => {
       metrics: ["AI Agent Systems", "Epigenetic Knowledge Base", "Molecular Medicine", "Device Testing", "Blood Test Protocols"]
     },
     {
-      year: "2024",
+      year: "Q3/2025",
       title: "Community Launch",
-      description: "Launch platform for early adopters and begin building a community of health optimizers.",
+      description: "Launch platform for early adopters and begin building a community of health optimizers. Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.",
       status: "planned",
-      metrics: ["Beta Testing", "User Feedback", "Feature Development"]
+      metrics: ["Beta Testing", "User Feedback", "Feature Development", "Community Building"]
+    },
+    {
+      year: "2024",
+      title: "Platform Development",
+      description: "Full platform development with advanced features, AI-powered insights, and comprehensive health optimization tools.",
+      status: "planned",
+      metrics: ["AI Integration", "Advanced Analytics", "User Dashboard", "Mobile App"]
     }
   ];
 
