@@ -1,26 +1,20 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-
 const HeroSection = () => {
   const scrollToFeatures = () => {
     const element = document.getElementById('features');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section 
-      id="hero" 
-      className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 relative"
-      style={{
-        backgroundImage: `url('/lovable-uploads/cb871aff-1e4a-400c-b97a-504fbd0c0049.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
+  return <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 relative" style={{
+    backgroundImage: `url('/lovable-uploads/cb871aff-1e4a-400c-b97a-504fbd0c0049.png')`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat'
+  }}>
       {/* Darker overlay for better text readability */}
       <div className="absolute inset-0 bg-black/40"></div>
       
@@ -41,36 +35,23 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => document.getElementById('contact')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               Start Your Journey
             </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              className="text-lg px-8 py-6 rounded-full border-2 border-white text-white hover:bg-white/90 hover:text-slate-900 hover:border-white/90 transition-all duration-300 shadow-lg backdrop-blur-sm"
-              onClick={scrollToFeatures}
-            >
+            <Button variant="outline" size="lg" onClick={scrollToFeatures} className="text-lg px-8 py-6 border-2 border-white hover:border-white/90 transition-all duration-300 shadow-lg backdrop-blur-sm bg-fuchsia-500 hover:bg-fuchsia-400 rounded-sm text-fuchsia-100">
               Learn More
             </Button>
           </div>
           
           <div className="animate-bounce">
-            <button 
-              onClick={scrollToFeatures} 
-              className="text-white/70 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2"
-              aria-label="Scroll to features section"
-            >
+            <button onClick={scrollToFeatures} className="text-white/70 hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-white/50 rounded-full p-2" aria-label="Scroll to features section">
               <ArrowDown size={32} />
             </button>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
