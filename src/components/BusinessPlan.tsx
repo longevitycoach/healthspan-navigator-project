@@ -1,3 +1,4 @@
+
 import React, { memo, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -106,7 +107,7 @@ const BusinessPlan = memo(() => {
       { month: 'M18', organic: 2500, paid: 1500, referral: 800 },
       { month: 'M24', organic: 4000, paid: 2200, referral: 1300 }
     ]
-  }), [];
+  }), []);
 
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8', '#82CA9D'];
 
