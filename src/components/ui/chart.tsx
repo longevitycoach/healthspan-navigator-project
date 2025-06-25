@@ -54,6 +54,14 @@ const ChartContainer = React.forwardRef<
           className
         )}
         {...props}
+        style={{
+          "--color-chart-1": "hsl(221, 83%, 53%)",
+          "--color-chart-2": "hsl(158, 64%, 52%)",
+          "--color-chart-3": "hsl(280, 87%, 65%)",
+          "--color-chart-4": "hsl(348, 83%, 47%)",
+          "--color-chart-5": "hsl(46, 77%, 65%)",
+          ...props.style
+        } as React.CSSProperties}
       >
         <ChartStyle id={chartId} config={config} />
         <RechartsPrimitive.ResponsiveContainer>

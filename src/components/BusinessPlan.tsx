@@ -1,13 +1,71 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ChevronLeft, ChevronRight, Users, Github, Mail, Heart, Target, TrendingUp, DollarSign, Lightbulb, Shield, Globe } from "lucide-react";
+import { ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
+import { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer } from "recharts";
 
 const BusinessPlan = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
+  // Market trend data
+  const marketGrowthData = [
+    { year: "2020", healthcare: 3.8, wellness: 450, longevity: 8 },
+    { year: "2021", healthcare: 4.0, wellness: 480, longevity: 12 },
+    { year: "2022", healthcare: 4.2, wellness: 520, longevity: 16 },
+    { year: "2023", healthcare: 4.4, wellness: 570, longevity: 20 },
+    { year: "2024", healthcare: 4.6, wellness: 620, longevity: 24 },
+    { year: "2025", healthcare: 4.8, wellness: 659, longevity: 27 }
+  ];
+
+  const demographicTrendsData = [
+    { age: "25-34", adoption: 68, growth: 12 },
+    { age: "35-44", adoption: 74, growth: 15 },
+    { age: "45-54", adoption: 62, growth: 18 },
+    { age: "55-64", adoption: 48, growth: 22 },
+    { age: "65+", adoption: 32, growth: 28 }
+  ];
+
+  const competitiveData = [
+    { category: "Health Tracking", market: 45, opportunity: 25 },
+    { category: "AI Analytics", market: 20, opportunity: 35 },
+    { category: "Expert Network", market: 15, opportunity: 40 },
+    { category: "Personalization", market: 25, opportunity: 45 },
+    { category: "Research Integration", market: 10, opportunity: 50 }
+  ];
+
+  const chartConfig = {
+    healthcare: {
+      label: "Healthcare Market",
+      color: "hsl(var(--chart-1))",
+    },
+    wellness: {
+      label: "Wellness Industry",
+      color: "hsl(var(--chart-2))",
+    },
+    longevity: {
+      label: "Longevity Market",
+      color: "hsl(var(--chart-3))",
+    },
+    adoption: {
+      label: "Current Adoption",
+      color: "hsl(var(--chart-4))",
+    },
+    growth: {
+      label: "Growth Rate",
+      color: "hsl(var(--chart-5))",
+    },
+    market: {
+      label: "Current Market Share",
+      color: "hsl(var(--chart-1))",
+    },
+    opportunity: {
+      label: "Opportunity Gap",
+      color: "hsl(var(--chart-2))",
+    }
+  };
+
   const slides = [
     {
       title: "Vision & Mission",
@@ -53,8 +111,10 @@ const BusinessPlan = () => {
       title: "Market Analysis",
       icon: <TrendingUp className="w-8 h-8 text-emerald-600" />,
       content: (
-        <div className="space-y-6">
-          <h3 className="text-2xl font-bold text-center mb-6">Market Opportunity & Trends</h3>
+        <div className="space-y-8">
+          <h3 className="text-2xl font-bold text-center mb-6">Market Opportunity & Growth Trends</h3>
+          
+          {/* Market Size Overview */}
           <div className="grid md:grid-cols-3 gap-6">
             <Card className="text-center border-blue-200">
               <CardContent className="pt-6">
@@ -78,6 +138,93 @@ const BusinessPlan = () => {
               </CardContent>
             </Card>
           </div>
+
+          {/* Market Growth Trends Chart */}
+          <Card>
+            <CardHeader>
+              <CardTitle>Market Growth Trajectory (Trillions/Billions USD)</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <ChartContainer config={chartConfig} className="h-[300px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <AreaChart data={marketGrowthData}>
+                    <CartesianGrid strokeDasharray="3 3" />
+                    <XAxis dataKey="year" />
+                    <YAxis />
+                    <ChartTooltip content={<ChartTooltipContent />} />
+                    <Area
+                      type="monotone"
+                      dataKey="healthcare"
+                      stackId="1"
+                      stroke="var(--color-healthcare)"
+                      fill="var(--color-healthcare)"
+                      fillOpacity={0.6}
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="wellness"
+                      stackId="2"
+                      stroke="var(--color-wellness)"
+                      fill="var(--color-wellness)"
+                      fillOpacity={0.6}
+                    />
+                    <Area
+                      type="monotone"
+                      dataKey="longevity"
+                      stackId="3"
+                      stroke="var(--color-longevity)"
+                      fill="var(--color-longevity)"
+                      fillOpacity={0.8}
+                    />
+                  </AreaChart>
+                </ResponsiveContainer>
+              </ChartContainer>
+            </CardContent>
+          </Card>
+
+          {/* Demographics & Adoption Trends */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle>Target Demographics Adoption</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ChartContainer config={chartConfig} className="h-[250px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={demographicTrendsData}>
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis dataKey="age" />
+                      <YAxis />
+                      <ChartTooltip content={<ChartTooltipContent />} />
+                      <Bar dataKey="adoption" fill="var(--color-adoption)" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </ChartContainer>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle>Competitive Landscape Analysis</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <ChartContainer config={chartConfig} className="h-[250px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <BarChart data={competitiveData} layout="horizontal">
+                      <CartesianGrid strokeDasharray="3 3" />
+                      <XAxis type="number" />
+                      <YAxis dataKey="category" type="category" width={100} />
+                      <ChartTooltip content={<ChartTooltipContent />} />
+                      <Bar dataKey="market" fill="var(--color-market)" />
+                      <Bar dataKey="opportunity" fill="var(--color-opportunity)" />
+                    </BarChart>
+                  </ResponsiveContainer>
+                </ChartContainer>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Market Drivers & Demographics */}
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-gradient-to-r from-blue-50 to-emerald-50 p-6 rounded-lg">
               <h4 className="font-semibold mb-3 text-blue-800">Market Drivers</h4>
