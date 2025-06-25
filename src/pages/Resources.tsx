@@ -182,6 +182,18 @@ const Resources = () => {
 
   const germanYouTube = [
     {
+      title: "Healthwise",
+      description: "Nils Behrens explores what true health means today, featuring conversations with specialists across medicine, therapy, and wellness"
+    },
+    {
+      title: "Flowgrade",
+      description: "Max Gotzler shared in expert interviews, how-to videos, recipes, and motivational clips to help you achieve your happiest and most powerful flow state"
+    },
+    {
+      title: "Modern Medicine",
+      description: "Alessandro Falcone discusses science-based longevity strategies with top experts, covering everything from nutrition and fitness to medical innovations"
+    },
+    {
       title: "Dr. med. Petra Bracht",
       description: "Gesundheitstipps und Präventionsmedizin",
       handle: "@DrPetraBracht"
