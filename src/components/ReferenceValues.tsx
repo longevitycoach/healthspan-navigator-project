@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -15,7 +14,7 @@ const cardiovascularBiomarkers = [
     optimalRange: "< 80 mg/dL",
     officialRange: "< 130 mg/dL",
     description: "Found on all 'bad' lipoproteins (like LDL), strongly correlated with increased cardiovascular disease risk. More informative than LDL alone.",
-    clinicalNotes: "Essential marker for cardiovascular risk assessment, superior to LDL-C for risk prediction.",
+    clinicalNotes: "Essential marker for cardiovascular risk assessment, superior to LDL-C for risk prediction. This marker is found on all 'bad' lipoproteins and provides better cardiovascular risk stratification than traditional cholesterol panels.",
     factors: ["Diet", "Exercise", "Statins", "Genetics"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -24,7 +23,7 @@ const cardiovascularBiomarkers = [
     optimalRange: "< 30 mg/dL",
     officialRange: "< 75 nmol/L",
     description: "Genetic risk factor for cardiovascular disease, independent of other lipid parameters.",
-    clinicalNotes: "Managing Lp(a) levels may require specialized interventions and monitoring. Genetic component makes it less responsive to lifestyle changes.",
+    clinicalNotes: "Managing Lp(a) levels may require specialized interventions and monitoring. Genetic component makes it less responsive to lifestyle changes. A genetic risk factor for cardiovascular disease that operates independently of other cholesterol markers.",
     factors: ["Genetics", "Niacin", "PCSK9 Inhibitors"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -33,7 +32,7 @@ const cardiovascularBiomarkers = [
     optimalRange: "> 50 mg/dL (women), > 40 mg/dL (men)",
     officialRange: "> 40 mg/dL (men), > 50 mg/dL (women)",
     description: "High-density lipoprotein, often referred to as 'good cholesterol'. Higher levels are generally protective.",
-    clinicalNotes: "Essential component of cardiovascular risk assessment, though quality matters more than quantity.",
+    clinicalNotes: "Essential component of cardiovascular risk assessment, though quality matters more than quantity. Functions as reverse cholesterol transport system.",
     factors: ["Exercise", "Diet", "Genetics", "Alcohol (moderate)"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -42,7 +41,7 @@ const cardiovascularBiomarkers = [
     optimalRange: "< 100 mg/dL",
     officialRange: "< 130 mg/dL",
     description: "Low-density lipoprotein, one of the 'bad' lipoproteins that carries ApoB.",
-    clinicalNotes: "Traditional marker for cardiovascular risk, though ApoB is more predictive.",
+    clinicalNotes: "Traditional marker for cardiovascular risk, though ApoB is more predictive. Still important for overall lipid profile assessment.",
     factors: ["Diet", "Exercise", "Genetics", "Medications"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -51,7 +50,7 @@ const cardiovascularBiomarkers = [
     optimalRange: "< 100 mg/dL",
     officialRange: "< 150 mg/dL",
     description: "Type of fat transported in the blood, influenced by diet and metabolic health.",
-    clinicalNotes: "Elevated levels associated with increased cardiovascular risk and metabolic dysfunction.",
+    clinicalNotes: "Elevated levels associated with increased cardiovascular risk and metabolic dysfunction. Responds well to dietary modifications.",
     factors: ["Diet", "Exercise", "Alcohol", "Genetics"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -60,8 +59,8 @@ const cardiovascularBiomarkers = [
     optimalRange: "> 8%",
     officialRange: "4-8%",
     description: "Percentage of EPA and DHA in red blood cell membranes. Low levels linked to higher mortality risk, called 'the new smoking'.",
-    clinicalNotes: "Critical for cardiovascular health, brain function, and inflammation control. Most people have insufficient levels due to poor Omega-3 to Omega-6 ratios.",
-    factors: ["Fish consumption", "Supplementation", "Diet quality"],
+    clinicalNotes: "Critical for cardiovascular health, brain function, and inflammation control. Most people have insufficient levels due to poor Omega-3 to Omega-6 ratios. Best measured in EDTA blood samples, not serum.",
+    factors: ["Fish consumption", "Supplementation", "Diet quality", "Antioxidants (co-factor)"],
     expertSource: "Thiemo Osterhaus"
   },
   {
@@ -69,7 +68,7 @@ const cardiovascularBiomarkers = [
     optimalRange: "< 8 µmol/L",
     officialRange: "< 15 µmol/L",
     description: "Amino acid whose elevated levels are linked to cardiovascular risk. Often correlates with B-vitamin deficiencies.",
-    clinicalNotes: "Elevated levels indicate increased cardiovascular risk and potential B6, B9, or B12 deficiencies.",
+    clinicalNotes: "Elevated levels indicate increased cardiovascular risk and potential B6, B9, or B12 deficiencies. High homocysteine often correlates with deficiencies in Vitamin B6, Vitamin B9 (Folic acid), or Vitamin B12.",
     factors: ["Vitamin B6", "Vitamin B9 (Folate)", "Vitamin B12", "Genetics"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -78,9 +77,18 @@ const cardiovascularBiomarkers = [
     optimalRange: "< 1 mg/L",
     officialRange: "< 3 mg/L",
     description: "Marker of general inflammation in the body. High levels indicate 'silent inflammation' contributing to aging.",
-    clinicalNotes: "Should always be measured with ferritin as inflammation can falsely elevate ferritin levels.",
+    clinicalNotes: "Should always be measured with ferritin as inflammation can falsely elevate ferritin levels. High CRP indicates 'silent inflammation' which contributes to aging (inflammaging).",
     factors: ["Diet", "Exercise", "Stress", "Infections"],
     expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Blood Pressure (Systolic/Diastolic)",
+    optimalRange: "< 120/80 mmHg",
+    officialRange: "< 130/80 mmHg",
+    description: "Critical for cardiovascular health. Hypertension often goes unnoticed in early stages.",
+    clinicalNotes: "Regularly monitor, especially for women in/after menopause due to hormonal shifts, and men experiencing erectile dysfunction, which can be an early warning sign of blood vessel issues.",
+    factors: ["Diet", "Exercise", "Stress", "Sleep", "Sodium intake"],
+    expertSource: "Various Medical Guidelines"
   }
 ];
 
@@ -90,7 +98,7 @@ const metabolicBiomarkers = [
     optimalRange: "< 100 mg/dL",
     officialRange: "70-99 mg/dL",
     description: "Blood sugar levels after overnight fast. Values over 100 mg/dL indicate disturbed glucose metabolism.",
-    clinicalNotes: "Key marker for metabolic health and diabetes risk assessment.",
+    clinicalNotes: "Key marker for metabolic health and diabetes risk assessment. Essential for longevity optimization.",
     factors: ["Diet", "Exercise", "Stress", "Sleep"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -99,7 +107,7 @@ const metabolicBiomarkers = [
     optimalRange: "< 5.3%",
     officialRange: "< 5.7%",
     description: "Average blood sugar level over 2-3 months. Key diagnostic marker for diabetes and longevity parameter.",
-    clinicalNotes: "Values from 5.7% indicate beginning disturbance. Measurement method can influence results.",
+    clinicalNotes: "Values from 5.7% indicate beginning disturbance. Measurement method can influence results. Provides an average blood sugar level over several months and is a relevant parameter for longevity.",
     factors: ["Diet", "Exercise", "Medications", "Stress"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -108,8 +116,17 @@ const metabolicBiomarkers = [
     optimalRange: "< 2.0",
     officialRange: "< 2.5",
     description: "Reflects insulin sensitivity and resistance, serving as indicator for pre-diabetic states.",
-    clinicalNotes: "Often not routinely measured in conventional medicine but crucial for metabolic assessment.",
+    clinicalNotes: "Often not routinely measured in conventional medicine but crucial for metabolic assessment. This index reflects insulin sensitivity and resistance, serving as an indicator for pre-diabetic states.",
     factors: ["Diet", "Exercise", "Body weight", "Stress"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Continuous Glucose Monitoring (CGM)",
+    optimalRange: "70-140 mg/dL (minimal spikes)",
+    officialRange: "Not established",
+    description: "Monitors blood sugar spikes throughout the day. Rapid increases are undesirable as they can lead to energy crashes and cravings.",
+    clinicalNotes: "Important for individuals aiming for stable energy, weight management, and prevention of type 2 diabetes. Can reveal glucose patterns not visible in single measurements.",
+    factors: ["Diet timing", "Food composition", "Exercise", "Stress", "Sleep"],
     expertSource: "Thiemo Osterhaus"
   }
 ];
@@ -120,8 +137,8 @@ const vitaminsBiomarkers = [
     optimalRange: "40-60 ng/mL",
     officialRange: "30-100 ng/mL",
     description: "Crucial for immune function, bone health, mood regulation, neurotransmitter formation, and hormone modulation.",
-    clinicalNotes: "Up to 60% of Germans estimated deficient, especially in winter. Higher doses recommended than official guidelines (2500 IU summer, 5000 IU winter).",
-    factors: ["Sun exposure", "Supplementation", "Skin color", "Geographic location"],
+    clinicalNotes: "Up to 60% of Germans estimated deficient, especially in winter. Higher doses recommended than official guidelines (2500 IU summer, 5000 IU winter). Important for brain health, protecting against autoimmune diseases, and preventing 'winter blues' or depression. Critical for fertility and egg quality.",
+    factors: ["Sun exposure", "Supplementation", "Skin color", "Geographic location", "Vitamin K2 (co-factor)", "Magnesium (co-factor)"],
     expertSource: "Thiemo Osterhaus"
   },
   {
@@ -129,7 +146,7 @@ const vitaminsBiomarkers = [
     optimalRange: "Varies",
     officialRange: "19-67 pg/mL",
     description: "Active form of Vitamin D. Testing alongside 25-OH can be relevant for immune system problems or autoimmune diseases.",
-    clinicalNotes: "Helps understand Vitamin D metabolism, particularly important for autoimmune conditions.",
+    clinicalNotes: "Helps understand Vitamin D metabolism, particularly important for autoimmune conditions. This is the active form of Vitamin D and testing this in addition to 25-OH Vitamin D can be particularly relevant for individuals with immune system problems.",
     factors: ["Kidney function", "PTH levels", "Calcium status"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -138,7 +155,7 @@ const vitaminsBiomarkers = [
     optimalRange: "> 1 ng/mL",
     officialRange: "No official range",
     description: "Vital for bone health (calcium distribution) and heart health. Works synergistically with Vitamin D.",
-    clinicalNotes: "Ensures calcium is deposited in bones, not arteries. Studies explore effects on immune health and athletic performance.",
+    clinicalNotes: "Ensures calcium is deposited in bones, not arteries. Studies explore effects on immune health and athletic performance. Works synergistically with Vitamin D to ensure calcium is deposited in bones and not in arteries.",
     factors: ["Diet", "Supplementation", "Gut bacteria"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -147,7 +164,7 @@ const vitaminsBiomarkers = [
     optimalRange: "> 12 mg/L",
     officialRange: "4-15 mg/L",
     description: "'Queen of vitamins' - crucial for immune system, collagen formation, nerve health. Key antioxidant and co-factor for cortisol/DHEA production.",
-    clinicalNotes: "Essential for iron absorption, often underestimated. Important for fertility and egg quality.",
+    clinicalNotes: "Essential for iron absorption, often underestimated. Important for fertility and egg quality. Crucial for a strong immune system, collagen formation, and healthy nerve cells. Co-factor for Cortisol and DHEA production.",
     factors: ["Diet", "Supplementation", "Stress", "Smoking"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -156,7 +173,7 @@ const vitaminsBiomarkers = [
     optimalRange: "> 400 pg/mL",
     officialRange: "200-1100 pg/mL",
     description: "Essential for nervous system function and reducing fatigue. Deficiency can cause irreversible nerve damage.",
-    clinicalNotes: "Critical for vegetarians/vegans. High doses recommended for neurodegenerative diseases. Holotranscobalamin more accurate than total B12.",
+    clinicalNotes: "Critical for vegetarians/vegans. High doses recommended for neurodegenerative diseases. Holotranscobalamin more accurate than total B12. Particularly critical for vegetarians and vegans as it is primarily found in animal products.",
     factors: ["Diet", "Absorption", "Age", "Medications"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -165,8 +182,35 @@ const vitaminsBiomarkers = [
     optimalRange: "> 10 ng/mL",
     officialRange: "> 3.1 ng/mL",
     description: "Essential for blood formation and reducing fatigue. Increased demand in women of childbearing age.",
-    clinicalNotes: "Critical during pregnancy and lactation. Works with B12 and B6 to control homocysteine.",
+    clinicalNotes: "Critical during pregnancy and lactation. Works with B12 and B6 to control homocysteine. Essential for normal blood formation and there is an increased demand in women of childbearing age.",
     factors: ["Diet", "Pregnancy", "Alcohol", "Medications"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "B-Complex Vitamins",
+    optimalRange: "Varies by vitamin",
+    officialRange: "Varies by vitamin",
+    description: "Complex of vitamins vital for energy production, nerve function, blood formation, and neurotransmitter synthesis.",
+    clinicalNotes: "A comprehensive B-complex is recommended over individual B vitamins for balanced intake. Especially important for brain health, nervous system support during stress, and for the gut-brain axis in managing pain.",
+    factors: ["Diet", "Stress", "Age", "Absorption"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Vitamin B6 (Pyridoxine)",
+    optimalRange: "20-50 ng/mL",
+    officialRange: "5-50 ng/mL",
+    description: "Important for steroid hormone synthesis. Deficiency linked to homocysteine levels and mood swings.",
+    clinicalNotes: "Important for steroid hormone synthesis. Its deficiency is linked to homocysteine levels and can affect mood swings and psychological well-being. Care should be taken with synthetic forms.",
+    factors: ["Diet", "Hormonal status", "Stress"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Vitamin B5 (Pantothenic Acid)",
+    optimalRange: "0.5-1.8 mg/L",
+    officialRange: "Not established",
+    description: "Crucial co-factor for Cortisol and DHEA production in the adrenal glands.",
+    clinicalNotes: "A crucial co-factor for Cortisol and DHEA production in the adrenal glands, especially beneficial for exhaustion and burnout.",
+    factors: ["Stress", "Adrenal function", "Diet"],
     expertSource: "Thiemo Osterhaus"
   }
 ];
@@ -177,8 +221,17 @@ const mineralsBiomarkers = [
     optimalRange: "100-120 µg/L (women), 100-150 µg/L (men)",
     officialRange: "15-150 µg/L (women), 30-400 µg/L (men)",
     description: "Primary marker for iron stores. Low levels indicate iron deficiency even if hemoglobin is normal.",
-    clinicalNotes: "Very common deficiency, especially in menstruating women, athletes, vegetarians. Can be falsely elevated by inflammation (check CRP).",
-    factors: ["Menstruation", "Diet", "Absorption", "Blood loss"],
+    clinicalNotes: "Very common deficiency, especially in menstruating women, athletes, vegetarians. Can be falsely elevated by inflammation (check CRP). Symptoms include chronic fatigue, hair loss, brittle nails, concentration problems, and reduced fertility. Always include Hemoglobin, Transferrin Saturation, and CRP alongside Ferritin for accurate diagnosis.",
+    factors: ["Menstruation", "Diet", "Absorption", "Blood loss", "Vitamin C (co-factor)"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Hemoglobin (HB)",
+    optimalRange: "> 12 g/dL (women), > 13 g/dL (men)",
+    officialRange: "12-15.5 g/dL (women), 13.5-17.5 g/dL (men)",
+    description: "The protein in red blood cells that carries oxygen. Used to diagnose anemia.",
+    clinicalNotes: "Used to diagnose anemia (blood deficiency), with defined cut-offs for women (<12 g/dL), men (<13 g/dL), and pregnant women (<11 g/dL).",
+    factors: ["Iron status", "B12", "Folate", "Chronic disease"],
     expertSource: "Thiemo Osterhaus"
   },
   {
@@ -186,7 +239,7 @@ const mineralsBiomarkers = [
     optimalRange: "2.2-2.6 mg/dL",
     officialRange: "1.7-2.2 mg/dL",
     description: "Involved in 600+ metabolic processes. Crucial for muscle function, nervous system, energy production, neurotransmitter formation.",
-    clinicalNotes: "~80% of population deficient. High demand for athletes and high-stress individuals. Whole blood analysis more accurate than serum.",
+    clinicalNotes: "~80% of population deficient. High demand for athletes and high-stress individuals. Whole blood analysis more accurate than serum. Crucial for muscle function, energy production (ATP synthesis depends on Magnesium), and sleep quality.",
     factors: ["Diet", "Stress", "Exercise", "Medications"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -195,7 +248,7 @@ const mineralsBiomarkers = [
     optimalRange: "90-110 µg/dL",
     officialRange: "60-120 µg/dL",
     description: "Important for immune system, cell division, collagen formation, steroid hormone synthesis. Deficiency causes hair loss, brittle nails.",
-    clinicalNotes: "Critical for vegetarians/vegans due to phytate binding. Recommended for athletes and gut barrier healing.",
+    clinicalNotes: "Critical for vegetarians/vegans due to phytate binding. Recommended for athletes and gut barrier healing. Important for synthesis of steroid hormones (Testosterone, Progesterone, Estrogen).",
     factors: ["Diet", "Phytates", "Absorption", "Stress"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -204,7 +257,7 @@ const mineralsBiomarkers = [
     optimalRange: "100-150 µg/L",
     officialRange: "50-200 µg/L",
     description: "Important for oxidative stress protection, immune system, antioxidant function, and thyroid health.",
-    clinicalNotes: "European soil often selenium-poor, leading to common deficiencies. Higher doses may be needed than standard recommendations.",
+    clinicalNotes: "European soil often selenium-poor, leading to common deficiencies. Higher doses may be needed than standard recommendations. Vital for healthy antioxidant and thyroid function.",
     factors: ["Soil content", "Diet", "Geographic location"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -213,8 +266,26 @@ const mineralsBiomarkers = [
     optimalRange: "100-199 µg/L",
     officialRange: "50-125 µg/L",
     description: "Essential for normal thyroid function and cognitive function.",
-    clinicalNotes: "Many regions (like Germany) are iodine-poor. Common in those consuming little iodized salt or fish.",
+    clinicalNotes: "Many regions (like Germany) are iodine-poor. Common in those consuming little iodized salt or fish. High doses can be used for thyroid support in fertility contexts.",
     factors: ["Geographic location", "Salt intake", "Fish consumption"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Calcium",
+    optimalRange: "9.5-10.5 mg/dL",
+    officialRange: "8.5-10.5 mg/dL",
+    description: "Essential for normal bone and tooth formation and muscle function.",
+    clinicalNotes: "Requires adequate Vitamin D for proper absorption. People who avoid dairy products often show a deficiency.",
+    factors: ["Vitamin D", "Diet", "Parathyroid function"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Copper",
+    optimalRange: "70-140 µg/dL",
+    officialRange: "70-140 µg/dL",
+    description: "A co-factor whose deficiency can impair iron absorption.",
+    clinicalNotes: "A co-factor whose deficiency can impair iron absorption. Important for connective tissue formation.",
+    factors: ["Diet", "Zinc balance", "Absorption"],
     expertSource: "Thiemo Osterhaus"
   }
 ];
@@ -225,7 +296,7 @@ const hormonesBiomarkers = [
     optimalRange: "1.0-2.0 mIU/L",
     officialRange: "0.4-4.0 mIU/L",
     description: "While commonly measured, TSH alone is insufficient for comprehensive thyroid assessment.",
-    clinicalNotes: "Should be evaluated alongside fT3 and fT4 for complete thyroid function assessment.",
+    clinicalNotes: "Should be evaluated alongside fT3 and fT4 for complete thyroid function assessment. Experts emphasize that TSH alone is insufficient for a comprehensive assessment of thyroid function.",
     factors: ["Thyroid disease", "Stress", "Medications", "Age"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -234,7 +305,7 @@ const hormonesBiomarkers = [
     optimalRange: "3.0-4.2 pg/mL",
     officialRange: "2.3-4.2 pg/mL",
     description: "The active thyroid hormone, critical for metabolism and energy.",
-    clinicalNotes: "More indicative of thyroid function than TSH alone. Essential for comprehensive assessment.",
+    clinicalNotes: "More indicative of thyroid function than TSH alone. Essential for comprehensive assessment. The active thyroid hormone critical for metabolism and energy.",
     factors: ["Thyroid health", "Iodine", "Selenium", "Stress"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -243,7 +314,7 @@ const hormonesBiomarkers = [
     optimalRange: "1.0-1.8 ng/dL",
     officialRange: "0.8-1.8 ng/dL",
     description: "Precursor to fT3, important for overall thyroid function assessment.",
-    clinicalNotes: "Should be evaluated with fT3 and TSH for complete picture.",
+    clinicalNotes: "Should be evaluated with fT3 and TSH for complete picture. A precursor to fT3 and important for overall thyroid function assessment.",
     factors: ["Thyroid health", "Medications", "Stress"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -252,7 +323,7 @@ const hormonesBiomarkers = [
     optimalRange: "15-25 pg/mL (men), 1-4 pg/mL (women)",
     officialRange: "9-30 pg/mL (men), 0.3-3.2 pg/mL (women)",
     description: "Important for dopaminergic system, learning, memory, concentration. Has neuroprotective qualities.",
-    clinicalNotes: "Men in 30s-40s can experience deficiency. Measure SHBG alongside total testosterone to calculate free testosterone.",
+    clinicalNotes: "Men in 30s-40s can experience deficiency. Measure SHBG alongside total testosterone to calculate free testosterone. Important for the dopaminergic system, acetylcholine (learning, memory, concentration), and can help prevent depression and cognitive impairment.",
     factors: ["Vitamin D3", "Vitamin B6", "Zinc", "Magnesium", "Age"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -261,7 +332,7 @@ const hormonesBiomarkers = [
     optimalRange: "20-40 pg/mL (women)",
     officialRange: "30-400 pg/mL (cycling women)",
     description: "Important for happiness, well-being, serotonergic/dopaminergic systems, and acetylcholine (learning/memory).",
-    clinicalNotes: "Protective against cardiovascular disease in women. Decline during menopause can increase blood pressure.",
+    clinicalNotes: "Protective against cardiovascular disease in women. Decline during menopause can increase blood pressure. Important for the proper functioning of the serotonergic and dopaminergic systems.",
     factors: ["Age", "Menopause", "Stress", "Body weight"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -270,8 +341,26 @@ const hormonesBiomarkers = [
     optimalRange: "5-20 ng/mL (luteal phase)",
     officialRange: "0.2-25 ng/mL",
     description: "Important for relaxation, mood stabilization, sleep quality, GABAergic system. Deficiency causes irritability, sleep issues.",
-    clinicalNotes: "Test on cycle day 19-21 for women. Can be measured in serum or saliva (saliva preferred for free hormones).",
+    clinicalNotes: "Test on cycle day 19-21 for women. Can be measured in serum or saliva (saliva preferred for free hormones). Important for the GABAergic system (which promotes calm) and deficiency can lead to irritability and sleep disturbances.",
     factors: ["Stress", "Age", "Cycle phase", "Sleep"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "DHEA (Dehydroepiandrosterone)",
+    optimalRange: "200-400 µg/dL",
+    officialRange: "85-690 µg/dL",
+    description: "Precursor hormone for testosterone and estrogen production. Often described as 'healing' hormone.",
+    clinicalNotes: "Vitamin C and Pantothenic acid (B5) are crucial co-factors for production. A precursor hormone that the body uses to produce Testosterone and Estrogen.",
+    factors: ["Age", "Stress", "Vitamin C", "Vitamin B5"],
+    expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "SHBG (Sex Hormone-Binding Globulin)",
+    optimalRange: "18-54 nmol/L (men), 18-144 nmol/L (women)",
+    officialRange: "18-54 nmol/L (men), 18-144 nmol/L (women)",
+    description: "A binding protein that transports sex hormones in the blood.",
+    clinicalNotes: "Essential to measure alongside total testosterone to accurately calculate free (bioavailable) testosterone.",
+    factors: ["Age", "Thyroid function", "Insulin resistance"],
     expertSource: "Thiemo Osterhaus"
   }
 ];
@@ -282,7 +371,7 @@ const liverBiomarkers = [
     optimalRange: "< 30 U/L",
     officialRange: "7-55 U/L",
     description: "Glutamate Pyruvate Transaminase - enzyme indicating liver function and potential damage.",
-    clinicalNotes: "Elevated levels indicate liver stress or damage.",
+    clinicalNotes: "Elevated levels indicate liver stress or damage. Part of comprehensive liver function assessment.",
     factors: ["Alcohol", "Medications", "Liver disease", "Diet"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -291,7 +380,7 @@ const liverBiomarkers = [
     optimalRange: "< 30 U/L",
     officialRange: "8-48 U/L",
     description: "Glutamate Oxaloacetate Transaminase - enzyme indicating liver function and potential damage.",
-    clinicalNotes: "Can also indicate muscle damage, should be interpreted with other liver markers.",
+    clinicalNotes: "Can also indicate muscle damage, should be interpreted with other liver markers. Part of liver function assessment panel.",
     factors: ["Alcohol", "Medications", "Liver disease", "Exercise"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -300,7 +389,7 @@ const liverBiomarkers = [
     optimalRange: "< 30 U/L",
     officialRange: "9-48 U/L",
     description: "Gamma-Glutamyl Transferase - elevated levels correlated with higher risk of earlier mortality.",
-    clinicalNotes: "Sensitive marker for liver stress and alcohol consumption.",
+    clinicalNotes: "Sensitive marker for liver stress and alcohol consumption. Elevated levels have been correlated with a higher risk of earlier mortality.",
     factors: ["Alcohol", "Medications", "Liver disease"],
     expertSource: "Thiemo Osterhaus"
   }
@@ -312,7 +401,7 @@ const kidneyBiomarkers = [
     optimalRange: "0.7-1.0 mg/dL (women), 0.8-1.2 mg/dL (men)",
     officialRange: "0.5-1.1 mg/dL (women), 0.7-1.3 mg/dL (men)",
     description: "Waste product from muscle metabolism, indicates kidney function.",
-    clinicalNotes: "Basic marker for kidney function assessment.",
+    clinicalNotes: "Basic marker for kidney function assessment. Should be interpreted alongside eGFR and other kidney markers.",
     factors: ["Kidney disease", "Dehydration", "Muscle mass"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -321,7 +410,7 @@ const kidneyBiomarkers = [
     optimalRange: "0.5-0.9 mg/L",
     officialRange: "0.5-1.0 mg/L",
     description: "More sensitive marker for kidney function than creatinine, less affected by muscle mass.",
-    clinicalNotes: "Superior to creatinine for early kidney function assessment.",
+    clinicalNotes: "Superior to creatinine for early kidney function assessment. More sensitive marker for kidney function than creatinine and less affected by muscle mass.",
     factors: ["Kidney function", "Age", "Inflammation"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -336,13 +425,13 @@ const kidneyBiomarkers = [
   }
 ];
 
-const specializedBiomarkers = [
+const longevityBiomarkers = [
   {
     name: "CoQ10 (Ubiquinol)",
     optimalRange: "> 2.5 µg/mL",
     officialRange: "0.4-1.8 µg/mL",
     description: "Vital for mitochondrial energy production, heart health, combating chronic fatigue. Levels decline with age.",
-    clinicalNotes: "Works with Vitamin B12 for mitochondrial function. Essential for cellular energy production.",
+    clinicalNotes: "Works with Vitamin B12 for mitochondrial function. Essential for cellular energy production. Vital for mitochondrial energy production ('fuel for the furnace') and heart health.",
     factors: ["Age", "Statin use", "Heart disease", "Supplementation"],
     expertSource: "Thiemo Osterhaus"
   },
@@ -351,18 +440,102 @@ const specializedBiomarkers = [
     optimalRange: "900-1400 µmol/L",
     officialRange: "550-1100 µmol/L",
     description: "Master antioxidant and main detoxification molecule. Protects cells, supports immune system, guards gut/brain barriers.",
-    clinicalNotes: "Deficiency common due to environmental toxins. Critical for detoxification and cellular protection.",
+    clinicalNotes: "Deficiency common due to environmental toxins. Critical for detoxification and cellular protection. Considered the body's 'master antioxidant' and main detoxification molecule.",
     factors: ["Environmental toxins", "Age", "Stress", "Diet"],
     expertSource: "Thiemo Osterhaus"
   },
   {
-    name: "DHEA (Dehydroepiandrosterone)",
-    optimalRange: "200-400 µg/dL",
-    officialRange: "85-690 µg/dL",
-    description: "Precursor hormone for testosterone and estrogen production. Often described as 'healing' hormone.",
-    clinicalNotes: "Vitamin C and Pantothenic acid (B5) are crucial co-factors for production.",
-    factors: ["Age", "Stress", "Vitamin C", "Vitamin B5"],
-    expertSource: "Thiemo Osterhaus"
+    name: "VO2 Max",
+    optimalRange: "> 50 mL/kg/min (men), > 40 mL/kg/min (women)",
+    officialRange: "Varies by age/fitness",
+    description: "Maximum rate of oxygen consumption during intense exercise. Strong correlation with physical condition and life expectancy.",
+    clinicalNotes: "Has a strong correlation with overall physical condition and life expectancy. Its measurement is being advocated as a standard for general medical check-ups.",
+    factors: ["Cardiovascular fitness", "Age", "Training", "Genetics"],
+    expertSource: "Longevity Research"
+  },
+  {
+    name: "Epigenetic Age / Aging Clocks",
+    optimalRange: "< Chronological Age",
+    officialRange: "Not established",
+    description: "Biological markers that estimate biological age, which may differ from chronological age.",
+    clinicalNotes: "Lifestyle factors like diet and exercise can significantly influence this marker. These are biological markers that can estimate a person's biological age.",
+    factors: ["Diet", "Exercise", "Sleep", "Stress management"],
+    expertSource: "Longevity Research"
+  },
+  {
+    name: "Taurine",
+    optimalRange: "40-100 µmol/L",
+    officialRange: "Not established",
+    description: "Shows promising longevity effects in animal studies, important for nerve metabolism.",
+    clinicalNotes: "Shows promising longevity effects in animal studies, also important for nerve metabolism. Research suggests potential anti-aging benefits.",
+    factors: ["Diet", "Supplementation", "Age"],
+    expertSource: "Longevity Research"  
+  },
+  {
+    name: "NAD+ / NADH Ratio",
+    optimalRange: "> 3:1",
+    officialRange: "Not established", 
+    description: "Critical for cellular energy production and DNA repair. Declines with age.",
+    clinicalNotes: "Essential for mitochondrial function and cellular repair processes. Supplementation with NAD+ precursors being studied for longevity benefits.",
+    factors: ["Age", "Exercise", "Fasting", "Sleep"],
+    expertSource: "Longevity Research"
+  }
+];
+
+const specializedBiomarkers = [
+  {
+    name: "Heavy Metals Panel (Mercury, Aluminum, Lead)",
+    optimalRange: "< Detection Limit",
+    officialRange: "Varies by metal",
+    description: "Exposure to these toxins is significant concern for brain health and linked to neurodegenerative diseases.",
+    clinicalNotes: "Exposure to these toxins is a significant concern for brain health and is linked to neurodegenerative diseases like Alzheimer's and Parkinson's. Testing for them is recommended.",
+    factors: ["Environmental exposure", "Dental work", "Diet", "Occupational exposure"],
+    expertSource: "Environmental Medicine"
+  },
+  {
+    name: "Amino Acids Panel",
+    optimalRange: "Varies by amino acid",
+    officialRange: "Varies by amino acid",
+    description: "Measuring individual amino acids helps assess protein metabolism, neurotransmitter synthesis, and hormone production.",
+    clinicalNotes: "Helps assess protein metabolism, neurotransmitter synthesis, and hormone production. Includes essential amino acids the body cannot produce.",
+    factors: ["Diet", "Protein intake", "Absorption", "Metabolism"],
+    expertSource: "Functional Medicine"
+  },
+  {
+    name: "Short-Chain Fatty Acids (SCFA)",
+    optimalRange: "High diversity",
+    officialRange: "Not established",
+    description: "Beneficial metabolites produced by gut bacteria. Important indicators of gut health.",
+    clinicalNotes: "Their levels, assessed through microbiome analysis, are important indicators of gut health and can influence the gut barrier.",
+    factors: ["Gut microbiome", "Fiber intake", "Diet quality"],
+    expertSource: "Microbiome Research"
+  },
+  {
+    name: "Microbiome Analysis",
+    optimalRange: "High diversity",
+    officialRange: "Not established",
+    description: "Assessment of gut bacterial composition and metabolite production.",
+    clinicalNotes: "Can help explain general, non-specific symptoms such as fatigue, body aches, and sensitive skin, linking them to gut imbalances.",
+    factors: ["Diet", "Antibiotics", "Stress", "Environment"],
+    expertSource: "Microbiome Research"
+  },
+  {
+    name: "Food Intolerance Panel",
+    optimalRange: "No significant reactions",
+    officialRange: "Not established",
+    description: "Identifies specific foods that trigger symptoms and contribute to gut inflammation.",
+    clinicalNotes: "Can help identify specific foods (e.g., fructose, lactose, gluten) that trigger symptoms and contribute to gut inflammation.",
+    factors: ["Gut health", "Immune system", "Genetics"],
+    expertSource: "Functional Medicine"
+  },
+  {
+    name: "Gut Permeability (Leaky Gut) Test",
+    optimalRange: "Normal barrier function",
+    officialRange: "Not established",
+    description: "Assesses integrity of intestinal barrier. Increased permeability allows toxins to enter bloodstream.",
+    clinicalNotes: "These tests assess the integrity of the intestinal barrier. Increased permeability allows toxins and undigested food particles to enter the bloodstream, triggering inflammation.",
+    factors: ["Diet", "Stress", "Medications", "Infections"],
+    expertSource: "Functional Medicine"
   }
 ];
 
@@ -378,7 +551,8 @@ const ReferenceValues = () => {
     { id: "hormones", label: "Hormones", icon: "🧬" },
     { id: "liver", label: "Liver", icon: "🫘" },
     { id: "kidney", label: "Kidney", icon: "💧" },
-    { id: "specialized", label: "Specialized", icon: "🧪" }
+    { id: "longevity", label: "Longevity", icon: "🧪" },
+    { id: "specialized", label: "Specialized", icon: "🔬" }
   ];
 
   const CategoryMenu = ({ categories, activeCategory, setActiveCategory, className = "" }) => (
@@ -488,6 +662,7 @@ const ReferenceValues = () => {
       case "hormones": return hormonesBiomarkers;
       case "liver": return liverBiomarkers;
       case "kidney": return kidneyBiomarkers;
+      case "longevity": return longevityBiomarkers;
       case "specialized": return specializedBiomarkers;
       default: return [];
     }
