@@ -67,41 +67,41 @@ const germanBooks = [
     "title": "Ab morgen jünger!",
     "author": "Nina Ruge",
     "description": "Neueste Erkenntnisse der Longevity-Forschung praktisch angewandt",
-    "url": "https://www.amazon.de/dp/3641319161"
+    "url": "https://www.amazon.de/Ab-morgen-j%C3%BCnger-bleiben-Longevity/dp/3453218817"
   },
   {
     "title": "Die Amino-Revolution",
     "author": "Dr. Ulrich Strunz",
     "description": "Wie Aminosäuren den Alterungsprozess beeinflussen können",
-    "url": "https://www.amazon.de/dp/3453207793"
+    "url": "https://www.audible.de/pd/Die-Amino-Revolution-Hoerbuch/B0BB8BVQCF"
   },
   {
     "title": "Nährstoff-Therapie",
     "author": "Dr. med. Helena Orfanos-Boeckel",
     "description": "Orthomolekulare Medizin in der praktischen Anwendung",
-    "url": "https://www.amazon.de/dp/3432114524"
+    "url": "https://www.audible.de/pd/Naehrstoff-Therapie-Hoerbuch/"
+  },
+  {
+    "title": "Nährstoff-Therapie - Der Praxisleitfaden",
+    "author": "Dr. med. Helena Orfanos-Boeckel",
+    "description": "Orthomolekulare Medizin richtig dosieren und anwenden. Vorbeugen und heilen mit Vitaminen, Mineralstoffen & Co.",
+    "url": "https://www.thalia.de/shop/home/artikeldetails/A1068364946"
   },
   {
     "title": "Der Glukose-Trick",
     "author": "Jessie Inchauspé",
     "description": "Praktische Strategien für stabilen Blutzucker und bessere Gesundheit",
-    "url": "https://www.amazon.de/dp/3453605993"
+    "url": "https://www.audible.de/pd/Der-Glukose-Trick-Hoerbuch/B0C62882BF"
   },
   {
     "title": "Darm mit Charme",
     "author": "Giulia Enders",
     "description": "Alles über ein unterschätztes Organ und seine Bedeutung für die Gesundheit",
-    "url": "https://www.amazon.de/dp/3548376959"
+    "url": "https://www.audible.de/pd/Darm-mit-Charme-Hoerbuch/3844921346"
   }
 ];
 
 const englishPodcasts = [
-  {
-    "title": "Lifespan with Dr. David Sinclair",
-    "host": "Dr. David Sinclair",
-    "description": "Harvard professor explores the science of aging and longevity interventions",
-    "url": "https://lifespanpodcast.com"
-  },
   {
     "title": "The Drive with Dr. Peter Attia",
     "host": "Dr. Peter Attia",
@@ -118,13 +118,13 @@ const englishPodcasts = [
     "title": "FoundMyFitness",
     "host": "Dr. Rhonda Patrick",
     "description": "Science-focused discussions on nutrition, aging, and health optimization",
-    "url": "https://www.foundmyfitness.com/podcast"
+    "url": "https://open.spotify.com/show/5QjpaU0o1Q2MkVZwwG3y7d"
   },
   {
     "title": "Longevity by Design",
     "host": "Dr. Gil Blander",
     "description": "Conversations with leading scientists about aging research and practical strategies",
-    "url": "https://www.insidetracker.com/longevity-by-design-podcast/"
+    "url": "https://open.spotify.com/show/04NcUniuNSDObfUpY8aiPO
   }
 ];
 
@@ -139,25 +139,25 @@ const germanPodcasts = [
     "title": "Flowgrade Show",
     "host": "Max Gotzler",
     "description": "Biohacking, Performance und Gesundheitsoptimierung auf höchstem Niveau",
-    "url": "https://flowgrade.de/podcast/"
+    "url": "https://www.flowgrade.de/podcasts/
   },
   {
     "title": "staYoung – Der Longevity-Podcast",
     "host": "Nina Ruge",
     "description": "Expertengespräche über Ernährung, Epigenetik und Fitness für Langlebigkeit",
-    "url": "https://stayoung-podcast.de/"
+    "url": "https://open.spotify.com/show/0iqqRlExC9vTovYJejxNlI"
   },
   {
     "title": "Lifestyle of Longevity",
     "host": "Dr. Kati Ernst & Kristine Zeller",
     "description": "Praktische Tipps und Routinen für ein längeres, gesünderes Leben",
-    "url": "https://lifestyle-of-longevity.com/podcast/"
+    "url": "https://open.spotify.com/show/5oN3i53N1AvBdfXtrmPURl
   },
   {
     "title": "Bio360 - Gesundheit, Biohacking & Selbstoptimierung",
     "host": "Unkas Gemmeker",
     "description": "Ganzheitliche Gesundheit und Performance-Optimierung",
-    "url": "https://bio360.de/podcast/"
+    "url": "https://open.spotify.com/show/3Ld04M8HiptuS4gsTIP1jp?si=c5vn3g0nTaKeINGzPTTKKQ&nd=1&dlsi=8a34d0b950824b79"
   }
 ];
 
