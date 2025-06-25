@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -124,7 +125,7 @@ const englishPodcasts = [
     "title": "Longevity by Design",
     "host": "Dr. Gil Blander",
     "description": "Conversations with leading scientists about aging research and practical strategies",
-    "url": "https://open.spotify.com/show/04NcUniuNSDObfUpY8aiPO
+    "url": "https://open.spotify.com/show/04NcUniuNSDObfUpY8aiPO"
   }
 ];
 
@@ -139,7 +140,7 @@ const germanPodcasts = [
     "title": "Flowgrade Show",
     "host": "Max Gotzler",
     "description": "Biohacking, Performance und Gesundheitsoptimierung auf höchstem Niveau",
-    "url": "https://www.flowgrade.de/podcasts/
+    "url": "https://www.flowgrade.de/podcasts/"
   },
   {
     "title": "staYoung – Der Longevity-Podcast",
@@ -151,7 +152,7 @@ const germanPodcasts = [
     "title": "Lifestyle of Longevity",
     "host": "Dr. Kati Ernst & Kristine Zeller",
     "description": "Praktische Tipps und Routinen für ein längeres, gesünderes Leben",
-    "url": "https://open.spotify.com/show/5oN3i53N1AvBdfXtrmPURl
+    "url": "https://open.spotify.com/show/5oN3i53N1AvBdfXtrmPURl"
   },
   {
     "title": "Bio360 - Gesundheit, Biohacking & Selbstoptimierung",
