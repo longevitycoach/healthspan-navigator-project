@@ -11,18 +11,30 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center">
+    <section 
+      id="hero" 
+      className="min-h-screen flex items-center justify-center pt-16 px-4 sm:px-6 lg:px-8 relative"
+      style={{
+        backgroundImage: `url('/lovable-uploads/cb871aff-1e4a-400c-b97a-504fbd0c0049.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20"></div>
+      
+      <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className="animate-fade-in">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-emerald-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-white via-blue-100 to-emerald-100 bg-clip-text text-transparent">
               Change Your Life
             </span>
             <br />
-            <span className="text-slate-800">with Small Habits</span>
+            <span className="text-white drop-shadow-lg">with Small Habits</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
             <strong>Measure the progress - results in exponential Longevity.</strong>
             <br />
             Build your healthspan one atomic habit at a time—powered by secure AI agents that gather your biomarkers, wearable metrics, and lifestyle data. Measure key metrics, act on bite-sized lessons drawn from the latest studies, expert books, and top podcasts, then re-measure to refine your plan. Progress that compounds into lasting vitality.
@@ -39,7 +51,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-lg px-8 py-6 rounded-full border-2 border-slate-300 hover:border-blue-400 hover:text-blue-600 transition-all duration-300"
+              className="text-lg px-8 py-6 rounded-full border-2 border-white/50 hover:border-white hover:bg-white/10 text-white hover:text-white backdrop-blur-sm transition-all duration-300"
               onClick={scrollToFeatures}
             >
               Learn More
@@ -47,7 +59,7 @@ const HeroSection = () => {
           </div>
           
           <div className="animate-bounce">
-            <button onClick={scrollToFeatures} className="text-slate-400 hover:text-blue-600 transition-colors">
+            <button onClick={scrollToFeatures} className="text-white/70 hover:text-white transition-colors">
               <ArrowDown size={32} />
             </button>
           </div>
