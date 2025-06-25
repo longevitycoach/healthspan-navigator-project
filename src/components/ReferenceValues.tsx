@@ -2,11 +2,14 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { Info, User, BookOpen } from "lucide-react";
+import { Info, User, BookOpen, Users, Globe, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
+import { Separator } from "@/components/ui/separator";
 
 const cardiovascularBiomarkers = [
   {
@@ -539,6 +542,131 @@ const specializedBiomarkers = [
   }
 ];
 
+const germanExperts = [
+  {
+    name: "Prof. Dr. Sven Voelpel",
+    specialty: "Aging Research & Nutrition",
+    description: "Professor focused on scientifically-backed nutrition and lifestyle interventions to slow and reverse aging, with research on autophagy and dietary effects on cancer cells."
+  },
+  {
+    name: "Prof. Dr. Dr. Jürgen Gießing",
+    specialty: "Sports Science & Creatine Research",
+    description: "Professor studying creatine's effects on muscle metabolism, brain function, and neurodegenerative diseases, plus supplement quality control."
+  },
+  {
+    name: "Dr. Christina Enzmann",
+    specialty: "Women's Health & Functional Medicine",
+    description: "Gynecologist expert in menopause, researching molecular mechanisms like the gut-hormone axis and nutrient deficiencies."
+  },
+  {
+    name: "Prof. Dr. Gregor Hasler",
+    specialty: "Gut-Brain Axis",
+    description: "Psychiatrist and neuroscientist studying how gut bacteria and their metabolites affect mental health at the molecular level."
+  },
+  {
+    name: "Prof. Dr. Klaus Günther",
+    specialty: "Micronutrient Diagnostics",
+    description: "Specialist focusing on iron deficiency and molecular diagnostics of essential trace elements."
+  },
+  {
+    name: "Dr. Darja Wagner",
+    specialty: "Fertility & Reproductive Health",
+    description: "Biologist optimizing egg and sperm quality through nutrition and micronutrients, researching MTHFR gene effects on folate metabolism."
+  },
+  {
+    name: "Dr. Reinhard Hannen",
+    specialty: "Reproductive Medicine",
+    description: "Specialist integrating molecular diagnostics into fertility treatments, focusing on thyroid hormones and environmental toxins."
+  },
+  {
+    name: "Dr. Alina Lessenich",
+    specialty: "Brain Health & Neurodegeneration",
+    description: "Expert researching neurodegenerative diseases and neuroinflammation, advocating molecular interventions like magnesium L-threonate."
+  },
+  {
+    name: "Thiemo Osterhaus",
+    specialty: "Blood Diagnostics & Personalized Medicine",
+    description: "Expert in developing optimal biomarker ranges and holistic, evidence-based molecular and nutrient medicine."
+  },
+  {
+    name: "Prof. Dr. Andreas Michalsen",
+    specialty: "Naturopathy & Nutritional Medicine",
+    description: "Renowned expert researching molecular and cellular effects of fasting and plant-based diets."
+  },
+  {
+    name: "Prof. Dr. Michael Roden",
+    specialty: "Diabetes & Metabolic Research",
+    description: "Director of German Diabetes Center, researching molecular mechanisms of insulin resistance and epigenetic regulation."
+  },
+  {
+    name: "Prof. Dr. Jörn Walter",
+    specialty: "Epigenetics",
+    description: "Leading epigeneticist at University of Saarland, known for foundational research on DNA methylation and epigenomics."
+  },
+  {
+    name: "Prof. Dr. Bernd Kleine-Gunk",
+    specialty: "Preventive Medicine & Anti-Aging",
+    description: "Chief physician prominent in preventive medicine, epigenetics, anti-aging, and lifestyle medicine."
+  }
+];
+
+const internationalExperts = [
+  {
+    name: "Bryan Johnson",
+    specialty: "Biohacking Pioneer",
+    description: "Entrepreneur achieving organ-specific biological ages decades younger through $2M/year regimen of diet, exercise, and medical monitoring.",
+    achievement: "Biological age: ~18-25 across different organs"
+  },
+  {
+    name: "Dave Pascoe",
+    specialty: "Systems Engineering & Longevity",
+    description: "Retired systems engineer ranked ahead of Bryan Johnson in Rejuvenation Olympics for slowest biological aging.",
+    achievement: "#1 in Rejuvenation Olympics at age 61"
+  },
+  {
+    name: "David Sinclair",
+    specialty: "Genetics & Epigenetic Reprogramming",
+    description: "Harvard geneticist and founder of Tally Health, researching epigenetic reprogramming and longevity interventions.",
+    achievement: "Claims 10-year biological age reduction"
+  },
+  {
+    name: "Dr. Mark Hyman",
+    specialty: "Functional Medicine",
+    description: "Functional medicine leader attributing youthful biomarkers to nutrition, exercise, and meditation.",
+    achievement: "Biological age 43 at chronological age 64"
+  },
+  {
+    name: "Steve Horvath",
+    specialty: "Epigenetic Clock Creator",
+    description: "German-born geneticist who created the epigenetic clock for measuring biological age via DNA methylation."
+  },
+  {
+    name: "Aubrey de Grey",
+    specialty: "Longevity Research",
+    description: "Advocates for damage repair strategies to reverse aging, known for the 'seven deadly causes' of aging theory."
+  },
+  {
+    name: "Dr. Rhonda Patrick",
+    specialty: "Biomedical Science Communication",
+    description: "Biomedical scientist widely followed for podcasts on nutrition, molecular medicine, and longevity science."
+  },
+  {
+    name: "Peter Attia, MD",
+    specialty: "Longevity Medicine",
+    description: "Physician and podcast host influential in translating longevity science and metabolic health for broad audiences."
+  },
+  {
+    name: "Valter Longo",
+    specialty: "Fasting Research",
+    description: "Researcher known for Fasting Mimicking Diet and youthful biomarkers through dietary interventions."
+  },
+  {
+    name: "Matt Kaeberlein",
+    specialty: "Aging Biology",
+    description: "University of Washington researcher studying rapamycin and mTOR pathway as key regulators of aging."
+  }
+];
+
 const ReferenceValues = () => {
   const [activeCategory, setActiveCategory] = useState("cardiovascular");
   const isMobile = useIsMobile();
@@ -555,24 +683,110 @@ const ReferenceValues = () => {
     { id: "specialized", label: "Specialized", icon: "🔬" }
   ];
 
-  const CategoryMenu = ({ categories, activeCategory, setActiveCategory, className = "" }) => (
-    <div className={`space-y-1 ${className}`}>
-      {categories.map((category) => (
-        <Button
-          key={category.id}
-          variant={activeCategory === category.id ? "default" : "ghost"}
-          className={`w-full justify-start text-left h-auto py-3 px-4 ${
-            activeCategory === category.id 
-              ? "bg-gradient-to-r from-blue-600 to-emerald-600 text-white" 
-              : "hover:bg-slate-100"
-          }`}
-          onClick={() => setActiveCategory(category.id)}
-        >
-          <span className="mr-3 text-lg">{category.icon}</span>
-          <span className="text-sm font-medium leading-tight">{category.label}</span>
-        </Button>
-      ))}
-    </div>
+  const ExpertSourcesModal = () => (
+    <Dialog>
+      <DialogTrigger asChild>
+        <Badge variant="outline" className="bg-white cursor-pointer hover:bg-slate-50">
+          <User className="h-3 w-3 mr-1" />
+          Expert Sources
+        </Badge>
+      </DialogTrigger>
+      <DialogContent className="max-w-4xl max-h-[80vh]">
+        <DialogHeader>
+          <DialogTitle className="flex items-center gap-2">
+            <Users className="h-5 w-5" />
+            Expert Sources & Longevity Pioneers
+          </DialogTitle>
+          <DialogDescription>
+            Leading scientists, clinicians, and biohackers driving advances in longevity, epigenetics, and molecular medicine
+          </DialogDescription>
+        </DialogHeader>
+        
+        <ScrollArea className="h-[60vh] pr-4">
+          <div className="space-y-6">
+            {/* German Experts Section */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin className="h-4 w-4 text-red-600" />
+                <h3 className="text-lg font-semibold text-slate-800">German Experts</h3>
+                <Badge variant="secondary">{germanExperts.length} experts</Badge>
+              </div>
+              <div className="grid gap-3">
+                {germanExperts.map((expert, index) => (
+                  <Card key={index} className="p-4">
+                    <div className="space-y-2">
+                      <div className="flex items-start justify-between">
+                        <h4 className="font-semibold text-slate-800">{expert.name}</h4>
+                        <Badge variant="outline" className="text-xs">{expert.specialty}</Badge>
+                      </div>
+                      <p className="text-sm text-slate-600 leading-relaxed">{expert.description}</p>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <Separator />
+
+            {/* International Experts Section */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Globe className="h-4 w-4 text-blue-600" />
+                <h3 className="text-lg font-semibold text-slate-800">International Experts & Biohacking Pioneers</h3>
+                <Badge variant="secondary">{internationalExperts.length} experts</Badge>
+              </div>
+              <div className="grid gap-3">
+                {internationalExperts.map((expert, index) => (
+                  <Card key={index} className="p-4">
+                    <div className="space-y-2">
+                      <div className="flex items-start justify-between">
+                        <h4 className="font-semibold text-slate-800">{expert.name}</h4>
+                        <Badge variant="outline" className="text-xs">{expert.specialty}</Badge>
+                      </div>
+                      {expert.achievement && (
+                        <Badge variant="secondary" className="bg-emerald-50 text-emerald-700 text-xs">
+                          🏆 {expert.achievement}
+                        </Badge>
+                      )}
+                      <p className="text-sm text-slate-600 leading-relaxed">{expert.description}</p>
+                    </div>
+                  </Card>
+                ))}
+              </div>
+            </div>
+
+            <Separator />
+
+            {/* Blue Zones & Special Populations */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Globe className="h-4 w-4 text-emerald-600" />
+                <h3 className="text-lg font-semibold text-slate-800">Blue Zones & Exceptional Populations</h3>
+              </div>
+              <Card className="p-4">
+                <div className="space-y-2">
+                  <h4 className="font-semibold text-slate-800">Blue Zones Residents</h4>
+                  <Badge variant="secondary" className="bg-blue-50 text-blue-700 text-xs">
+                    🌍 Global Longevity Hotspots
+                  </Badge>
+                  <p className="text-sm text-slate-600 leading-relaxed">
+                    Populations in Okinawa, Sardinia, Ikaria, and other Blue Zones consistently show biological ages much younger than their chronological ages, attributed to plant-based diets, physical activity, social ties, and low stress.
+                  </p>
+                </div>
+              </Card>
+            </div>
+
+            {/* Methodology Note */}
+            <div className="bg-slate-50 p-4 rounded-lg">
+              <h4 className="font-semibold text-slate-800 mb-2">Methodology & Verification</h4>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                This curated list includes experts who have demonstrated measurable impacts on biological aging through research, clinical practice, or personal experimentation. Many have achieved documented biological ages significantly younger than their chronological ages through evidence-based interventions.
+              </p>
+            </div>
+          </div>
+        </ScrollArea>
+      </DialogContent>
+    </Dialog>
   );
 
   const renderBiomarkerTable = (biomarkers) => (
@@ -679,10 +893,7 @@ const ReferenceValues = () => {
             Optimal biomarker ranges based on cutting-edge longevity research and expert recommendations
           </p>
           <div className="mt-4 flex flex-wrap justify-center gap-2">
-            <Badge variant="outline" className="bg-white">
-              <User className="h-3 w-3 mr-1" />
-              Expert Sources
-            </Badge>
+            <ExpertSourcesModal />
             <Badge variant="outline" className="bg-white">
               <BookOpen className="h-3 w-3 mr-1" />
               Research-Based
