@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -83,6 +82,10 @@ const PersonalJourney = () => {
           
           <p className="text-slate-600 mb-4">
             My daily habits form the foundation of longevity: morning sports to kickstart metabolism, running and cycling to work for cardiovascular health, always taking the stairs for functional movement, cold showers for hormetic stress and resilience, and regular gym sessions for strength and muscle preservation. These atomic habits compound into exponential health benefits over time.
+          </p>
+          
+          <p className="text-slate-600 mb-4">
+            Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, gym.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
