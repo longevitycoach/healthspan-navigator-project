@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink } from "lucide-react";
 
 const PersonalJourney = () => {
   const timelineEvents = [
@@ -60,13 +62,13 @@ const PersonalJourney = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex justify-center mb-6">
-            <Avatar className="w-24 h-24 border-4 border-white shadow-lg">
+            <Avatar className="w-32 h-32 border-4 border-white shadow-lg">
               <AvatarImage 
                 src="/lovable-uploads/4f589e6f-b895-43dc-a65f-33125c1abb17.png" 
                 alt="Founder Profile"
                 className="object-cover"
               />
-              <AvatarFallback className="text-2xl font-bold bg-gradient-to-r from-blue-500 to-emerald-500 text-white">
+              <AvatarFallback className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-emerald-500 text-white">
                 LC
               </AvatarFallback>
             </Avatar>
@@ -74,9 +76,32 @@ const PersonalJourney = () => {
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
             My Personal Journey
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
             From basic health tracking to building a comprehensive longevity platform
           </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button 
+              asChild
+              variant="outline" 
+              className="flex items-center gap-2 hover:bg-blue-50"
+            >
+              <a href="https://github.com/ma3u/blood-test/" target="_blank" rel="noopener noreferrer">
+                <Github size={16} />
+                First Prototype (GitHub)
+              </a>
+            </Button>
+            <Button 
+              asChild
+              variant="outline" 
+              className="flex items-center gap-2 hover:bg-emerald-50"
+            >
+              <a href="https://mabu.red/" target="_blank" rel="noopener noreferrer">
+                <ExternalLink size={16} />
+                Live Demo
+              </a>
+            </Button>
+          </div>
         </div>
 
         <div className="relative">

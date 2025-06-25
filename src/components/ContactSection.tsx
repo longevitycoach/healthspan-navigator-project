@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import { Mail, Linkedin } from "lucide-react";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -51,7 +52,7 @@ const ContactSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
             <h3 className="text-2xl font-bold text-slate-800 mb-6">Why Join Early?</h3>
-            <div className="space-y-4">
+            <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-3 mr-4 flex-shrink-0"></div>
                 <div>
@@ -71,6 +72,32 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-slate-800">Early Bird Pricing</h4>
                   <p className="text-slate-600">Special pricing for early adopters and founding members</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white/50 backdrop-blur-sm rounded-lg p-6 border border-slate-200">
+              <h4 className="text-lg font-semibold text-slate-800 mb-4">Get in Touch</h4>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <Mail className="w-5 h-5 text-blue-600" />
+                  <a 
+                    href="mailto:info@mabu.red" 
+                    className="text-slate-700 hover:text-blue-600 transition-colors"
+                  >
+                    info@mabu.red
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Linkedin className="w-5 h-5 text-blue-600" />
+                  <a 
+                    href="https://www.linkedin.com/in/mbuchhorn/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-slate-700 hover:text-blue-600 transition-colors"
+                  >
+                    LinkedIn Profile
+                  </a>
                 </div>
               </div>
             </div>
