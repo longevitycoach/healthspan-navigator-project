@@ -81,11 +81,11 @@ const PersonalJourney = () => {
           </p>
           
           <p className="text-slate-600 mb-4">
-            My daily habits form the foundation of longevity: morning sports to kickstart metabolism, running and cycling to work for cardiovascular health, always taking the stairs for functional movement, cold showers for hormetic stress and resilience, and regular gym sessions for strength and muscle preservation. These atomic habits compound into exponential health benefits over time.
+            My daily habits form the foundation of longevity: morning sports to kickstart metabolism, running and cycling to work for cardiovascular health, always taking the stairs for functional movement, cold showers for hormetic stress and resilience, and one time per week gym sessions for strength and muscle preservation. These atomic habits compound into exponential health benefits over time.
           </p>
           
           <p className="text-slate-600 mb-4">
-            Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, gym, Wim Hof Breathing.
+            Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time per week gym, Wim Hof Breathing.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
