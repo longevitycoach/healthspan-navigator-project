@@ -30,6 +30,16 @@ const Resources = () => {
       title: "Super Human",
       author: "Dave Asprey",
       description: "Bulletproof plan for aging backward and maybe even living forever"
+    },
+    {
+      title: "Breath: The New Science of a Lost Art",
+      author: "James Astor",
+      description: "Breath turns the conventional wisdom of what we thought we knew about our most basic biological function on its head (2020)"
+    },
+    {
+      title: "Wim Hof Method",
+      author: "Wim Hof",
+      description: "The inspired Tummo meditation offers a unique combination of physical strengthening, emotional cleansing. It can help to find inner balance and at the same time prepare the body for extreme conditions (2022)"
     }
   ];
 
