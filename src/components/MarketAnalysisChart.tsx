@@ -245,42 +245,50 @@ const MarketAnalysisChart = () => {
         </TabsList>
 
         <TabsContent value="german" className="mt-6">
-          <Card>
+          <Card className="w-full">
             <CardHeader>
               <CardTitle>German Market Leaders and Emerging Players</CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="relative h-96 bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border overflow-hidden">
-                <div className="absolute top-4 left-4 text-sm font-medium text-gray-600">
-                  Clinical Solutions (Top)
+            <CardContent className="p-0">
+              <div className="relative w-full h-[500px] bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border overflow-hidden">
+                {/* Y-Axis Labels */}
+                <div className="absolute left-2 top-4 text-sm font-medium text-gray-700 transform -rotate-90 origin-left">
+                  Market Focus
                 </div>
-                <div className="absolute top-1/2 left-4 text-sm font-medium text-gray-600">
-                  Consumer Health (Middle)
+                <div className="absolute left-8 top-8 text-xs text-gray-600">Clinical Solutions</div>
+                <div className="absolute left-8 top-1/2 text-xs text-gray-600">Consumer Health</div>
+                <div className="absolute left-8 bottom-16 text-xs text-gray-600">Research & Development</div>
+                
+                {/* X-Axis Labels */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
+                  Funding Size (€M)
                 </div>
-                <div className="absolute bottom-4 left-4 text-sm font-medium text-gray-600">
-                  Funding Size →
-                </div>
+                <div className="absolute bottom-6 left-20 text-xs text-gray-600">1M</div>
+                <div className="absolute bottom-6 left-1/3 text-xs text-gray-600">10M</div>
+                <div className="absolute bottom-6 left-2/3 text-xs text-gray-600">50M+</div>
                 
                 {germanCompanies.map((company, index) => (
                   <CompanyBubble key={index} company={company} region="german" />
                 ))}
               </div>
               
-              <div className="mt-4 grid md:grid-cols-2 gap-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Technology-Focused Clinical</h4>
-                  <ul className="text-sm space-y-1">
-                    <li>• Orbem: $32M AI-powered MRI platform</li>
-                    <li>• Cellbricks: 3D bioprinting for organs</li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Consumer Health Optimization</h4>
-                  <ul className="text-sm space-y-1">
-                    <li>• Aware Health: €14.1M corporate wellness</li>
-                    <li>• HealthCaters: €1.2M AI health coaching</li>
-                    <li>• Liv Longevity Labs: TruAge testing</li>
-                  </ul>
+              <div className="p-6">
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div>
+                    <h4 className="font-semibold mb-2">Technology-Focused Clinical</h4>
+                    <ul className="text-sm space-y-1">
+                      <li>• Orbem: $32M AI-powered MRI platform</li>
+                      <li>• Cellbricks: 3D bioprinting for organs</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Consumer Health Optimization</h4>
+                    <ul className="text-sm space-y-1">
+                      <li>• Aware Health: €14.1M corporate wellness</li>
+                      <li>• HealthCaters: €1.2M AI health coaching</li>
+                      <li>• Liv Longevity Labs: TruAge testing</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -288,12 +296,28 @@ const MarketAnalysisChart = () => {
         </TabsContent>
 
         <TabsContent value="european" className="mt-6">
-          <Card>
+          <Card className="w-full">
             <CardHeader>
               <CardTitle>European Competitive Landscape</CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="relative h-96 bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg border overflow-hidden">
+            <CardContent className="p-0">
+              <div className="relative w-full h-[500px] bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg border overflow-hidden">
+                {/* Y-Axis Labels */}
+                <div className="absolute left-2 top-4 text-sm font-medium text-gray-700 transform -rotate-90 origin-left">
+                  Market Focus
+                </div>
+                <div className="absolute left-8 top-8 text-xs text-gray-600">Clinical Solutions</div>
+                <div className="absolute left-8 top-1/2 text-xs text-gray-600">Consumer Health</div>
+                <div className="absolute left-8 bottom-16 text-xs text-gray-600">Research & Development</div>
+                
+                {/* X-Axis Labels */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
+                  Funding Size (€M)
+                </div>
+                <div className="absolute bottom-6 left-20 text-xs text-gray-600">5M</div>
+                <div className="absolute bottom-6 left-1/3 text-xs text-gray-600">20M</div>
+                <div className="absolute bottom-6 left-2/3 text-xs text-gray-600">60M+</div>
+                
                 {internationalCompanies
                   .filter(company => ['Stockholm', 'Switzerland', 'London', 'Newcastle'].some(city => company.location.includes(city)))
                   .map((company, index) => (
@@ -301,18 +325,20 @@ const MarketAnalysisChart = () => {
                   ))}
               </div>
               
-              <div className="mt-4 grid md:grid-cols-3 gap-4">
-                <div>
-                  <h4 className="font-semibold mb-2">Nordic Innovation</h4>
-                  <p className="text-sm">Neko Health (€60M) leads with Spotify founder backing</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">Swiss Precision</h4>
-                  <p className="text-sm">Biolytica & Epiterna focus on biosensors and drug evaluation</p>
-                </div>
-                <div>
-                  <h4 className="font-semibold mb-2">UK Market Leadership</h4>
-                  <p className="text-sm">Bioniq (€20.7M) and GlycanAge lead personalized health</p>
+              <div className="p-6">
+                <div className="grid md:grid-cols-3 gap-4">
+                  <div>
+                    <h4 className="font-semibold mb-2">Nordic Innovation</h4>
+                    <p className="text-sm">Neko Health (€60M) leads with Spotify founder backing</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">Swiss Precision</h4>
+                    <p className="text-sm">Biolytica & Epiterna focus on biosensors and drug evaluation</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold mb-2">UK Market Leadership</h4>
+                    <p className="text-sm">Bioniq (€20.7M) and GlycanAge lead personalized health</p>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -320,44 +346,62 @@ const MarketAnalysisChart = () => {
         </TabsContent>
 
         <TabsContent value="global" className="mt-6">
-          <Card>
+          <Card className="w-full">
             <CardHeader>
               <CardTitle>Global Market Overview</CardTitle>
             </CardHeader>
-            <CardContent>
-              <div className="relative h-96 bg-gradient-to-br from-emerald-50 to-yellow-50 rounded-lg border overflow-hidden">
+            <CardContent className="p-0">
+              <div className="relative w-full h-[500px] bg-gradient-to-br from-emerald-50 to-yellow-50 rounded-lg border overflow-hidden">
+                {/* Y-Axis Labels */}
+                <div className="absolute left-2 top-4 text-sm font-medium text-gray-700 transform -rotate-90 origin-left">
+                  Market Focus
+                </div>
+                <div className="absolute left-8 top-8 text-xs text-gray-600">Clinical Solutions</div>
+                <div className="absolute left-8 top-1/2 text-xs text-gray-600">Consumer Health</div>
+                <div className="absolute left-8 bottom-16 text-xs text-gray-600">Research & Development</div>
+                
+                {/* X-Axis Labels */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
+                  Funding Size (Billions)
+                </div>
+                <div className="absolute bottom-6 left-20 text-xs text-gray-600">10M</div>
+                <div className="absolute bottom-6 left-1/3 text-xs text-gray-600">100M</div>
+                <div className="absolute bottom-6 left-2/3 text-xs text-gray-600">1B+</div>
+                
                 {[...germanCompanies, ...internationalCompanies].map((company, index) => (
                   <CompanyBubble key={index} company={company} region="global" />
                 ))}
               </div>
               
-              <div className="mt-4 space-y-4">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <h4 className="font-semibold mb-2">US Market Dominance</h4>
-                    <ul className="text-sm space-y-1">
-                      <li>• Altos Labs: $3B (Bezos-backed)</li>
-                      <li>• Function Health: $53M Series A</li>
-                      <li>• InsideTracker: Personalized nutrition leader</li>
-                    </ul>
+              <div className="p-6">
+                <div className="space-y-4">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div>
+                      <h4 className="font-semibold mb-2">US Market Dominance</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• Altos Labs: $3B (Bezos-backed)</li>
+                        <li>• Function Health: $53M Series A</li>
+                        <li>• InsideTracker: Personalized nutrition leader</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-2">German Position</h4>
+                      <ul className="text-sm space-y-1">
+                        <li>• Strong in clinical AI and bioprinting</li>
+                        <li>• Growing consumer health sector</li>
+                        <li>• Berlin emerging as longevity hub</li>
+                      </ul>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-2">German Position</h4>
-                    <ul className="text-sm space-y-1">
-                      <li>• Strong in clinical AI and bioprinting</li>
-                      <li>• Growing consumer health sector</li>
-                      <li>• Berlin emerging as longevity hub</li>
-                    </ul>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold mb-2">Market Insights</h4>
+                    <p className="text-sm">
+                      The longevity market shows clear geographic specializations: US leads in funding and research, 
+                      Nordic countries excel in consumer platforms, Switzerland focuses on precision medicine, 
+                      and Germany develops clinical AI solutions and bioprinting technologies.
+                    </p>
                   </div>
-                </div>
-                
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h4 className="font-semibold mb-2">Market Insights</h4>
-                  <p className="text-sm">
-                    The longevity market shows clear geographic specializations: US leads in funding and research, 
-                    Nordic countries excel in consumer platforms, Switzerland focuses on precision medicine, 
-                    and Germany develops clinical AI solutions and bioprinting technologies.
-                  </p>
                 </div>
               </div>
             </CardContent>
