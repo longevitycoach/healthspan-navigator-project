@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -36,75 +35,105 @@ const Resources = () => {
 
   const germanBooks = [
     {
-      title: "Gesund älter werden",
+      title: "Blut – Das Geheimnis unseres flüssigen Organs",
       author: "Dr. Ulrich Strunz",
-      description: "Molekularmedizinische Ansätze für gesundes Altern"
+      description: "Audiable incl. in membership (2016)"
     },
     {
-      title: "Forever Young",
+      title: "Der Schlüssel zur Gesundheit",
       author: "Dr. Ulrich Strunz",
-      description: "Das Geheimnis der Telomere für ein langes Leben"
+      description: "Grundlagen der Präventionsmedizin (2016)"
     },
     {
-      title: "Die Heilkraft der Natur",
+      title: "Ab morgen jünger!",
+      author: "Nina Ruge",
+      description: "Neueste Erkenntnisse der Longevity-Forschung (2025)"
+    },
+    {
+      title: "Die Amino-Revolution: Der Alters-Code entschlüsselt",
+      author: "Dr. Ulrich Strunz",
+      description: "Wissenschaftliche Ansätze zur Zellregeneration (2021)"
+    },
+    {
+      title: "Nährstoff-Therapie",
       author: "Dr. med. Helena Orfanos-Boeckel",
-      description: "Naturheilkundliche Ansätze für Langlebigkeit"
+      description: "Orthomolekulare Medizin in der Praxis (2021)"
     },
     {
-      title: "Zellverjüngung",
-      author: "Dr. med. Petra Bracht",
-      description: "Wissenschaftliche Methoden zur Zellregeneration"
+      title: "Verjünge deine Gene",
+      author: "Prof. Dr. med. Bernd Kleine-Gunk & Bernhard Hobelsberger",
+      description: "Epigenetische Ansätze für gesundes Altern (2023)"
+    },
+    {
+      title: "Der Glukose-Trick – Das Praxisbuch",
+      author: "Jessie Inchauspé",
+      description: "Praktische Strategien für stabilen Blutzucker (2023)"
+    },
+    {
+      title: "Darm mit Charme",
+      author: "Giulia Enders",
+      description: "Alles über ein unterschätztes Organ (2017)"
     }
   ];
 
   const englishPodcasts = [
     {
-      title: "The Peter Attia Drive",
-      host: "Peter Attia",
-      description: "Deep dives into longevity, health optimization, and precision medicine"
+      title: "Lifespan",
+      host: "Dr. David Sinclair",
+      description: "Harvard professor dives into the science of aging and interventions that may slow or reverse it"
+    },
+    {
+      title: "The Drive",
+      host: "Dr. Peter Attia",
+      description: "Deep insights into nutrition, exercise, and disease prevention with health leaders"
+    },
+    {
+      title: "Huberman Lab",
+      host: "Dr. Andrew Huberman",
+      description: "Stanford neuroscientist explores how neuroscience and lifestyle factors affect healthspan"
     },
     {
       title: "FoundMyFitness",
-      host: "Rhonda Patrick",
-      description: "Science-based discussions on nutrition, aging, and healthspan"
+      host: "Rhonda Patrick, Ph.D.",
+      description: "Micronutrients, exercise, and evidence-based health optimization"
     },
     {
-      title: "The Tim Ferriss Show",
-      host: "Tim Ferriss",
-      description: "Interviews with world-class performers on health optimization"
-    },
-    {
-      title: "Ben Greenfield Life",
-      host: "Ben Greenfield",
-      description: "Biohacking, longevity, and performance optimization"
-    },
-    {
-      title: "The Longevity Podcast",
-      host: "Various Experts",
-      description: "Latest research and strategies for extending lifespan"
+      title: "Longevity by Design",
+      host: "Dr. Gil Blander",
+      description: "Leading scientists discuss the latest in aging research and practical strategies"
     }
   ];
 
   const germanPodcasts = [
     {
-      title: "Gesundheit to go",
-      host: "Dr. med. Petra Bracht",
-      description: "Gesundheitstipps und Longevity-Strategien auf Deutsch"
+      title: "Healthwise",
+      host: "Nils Behrens",
+      description: "Explores what true health means today, featuring conversations with specialists across medicine, therapy, and wellness"
     },
     {
-      title: "Strunz Podcast",
-      host: "Dr. Ulrich Strunz",
-      description: "Molekularmedizin und Präventionsmedizin"
-    },
-    {
-      title: "Biohacking Podcast",
+      title: "Flowgrade",
       host: "Max Gotzler",
-      description: "Optimierung von Gesundheit und Leistungsfähigkeit"
+      description: "Expert interviews, how-to videos, recipes, and motivational clips to help you achieve your happiest and most powerful flow state"
     },
     {
-      title: "Flowgrade Show",
-      host: "Max Gotzler",
-      description: "Performance und Gesundheitsoptimierung"
+      title: "Modern Medicine",
+      host: "Alessandro Falcone",
+      description: "Science-based longevity strategies with top experts, covering nutrition, fitness, and medical innovations"
+    },
+    {
+      title: "staYoung – Der Longevity-Podcast",
+      host: "Nina Ruge",
+      description: "Expert interviews and practical advice on nutrition, epigenetics, and fitness for lifelong health and vitality"
+    },
+    {
+      title: "Lifestyle of Longevity",
+      host: "Dr. Kati Ernst and Kristine Zeller",
+      description: "Personal longevity journey, offering routines, checklists, and actionable tips for a longer, healthier life"
+    },
+    {
+      title: "ERCM Medizin",
+      host: "Alexander Muacevic",
+      description: "Medizinische Expertise und innovative Behandlungsansätze"
     }
   ];
 
