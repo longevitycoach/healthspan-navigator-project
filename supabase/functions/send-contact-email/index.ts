@@ -2,8 +2,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import { corsHeaders } from '../_shared/cors.ts'
 
-const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
-
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders })
@@ -12,6 +10,14 @@ serve(async (req) => {
   try {
     // Log that the function was called
     console.log('send-contact-email function called')
+    
+    // Get the API key and log its availability
+    const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
+    console.log('Environment variables check:', {
+      hasResendKey: !!RESEND_API_KEY,
+      keyLength: RESEND_API_KEY?.length || 0,
+      allEnvKeys: Object.keys(Deno.env.toObject()).filter(key => key.includes('RESEND'))
+    })
     
     // Check if API key is available
     if (!RESEND_API_KEY) {
