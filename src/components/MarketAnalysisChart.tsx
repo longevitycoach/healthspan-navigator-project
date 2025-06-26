@@ -798,7 +798,7 @@ const MarketAnalysisChart = () => {
             <CardContent className="p-0">
               <div className="relative w-full h-[500px] bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border overflow-hidden">
                 {/* Y-Axis with horizontal lines and labels */}
-                <div className="absolute left-1.5 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">
+                <div className="absolute left-1 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">
                   Market Focus
                 </div>
                 
