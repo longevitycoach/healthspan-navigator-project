@@ -902,7 +902,7 @@ const MarketAnalysisChart = () => {
             <CardContent className="p-0">
               <div className="relative w-full h-[500px] bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border overflow-hidden">
                 {/* Y-Axis with horizontal lines and labels */}
-                <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">
+                <div className="absolute left-1 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">
                   Market Focus
                 </div>
                 
@@ -957,7 +957,7 @@ const MarketAnalysisChart = () => {
             <CardContent className="p-0">
               <div className="relative w-full h-[500px] bg-gradient-to-br from-purple-50 to-blue-50 rounded-lg border overflow-hidden">
                 {/* Y-Axis with dotted lines */}
-                <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">Market Focus</div>
+                <div className="absolute left-1 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">Market Focus</div>
                 <div className="absolute left-0 right-0 top-16 border-t border-dashed border-gray-300"></div>
                 <div className="absolute left-0 right-0 top-1/3 border-t border-dashed border-gray-300"></div>
                 <div className="absolute left-0 right-0 top-2/3 border-t border-dashed border-gray-300"></div>
@@ -1004,7 +1004,7 @@ const MarketAnalysisChart = () => {
             <CardContent className="p-0">
               <div className="relative w-full h-[500px] bg-gradient-to-br from-red-50 to-yellow-50 rounded-lg border overflow-hidden">
                 {/* Y-Axis with dotted lines */}
-                <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">Market Focus</div>
+                <div className="absolute left-1 top-1/2 transform -translate-y-1/2 text-sm font-medium text-gray-700 transform -rotate-90 origin-center">Market Focus</div>
                 <div className="absolute left-0 right-0 top-16 border-t border-dashed border-gray-300"></div>
                 <div className="absolute left-0 right-0 top-1/3 border-t border-dashed border-gray-300"></div>
                 <div className="absolute left-0 right-0 top-2/3 border-t border-dashed border-gray-300"></div>
