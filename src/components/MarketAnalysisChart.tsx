@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -26,7 +25,7 @@ const MarketAnalysisChart = () => {
     // Top 10 Global Leaders
     {
       name: "Altos Labs",
-      location: "United States",
+      location: "San Francisco, CA",
       funding: "$3B",
       founded: "2021",
       focus: "Cellular reprogramming",
@@ -44,7 +43,7 @@ const MarketAnalysisChart = () => {
       description: "Cellular rejuvenation and lifespan extension research with significant venture backing.",
       category: "research",
       rank: 2,
-      url: "https://retrobiosciences.com"
+      url: "https://retro.bio"
     },
     {
       name: "Hevolution Foundation",
@@ -58,6 +57,17 @@ const MarketAnalysisChart = () => {
       url: "https://hevolutionfoundation.com"
     },
     {
+      name: "Sunday Natural",
+      location: "Berlin, Germany",
+      funding: "$875M",
+      founded: "2014",
+      focus: "Premium supplements",
+      description: "Premium natural supplements and longevity nutrition platform with major acquisition exit.",
+      category: "consumer",
+      rank: 4,
+      url: "https://www.sunday.de/en/"
+    },
+    {
       name: "Abogen Biosciences",
       location: "Suzhou, China",
       funding: "$700M",
@@ -65,8 +75,8 @@ const MarketAnalysisChart = () => {
       focus: "Biotechnology therapeutics",
       description: "Chinese biotech with substantial Series C funding for therapeutic development.",
       category: "clinical",
-      rank: 4,
-      url: "https://www.abogenbio.com"
+      rank: 5,
+      url: "https://abogenbio.com"
     },
     {
       name: "BioSplice Therapeutics",
@@ -76,7 +86,7 @@ const MarketAnalysisChart = () => {
       focus: "Alternative splicing therapeutics",
       description: "Developing therapeutics based on alternative splicing technology for age-related diseases.",
       category: "clinical",
-      rank: 5,
+      rank: 6,
       url: "https://biosplicetherapeutics.com"
     },
     {
@@ -87,7 +97,7 @@ const MarketAnalysisChart = () => {
       focus: "Precision medicine",
       description: "Genomics and precision medicine platform for health optimization and longevity.",
       category: "clinical",
-      rank: 6,
+      rank: 7,
       url: "https://humanlongevity.com"
     },
     {
@@ -98,7 +108,7 @@ const MarketAnalysisChart = () => {
       focus: "Smart wearables",
       description: "Health tracking wearables with advanced biometric monitoring for optimization.",
       category: "consumer",
-      rank: 7,
+      rank: 8,
       url: "https://ouraring.com"
     },
     {
@@ -109,7 +119,7 @@ const MarketAnalysisChart = () => {
       focus: "Metabolic diseases",
       description: "Public company developing therapeutics for obesity and metabolic diseases of aging.",
       category: "clinical",
-      rank: 8,
+      rank: 9,
       url: "https://bioagelabs.com"
     },
     {
@@ -120,9 +130,10 @@ const MarketAnalysisChart = () => {
       focus: "Senolytic therapies",
       description: "Pioneer in senolytic drug development for age-related diseases.",
       category: "clinical",
-      rank: 9,
+      rank: 10,
       url: "https://unitybiotechnology.com"
     },
+    // Additional Notable Companies (including new ones from the table)
     {
       name: "Function Health",
       location: "Austin, TX",
@@ -131,10 +142,9 @@ const MarketAnalysisChart = () => {
       focus: "Preventive health testing",
       description: "Direct-to-consumer comprehensive health dashboards with expert interpretation.",
       category: "consumer",
-      rank: 10,
+      rank: 11,
       url: "https://functionhealth.com"
     },
-    // Additional Notable Companies (including recovered ones)
     {
       name: "Juvenescence",
       location: "Douglas, Isle of Man",
@@ -143,8 +153,8 @@ const MarketAnalysisChart = () => {
       focus: "Anti-aging drug development",
       description: "Multi-platform approach to developing therapies for age-related diseases.",
       category: "clinical",
-      rank: 11,
-      url: "https://juvenescence.ltd"
+      rank: 12,
+      url: "https://juvenescence.life"
     },
     {
       name: "Insilico Medicine",
@@ -154,7 +164,7 @@ const MarketAnalysisChart = () => {
       focus: "AI drug discovery",
       description: "AI-powered drug discovery platform focused on aging and age-related diseases.",
       category: "research",
-      rank: 12,
+      rank: 13,
       url: "https://insilico.com"
     },
     {
@@ -165,7 +175,7 @@ const MarketAnalysisChart = () => {
       focus: "Senolytic therapies",
       description: "Developing next-generation senolytic therapies for age-related diseases.",
       category: "clinical",
-      rank: 13,
+      rank: 14,
       url: "https://rubedolife.com"
     },
     {
@@ -176,8 +186,8 @@ const MarketAnalysisChart = () => {
       focus: "Mitochondrial health",
       description: "Series D funding led by L'Oréal and Nestlé for Mitopure technology advancing longevity applications.",
       category: "consumer",
-      rank: 14,
-      url: "https://timelinenutrition.com"
+      rank: 15,
+      url: "https://timeline.bio"
     },
     {
       name: "Neko Health",
@@ -197,7 +207,7 @@ const MarketAnalysisChart = () => {
       focus: "Multi-platform longevity",
       description: "Comprehensive approach to longevity research across multiple therapeutic areas.",
       category: "research",
-      rank: 15,
+      rank: 16,
       url: "https://lifebiosciences.com"
     },
     {
@@ -208,7 +218,7 @@ const MarketAnalysisChart = () => {
       focus: "Dog longevity drugs",
       description: "Developing FDA-approved drugs to extend healthy lifespan in dogs.",
       category: "clinical",
-      rank: 16,
+      rank: 17,
       url: "https://loyalfordogs.com"
     },
     {
@@ -219,7 +229,7 @@ const MarketAnalysisChart = () => {
       focus: "Anti-aging devices",
       description: "Intelligent anti-aging devices and treatments for cellular rejuvenation.",
       category: "clinical",
-      rank: 17,
+      rank: 18,
       url: "https://rejuvelab.com"
     },
     {
@@ -230,7 +240,7 @@ const MarketAnalysisChart = () => {
       focus: "AI-driven longevity",
       description: "Singapore-based AI platform for longevity research and biomarker development.",
       category: "research",
-      rank: 18,
+      rank: 19,
       url: "https://gero.ai"
     },
     {
@@ -251,7 +261,7 @@ const MarketAnalysisChart = () => {
       focus: "Mitophagy inducers",
       description: "Swiss biotech developing mitophagy inducers for cellular rejuvenation therapies.",
       category: "clinical",
-      rank: 19,
+      rank: 20,
       url: "https://vandria.com"
     },
     {
@@ -262,7 +272,7 @@ const MarketAnalysisChart = () => {
       focus: "Precision diagnostics",
       description: "Longevity-focused precision diagnostics and health optimization clinics.",
       category: "consumer",
-      rank: 20,
+      rank: 21,
       url: "https://fountainlife.com"
     },
     {
@@ -273,7 +283,7 @@ const MarketAnalysisChart = () => {
       focus: "Exosome therapeutics",
       description: "Lyophilized exosomes for regenerative medicine and anti-aging applications.",
       category: "clinical",
-      rank: 21,
+      rank: 22,
       url: "https://advancexo.com"
     },
     {
@@ -294,8 +304,19 @@ const MarketAnalysisChart = () => {
       focus: "Multi-omics AI platform",
       description: "AI platform leveraging multi-omics data for longevity research and applications.",
       category: "research",
-      rank: 22,
+      rank: 23,
       url: "https://haoma.ai"
+    },
+    {
+      name: "Aware Health",
+      location: "Berlin, Germany",
+      funding: "$15M",
+      founded: "2019",
+      focus: "Preventive medicine",
+      description: "Comprehensive blood testing and preventive medicine platform with advanced biomarker analysis.",
+      category: "consumer",
+      rank: 24,
+      url: "https://www.aware.app/en/"
     },
     {
       name: "Deep Longevity",
@@ -305,7 +326,7 @@ const MarketAnalysisChart = () => {
       focus: "AI aging clocks",
       description: "AI-driven longevity research with advanced aging clock technology for health optimization.",
       category: "research",
-      rank: 23,
+      rank: 25,
       url: "https://deep-longevity.com"
     },
     {
@@ -316,7 +337,7 @@ const MarketAnalysisChart = () => {
       focus: "Precision oncology",
       description: "Precision oncology and genomics platform with applications in longevity research.",
       category: "clinical",
-      rank: 24,
+      rank: 26,
       url: "https://genetronhealth.com"
     },
     {
@@ -327,7 +348,7 @@ const MarketAnalysisChart = () => {
       focus: "Neuroinflammation",
       description: "Developing treatments for neuroinflammation and age-related cognitive decline.",
       category: "clinical",
-      rank: 25,
+      rank: 27,
       url: "https://jupiterneurosciences.com"
     },
     {
@@ -338,7 +359,7 @@ const MarketAnalysisChart = () => {
       focus: "Gene therapy for aging",
       description: "Gene therapy approaches to address fundamental mechanisms of aging.",
       category: "clinical",
-      rank: 26,
+      rank: 28,
       url: "https://rejuvenatebio.com"
     },
     {
@@ -349,7 +370,7 @@ const MarketAnalysisChart = () => {
       focus: "Drug screening platform",
       description: "University spinoff with accelerated drug evaluation platform for longevity therapeutics.",
       category: "research",
-      rank: 27,
+      rank: 29,
       url: "https://epiterna.com"
     },
     {
@@ -360,8 +381,8 @@ const MarketAnalysisChart = () => {
       focus: "RNA splicing",
       description: "UK biotech focusing on RNA splicing and senotherapeutics for age-related diseases.",
       category: "clinical",
-      rank: 28,
-      url: "https://senisca.com"
+      rank: 30,
+      url: "https://senisca.co"
     },
     {
       name: "Turn Biotechnologies",
@@ -371,7 +392,7 @@ const MarketAnalysisChart = () => {
       focus: "mRNA reprogramming",
       description: "mRNA-based cellular reprogramming technology for tissue regeneration.",
       category: "clinical",
-      rank: 29,
+      rank: 31,
       url: "https://turnbiotechnologies.com"
     },
     {
@@ -382,8 +403,30 @@ const MarketAnalysisChart = () => {
       focus: "Gene therapy",
       description: "Public company developing gene therapy approaches for longevity and healthspan extension.",
       category: "clinical",
-      rank: 30,
+      rank: 32,
       url: "https://genflowbio.com"
+    },
+    {
+      name: "Cellbricks",
+      location: "Berlin, Germany",
+      funding: "$8M",
+      founded: "2015",
+      focus: "3D bioprinting systems",
+      description: "Molecular medicine focused on bio-fabrication technology for artificially manufactured organs.",
+      category: "clinical",
+      rank: 33,
+      url: "https://cellbricks.com"
+    },
+    {
+      name: "Akribion Therapeutics",
+      location: "Zwingenberg, Germany",
+      funding: "$8M",
+      founded: "2020",
+      focus: "RNA-guided cell depletion",
+      description: "RNA-guided programmable cell depletion technology for therapeutic applications.",
+      category: "clinical",
+      rank: 34,
+      url: "https://www.akribion-therapeutics.com"
     },
     {
       name: "clook.bio",
@@ -393,7 +436,7 @@ const MarketAnalysisChart = () => {
       focus: "Stem cell therapies",
       description: "Stem cell-based therapies for regenerative medicine and longevity applications.",
       category: "clinical",
-      rank: 31,
+      rank: 35,
       url: "https://clook.bio"
     },
     {
@@ -404,8 +447,19 @@ const MarketAnalysisChart = () => {
       focus: "Mitochondrial transplantation",
       description: "Swiss biotech developing mitochondrial transplantation therapy for cellular rejuvenation.",
       category: "clinical",
-      rank: 32,
+      rank: 36,
       url: "https://cellvie.com"
+    },
+    {
+      name: "Liv Longevity Labs",
+      location: "Berlin, Germany",
+      funding: "$5M",
+      founded: "2024",
+      focus: "Cellular aging tests",
+      description: "Consumer-focused longevity solutions with TruAge cellular aging test and AI-based personalized recommendations.",
+      category: "consumer",
+      rank: 37,
+      url: "https://liv.health"
     },
     {
       name: "GlycanAge",
@@ -415,7 +469,7 @@ const MarketAnalysisChart = () => {
       focus: "Glycan biomarkers",
       description: "Biological age measurement using glycan-based molecular biomarker assessment.",
       category: "clinical",
-      rank: 33,
+      rank: 38,
       url: "https://glycanage.com"
     },
     {
@@ -426,8 +480,41 @@ const MarketAnalysisChart = () => {
       focus: "Cell therapy",
       description: "Cell therapy applications for regenerative medicine and longevity.",
       category: "clinical",
-      rank: 34,
+      rank: 39,
       url: "https://liftbiosciences.com"
+    },
+    {
+      name: "AERA Health",
+      location: "Munich, Germany",
+      funding: "$4M",
+      founded: "2021",
+      focus: "P4 preventive medicine",
+      description: "Preventive and longevity medicine platform with personalized health optimization.",
+      category: "consumer",
+      rank: 40,
+      url: "https://www.aera.health"
+    },
+    {
+      name: "for you eHealth",
+      location: "Weiden, Germany",
+      funding: "$3.91M",
+      founded: "2016",
+      focus: "At-home health testing",
+      description: "At-home health testing and biomarker analysis for personalized health optimization.",
+      category: "consumer",
+      rank: 41,
+      url: "https://www.foryouehealth.de/"
+    },
+    {
+      name: "Velabs Therapeutics",
+      location: "Heidelberg, Germany",
+      funding: "$3.81M",
+      founded: "2018",
+      focus: "Senolytic antibodies",
+      description: "Senolytic antibody therapies for age-related disease treatment.",
+      category: "clinical",
+      rank: 42,
+      url: "https://www.cbinsights.com/company/velabs-therapeutics"
     },
     {
       name: "Shift Bioscience",
@@ -437,7 +524,7 @@ const MarketAnalysisChart = () => {
       focus: "Mitochondrial rejuvenation",
       description: "Mitochondrial-focused therapies for cellular rejuvenation and longevity.",
       category: "research",
-      rank: 35,
+      rank: 43,
       url: "https://shiftbioscience.com"
     },
     {
@@ -448,7 +535,7 @@ const MarketAnalysisChart = () => {
       focus: "AI brain health",
       description: "AI-driven brain health optimization app for cognitive longevity.",
       category: "consumer",
-      rank: 36,
+      rank: 44,
       url: "https://tolion.com"
     },
     {
@@ -459,7 +546,7 @@ const MarketAnalysisChart = () => {
       focus: "Longevity therapeutics",
       description: "Singapore-based therapeutics company focused on aging-related diseases.",
       category: "clinical",
-      rank: 37,
+      rank: 45,
       url: "https://albatroztherapeutics.com"
     },
     {
@@ -470,7 +557,7 @@ const MarketAnalysisChart = () => {
       focus: "Preventive healthcare",
       description: "Personalized preventive healthcare platform with longevity focus.",
       category: "consumer",
-      rank: 38,
+      rank: 46,
       url: "https://biopeak.in"
     },
     {
@@ -481,7 +568,7 @@ const MarketAnalysisChart = () => {
       focus: "Cardiovascular aging",
       description: "Therapies targeting cardiovascular aspects of aging and longevity.",
       category: "clinical",
-      rank: 39,
+      rank: 47,
       url: "https://repairbiotechnologies.com"
     },
     {
@@ -492,7 +579,7 @@ const MarketAnalysisChart = () => {
       focus: "Senolytic drugs",
       description: "Early-stage senolytic drug development for age-related diseases.",
       category: "clinical",
-      rank: 40,
+      rank: 48,
       url: "https://ichortherapeutics.com"
     },
     {
@@ -503,118 +590,19 @@ const MarketAnalysisChart = () => {
       focus: "DNA testing",
       description: "Home-based DNA testing specifically designed for longevity optimization.",
       category: "consumer",
-      rank: 41,
+      rank: 49,
       url: "https://evagene.me"
     },
     {
-      name: "Underdog Pharmaceuticals",
-      location: "Helsinki, Finland",
-      funding: "$2.2M",
-      founded: "2020",
-      focus: "Small molecule drugs",
-      description: "Small molecule longevity drugs targeting fundamental aging mechanisms.",
-      category: "clinical",
-      rank: 42,
-      url: "https://underdogpharma.com"
-    },
-    {
-      name: "Longevity Copilot",
-      location: "Vienna, Austria",
-      funding: "$2M",
-      founded: "2021",
-      focus: "Lifestyle optimization",
-      description: "AI-powered lifestyle habit adoption app for longevity optimization.",
-      category: "consumer",
-      rank: 43,
-      url: "https://longevitycopilot.com"
-    },
-    {
-      name: "Rabbit Bio",
-      location: "San Francisco, CA",
-      funding: "$2M",
-      founded: "2020",
-      focus: "Cellular reprogramming",
-      description: "Early-stage cellular reprogramming research and therapeutics development.",
-      category: "research",
-      rank: 44,
-      url: "https://rabbit.bio"
-    },
-    {
-      name: "Acorn Biolabs",
-      location: "Toronto, Canada",
-      funding: "$1.8M",
-      founded: "2018",
-      focus: "Stem cell preservation",
-      description: "Stem cell preservation services for future therapeutic applications.",
-      category: "consumer",
-      rank: 45,
-      url: "https://acornbiolabs.com"
-    },
-    {
-      name: "Kyma Health",
-      location: "London, UK",
-      funding: "$1.5M",
-      founded: "2021",
-      focus: "Women's health",
-      description: "Personalized healthcare platform specifically designed for women's longevity.",
-      category: "consumer",
-      rank: 46,
-      url: "https://kymahealth.com"
-    },
-    {
-      name: "BASIS Health",
-      location: "New York, NY",
+      name: "HealthCaters",
+      location: "Berlin, Germany",
       funding: "$1.2M",
       founded: "2020",
-      focus: "Nutrition & longevity",
-      description: "Meal preparation and nutritional optimization for longevity and healthspan.",
+      focus: "AI health screening",
+      description: "AI-powered health screening stations for comprehensive health monitoring.",
       category: "consumer",
-      rank: 47,
-      url: "https://basishealth.com"
-    },
-    {
-      name: "Axia Longevity",
-      location: "United States",
-      funding: "$1M",
-      founded: "2019",
-      focus: "Aging tracking",
-      description: "Aging tracking application with integrated supplement recommendations.",
-      category: "consumer",
-      rank: 48,
-      url: "https://axialongevity.com"
-    },
-    {
-      name: "Liv Longevity Labs",
-      location: "Berlin, Germany",
-      funding: "$5M",
-      founded: "2024",
-      focus: "Cellular aging tests",
-      description: "Consumer-focused longevity solutions with TruAge cellular aging test and AI-based personalized recommendations.",
-      category: "consumer",
-      rank: 49,
-      url: "https://livlongevitylabs.com"
-    },
-    {
-      name: "Cellbricks",
-      location: "Berlin, Germany",
-      funding: "$8M",
-      founded: "2015",
-      focus: "3D bioprinting systems",
-      description: "Molecular medicine focused on bio-fabrication technology for artificially manufactured organs.",
-      category: "clinical",
       rank: 50,
-      url: "https://cellbricks.com"
-    },
-    // Recovered companies that were missing
-    {
-      name: "Aware",
-      location: "United States",
-      funding: "$15M",
-      founded: "2019",
-      focus: "Health monitoring",
-      description: "Advanced health monitoring and longevity tracking platform with AI-driven insights.",
-      category: "consumer",
-      url: "https://aware.com"
+      url: "https://healthcaters.com"
     }
   ];
 
