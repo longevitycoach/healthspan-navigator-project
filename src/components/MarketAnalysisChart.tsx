@@ -801,6 +801,17 @@ const MarketAnalysisChart = () => {
     ? globalTop50Companies 
     : globalTop50Companies.filter(company => company.category === selectedCategory);
 
+  // Filter German companies specifically
+  const germanCompanies = globalTop50Companies.filter(company => 
+    company.location.includes('Germany') || 
+    company.location.includes('Berlin') || 
+    company.location.includes('Munich') || 
+    company.location.includes('Bavaria') || 
+    company.location.includes('Heidelberg') || 
+    company.location.includes('Zwingenberg') || 
+    company.location.includes('Mainz')
+  );
+
   return (
     <div className="w-full space-y-6">
       <div className="text-center mb-6">
@@ -994,41 +1005,47 @@ const MarketAnalysisChart = () => {
                 <div className="absolute left-8 bottom-20 text-sm font-medium text-purple-700">Research & Development</div>
                 
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">Funding Size</div>
-                <div className="absolute bottom-6 left-8 text-xs text-gray-600">€1M</div>
-                <div className="absolute bottom-6 left-1/3 text-xs text-gray-600">€10M</div>
-                <div className="absolute bottom-6 right-20 text-xs text-gray-600">€30M+</div>
+                <div className="absolute bottom-6 left-8 text-xs text-gray-600">Undisclosed</div>
+                <div className="absolute bottom-6 left-1/4 text-xs text-gray-600">$5M</div>
+                <div className="absolute bottom-6 left-1/2 text-xs text-gray-600">$15M</div>
+                <div className="absolute bottom-6 right-20 text-xs text-gray-600">$875M</div>
                 
-                {globalTop50Companies
-                  .filter(company => company.location.includes('Germany'))
-                  .map((company, index) => (
-                    <CompanyBubble key={`german-${company.name}-${index}`} company={company} region="german" index={index} />
-                  ))}
+                {germanCompanies.map((company, index) => (
+                  <CompanyBubble key={`german-${company.name}-${index}`} company={company} region="german" index={index} />
+                ))}
               </div>
               
               <div className="p-6">
                 <div className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold mb-2">Clinical AI Leadership</h4>
+                      <h4 className="font-semibold mb-2">Consumer Health Leaders</h4>
                       <ul className="text-sm space-y-1">
-                        <li>• Orbem: $32M AI-powered MRI platform</li>
-                        <li>• Cellbricks: 3D bioprinting for organs</li>
+                        <li>• Sunday Natural: $875M (acquired)</li>
+                        <li>• Aware Health: $15M preventive medicine</li>
+                        <li>• AERA Health: $4M P4 medicine</li>
+                        <li>• for you eHealth: At-home testing</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold mb-2">Consumer Innovation</h4>
+                      <h4 className="font-semibold mb-2">Clinical Innovation</h4>
                       <ul className="text-sm space-y-1">
-                        <li>• Liv Longevity Labs: TruAge testing</li>
-                        <li>• Growing Berlin longevity ecosystem</li>
+                        <li>• Akribion Therapeutics: $8M RNA-guided therapy</li>
+                        <li>• Velabs Therapeutics: $3.8M senolytic antibodies</li>
+                        <li>• Cellbricks Therapeutics: 3D bioprinting</li>
+                        <li>• ActiTrexx: Regulatory T cell therapies</li>
                       </ul>
                     </div>
                   </div>
                   
                   <div className="bg-orange-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Strategic Position</h4>
+                    <h4 className="font-semibold mb-2">German Market Overview</h4>
+                    <p className="text-sm mb-2">
+                      <strong>{germanCompanies.length} companies</strong> tracked with diverse focus areas from consumer health to advanced therapeutics.
+                    </p>
                     <p className="text-sm">
-                      Germany demonstrates strong technical capabilities in clinical AI and bioprinting, 
-                      with Berlin emerging as a key European longevity hub complementing Switzerland's leadership.
+                      Germany demonstrates strong capabilities across the longevity spectrum, from Berlin's consumer health ecosystem 
+                      to advanced clinical research in RNA therapeutics and bioprinting technologies.
                     </p>
                   </div>
                 </div>
