@@ -593,34 +593,36 @@ const MarketAnalysisChart = () => {
   const getMarketPosition = (funding: string, category: string, index: number): { x: number; y: number } => {
     const fundingSize = getFundingSize(funding);
     
-    // Create a more accurate mapping for funding to X position - doubled spacing
-    let xPosition;
-    if (fundingSize >= 1000) { // $1B+
-      xPosition = 760 + (Math.random() * 80); // Far right - doubled
-    } else if (fundingSize >= 100) { // $100M+
-      xPosition = 560 + (fundingSize - 100) * 1.0 + (Math.random() * 60); // doubled
-    } else if (fundingSize >= 50) { // $50M+
-      xPosition = 440 + (fundingSize - 50) * 2.4 + (Math.random() * 50); // doubled
-    } else if (fundingSize >= 10) { // $10M+
-      xPosition = 240 + (fundingSize - 10) * 5.0 + (Math.random() * 40); // doubled
-    } else { // Under $10M
-      xPosition = 100 + fundingSize * 14 + (Math.random() * 30); // doubled
-    }
+    // Find max funding for scaling (Altos Labs has $3B = 3000M)
+    const maxFunding = 3000;
+    const minFunding = 1;
     
-    // Ensure bounds - doubled width
-    xPosition = Math.max(Math.min(xPosition, 900), 80);
+    // Use logarithmic scale for better distribution
+    const logFunding = Math.log10(fundingSize);
+    const logMax = Math.log10(maxFunding);
+    const logMin = Math.log10(minFunding);
+    
+    // Map to X position with proper scaling (60px to 900px range)
+    const normalizedPosition = (logFunding - logMin) / (logMax - logMin);
+    let xPosition = 60 + (normalizedPosition * 840); // 840px range (900-60)
+    
+    // Add some randomness to prevent exact overlap while maintaining order
+    const randomOffset = (Math.random() - 0.5) * 30; // ±15px random offset
+    xPosition += randomOffset;
+    
+    // Ensure bounds
+    xPosition = Math.max(Math.min(xPosition, 900), 60);
     
     let categoryY = 150; // Default middle position
     if (category === 'clinical') categoryY = 80;
     else if (category === 'consumer') categoryY = 220;  
     else if (category === 'research') categoryY = 360;
     
-    // Add scatter to prevent overlapping - use index-based offset
-    const scatterY = ((index % 5) - 2) * 20; // Vertical scatter
-    const scatterX = ((index % 3) - 1) * 15; // Horizontal scatter
+    // Add vertical scatter to prevent overlapping - use index-based offset
+    const scatterY = ((index % 7) - 3) * 15; // Vertical scatter
     
     return {
-      x: Math.max(Math.min(xPosition + scatterX, 900), 60),
+      x: xPosition,
       y: Math.max(Math.min(categoryY + scatterY, 420), 60)
     };
   };
@@ -628,8 +630,8 @@ const MarketAnalysisChart = () => {
   const CompanyBubble = ({ company, region, index }: { company: Company; region: string; index: number }) => {
     const position = getMarketPosition(company.funding, company.category, index);
     const fundingSize = getFundingSize(company.funding);
-    // Increased minimum size and scaling factor for bigger bubbles
-    const size = Math.max(Math.log10(fundingSize) * 18 + 15, 30);
+    // Doubled minimum size and scaling factor for bigger bubbles
+    const size = Math.max(Math.log10(fundingSize) * 36 + 30, 60); // Doubled from previous values
     
     const handleClick = () => {
       if (company.url) {
@@ -786,15 +788,14 @@ const MarketAnalysisChart = () => {
                 <div className="absolute left-8 top-1/3 text-sm font-bold text-green-700">Consumer Health</div>
                 <div className="absolute left-8 bottom-24 text-sm font-bold text-purple-700">Research & Development</div>
                 
-                {/* X-Axis with proper funding scale markers - doubled spacing */}
+                {/* X-Axis with logarithmic scale markers */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
-                  Funding Size
+                  Funding Size (Logarithmic Scale)
                 </div>
-                <div className="absolute bottom-6 left-24 text-xs text-gray-600">$1M</div>
-                <div className="absolute bottom-6 left-64 text-xs text-gray-600">$10M</div>
-                <div className="absolute bottom-6 left-112 text-xs text-gray-600">$50M</div>
-                <div className="absolute bottom-6 left-160 text-xs text-gray-600">$100M</div>
-                <div className="absolute bottom-6 right-32 text-xs text-gray-600">$1B+</div>
+                <div className="absolute bottom-6 left-16 text-xs text-gray-600">$1M</div>
+                <div className="absolute bottom-6 left-40 text-xs text-gray-600">$10M</div>
+                <div className="absolute bottom-6 left-64 text-xs text-gray-600">$100M</div>
+                <div className="absolute bottom-6 right-20 text-xs text-gray-600">$3B</div>
                 
                 {filteredCompanies.map((company, index) => (
                   <CompanyBubble key={`${company.name}-${index}`} company={company} region="global" index={index} />
