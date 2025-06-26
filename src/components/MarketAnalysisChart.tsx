@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -797,19 +796,31 @@ const MarketAnalysisChart = () => {
     );
   };
 
+  const isGermanCompany = (company: Company): boolean => {
+    return company.location.includes('Germany') || 
+           company.location.includes('Berlin') || 
+           company.location.includes('Munich') || 
+           company.location.includes('Bavaria') || 
+           company.location.includes('Heidelberg') || 
+           company.location.includes('Zwingenberg') || 
+           company.location.includes('Mainz') ||
+           company.location.includes('Weiden');
+  };
+
+  const nonGermanCompanies = globalTop50Companies.filter(company => !isGermanCompany(company));
+
   const filteredCompanies = selectedCategory === 'all' 
-    ? globalTop50Companies 
-    : globalTop50Companies.filter(company => company.category === selectedCategory);
+    ? nonGermanCompanies 
+    : nonGermanCompanies.filter(company => company.category === selectedCategory);
 
   // Filter German companies specifically
-  const germanCompanies = globalTop50Companies.filter(company => 
-    company.location.includes('Germany') || 
-    company.location.includes('Berlin') || 
-    company.location.includes('Munich') || 
-    company.location.includes('Bavaria') || 
-    company.location.includes('Heidelberg') || 
-    company.location.includes('Zwingenberg') || 
-    company.location.includes('Mainz')
+  const germanCompanies = globalTop50Companies.filter(company => isGermanCompany(company));
+
+  // Filter European companies (excluding German ones)
+  const europeanCompanies = globalTop50Companies.filter(company => 
+    !isGermanCompany(company) && (
+      ['Switzerland', 'London', 'Stockholm', 'Newcastle', 'Exeter', 'UK', 'Finland', 'Lausanne', 'Basel', 'Isle of Man'].some(location => company.location.includes(location))
+    )
   );
 
   return (
@@ -862,28 +873,28 @@ const MarketAnalysisChart = () => {
                     size="sm"
                     onClick={() => setSelectedCategory('all')}
                   >
-                    All ({globalTop50Companies.length})
+                    All ({nonGermanCompanies.length})
                   </Button>
                   <Button 
                     variant={selectedCategory === 'clinical' ? 'default' : 'outline'} 
                     size="sm"
                     onClick={() => setSelectedCategory('clinical')}
                   >
-                    Clinical ({globalTop50Companies.filter(c => c.category === 'clinical').length})
+                    Clinical ({nonGermanCompanies.filter(c => c.category === 'clinical').length})
                   </Button>
                   <Button 
                     variant={selectedCategory === 'consumer' ? 'default' : 'outline'} 
                     size="sm"
                     onClick={() => setSelectedCategory('consumer')}
                   >
-                    Consumer ({globalTop50Companies.filter(c => c.category === 'consumer').length})
+                    Consumer ({nonGermanCompanies.filter(c => c.category === 'consumer').length})
                   </Button>
                   <Button 
                     variant={selectedCategory === 'research' ? 'default' : 'outline'} 
                     size="sm"
                     onClick={() => setSelectedCategory('research')}
                   >
-                    Research ({globalTop50Companies.filter(c => c.category === 'research').length})
+                    Research ({nonGermanCompanies.filter(c => c.category === 'research').length})
                   </Button>
                 </div>
               </CardTitle>
@@ -925,7 +936,7 @@ const MarketAnalysisChart = () => {
                     <div className="text-sm text-gray-600">Total disclosed funding</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600">{globalTop50Companies.length}</div>
+                    <div className="text-2xl font-bold text-green-600">{nonGermanCompanies.length}</div>
                     <div className="text-sm text-gray-600">Top companies tracked</div>
                   </div>
                   <div className="text-center">
@@ -960,11 +971,9 @@ const MarketAnalysisChart = () => {
                 <div className="absolute bottom-6 left-1/3 text-xs text-gray-600">€20M</div>
                 <div className="absolute bottom-6 right-20 text-xs text-gray-600">€60M+</div>
                 
-                {globalTop50Companies
-                  .filter(company => ['Switzerland', 'London', 'Stockholm', 'Newcastle', 'Exeter', 'Germany'].some(location => company.location.includes(location)))
-                  .map((company, index) => (
-                    <CompanyBubble key={`european-${company.name}-${index}`} company={company} region="european" index={index} />
-                  ))}
+                {europeanCompanies.map((company, index) => (
+                  <CompanyBubble key={`european-${company.name}-${index}`} company={company} region="european" index={index} />
+                ))}
               </div>
               
               <div className="p-6">
