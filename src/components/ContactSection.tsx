@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Linkedin, ExternalLink, BookOpen } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -13,21 +14,64 @@ const ContactSection = () => {
     email: "",
     message: ""
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would typically send the data to your backend
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Thank you for your interest!",
-      description: "We'll be in touch soon with early access information.",
-    });
-    
-    // Reset form
-    setFormData({ name: "", email: "", message: "" });
+    if (!formData.name || !formData.email) {
+      toast({
+        title: "Missing Information",
+        description: "Please fill in your name and email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Save the contact request to the database
+      const { error } = await supabase
+        .from('contact_requests')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            message: formData.message || '',
+          }
+        ]);
+
+      if (error) {
+        console.error('Error saving contact request:', error);
+        toast({
+          title: "Error",
+          description: "There was an error submitting your request. Please try again.",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      console.log("Contact request saved successfully:", formData);
+      
+      toast({
+        title: "Thank you for your interest!",
+        description: "We'll be in touch within 1-3 working days with early access information.",
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Unexpected error:', error);
+      toast({
+        title: "Error",
+        description: "There was an unexpected error. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -163,6 +207,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -174,6 +219,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     required
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
                 <div>
@@ -184,13 +230,15 @@ const ContactSection = () => {
                     onChange={handleChange}
                     rows={4}
                     className="w-full"
+                    disabled={isSubmitting}
                   />
                 </div>
                 <Button 
                   type="submit" 
                   className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-lg py-6"
+                  disabled={isSubmitting}
                 >
-                  Join Early Access
+                  {isSubmitting ? "Submitting..." : "Join Early Access"}
                 </Button>
               </form>
             </CardContent>
