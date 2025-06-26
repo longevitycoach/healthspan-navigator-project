@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -31,7 +32,8 @@ const MarketAnalysisChart = () => {
       focus: "Cellular reprogramming",
       description: "Backed by Jeff Bezos, staffed by Nobel Prize winners for cellular programming research and anti-aging therapeutics.",
       category: "research",
-      rank: 1
+      rank: 1,
+      url: "https://altoslabs.com"
     },
     {
       name: "Retro Biosciences",
@@ -41,7 +43,8 @@ const MarketAnalysisChart = () => {
       focus: "Lifespan extension",
       description: "Cellular rejuvenation and lifespan extension research with significant venture backing.",
       category: "research",
-      rank: 2
+      rank: 2,
+      url: "https://retrobiosciences.com"
     },
     {
       name: "Hevolution Foundation",
@@ -51,7 +54,8 @@ const MarketAnalysisChart = () => {
       focus: "Longevity research funding",
       description: "Foundation dedicated to funding longevity research globally with substantial government backing.",
       category: "research",
-      rank: 3
+      rank: 3,
+      url: "https://hevolutionfoundation.com"
     },
     {
       name: "Abogen Biosciences",
@@ -61,7 +65,8 @@ const MarketAnalysisChart = () => {
       focus: "Biotechnology therapeutics",
       description: "Chinese biotech with substantial Series C funding for therapeutic development.",
       category: "clinical",
-      rank: 4
+      rank: 4,
+      url: "https://www.abogenbio.com"
     },
     {
       name: "BioSplice Therapeutics",
@@ -71,7 +76,8 @@ const MarketAnalysisChart = () => {
       focus: "Alternative splicing therapeutics",
       description: "Developing therapeutics based on alternative splicing technology for age-related diseases.",
       category: "clinical",
-      rank: 5
+      rank: 5,
+      url: "https://biosplicetherapeutics.com"
     },
     {
       name: "Human Longevity Inc.",
@@ -81,7 +87,8 @@ const MarketAnalysisChart = () => {
       focus: "Precision medicine",
       description: "Genomics and precision medicine platform for health optimization and longevity.",
       category: "clinical",
-      rank: 6
+      rank: 6,
+      url: "https://humanlongevity.com"
     },
     {
       name: "ŌURA",
@@ -102,7 +109,8 @@ const MarketAnalysisChart = () => {
       focus: "Metabolic diseases",
       description: "Public company developing therapeutics for obesity and metabolic diseases of aging.",
       category: "clinical",
-      rank: 8
+      rank: 8,
+      url: "https://bioagelabs.com"
     },
     {
       name: "Unity Biotechnology",
@@ -112,7 +120,8 @@ const MarketAnalysisChart = () => {
       focus: "Senolytic therapies",
       description: "Pioneer in senolytic drug development for age-related diseases.",
       category: "clinical",
-      rank: 9
+      rank: 9,
+      url: "https://unitybiotechnology.com"
     },
     {
       name: "Function Health",
@@ -134,7 +143,8 @@ const MarketAnalysisChart = () => {
       focus: "Anti-aging drug development",
       description: "Multi-platform approach to developing therapies for age-related diseases.",
       category: "clinical",
-      rank: 11
+      rank: 11,
+      url: "https://juvenescence.ltd"
     },
     {
       name: "Insilico Medicine",
@@ -144,7 +154,8 @@ const MarketAnalysisChart = () => {
       focus: "AI drug discovery",
       description: "AI-powered drug discovery platform focused on aging and age-related diseases.",
       category: "research",
-      rank: 12
+      rank: 12,
+      url: "https://insilico.com"
     },
     {
       name: "Rubedo Life Sciences",
@@ -154,7 +165,8 @@ const MarketAnalysisChart = () => {
       focus: "Senolytic therapies",
       description: "Developing next-generation senolytic therapies for age-related diseases.",
       category: "clinical",
-      rank: 13
+      rank: 13,
+      url: "https://rubedolife.com"
     },
     {
       name: "Timeline",
@@ -185,7 +197,8 @@ const MarketAnalysisChart = () => {
       focus: "Multi-platform longevity",
       description: "Comprehensive approach to longevity research across multiple therapeutic areas.",
       category: "research",
-      rank: 15
+      rank: 15,
+      url: "https://lifebiosciences.com"
     },
     {
       name: "Loyal",
@@ -195,7 +208,8 @@ const MarketAnalysisChart = () => {
       focus: "Dog longevity drugs",
       description: "Developing FDA-approved drugs to extend healthy lifespan in dogs.",
       category: "clinical",
-      rank: 16
+      rank: 16,
+      url: "https://loyalfordogs.com"
     },
     {
       name: "Shanghai Rejuvelab",
@@ -205,7 +219,8 @@ const MarketAnalysisChart = () => {
       focus: "Anti-aging devices",
       description: "Intelligent anti-aging devices and treatments for cellular rejuvenation.",
       category: "clinical",
-      rank: 17
+      rank: 17,
+      url: "https://rejuvelab.com"
     },
     {
       name: "Gero",
@@ -215,7 +230,8 @@ const MarketAnalysisChart = () => {
       focus: "AI-driven longevity",
       description: "Singapore-based AI platform for longevity research and biomarker development.",
       category: "research",
-      rank: 18
+      rank: 18,
+      url: "https://gero.ai"
     },
     {
       name: "Orbem",
@@ -224,7 +240,8 @@ const MarketAnalysisChart = () => {
       founded: "2019",
       focus: "AI-powered MRI platform",
       description: "Germany's most technically sophisticated longevity AI company with clinical expertise and advanced AI for medical imaging.",
-      category: "clinical"
+      category: "clinical",
+      url: "https://orbem.ai"
     },
     {
       name: "Vandria",
@@ -234,7 +251,8 @@ const MarketAnalysisChart = () => {
       focus: "Mitophagy inducers",
       description: "Swiss biotech developing mitophagy inducers for cellular rejuvenation therapies.",
       category: "clinical",
-      rank: 19
+      rank: 19,
+      url: "https://vandria.com"
     },
     {
       name: "Fountain Life",
@@ -244,7 +262,8 @@ const MarketAnalysisChart = () => {
       focus: "Precision diagnostics",
       description: "Longevity-focused precision diagnostics and health optimization clinics.",
       category: "consumer",
-      rank: 20
+      rank: 20,
+      url: "https://fountainlife.com"
     },
     {
       name: "Advancexo",
@@ -254,7 +273,8 @@ const MarketAnalysisChart = () => {
       focus: "Exosome therapeutics",
       description: "Lyophilized exosomes for regenerative medicine and anti-aging applications.",
       category: "clinical",
-      rank: 21
+      rank: 21,
+      url: "https://advancexo.com"
     },
     {
       name: "Bioniq",
@@ -274,7 +294,8 @@ const MarketAnalysisChart = () => {
       focus: "Multi-omics AI platform",
       description: "AI platform leveraging multi-omics data for longevity research and applications.",
       category: "research",
-      rank: 22
+      rank: 22,
+      url: "https://haoma.ai"
     },
     {
       name: "Deep Longevity",
@@ -284,7 +305,8 @@ const MarketAnalysisChart = () => {
       focus: "AI aging clocks",
       description: "AI-driven longevity research with advanced aging clock technology for health optimization.",
       category: "research",
-      rank: 23
+      rank: 23,
+      url: "https://deep-longevity.com"
     },
     {
       name: "Genetron Health",
@@ -294,7 +316,8 @@ const MarketAnalysisChart = () => {
       focus: "Precision oncology",
       description: "Precision oncology and genomics platform with applications in longevity research.",
       category: "clinical",
-      rank: 24
+      rank: 24,
+      url: "https://genetronhealth.com"
     },
     {
       name: "Jupiter Neurosciences",
@@ -304,7 +327,8 @@ const MarketAnalysisChart = () => {
       focus: "Neuroinflammation",
       description: "Developing treatments for neuroinflammation and age-related cognitive decline.",
       category: "clinical",
-      rank: 25
+      rank: 25,
+      url: "https://jupiterneurosciences.com"
     },
     {
       name: "Rejuvenate Bio",
@@ -314,7 +338,8 @@ const MarketAnalysisChart = () => {
       focus: "Gene therapy for aging",
       description: "Gene therapy approaches to address fundamental mechanisms of aging.",
       category: "clinical",
-      rank: 26
+      rank: 26,
+      url: "https://rejuvenatebio.com"
     },
     {
       name: "Epiterna",
@@ -324,7 +349,8 @@ const MarketAnalysisChart = () => {
       focus: "Drug screening platform",
       description: "University spinoff with accelerated drug evaluation platform for longevity therapeutics.",
       category: "research",
-      rank: 27
+      rank: 27,
+      url: "https://epiterna.com"
     },
     {
       name: "Senisca",
@@ -334,7 +360,8 @@ const MarketAnalysisChart = () => {
       focus: "RNA splicing",
       description: "UK biotech focusing on RNA splicing and senotherapeutics for age-related diseases.",
       category: "clinical",
-      rank: 28
+      rank: 28,
+      url: "https://senisca.com"
     },
     {
       name: "Turn Biotechnologies",
@@ -344,7 +371,8 @@ const MarketAnalysisChart = () => {
       focus: "mRNA reprogramming",
       description: "mRNA-based cellular reprogramming technology for tissue regeneration.",
       category: "clinical",
-      rank: 29
+      rank: 29,
+      url: "https://turnbiotechnologies.com"
     },
     {
       name: "Genflow Biosciences",
@@ -354,7 +382,8 @@ const MarketAnalysisChart = () => {
       focus: "Gene therapy",
       description: "Public company developing gene therapy approaches for longevity and healthspan extension.",
       category: "clinical",
-      rank: 30
+      rank: 30,
+      url: "https://genflowbio.com"
     },
     {
       name: "clook.bio",
@@ -364,7 +393,8 @@ const MarketAnalysisChart = () => {
       focus: "Stem cell therapies",
       description: "Stem cell-based therapies for regenerative medicine and longevity applications.",
       category: "clinical",
-      rank: 31
+      rank: 31,
+      url: "https://clook.bio"
     },
     {
       name: "Cellvie",
@@ -374,7 +404,8 @@ const MarketAnalysisChart = () => {
       focus: "Mitochondrial transplantation",
       description: "Swiss biotech developing mitochondrial transplantation therapy for cellular rejuvenation.",
       category: "clinical",
-      rank: 32
+      rank: 32,
+      url: "https://cellvie.com"
     },
     {
       name: "GlycanAge",
@@ -395,7 +426,8 @@ const MarketAnalysisChart = () => {
       focus: "Cell therapy",
       description: "Cell therapy applications for regenerative medicine and longevity.",
       category: "clinical",
-      rank: 34
+      rank: 34,
+      url: "https://liftbiosciences.com"
     },
     {
       name: "Shift Bioscience",
@@ -405,7 +437,8 @@ const MarketAnalysisChart = () => {
       focus: "Mitochondrial rejuvenation",
       description: "Mitochondrial-focused therapies for cellular rejuvenation and longevity.",
       category: "research",
-      rank: 35
+      rank: 35,
+      url: "https://shiftbioscience.com"
     },
     {
       name: "Tolion Health",
@@ -415,7 +448,8 @@ const MarketAnalysisChart = () => {
       focus: "AI brain health",
       description: "AI-driven brain health optimization app for cognitive longevity.",
       category: "consumer",
-      rank: 36
+      rank: 36,
+      url: "https://tolion.com"
     },
     {
       name: "Albatroz Therapeutics",
@@ -425,7 +459,8 @@ const MarketAnalysisChart = () => {
       focus: "Longevity therapeutics",
       description: "Singapore-based therapeutics company focused on aging-related diseases.",
       category: "clinical",
-      rank: 37
+      rank: 37,
+      url: "https://albatroztherapeutics.com"
     },
     {
       name: "Biopeak",
@@ -435,7 +470,8 @@ const MarketAnalysisChart = () => {
       focus: "Preventive healthcare",
       description: "Personalized preventive healthcare platform with longevity focus.",
       category: "consumer",
-      rank: 38
+      rank: 38,
+      url: "https://biopeak.in"
     },
     {
       name: "Repair Biotechnologies",
@@ -445,7 +481,8 @@ const MarketAnalysisChart = () => {
       focus: "Cardiovascular aging",
       description: "Therapies targeting cardiovascular aspects of aging and longevity.",
       category: "clinical",
-      rank: 39
+      rank: 39,
+      url: "https://repairbiotechnologies.com"
     },
     {
       name: "Ichor Therapeutics",
@@ -455,7 +492,8 @@ const MarketAnalysisChart = () => {
       focus: "Senolytic drugs",
       description: "Early-stage senolytic drug development for age-related diseases.",
       category: "clinical",
-      rank: 40
+      rank: 40,
+      url: "https://ichortherapeutics.com"
     },
     {
       name: "EvaGene",
@@ -465,7 +503,8 @@ const MarketAnalysisChart = () => {
       focus: "DNA testing",
       description: "Home-based DNA testing specifically designed for longevity optimization.",
       category: "consumer",
-      rank: 41
+      rank: 41,
+      url: "https://evagene.me"
     },
     {
       name: "Underdog Pharmaceuticals",
@@ -475,7 +514,8 @@ const MarketAnalysisChart = () => {
       focus: "Small molecule drugs",
       description: "Small molecule longevity drugs targeting fundamental aging mechanisms.",
       category: "clinical",
-      rank: 42
+      rank: 42,
+      url: "https://underdogpharma.com"
     },
     {
       name: "Longevity Copilot",
@@ -485,7 +525,8 @@ const MarketAnalysisChart = () => {
       focus: "Lifestyle optimization",
       description: "AI-powered lifestyle habit adoption app for longevity optimization.",
       category: "consumer",
-      rank: 43
+      rank: 43,
+      url: "https://longevitycopilot.com"
     },
     {
       name: "Rabbit Bio",
@@ -495,7 +536,8 @@ const MarketAnalysisChart = () => {
       focus: "Cellular reprogramming",
       description: "Early-stage cellular reprogramming research and therapeutics development.",
       category: "research",
-      rank: 44
+      rank: 44,
+      url: "https://rabbit.bio"
     },
     {
       name: "Acorn Biolabs",
@@ -505,7 +547,8 @@ const MarketAnalysisChart = () => {
       focus: "Stem cell preservation",
       description: "Stem cell preservation services for future therapeutic applications.",
       category: "consumer",
-      rank: 45
+      rank: 45,
+      url: "https://acornbiolabs.com"
     },
     {
       name: "Kyma Health",
@@ -515,7 +558,8 @@ const MarketAnalysisChart = () => {
       focus: "Women's health",
       description: "Personalized healthcare platform specifically designed for women's longevity.",
       category: "consumer",
-      rank: 46
+      rank: 46,
+      url: "https://kymahealth.com"
     },
     {
       name: "BASIS Health",
@@ -525,7 +569,8 @@ const MarketAnalysisChart = () => {
       focus: "Nutrition & longevity",
       description: "Meal preparation and nutritional optimization for longevity and healthspan.",
       category: "consumer",
-      rank: 47
+      rank: 47,
+      url: "https://basishealth.com"
     },
     {
       name: "Axia Longevity",
@@ -535,7 +580,8 @@ const MarketAnalysisChart = () => {
       focus: "Aging tracking",
       description: "Aging tracking application with integrated supplement recommendations.",
       category: "consumer",
-      rank: 48
+      rank: 48,
+      url: "https://axialongevity.com"
     },
     {
       name: "Liv Longevity Labs",
@@ -545,7 +591,8 @@ const MarketAnalysisChart = () => {
       focus: "Cellular aging tests",
       description: "Consumer-focused longevity solutions with TruAge cellular aging test and AI-based personalized recommendations.",
       category: "consumer",
-      rank: 49
+      rank: 49,
+      url: "https://livlongevitylabs.com"
     },
     {
       name: "Cellbricks",
@@ -555,7 +602,8 @@ const MarketAnalysisChart = () => {
       focus: "3D bioprinting systems",
       description: "Molecular medicine focused on bio-fabrication technology for artificially manufactured organs.",
       category: "clinical",
-      rank: 50
+      rank: 50,
+      url: "https://cellbricks.com"
     },
     // Recovered companies that were missing
     {
@@ -565,7 +613,8 @@ const MarketAnalysisChart = () => {
       founded: "2019",
       focus: "Health monitoring",
       description: "Advanced health monitoring and longevity tracking platform with AI-driven insights.",
-      category: "consumer"
+      category: "consumer",
+      url: "https://aware.com"
     }
   ];
 
@@ -631,7 +680,7 @@ const MarketAnalysisChart = () => {
     const position = getMarketPosition(company.funding, company.category, index);
     const fundingSize = getFundingSize(company.funding);
     // Doubled minimum size and scaling factor for bigger bubbles
-    const size = Math.max(Math.log10(fundingSize) * 36 + 30, 60); // Doubled from previous values
+    const size = Math.max(Math.log10(fundingSize) * 72 + 60, 120); // Doubled from previous values
     
     const handleClick = () => {
       if (company.url) {
@@ -640,7 +689,7 @@ const MarketAnalysisChart = () => {
     };
     
     return (
-      <HoverCard>
+      <HoverCard openDelay={200} closeDelay={300}>
         <HoverCardTrigger asChild>
           <div
             className={`absolute transition-all duration-200 hover:scale-110 ${company.url ? 'cursor-pointer' : 'cursor-default'}`}
@@ -653,7 +702,9 @@ const MarketAnalysisChart = () => {
             onClick={handleClick}
           >
             <div className={`w-full h-full rounded-full border-2 flex items-center justify-center text-xs font-semibold ${getCategoryColor(company.category)} hover:shadow-lg`}>
-              {company.name.split(' ')[0]}
+              <span className="text-center px-1 leading-tight">
+                {company.name.split(' ')[0]}
+              </span>
             </div>
           </div>
         </HoverCardTrigger>
@@ -682,7 +733,15 @@ const MarketAnalysisChart = () => {
             {company.url && (
               <div className="flex items-center gap-2 pt-2 border-t">
                 <ExternalLink className="w-4 h-4 text-blue-600" />
-                <span className="text-sm text-blue-600">Click bubble to visit website</span>
+                <a 
+                  href={company.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-sm text-blue-600 hover:underline"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  Visit website
+                </a>
               </div>
             )}
           </div>
