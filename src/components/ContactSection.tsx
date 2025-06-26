@@ -33,7 +33,7 @@ const ContactSection = () => {
 
     try {
       // Save the contact request to the database
-      const { error } = await supabase
+      const { error: dbError } = await supabase
         .from('contact_requests')
         .insert([
           {
@@ -43,14 +43,28 @@ const ContactSection = () => {
           }
         ]);
 
-      if (error) {
-        console.error('Error saving contact request:', error);
+      if (dbError) {
+        console.error('Error saving contact request:', dbError);
         toast({
           title: "Error",
           description: "There was an error submitting your request. Please try again.",
           variant: "destructive",
         });
         return;
+      }
+
+      // Send email notification
+      const { error: emailError } = await supabase.functions.invoke('send-contact-email', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message
+        }
+      });
+
+      if (emailError) {
+        console.error('Error sending email:', emailError);
+        // Don't show error to user since the form was saved successfully
       }
 
       console.log("Contact request saved successfully:", formData);
@@ -247,7 +261,7 @@ const ContactSection = () => {
 
         <div className="mt-16 text-center">
           <p className="text-slate-500 text-sm">
-            Coming Q2 2024 • Built with privacy and security in mind • HIPAA compliant
+            Coming Q2 2024 • Built with privacy and security in mind
           </p>
         </div>
       </div>
