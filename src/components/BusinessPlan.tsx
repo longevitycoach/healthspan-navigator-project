@@ -223,7 +223,7 @@ const BusinessPlan = () => {
               
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-blue-900">Premium</h4>
-                <p className="text-2xl font-bold text-blue-600 mt-2">€99/month</p>
+                <p className="text-2xl font-bold text-blue-600 mt-2">€9/month</p>
                 <p className="text-sm text-blue-700">Personal optimization</p>
               </div>
               
@@ -240,7 +240,7 @@ const BusinessPlan = () => {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Weekly coaching sessions</span>
+                    <span>25% off personal coaching sessions</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
@@ -266,7 +266,7 @@ const BusinessPlan = () => {
             <div className="bg-green-50 p-6 rounded-lg border-2 border-green-300">
               <div className="text-center mb-4">
                 <h4 className="text-xl font-bold text-green-900">Enterprise</h4>
-                <p className="text-2xl font-bold text-green-600 mt-2">€299/month</p>
+                <p className="text-2xl font-bold text-green-600 mt-2">€29/month</p>
                 <p className="text-sm text-green-700">Complete optimization</p>
               </div>
               
@@ -275,11 +275,11 @@ const BusinessPlan = () => {
                 <ul className="text-sm text-green-800 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>1-on-1 expert consultations</span>
+                    <span>50% off 1-on-1 expert consultations</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
-                    <span>Cutting-edge biomarker testing</span>
+                    <span>50% off cutting-edge biomarker testing</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-500 mt-1">✓</span>
@@ -308,7 +308,7 @@ const BusinessPlan = () => {
             <div className="grid md:grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-lg">
                 <h5 className="font-semibold text-purple-900 mb-2">Corporate Wellness</h5>
-                <p className="text-sm text-purple-800 mb-2">€50-200/employee/month</p>
+                <p className="text-sm text-purple-800 mb-2">€15-50/employee/month</p>
                 <ul className="text-xs text-purple-700 space-y-1">
                   <li>• Company-wide health optimization</li>
                   <li>• Executive health programs</li>
@@ -336,15 +336,15 @@ const BusinessPlan = () => {
             <div className="grid md:grid-cols-3 gap-4 text-sm">
               <div>
                 <div className="font-medium text-yellow-800">Free → Premium</div>
-                <div className="text-yellow-700">Target: 8-12% conversion rate</div>
+                <div className="text-yellow-700">Target: 12-15% conversion rate</div>
               </div>
               <div>
                 <div className="font-medium text-yellow-800">Premium → Enterprise</div>
-                <div className="text-yellow-700">Target: 15-20% upgrade rate</div>
+                <div className="text-yellow-700">Target: 18-22% upgrade rate</div>
               </div>
               <div>
                 <div className="font-medium text-yellow-800">Average LTV</div>
-                <div className="text-yellow-700">€2,000+ per paid user</div>
+                <div className="text-yellow-700">€450+ per paid user</div>
               </div>
             </div>
           </div>
@@ -419,21 +419,21 @@ const BusinessPlan = () => {
           <div className="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg">
             <h4 className="text-lg font-semibold mb-3">Market Positioning</h4>
             <p className="text-sm mb-3">
-              We position ourselves as the premium, science-first alternative to generic wellness apps, 
-              targeting health-conscious individuals and organizations willing to invest in evidence-based optimization.
+              We position ourselves as the accessible, science-first alternative to expensive wellness programs, 
+              targeting health-conscious individuals seeking evidence-based optimization at an affordable price.
             </p>
             <div className="grid md:grid-cols-3 gap-4 text-center text-sm">
               <div>
                 <div className="font-semibold">Target Market</div>
-                <div>Affluent health optimizers</div>
+                <div>Health-conscious consumers</div>
               </div>
               <div>
                 <div className="font-semibold">Price Position</div>
-                <div>Premium (top 20%)</div>
+                <div>Affordable premium</div>
               </div>
               <div>
                 <div className="font-semibold">Value Proposition</div>
-                <div>Personalized longevity</div>
+                <div>Accessible longevity science</div>
               </div>
             </div>
           </div>
@@ -458,23 +458,23 @@ const BusinessPlan = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
                   <span className="font-medium">Q3-Q4 2025</span>
-                  <span className="font-bold text-green-600">€125K</span>
+                  <span className="font-bold text-green-600">€12K</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
                   <span className="font-medium">Year 1 (2026)</span>
-                  <span className="font-bold text-green-600">€750K</span>
+                  <span className="font-bold text-green-600">€68K</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
                   <span className="font-medium">Year 2 (2027)</span>
-                  <span className="font-bold text-green-600">€2.8M</span>
+                  <span className="font-bold text-green-600">€285K</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
                   <span className="font-medium">Year 3 (2028)</span>
-                  <span className="font-bold text-green-600">€8.2M</span>
+                  <span className="font-bold text-green-600">€920K</span>
                 </div>
                 <div className="flex justify-between items-center p-3 bg-green-50 rounded border border-green-200">
                   <span className="font-medium">Year 4 (2029)</span>
-                  <span className="font-bold text-green-700">€18.5M</span>
+                  <span className="font-bold text-green-700">€2.1M</span>
                 </div>
               </div>
             </div>
@@ -486,56 +486,56 @@ const BusinessPlan = () => {
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Q3-Q4 2025</span>
-                    <span className="font-bold">250 total</span>
+                    <span className="font-bold">350 total</span>
                   </div>
                   <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 200</div>
-                    <div>Premium: 45</div>
-                    <div>Enterprise: 5</div>
+                    <div>Free: 280</div>
+                    <div>Premium: 60</div>
+                    <div>Enterprise: 10</div>
                   </div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 1 (2026)</span>
-                    <span className="font-bold">1,500 total</span>
+                    <span className="font-bold">2,100 total</span>
                   </div>
                   <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 1,200</div>
-                    <div>Premium: 270</div>
-                    <div>Enterprise: 30</div>
+                    <div>Free: 1,680</div>
+                    <div>Premium: 360</div>
+                    <div>Enterprise: 60</div>
                   </div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 2 (2027)</span>
-                    <span className="font-bold">7,000 total</span>
+                    <span className="font-bold">10,500 total</span>
                   </div>
                   <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 5,250</div>
-                    <div>Premium: 1,575</div>
-                    <div>Enterprise: 175</div>
+                    <div>Free: 7,875</div>
+                    <div>Premium: 2,205</div>
+                    <div>Enterprise: 420</div>
                   </div>
                 </div>
                 <div className="p-3 bg-blue-50 rounded">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 3 (2028)</span>
-                    <span className="font-bold">22,000 total</span>
+                    <span className="font-bold">35,000 total</span>
                   </div>
                   <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 15,400</div>
-                    <div>Premium: 5,720</div>
-                    <div>Enterprise: 880</div>
+                    <div>Free: 24,500</div>
+                    <div>Premium: 8,750</div>
+                    <div>Enterprise: 1,750</div>
                   </div>
                 </div>
                 <div className="p-3 bg-blue-100 rounded border border-blue-200">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">Year 4 (2029)</span>
-                    <span className="font-bold">50,000 total</span>
+                    <span className="font-bold">80,000 total</span>
                   </div>
                   <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 32,500</div>
-                    <div>Premium: 15,000</div>
-                    <div>Enterprise: 2,500</div>
+                    <div>Free: 52,000</div>
+                    <div>Premium: 24,000</div>
+                    <div>Enterprise: 4,000</div>
                   </div>
                 </div>
               </div>
@@ -555,7 +555,7 @@ const BusinessPlan = () => {
                   <li>• Conversion funnel entry point</li>
                 </ul>
                 <div className="mt-3 text-xs text-gray-600">
-                  Target conversion: 10-15% to Premium
+                  Target conversion: 12-15% to Premium
                 </div>
               </div>
               
@@ -568,7 +568,7 @@ const BusinessPlan = () => {
                   <li>• Highest engagement rates</li>
                 </ul>
                 <div className="mt-3 text-xs text-blue-600">
-                  Target upgrade: 15-20% to Enterprise
+                  Target upgrade: 18-22% to Enterprise
                 </div>
               </div>
               
@@ -581,7 +581,7 @@ const BusinessPlan = () => {
                   <li>• White-label solutions</li>
                 </ul>
                 <div className="mt-3 text-xs text-green-600">
-                  Highest LTV: €10,000+ per user
+                  Highest LTV: €1,200+ per user
                 </div>
               </div>
             </div>
@@ -589,31 +589,32 @@ const BusinessPlan = () => {
           
           <div className="grid md:grid-cols-3 gap-4">
             <div className="bg-green-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-green-600">€30M</div>
+              <div className="text-2xl font-bold text-green-600">€3.3M</div>
               <div className="text-sm text-green-800">Cumulative Revenue</div>
               <div className="text-xs text-gray-600 mt-1">4.5-year total</div>
             </div>
             <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-blue-600">65%</div>
+              <div className="text-2xl font-bold text-blue-600">70%</div>
               <div className="text-sm text-blue-800">Gross Margin</div>
               <div className="text-xs text-gray-600 mt-1">Year 4 target</div>
             </div>
             <div className="bg-purple-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-purple-600">€3M</div>
+              <div className="text-2xl font-bold text-purple-600">€500K</div>
               <div className="text-sm text-purple-800">Funding Needed</div>
-              <div className="text-xs text-gray-600 mt-1">Series A target</div>
+              <div className="text-xs text-gray-600 mt-1">Seed round target</div>
             </div>
           </div>
           
           <div className="bg-yellow-50 p-4 rounded-lg">
             <h4 className="font-semibold text-yellow-900 mb-2">Key Assumptions</h4>
             <ul className="text-sm text-yellow-800 space-y-1">
-              <li>• Average revenue per user (ARPU) of €100/month by Year 2</li>
-              <li>• Customer acquisition cost (CAC) decreasing from €180 to €60</li>
-              <li>• Customer lifetime value (LTV) increasing to €2,000</li>
-              <li>• 12% monthly churn rate improving to 4% by Year 4</li>
-              <li>• Free-to-Premium conversion rate: 10-15%</li>
-              <li>• Premium-to-Enterprise upgrade rate: 15-20%</li>
+              <li>• Average revenue per user (ARPU) of €12/month by Year 2</li>
+              <li>• Customer acquisition cost (CAC) decreasing from €25 to €8</li>
+              <li>• Customer lifetime value (LTV) increasing to €450</li>
+              <li>• 8% monthly churn rate improving to 3% by Year 4</li>
+              <li>• Free-to-Premium conversion rate: 12-15%</li>
+              <li>• Premium-to-Enterprise upgrade rate: 18-22%</li>
+              <li>• Lower prices enable higher volume and conversion rates</li>
             </ul>
           </div>
         </div>
@@ -740,8 +741,8 @@ const BusinessPlan = () => {
               <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
                 <h4 className="text-xl font-semibold text-blue-900 mb-3">For Investors</h4>
                 <ul className="text-blue-800 space-y-2">
-                  <li>• €3M Series A funding round opening Q1 2026</li>
-                  <li>• Target 8x return within 4 years</li>
+                  <li>• €500K Seed funding round opening Q1 2026</li>
+                  <li>• Target 10x return within 5 years</li>
                   <li>• Growing market with 15.7% CAGR</li>
                   <li>• Experienced team with proven track record</li>
                 </ul>
