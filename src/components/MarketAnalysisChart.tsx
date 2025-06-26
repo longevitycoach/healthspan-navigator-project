@@ -679,8 +679,8 @@ const MarketAnalysisChart = () => {
   const CompanyBubble = ({ company, region, index }: { company: Company; region: string; index: number }) => {
     const position = getMarketPosition(company.funding, company.category, index);
     const fundingSize = getFundingSize(company.funding);
-    // Doubled minimum size and scaling factor for bigger bubbles
-    const size = Math.max(Math.log10(fundingSize) * 72 + 60, 120); // Doubled from previous values
+    // Halved the size calculation - reduced from previous values
+    const size = Math.max(Math.log10(fundingSize) * 36 + 30, 60); // Halved from 72 and 60 to 36 and 30, min from 120 to 60
     
     const handleClick = () => {
       if (company.url) {
