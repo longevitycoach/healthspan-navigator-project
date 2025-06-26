@@ -593,22 +593,22 @@ const MarketAnalysisChart = () => {
   const getMarketPosition = (funding: string, category: string, index: number): { x: number; y: number } => {
     const fundingSize = getFundingSize(funding);
     
-    // Create a more accurate mapping for funding to X position
+    // Create a more accurate mapping for funding to X position - doubled spacing
     let xPosition;
     if (fundingSize >= 1000) { // $1B+
-      xPosition = 380 + (Math.random() * 40); // Far right
+      xPosition = 760 + (Math.random() * 80); // Far right - doubled
     } else if (fundingSize >= 100) { // $100M+
-      xPosition = 280 + (fundingSize - 100) * 0.5 + (Math.random() * 30);
+      xPosition = 560 + (fundingSize - 100) * 1.0 + (Math.random() * 60); // doubled
     } else if (fundingSize >= 50) { // $50M+
-      xPosition = 220 + (fundingSize - 50) * 1.2 + (Math.random() * 25);
+      xPosition = 440 + (fundingSize - 50) * 2.4 + (Math.random() * 50); // doubled
     } else if (fundingSize >= 10) { // $10M+
-      xPosition = 120 + (fundingSize - 10) * 2.5 + (Math.random() * 20);
+      xPosition = 240 + (fundingSize - 10) * 5.0 + (Math.random() * 40); // doubled
     } else { // Under $10M
-      xPosition = 50 + fundingSize * 7 + (Math.random() * 15);
+      xPosition = 100 + fundingSize * 14 + (Math.random() * 30); // doubled
     }
     
-    // Ensure bounds
-    xPosition = Math.max(Math.min(xPosition, 450), 40);
+    // Ensure bounds - doubled width
+    xPosition = Math.max(Math.min(xPosition, 900), 80);
     
     let categoryY = 150; // Default middle position
     if (category === 'clinical') categoryY = 80;
@@ -620,7 +620,7 @@ const MarketAnalysisChart = () => {
     const scatterX = ((index % 3) - 1) * 15; // Horizontal scatter
     
     return {
-      x: Math.max(Math.min(xPosition + scatterX, 450), 30),
+      x: Math.max(Math.min(xPosition + scatterX, 900), 60),
       y: Math.max(Math.min(categoryY + scatterY, 420), 60)
     };
   };
@@ -786,15 +786,15 @@ const MarketAnalysisChart = () => {
                 <div className="absolute left-8 top-1/3 text-sm font-bold text-green-700">Consumer Health</div>
                 <div className="absolute left-8 bottom-24 text-sm font-bold text-purple-700">Research & Development</div>
                 
-                {/* X-Axis with proper funding scale markers */}
+                {/* X-Axis with proper funding scale markers - doubled spacing */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
                   Funding Size
                 </div>
-                <div className="absolute bottom-6 left-12 text-xs text-gray-600">$1M</div>
-                <div className="absolute bottom-6 left-32 text-xs text-gray-600">$10M</div>
-                <div className="absolute bottom-6 left-56 text-xs text-gray-600">$50M</div>
-                <div className="absolute bottom-6 left-80 text-xs text-gray-600">$100M</div>
-                <div className="absolute bottom-6 right-16 text-xs text-gray-600">$1B+</div>
+                <div className="absolute bottom-6 left-24 text-xs text-gray-600">$1M</div>
+                <div className="absolute bottom-6 left-64 text-xs text-gray-600">$10M</div>
+                <div className="absolute bottom-6 left-112 text-xs text-gray-600">$50M</div>
+                <div className="absolute bottom-6 left-160 text-xs text-gray-600">$100M</div>
+                <div className="absolute bottom-6 right-32 text-xs text-gray-600">$1B+</div>
                 
                 {filteredCompanies.map((company, index) => (
                   <CompanyBubble key={`${company.name}-${index}`} company={company} region="global" index={index} />
