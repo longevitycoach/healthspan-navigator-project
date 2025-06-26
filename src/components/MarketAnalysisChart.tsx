@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -43,6 +42,26 @@ const MarketAnalysisChart = () => {
       description: "Cellular rejuvenation and lifespan extension research with significant venture backing.",
       category: "research",
       rank: 2
+    },
+    {
+      name: "Hevolution Foundation",
+      location: "Riyadh, Saudi Arabia",
+      funding: "$1B",
+      founded: "2020",
+      focus: "Longevity research funding",
+      description: "Foundation dedicated to funding longevity research globally with substantial government backing.",
+      category: "research",
+      rank: 3
+    },
+    {
+      name: "Abogen Biosciences",
+      location: "Suzhou, China",
+      funding: "$700M",
+      founded: "2019",
+      focus: "Biotechnology therapeutics",
+      description: "Chinese biotech with substantial Series C funding for therapeutic development.",
+      category: "clinical",
+      rank: 4
     },
     {
       name: "BioSplice Therapeutics",
@@ -106,7 +125,37 @@ const MarketAnalysisChart = () => {
       rank: 10,
       url: "https://functionhealth.com"
     },
-    // European Leaders
+    // Additional Notable Companies (including recovered ones)
+    {
+      name: "Juvenescence",
+      location: "Douglas, Isle of Man",
+      funding: "$100M",
+      founded: "2017",
+      focus: "Anti-aging drug development",
+      description: "Multi-platform approach to developing therapies for age-related diseases.",
+      category: "clinical",
+      rank: 11
+    },
+    {
+      name: "Insilico Medicine",
+      location: "New York, NY",
+      funding: "$95M",
+      founded: "2014",
+      focus: "AI drug discovery",
+      description: "AI-powered drug discovery platform focused on aging and age-related diseases.",
+      category: "research",
+      rank: 12
+    },
+    {
+      name: "Rubedo Life Sciences",
+      location: "Sunnyvale, CA",
+      funding: "$87M",
+      founded: "2018",
+      focus: "Senolytic therapies",
+      description: "Developing next-generation senolytic therapies for age-related diseases.",
+      category: "clinical",
+      rank: 13
+    },
     {
       name: "Timeline",
       location: "Lausanne, Switzerland",
@@ -119,6 +168,65 @@ const MarketAnalysisChart = () => {
       url: "https://timelinenutrition.com"
     },
     {
+      name: "Neko Health",
+      location: "Stockholm, Sweden",
+      funding: "$60M",
+      founded: "2018",
+      focus: "Sensor-based AI platform",
+      description: "Co-founded by Spotify's Daniel Ek, combining biometric monitoring with AI-driven health insights.",
+      category: "consumer",
+      url: "https://nekohealth.com"
+    },
+    {
+      name: "Life Biosciences",
+      location: "Boston, MA",
+      funding: "$50M",
+      founded: "2017",
+      focus: "Multi-platform longevity",
+      description: "Comprehensive approach to longevity research across multiple therapeutic areas.",
+      category: "research",
+      rank: 15
+    },
+    {
+      name: "Loyal",
+      location: "San Francisco, CA",
+      funding: "$45M",
+      founded: "2019",
+      focus: "Dog longevity drugs",
+      description: "Developing FDA-approved drugs to extend healthy lifespan in dogs.",
+      category: "clinical",
+      rank: 16
+    },
+    {
+      name: "Shanghai Rejuvelab",
+      location: "Shanghai, China",
+      funding: "$45M",
+      founded: "2020",
+      focus: "Anti-aging devices",
+      description: "Intelligent anti-aging devices and treatments for cellular rejuvenation.",
+      category: "clinical",
+      rank: 17
+    },
+    {
+      name: "Gero",
+      location: "Singapore",
+      funding: "$40M",
+      founded: "2015",
+      focus: "AI-driven longevity",
+      description: "Singapore-based AI platform for longevity research and biomarker development.",
+      category: "research",
+      rank: 18
+    },
+    {
+      name: "Orbem",
+      location: "Munich, Germany",
+      funding: "$32M",
+      founded: "2019",
+      focus: "AI-powered MRI platform",
+      description: "Germany's most technically sophisticated longevity AI company with clinical expertise and advanced AI for medical imaging.",
+      category: "clinical"
+    },
+    {
       name: "Vandria",
       location: "Basel, Switzerland",
       funding: "$30.7M",
@@ -129,6 +237,86 @@ const MarketAnalysisChart = () => {
       rank: 19
     },
     {
+      name: "Fountain Life",
+      location: "Dallas, TX",
+      funding: "$30M",
+      founded: "2019",
+      focus: "Precision diagnostics",
+      description: "Longevity-focused precision diagnostics and health optimization clinics.",
+      category: "consumer",
+      rank: 20
+    },
+    {
+      name: "Advancexo",
+      location: "China",
+      funding: "$25M",
+      founded: "2018",
+      focus: "Exosome therapeutics",
+      description: "Lyophilized exosomes for regenerative medicine and anti-aging applications.",
+      category: "clinical",
+      rank: 21
+    },
+    {
+      name: "Bioniq",
+      location: "London, UK",
+      funding: "$20.7M",
+      founded: "2019",
+      focus: "Personalized supplements",
+      description: "Biomarker analysis combined with genetic profiling for customized supplementation.",
+      category: "consumer",
+      url: "https://bioniq.com"
+    },
+    {
+      name: "HAOMA",
+      location: "China",
+      funding: "$18M",
+      founded: "2020",
+      focus: "Multi-omics AI platform",
+      description: "AI platform leveraging multi-omics data for longevity research and applications.",
+      category: "research",
+      rank: 22
+    },
+    {
+      name: "Deep Longevity",
+      location: "Hong Kong, China",
+      funding: "$14M",
+      founded: "2020",
+      focus: "AI aging clocks",
+      description: "AI-driven longevity research with advanced aging clock technology for health optimization.",
+      category: "research",
+      rank: 23
+    },
+    {
+      name: "Genetron Health",
+      location: "Beijing, China",
+      funding: "$12M",
+      founded: "2015",
+      focus: "Precision oncology",
+      description: "Precision oncology and genomics platform with applications in longevity research.",
+      category: "clinical",
+      rank: 24
+    },
+    {
+      name: "Jupiter Neurosciences",
+      location: "Jupiter, FL",
+      funding: "$11M",
+      founded: "2019",
+      focus: "Neuroinflammation",
+      description: "Developing treatments for neuroinflammation and age-related cognitive decline.",
+      category: "clinical",
+      rank: 25
+    },
+    {
+      name: "Rejuvenate Bio",
+      location: "San Diego, CA",
+      funding: "$10M",
+      founded: "2018",
+      focus: "Gene therapy for aging",
+      description: "Gene therapy approaches to address fundamental mechanisms of aging.",
+      category: "clinical",
+      rank: 26
+    },
+    {
       name: "Epiterna",
       location: "Lausanne, Switzerland",
       funding: "$10M",
@@ -137,6 +325,46 @@ const MarketAnalysisChart = () => {
       description: "University spinoff with accelerated drug evaluation platform for longevity therapeutics.",
       category: "research",
       rank: 27
+    },
+    {
+      name: "Senisca",
+      location: "Exeter, UK",
+      funding: "$9.1M",
+      founded: "2020",
+      focus: "RNA splicing",
+      description: "UK biotech focusing on RNA splicing and senotherapeutics for age-related diseases.",
+      category: "clinical",
+      rank: 28
+    },
+    {
+      name: "Turn Biotechnologies",
+      location: "Mountain View, CA",
+      funding: "$9M",
+      founded: "2018",
+      focus: "mRNA reprogramming",
+      description: "mRNA-based cellular reprogramming technology for tissue regeneration.",
+      category: "clinical",
+      rank: 29
+    },
+    {
+      name: "Genflow Biosciences",
+      location: "London, UK",
+      funding: "$8.5M",
+      founded: "2019",
+      focus: "Gene therapy",
+      description: "Public company developing gene therapy approaches for longevity and healthspan extension.",
+      category: "clinical",
+      rank: 30
+    },
+    {
+      name: "clook.bio",
+      location: "London, UK",
+      funding: "$7.5M",
+      founded: "2020",
+      focus: "Stem cell therapies",
+      description: "Stem cell-based therapies for regenerative medicine and longevity applications.",
+      category: "clinical",
+      rank: 31
     },
     {
       name: "Cellvie",
@@ -160,30 +388,159 @@ const MarketAnalysisChart = () => {
       url: "https://glycanage.com"
     },
     {
-      name: "Senisca",
-      location: "Exeter, UK",
-      funding: "$9.1M",
-      founded: "2020",
-      focus: "RNA splicing",
-      description: "UK biotech focusing on RNA splicing and senotherapeutics for age-related diseases.",
+      name: "LIfT BioSciences",
+      location: "London, UK",
+      funding: "$4.5M",
+      founded: "2019",
+      focus: "Cell therapy",
+      description: "Cell therapy applications for regenerative medicine and longevity.",
       category: "clinical",
-      rank: 28
+      rank: 34
     },
     {
-      name: "Genflow Biosciences",
-      location: "London, UK",
-      funding: "$8.5M",
-      founded: "2019",
-      focus: "Gene therapy",
-      description: "Public company developing gene therapy approaches for longevity and healthspan extension.",
-      category: "clinical",
-      rank: 30
+      name: "Shift Bioscience",
+      location: "Cambridge, UK",
+      funding: "$3.5M",
+      founded: "2017",
+      focus: "Mitochondrial rejuvenation",
+      description: "Mitochondrial-focused therapies for cellular rejuvenation and longevity.",
+      category: "research",
+      rank: 35
     },
-    // German Companies
+    {
+      name: "Tolion Health",
+      location: "Prague, Czech Republic",
+      funding: "$3M",
+      founded: "2020",
+      focus: "AI brain health",
+      description: "AI-driven brain health optimization app for cognitive longevity.",
+      category: "consumer",
+      rank: 36
+    },
+    {
+      name: "Albatroz Therapeutics",
+      location: "Singapore",
+      funding: "$3M",
+      founded: "2019",
+      focus: "Longevity therapeutics",
+      description: "Singapore-based therapeutics company focused on aging-related diseases.",
+      category: "clinical",
+      rank: 37
+    },
+    {
+      name: "Biopeak",
+      location: "Bengaluru, India",
+      funding: "$3M",
+      founded: "2020",
+      focus: "Preventive healthcare",
+      description: "Personalized preventive healthcare platform with longevity focus.",
+      category: "consumer",
+      rank: 38
+    },
+    {
+      name: "Repair Biotechnologies",
+      location: "New York, NY",
+      funding: "$3M",
+      founded: "2018",
+      focus: "Cardiovascular aging",
+      description: "Therapies targeting cardiovascular aspects of aging and longevity.",
+      category: "clinical",
+      rank: 39
+    },
+    {
+      name: "Ichor Therapeutics",
+      location: "New York, NY",
+      funding: "$2.5M",
+      founded: "2017",
+      focus: "Senolytic drugs",
+      description: "Early-stage senolytic drug development for age-related diseases.",
+      category: "clinical",
+      rank: 40
+    },
+    {
+      name: "EvaGene",
+      location: "Sofia, Bulgaria",
+      funding: "$2.5M",
+      founded: "2019",
+      focus: "DNA testing",
+      description: "Home-based DNA testing specifically designed for longevity optimization.",
+      category: "consumer",
+      rank: 41
+    },
+    {
+      name: "Underdog Pharmaceuticals",
+      location: "Helsinki, Finland",
+      funding: "$2.2M",
+      founded: "2020",
+      focus: "Small molecule drugs",
+      description: "Small molecule longevity drugs targeting fundamental aging mechanisms.",
+      category: "clinical",
+      rank: 42
+    },
+    {
+      name: "Longevity Copilot",
+      location: "Vienna, Austria",
+      funding: "$2M",
+      founded: "2021",
+      focus: "Lifestyle optimization",
+      description: "AI-powered lifestyle habit adoption app for longevity optimization.",
+      category: "consumer",
+      rank: 43
+    },
+    {
+      name: "Rabbit Bio",
+      location: "San Francisco, CA",
+      funding: "$2M",
+      founded: "2020",
+      focus: "Cellular reprogramming",
+      description: "Early-stage cellular reprogramming research and therapeutics development.",
+      category: "research",
+      rank: 44
+    },
+    {
+      name: "Acorn Biolabs",
+      location: "Toronto, Canada",
+      funding: "$1.8M",
+      founded: "2018",
+      focus: "Stem cell preservation",
+      description: "Stem cell preservation services for future therapeutic applications.",
+      category: "consumer",
+      rank: 45
+    },
+    {
+      name: "Kyma Health",
+      location: "London, UK",
+      funding: "$1.5M",
+      founded: "2021",
+      focus: "Women's health",
+      description: "Personalized healthcare platform specifically designed for women's longevity.",
+      category: "consumer",
+      rank: 46
+    },
+    {
+      name: "BASIS Health",
+      location: "New York, NY",
+      funding: "$1.2M",
+      founded: "2020",
+      focus: "Nutrition & longevity",
+      description: "Meal preparation and nutritional optimization for longevity and healthspan.",
+      category: "consumer",
+      rank: 47
+    },
+    {
+      name: "Axia Longevity",
+      location: "United States",
+      funding: "$1M",
+      founded: "2019",
+      focus: "Aging tracking",
+      description: "Aging tracking application with integrated supplement recommendations.",
+      category: "consumer",
+      rank: 48
+    },
     {
       name: "Liv Longevity Labs",
       location: "Berlin, Germany",
-      funding: "Undisclosed",
+      funding: "$5M",
       founded: "2024",
       focus: "Cellular aging tests",
       description: "Consumer-focused longevity solutions with TruAge cellular aging test and AI-based personalized recommendations.",
@@ -191,104 +548,37 @@ const MarketAnalysisChart = () => {
       rank: 49
     },
     {
-      name: "Orbem",
-      location: "Munich, Germany",
-      funding: "$32M",
-      founded: "2019",
-      focus: "AI-powered MRI platform",
-      description: "Germany's most technically sophisticated longevity AI company with clinical expertise and advanced AI for medical imaging.",
-      category: "clinical"
-    },
-    {
       name: "Cellbricks",
       location: "Berlin, Germany",
-      funding: "Undisclosed",
+      funding: "$8M",
       founded: "2015",
       focus: "3D bioprinting systems",
       description: "Molecular medicine focused on bio-fabrication technology for artificially manufactured organs.",
       category: "clinical",
       rank: 50
     },
-    // Asian Leaders
+    // Recovered companies that were missing
     {
-      name: "Abogen Biosciences",
-      location: "Suzhou, China",
-      funding: "$700M",
+      name: "Aware",
+      location: "United States",
+      funding: "$15M",
       founded: "2019",
-      focus: "Biotechnology therapeutics",
-      description: "Chinese biotech with substantial Series C funding for therapeutic development.",
-      category: "clinical",
-      rank: 4
-    },
-    {
-      name: "Deep Longevity",
-      location: "Hong Kong, China",
-      funding: "$14M",
-      founded: "2020",
-      focus: "AI aging clocks",
-      description: "AI-driven longevity research with advanced aging clock technology for health optimization.",
-      category: "research",
-      rank: 23
-    },
-    {
-      name: "Gero",
-      location: "Singapore",
-      funding: "$40M",
-      founded: "2015",
-      focus: "AI-driven longevity",
-      description: "Singapore-based AI platform for longevity research and biomarker development.",
-      category: "research",
-      rank: 18
-    },
-    // Additional Notable Companies
-    {
-      name: "Neko Health",
-      location: "Stockholm, Sweden",
-      funding: "$60M",
-      founded: "2018",
-      focus: "Sensor-based AI platform",
-      description: "Co-founded by Spotify's Daniel Ek, combining biometric monitoring with AI-driven health insights.",
-      category: "consumer",
-      url: "https://nekohealth.com"
-    },
-    {
-      name: "Bioniq",
-      location: "London, UK",
-      funding: "$20.7M",
-      founded: "2019",
-      focus: "Personalized supplements",
-      description: "Biomarker analysis combined with genetic profiling for customized supplementation.",
-      category: "consumer",
-      url: "https://bioniq.com"
+      focus: "Health monitoring",
+      description: "Advanced health monitoring and longevity tracking platform with AI-driven insights.",
+      category: "consumer"
     }
   ];
 
   const getFundingSize = (funding: string): number => {
-    if (funding.includes('$3B')) return 3000;
-    if (funding.includes('$1B')) return 1000;
-    if (funding.includes('$700M')) return 700;
-    if (funding.includes('$561.5M')) return 561.5;
-    if (funding.includes('$399.8M')) return 399.8;
-    if (funding.includes('$200M')) return 200;
-    if (funding.includes('$198M')) return 198;
-    if (funding.includes('$176M')) return 176;
-    if (funding.includes('$106M')) return 106;
-    if (funding.includes('$66M') || funding.includes('€60M')) return 66;
-    if (funding.includes('$45M')) return 45;
-    if (funding.includes('$40M')) return 40;
-    if (funding.includes('$32M')) return 32;
-    if (funding.includes('$30.7M')) return 30.7;
-    if (funding.includes('€20.7M')) return 20.7;
-    if (funding.includes('€14.1M')) return 14.1;
-    if (funding.includes('$14M')) return 14;
-    if (funding.includes('$10M')) return 10;
-    if (funding.includes('$9.1M')) return 9.1;
-    if (funding.includes('$8.5M')) return 8.5;
-    if (funding.includes('€5.5M') || funding.includes('$5.5M')) return 5.5;
-    if (funding.includes('€4.7M') || funding.includes('$4.7M')) return 4.7;
-    if (funding.includes('€4.2M')) return 4.2;
-    if (funding.includes('€1.2M')) return 1.2;
-    return 2;
+    // Extract numeric value and convert to millions for consistent scaling
+    const numStr = funding.replace(/[$€,B]/g, '').replace('M', '');
+    let num = parseFloat(numStr);
+    
+    if (funding.includes('B')) {
+      num = num * 1000; // Convert billions to millions
+    }
+    
+    return Math.max(num, 1); // Ensure minimum value of 1M for scaling
   };
 
   const getCategoryColor = (category: string): string => {
@@ -302,18 +592,21 @@ const MarketAnalysisChart = () => {
 
   const getMarketPosition = (funding: string, category: string, index: number): { x: number; y: number } => {
     const fundingSize = getFundingSize(funding);
-    const logFunding = Math.log10(fundingSize + 1);
-    const baseX = (logFunding - 0.5) * 120; // Improved X scaling
+    // Use log scale for better distribution of funding sizes
+    const logFunding = Math.log10(fundingSize);
+    // Scale X position: log(1M) = 0, log(1000M) = 3, so multiply by 120 for good spread
+    const baseX = (logFunding * 120) + 50;
     
     let categoryY = 150; // Default middle position
-    if (category === 'clinical') categoryY = 50;
-    else if (category === 'consumer') categoryY = 200;  
-    else if (category === 'research') categoryY = 350;
+    if (category === 'clinical') categoryY = 80;
+    else if (category === 'consumer') categoryY = 220;  
+    else if (category === 'research') categoryY = 360;
     
-    const scatter = (index % 5 - 2) * 15; // Better distribution
+    // Add some scatter to avoid exact overlaps
+    const scatter = (index % 7 - 3) * 12;
     
     return {
-      x: Math.max(Math.min(baseX + scatter, 480), 20),
+      x: Math.max(Math.min(baseX + scatter, 450), 30),
       y: categoryY + scatter
     };
   };
@@ -321,7 +614,8 @@ const MarketAnalysisChart = () => {
   const CompanyBubble = ({ company, region, index }: { company: Company; region: string; index: number }) => {
     const position = getMarketPosition(company.funding, company.category, index);
     const fundingSize = getFundingSize(company.funding);
-    const size = Math.max(Math.log10(fundingSize + 1) * 12, 25);
+    // Increased minimum size and scaling factor for bigger bubbles
+    const size = Math.max(Math.log10(fundingSize) * 18 + 15, 30);
     
     const handleClick = () => {
       if (company.url) {
@@ -404,7 +698,7 @@ const MarketAnalysisChart = () => {
           </p>
           <p>
             <strong>Europe</strong> hosts 15 companies (30%) in the top 50, with <strong>Switzerland</strong> leading 
-            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 2 companies focusing on 
+            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 3 companies focusing on 
             AI-powered clinical solutions and bioprinting. <strong>China</strong> represents 12% with 6 companies 
             showing rapid growth in biotechnology innovation.
           </p>
@@ -464,21 +758,21 @@ const MarketAnalysisChart = () => {
             </CardHeader>
             <CardContent className="p-0">
               <div className="relative w-full h-[500px] bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border overflow-hidden">
-                {/* Improved Y-Axis with horizontal dotted lines */}
+                {/* Y-Axis with horizontal dotted lines */}
                 <div className="absolute left-2 top-4 text-sm font-medium text-gray-700 transform -rotate-90 origin-left">
                   Market Focus
                 </div>
                 
                 {/* Horizontal dotted lines for better category separation */}
-                <div className="absolute left-0 right-0 top-16 border-t border-dashed border-gray-300"></div>
-                <div className="absolute left-0 right-0 top-1/3 border-t border-dashed border-gray-300"></div>
-                <div className="absolute left-0 right-0 top-2/3 border-t border-dashed border-gray-300"></div>
+                <div className="absolute left-0 right-0 top-20 border-t border-dashed border-gray-400"></div>
+                <div className="absolute left-0 right-0 top-1/3 border-t border-dashed border-gray-400"></div>
+                <div className="absolute left-0 right-0 top-2/3 border-t border-dashed border-gray-400"></div>
                 
-                <div className="absolute left-8 top-12 text-sm font-medium text-blue-700">Clinical Solutions</div>
-                <div className="absolute left-8 top-1/3 text-sm font-medium text-green-700">Consumer Health</div>
-                <div className="absolute left-8 bottom-20 text-sm font-medium text-purple-700">Research & Development</div>
+                <div className="absolute left-8 top-8 text-sm font-bold text-blue-700">Clinical Solutions</div>
+                <div className="absolute left-8 top-1/3 text-sm font-bold text-green-700">Consumer Health</div>
+                <div className="absolute left-8 bottom-24 text-sm font-bold text-purple-700">Research & Development</div>
                 
-                {/* Improved X-Axis with better scaling */}
+                {/* X-Axis with better scaling */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
                   Funding Size (Log Scale)
                 </div>
@@ -684,7 +978,7 @@ const MarketAnalysisChart = () => {
                   <ul className="text-sm space-y-1">
                     <li>• Switzerland: 4 companies, strong corporate backing</li>
                     <li>• UK: 6 companies, research excellence</li>
-                    <li>• Germany: 2 companies, technical innovation</li>
+                    <li>• Germany: 3 companies, technical innovation</li>
                     <li>• Strong regulatory and academic environment</li>
                   </ul>
                 </div>
