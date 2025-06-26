@@ -370,6 +370,16 @@ const MarketAnalysisChart = () => {
     rank: 32,
     url: "https://genflowbio.com"
   }, {
+    name: "Curexsys",
+    location: "Göttingen, Germany",
+    funding: "$8.2M",
+    founded: "2020",
+    focus: "Therapeutic exosomes",
+    description: "Series A biotech developing therapeutic exosome technologies for regenerative medicine applications.",
+    category: "clinical",
+    rank: 33,
+    url: "https://www.curexus.com/en/"
+  }, {
     name: "Cellbricks",
     location: "Berlin, Germany",
     funding: "$8M",
@@ -377,17 +387,17 @@ const MarketAnalysisChart = () => {
     focus: "3D bioprinting systems",
     description: "Molecular medicine focused on bio-fabrication technology for artificially manufactured organs.",
     category: "clinical",
-    rank: 33,
+    rank: 34,
     url: "https://cellbricks.com"
   }, {
     name: "Akribion Therapeutics",
     location: "Zwingenberg, Germany",
     funding: "$8M",
-    founded: "2020",
+    founded: "2018",
     focus: "RNA-guided cell depletion",
     description: "RNA-guided programmable cell depletion technology for therapeutic applications.",
     category: "clinical",
-    rank: 34,
+    rank: 35,
     url: "https://www.akribion-therapeutics.com"
   }, {
     name: "clook.bio",
@@ -397,7 +407,7 @@ const MarketAnalysisChart = () => {
     focus: "Stem cell therapies",
     description: "Stem cell-based therapies for regenerative medicine and longevity applications.",
     category: "clinical",
-    rank: 35,
+    rank: 36,
     url: "https://clook.bio"
   }, {
     name: "Cellvie",
@@ -407,8 +417,18 @@ const MarketAnalysisChart = () => {
     focus: "Mitochondrial transplantation",
     description: "Swiss biotech developing mitochondrial transplantation therapy for cellular rejuvenation.",
     category: "clinical",
-    rank: 36,
+    rank: 37,
     url: "https://cellvie.com"
+  }, {
+    name: "Tomorrow.Bio",
+    location: "Berlin, Germany",
+    funding: "$5M",
+    founded: "2020",
+    focus: "Human cryopreservation",
+    description: "Seed-stage company focused on human cryopreservation R&D and cryonics technology development.",
+    category: "research",
+    rank: 38,
+    url: "https://www.tomorrow.bio"
   }, {
     name: "Liv Longevity Labs",
     location: "Berlin, Germany",
@@ -417,7 +437,7 @@ const MarketAnalysisChart = () => {
     focus: "Cellular aging tests",
     description: "Consumer-focused longevity solutions with TruAge cellular aging test and AI-based personalized recommendations.",
     category: "consumer",
-    rank: 37,
+    rank: 39,
     url: "https://liv.health"
   }, {
     name: "GlycanAge",
@@ -427,7 +447,7 @@ const MarketAnalysisChart = () => {
     focus: "Glycan biomarkers",
     description: "Biological age measurement using glycan-based molecular biomarker assessment.",
     category: "clinical",
-    rank: 38,
+    rank: 40,
     url: "https://glycanage.com"
   }, {
     name: "LIfT BioSciences",
@@ -437,7 +457,7 @@ const MarketAnalysisChart = () => {
     focus: "Cell therapy",
     description: "Cell therapy applications for regenerative medicine and longevity.",
     category: "clinical",
-    rank: 39,
+    rank: 41,
     url: "https://liftbiosciences.com"
   }, {
     name: "AERA Health",
@@ -447,7 +467,7 @@ const MarketAnalysisChart = () => {
     focus: "P4 preventive medicine",
     description: "Preventive and longevity medicine platform with personalized health optimization.",
     category: "consumer",
-    rank: 40,
+    rank: 42,
     url: "https://www.aera.health"
   }, {
     name: "for you eHealth",
@@ -457,7 +477,7 @@ const MarketAnalysisChart = () => {
     focus: "At-home health testing",
     description: "At-home health testing and biomarker analysis for personalized health optimization.",
     category: "consumer",
-    rank: 41,
+    rank: 43,
     url: "https://www.foryouehealth.de/"
   }, {
     name: "Velabs Therapeutics",
@@ -467,7 +487,7 @@ const MarketAnalysisChart = () => {
     focus: "Senolytic antibodies",
     description: "Senolytic antibody therapies for age-related disease treatment.",
     category: "clinical",
-    rank: 42,
+    rank: 44,
     url: "https://www.cbinsights.com/company/velabs-therapeutics"
   }, {
     name: "Shift Bioscience",
@@ -477,7 +497,7 @@ const MarketAnalysisChart = () => {
     focus: "Mitochondrial rejuvenation",
     description: "Mitochondrial-focused therapies for cellular rejuvenation and longevity.",
     category: "research",
-    rank: 43,
+    rank: 45,
     url: "https://shiftbioscience.com"
   }, {
     name: "Tolion Health",
@@ -487,7 +507,7 @@ const MarketAnalysisChart = () => {
     focus: "AI brain health",
     description: "AI-driven brain health optimization app for cognitive longevity.",
     category: "consumer",
-    rank: 44,
+    rank: 46,
     url: "https://tolion.com"
   }, {
     name: "Albatroz Therapeutics",
@@ -497,7 +517,7 @@ const MarketAnalysisChart = () => {
     focus: "Longevity therapeutics",
     description: "Singapore-based therapeutics company focused on aging-related diseases.",
     category: "clinical",
-    rank: 45,
+    rank: 47,
     url: "https://albatroztherapeutics.com"
   }, {
     name: "Biopeak",
@@ -507,7 +527,7 @@ const MarketAnalysisChart = () => {
     focus: "Preventive healthcare",
     description: "Personalized preventive healthcare platform with longevity focus.",
     category: "consumer",
-    rank: 46,
+    rank: 48,
     url: "https://biopeak.in"
   }, {
     name: "Repair Biotechnologies",
@@ -517,7 +537,7 @@ const MarketAnalysisChart = () => {
     focus: "Cardiovascular aging",
     description: "Therapies targeting cardiovascular aspects of aging and longevity.",
     category: "clinical",
-    rank: 47,
+    rank: 49,
     url: "https://repairbiotechnologies.com"
   }, {
     name: "Ichor Therapeutics",
@@ -527,7 +547,7 @@ const MarketAnalysisChart = () => {
     focus: "Senolytic drugs",
     description: "Early-stage senolytic drug development for age-related diseases.",
     category: "clinical",
-    rank: 48,
+    rank: 50,
     url: "https://ichortherapeutics.com"
   }, {
     name: "EvaGene",
@@ -537,7 +557,7 @@ const MarketAnalysisChart = () => {
     focus: "DNA testing",
     description: "Home-based DNA testing specifically designed for longevity optimization.",
     category: "consumer",
-    rank: 49,
+    rank: 51,
     url: "https://evagene.me"
   }, {
     name: "HealthCaters",
@@ -547,7 +567,7 @@ const MarketAnalysisChart = () => {
     focus: "AI health screening",
     description: "AI-powered health screening stations for comprehensive health monitoring.",
     category: "consumer",
-    rank: 50,
+    rank: 52,
     url: "https://healthcaters.com"
   },
   // Additional companies with undisclosed funding
@@ -559,7 +579,7 @@ const MarketAnalysisChart = () => {
     focus: "3D bioprinting",
     description: "3D bioprinting and organ fabrication for regenerative medicine applications.",
     category: "clinical",
-    rank: 51,
+    rank: 53,
     url: "https://www.cellbricks-therapeutics.com"
   }, {
     name: "Centenara Labs AG",
@@ -569,7 +589,7 @@ const MarketAnalysisChart = () => {
     focus: "Regenerative therapeutics",
     description: "Regenerative and geriatric disease therapeutics in pre-clinical development.",
     category: "clinical",
-    rank: 52
+    rank: 54
   }, {
     name: "ActiTrexx GmbH",
     location: "Mainz, Germany",
@@ -578,7 +598,17 @@ const MarketAnalysisChart = () => {
     focus: "Regulatory T cell therapies",
     description: "Early-stage regulatory T cell therapies for age-related immune disorders.",
     category: "clinical",
-    rank: 53
+    rank: 55
+  }, {
+    name: "BioMed X Institute",
+    location: "Heidelberg, Germany",
+    funding: "Undisclosed",
+    founded: "2014",
+    focus: "Drug discovery platform",
+    description: "Independent research hub for biomedical research and drug discovery with interdisciplinary approach.",
+    category: "research",
+    rank: 56,
+    url: "https://bmedx.com"
   }];
   const getFundingSize = (funding: string): number => {
     // Handle undisclosed funding
@@ -726,7 +756,7 @@ const MarketAnalysisChart = () => {
       </HoverCard>;
   };
   const isGermanCompany = (company: Company): boolean => {
-    return company.location.includes('Germany') || company.location.includes('Berlin') || company.location.includes('Munich') || company.location.includes('Bavaria') || company.location.includes('Heidelberg') || company.location.includes('Zwingenberg') || company.location.includes('Mainz') || company.location.includes('Weiden');
+    return company.location.includes('Germany') || company.location.includes('Berlin') || company.location.includes('Munich') || company.location.includes('Bavaria') || company.location.includes('Heidelberg') || company.location.includes('Zwingenberg') || company.location.includes('Mainz') || company.location.includes('Weiden') || company.location.includes('Göttingen');
   };
   const nonGermanCompanies = globalTop50Companies.filter(company => !isGermanCompany(company));
   const filteredCompanies = selectedCategory === 'all' ? nonGermanCompanies : nonGermanCompanies.filter(company => company.category === selectedCategory);
@@ -754,8 +784,8 @@ const MarketAnalysisChart = () => {
           </p>
           <p>
             <strong>Europe</strong> hosts 15+ companies (30%) in the top 50+, with <strong>Switzerland</strong> leading 
-            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 8+ companies focusing on 
-            AI-powered clinical solutions and bioprinting. Companies with undisclosed funding are positioned on the left with small bubbles.
+            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 12+ companies focusing on 
+            AI-powered clinical solutions, bioprinting, and therapeutic exosomes. Companies with undisclosed funding are positioned on the left with small bubbles.
           </p>
         </div>
         
@@ -929,10 +959,10 @@ const MarketAnalysisChart = () => {
                     <div>
                       <h4 className="font-semibold mb-2">Clinical Innovation</h4>
                       <ul className="text-sm space-y-1">
+                        <li>• Curexsys: $8.2M therapeutic exosomes</li>
                         <li>• Akribion Therapeutics: $8M RNA-guided therapy</li>
+                        <li>• Tomorrow.Bio: $5M cryopreservation R&D</li>
                         <li>• Velabs Therapeutics: $3.8M senolytic antibodies</li>
-                        <li>• Cellbricks Therapeutics: 3D bioprinting</li>
-                        <li>• ActiTrexx: Regulatory T cell therapies</li>
                       </ul>
                     </div>
                   </div>
@@ -944,7 +974,7 @@ const MarketAnalysisChart = () => {
                     </p>
                     <p className="text-sm">
                       Germany demonstrates strong capabilities across the longevity spectrum, from Berlin's consumer health ecosystem 
-                      to advanced clinical research in RNA therapeutics and bioprinting technologies.
+                      to advanced clinical research in RNA therapeutics, bioprinting technologies, and therapeutic exosomes.
                     </p>
                   </div>
                 </div>
@@ -1015,7 +1045,7 @@ const MarketAnalysisChart = () => {
                   <ul className="text-sm space-y-1">
                     <li>• Switzerland: 4 companies, strong corporate backing</li>
                     <li>• UK: 6 companies, research excellence</li>
-                    <li>• Germany: 3 companies, technical innovation</li>
+                    <li>• Germany: 12 companies, technical innovation</li>
                     <li>• Strong regulatory and academic environment</li>
                   </ul>
                 </div>
