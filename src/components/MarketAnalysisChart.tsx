@@ -592,22 +592,36 @@ const MarketAnalysisChart = () => {
 
   const getMarketPosition = (funding: string, category: string, index: number): { x: number; y: number } => {
     const fundingSize = getFundingSize(funding);
-    // Use log scale for better distribution of funding sizes
-    const logFunding = Math.log10(fundingSize);
-    // Scale X position: log(1M) = 0, log(1000M) = 3, so multiply by 120 for good spread
-    const baseX = (logFunding * 120) + 50;
+    
+    // Create a more accurate mapping for funding to X position
+    let xPosition;
+    if (fundingSize >= 1000) { // $1B+
+      xPosition = 380 + (Math.random() * 40); // Far right
+    } else if (fundingSize >= 100) { // $100M+
+      xPosition = 280 + (fundingSize - 100) * 0.5 + (Math.random() * 30);
+    } else if (fundingSize >= 50) { // $50M+
+      xPosition = 220 + (fundingSize - 50) * 1.2 + (Math.random() * 25);
+    } else if (fundingSize >= 10) { // $10M+
+      xPosition = 120 + (fundingSize - 10) * 2.5 + (Math.random() * 20);
+    } else { // Under $10M
+      xPosition = 50 + fundingSize * 7 + (Math.random() * 15);
+    }
+    
+    // Ensure bounds
+    xPosition = Math.max(Math.min(xPosition, 450), 40);
     
     let categoryY = 150; // Default middle position
     if (category === 'clinical') categoryY = 80;
     else if (category === 'consumer') categoryY = 220;  
     else if (category === 'research') categoryY = 360;
     
-    // Add some scatter to avoid exact overlaps
-    const scatter = (index % 7 - 3) * 12;
+    // Add scatter to prevent overlapping - use index-based offset
+    const scatterY = ((index % 5) - 2) * 20; // Vertical scatter
+    const scatterX = ((index % 3) - 1) * 15; // Horizontal scatter
     
     return {
-      x: Math.max(Math.min(baseX + scatter, 450), 30),
-      y: categoryY + scatter
+      x: Math.max(Math.min(xPosition + scatterX, 450), 30),
+      y: Math.max(Math.min(categoryY + scatterY, 420), 60)
     };
   };
 
@@ -758,7 +772,7 @@ const MarketAnalysisChart = () => {
             </CardHeader>
             <CardContent className="p-0">
               <div className="relative w-full h-[500px] bg-gradient-to-br from-blue-50 to-green-50 rounded-lg border overflow-hidden">
-                {/* Y-Axis with horizontal dotted lines */}
+                {/* Y-Axis with horizontal lines and labels */}
                 <div className="absolute left-2 top-4 text-sm font-medium text-gray-700 transform -rotate-90 origin-left">
                   Market Focus
                 </div>
@@ -772,14 +786,15 @@ const MarketAnalysisChart = () => {
                 <div className="absolute left-8 top-1/3 text-sm font-bold text-green-700">Consumer Health</div>
                 <div className="absolute left-8 bottom-24 text-sm font-bold text-purple-700">Research & Development</div>
                 
-                {/* X-Axis with better scaling */}
+                {/* X-Axis with proper funding scale markers */}
                 <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 text-sm font-medium text-gray-700">
-                  Funding Size (Log Scale)
+                  Funding Size
                 </div>
-                <div className="absolute bottom-6 left-8 text-xs text-gray-600">$1M</div>
-                <div className="absolute bottom-6 left-1/4 text-xs text-gray-600">$10M</div>
-                <div className="absolute bottom-6 left-1/2 text-xs text-gray-600">$100M</div>
-                <div className="absolute bottom-6 right-20 text-xs text-gray-600">$1B+</div>
+                <div className="absolute bottom-6 left-12 text-xs text-gray-600">$1M</div>
+                <div className="absolute bottom-6 left-32 text-xs text-gray-600">$10M</div>
+                <div className="absolute bottom-6 left-56 text-xs text-gray-600">$50M</div>
+                <div className="absolute bottom-6 left-80 text-xs text-gray-600">$100M</div>
+                <div className="absolute bottom-6 right-16 text-xs text-gray-600">$1B+</div>
                 
                 {filteredCompanies.map((company, index) => (
                   <CompanyBubble key={`${company.name}-${index}`} company={company} region="global" index={index} />
