@@ -58,6 +58,32 @@ const BusinessPlan = () => {
       icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
       content: (
         <div className="space-y-6">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg mb-6">
+            <h4 className="text-xl font-semibold mb-4 text-slate-900">Global Longevity Market Overview</h4>
+            <div className="grid md:grid-cols-3 gap-4 mb-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-600">$8.5B</div>
+                <div className="text-sm text-gray-600">Global investment 2024</div>
+                <div className="text-xs text-gray-500">220% increase from 2023</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600">$8.1B</div>
+                <div className="text-sm text-gray-600">Top 50 disclosed funding</div>
+                <div className="text-xs text-gray-500">$169M average per company</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-600">91%</div>
+                <div className="text-sm text-gray-600">Top 10 concentration</div>
+                <div className="text-xs text-gray-500">$7.4B in top tier</div>
+              </div>
+            </div>
+            <p className="text-sm text-slate-700">
+              The longevity market demonstrates extreme capital concentration, with breakthrough technologies requiring 
+              substantial resources for research, clinical trials, and regulatory approval. Europe represents 30% of 
+              top companies, with Switzerland leading through strategic corporate partnerships and Germany excelling 
+              in AI-powered clinical solutions.
+            </p>
+          </div>
           <MarketAnalysisChart />
         </div>
       )
