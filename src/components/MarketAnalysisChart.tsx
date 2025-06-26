@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -453,7 +454,7 @@ const MarketAnalysisChart = () => {
     {
       name: "Liv Longevity Labs",
       location: "Berlin, Germany",
-      funding: "$5M",
+      funding: "Undisclosed",
       founded: "2024",
       focus: "Cellular aging tests",
       description: "Consumer-focused longevity solutions with TruAge cellular aging test and AI-based personalized recommendations.",
@@ -603,10 +604,47 @@ const MarketAnalysisChart = () => {
       category: "consumer",
       rank: 50,
       url: "https://healthcaters.com"
+    },
+    // Additional companies with undisclosed funding
+    {
+      name: "Cellbricks Therapeutics",
+      location: "Berlin, Germany",
+      funding: "Undisclosed",
+      founded: "2015",
+      focus: "3D bioprinting",
+      description: "3D bioprinting and organ fabrication for regenerative medicine applications.",
+      category: "clinical",
+      rank: 51,
+      url: "https://www.cellbricks-therapeutics.com"
+    },
+    {
+      name: "Centenara Labs AG",
+      location: "Zurich, Switzerland",
+      funding: "Undisclosed",
+      founded: "2020",
+      focus: "Regenerative therapeutics",
+      description: "Regenerative and geriatric disease therapeutics in pre-clinical development.",
+      category: "clinical",
+      rank: 52
+    },
+    {
+      name: "ActiTrexx GmbH",
+      location: "Mainz, Germany",
+      funding: "Undisclosed",
+      founded: "2018",
+      focus: "Regulatory T cell therapies",
+      description: "Early-stage regulatory T cell therapies for age-related immune disorders.",
+      category: "clinical",
+      rank: 53
     }
   ];
 
   const getFundingSize = (funding: string): number => {
+    // Handle undisclosed funding
+    if (funding === "Undisclosed") {
+      return 0.1; // Very small value to position on left
+    }
+    
     // Extract numeric value and convert to millions for consistent scaling
     const numStr = funding.replace(/[$€,B]/g, '').replace('M', '');
     let num = parseFloat(numStr);
@@ -629,6 +667,21 @@ const MarketAnalysisChart = () => {
 
   const getMarketPosition = (funding: string, category: string, index: number): { x: number; y: number } => {
     const fundingSize = getFundingSize(funding);
+    
+    // Special handling for undisclosed funding
+    if (funding === "Undisclosed") {
+      let categoryY = 150; // Default middle position
+      if (category === 'clinical') categoryY = 80;
+      else if (category === 'consumer') categoryY = 220;  
+      else if (category === 'research') categoryY = 360;
+      
+      // Position on the left with some vertical scatter
+      const scatterY = ((index % 7) - 3) * 15;
+      return {
+        x: 30, // Far left position
+        y: Math.max(Math.min(categoryY + scatterY, 420), 60)
+      };
+    }
     
     // Find max funding for scaling (Altos Labs has $3B = 3000M)
     const maxFunding = 3000;
@@ -667,8 +720,14 @@ const MarketAnalysisChart = () => {
   const CompanyBubble = ({ company, region, index }: { company: Company; region: string; index: number }) => {
     const position = getMarketPosition(company.funding, company.category, index);
     const fundingSize = getFundingSize(company.funding);
-    // Halved the size calculation - reduced from previous values
-    const size = Math.max(Math.log10(fundingSize) * 36 + 30, 60); // Halved from 72 and 60 to 36 and 30, min from 120 to 60
+    
+    // Special size for undisclosed funding
+    let size;
+    if (company.funding === "Undisclosed") {
+      size = 10; // Fixed small size for undisclosed
+    } else {
+      size = Math.max(Math.log10(fundingSize) * 18 + 15, 30); // Halved from previous values
+    }
     
     const handleClick = () => {
       if (company.url) {
@@ -755,15 +814,14 @@ const MarketAnalysisChart = () => {
         <div className="bg-blue-50 p-4 rounded-lg mb-4 text-sm text-left">
           <h4 className="font-semibold mb-2">Market Overview</h4>
           <p className="mb-2">
-            The top 50 longevity startups have collectively raised over <strong>$8.1 billion</strong> in disclosed funding, 
+            The top 50+ longevity startups have collectively raised over <strong>$8.1 billion</strong> in disclosed funding, 
             with an average of <strong>$169 million</strong> per company. This represents part of the broader $8.5 billion 
             global longevity investment in 2024, a 220% increase from 2023.
           </p>
           <p>
-            <strong>Europe</strong> hosts 15 companies (30%) in the top 50, with <strong>Switzerland</strong> leading 
-            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 3 companies focusing on 
-            AI-powered clinical solutions and bioprinting. <strong>China</strong> represents 12% with 6 companies 
-            showing rapid growth in biotechnology innovation.
+            <strong>Europe</strong> hosts 15+ companies (30%) in the top 50+, with <strong>Switzerland</strong> leading 
+            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 8+ companies focusing on 
+            AI-powered clinical solutions and bioprinting. Companies with undisclosed funding are positioned on the left with small bubbles.
           </p>
         </div>
         
