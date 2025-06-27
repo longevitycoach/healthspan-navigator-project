@@ -569,6 +569,16 @@ const MarketAnalysisChart = () => {
     category: "consumer",
     rank: 52,
     url: "https://healthcaters.com"
+  }, {
+    name: "Orthomol",
+    location: "Langenfeld, Germany",
+    funding: "$1B",
+    founded: "1991",
+    focus: "Orthomolecular supplements",
+    description: "Leading German orthomolecular supplement company with €1 billion target sale value, specializing in premium micronutrient formulations.",
+    category: "consumer",
+    rank: 53,
+    url: "https://www.orthomol.com"
   },
   // Additional companies with undisclosed funding
   {
@@ -579,7 +589,7 @@ const MarketAnalysisChart = () => {
     focus: "3D bioprinting",
     description: "3D bioprinting and organ fabrication for regenerative medicine applications.",
     category: "clinical",
-    rank: 53,
+    rank: 54,
     url: "https://www.cellbricks-therapeutics.com"
   }, {
     name: "Centenara Labs AG",
@@ -589,7 +599,7 @@ const MarketAnalysisChart = () => {
     focus: "Regenerative therapeutics",
     description: "Regenerative and geriatric disease therapeutics in pre-clinical development.",
     category: "clinical",
-    rank: 54
+    rank: 55
   }, {
     name: "ActiTrexx GmbH",
     location: "Mainz, Germany",
@@ -598,7 +608,7 @@ const MarketAnalysisChart = () => {
     focus: "Regulatory T cell therapies",
     description: "Early-stage regulatory T cell therapies for age-related immune disorders.",
     category: "clinical",
-    rank: 55
+    rank: 56
   }, {
     name: "BioMed X Institute",
     location: "Heidelberg, Germany",
@@ -607,7 +617,7 @@ const MarketAnalysisChart = () => {
     focus: "Drug discovery platform",
     description: "Independent research hub for biomedical research and drug discovery with interdisciplinary approach.",
     category: "research",
-    rank: 56,
+    rank: 57,
     url: "https://bmedx.com"
   }];
   const getFundingSize = (funding: string): number => {
@@ -756,7 +766,7 @@ const MarketAnalysisChart = () => {
       </HoverCard>;
   };
   const isGermanCompany = (company: Company): boolean => {
-    return company.location.includes('Germany') || company.location.includes('Berlin') || company.location.includes('Munich') || company.location.includes('Bavaria') || company.location.includes('Heidelberg') || company.location.includes('Zwingenberg') || company.location.includes('Mainz') || company.location.includes('Weiden') || company.location.includes('Göttingen');
+    return company.location.includes('Germany') || company.location.includes('Berlin') || company.location.includes('Munich') || company.location.includes('Bavaria') || company.location.includes('Heidelberg') || company.location.includes('Zwingenberg') || company.location.includes('Mainz') || company.location.includes('Weiden') || company.location.includes('Göttingen') || company.location.includes('Langenfeld');
   };
   const nonGermanCompanies = globalTop50Companies.filter(company => !isGermanCompany(company));
   const filteredCompanies = selectedCategory === 'all' ? nonGermanCompanies : nonGermanCompanies.filter(company => company.category === selectedCategory);
@@ -778,14 +788,14 @@ const MarketAnalysisChart = () => {
         <div className="bg-blue-50 p-4 rounded-lg mb-4 text-sm text-left">
           <h4 className="font-semibold mb-2">Market Overview</h4>
           <p className="mb-2">
-            The top 50+ longevity startups have collectively raised over <strong>$8.1 billion</strong> in disclosed funding, 
+            The top 50+ longevity startups have collectively raised over <strong>$9.1 billion</strong> in disclosed funding, 
             with an average of <strong>$169 million</strong> per company. This represents part of the broader $8.5 billion 
             global longevity investment in 2024, a 220% increase from 2023.
           </p>
           <p>
             <strong>Europe</strong> hosts 15+ companies (30%) in the top 50+, with <strong>Switzerland</strong> leading 
-            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 12+ companies focusing on 
-            AI-powered clinical solutions, bioprinting, and therapeutic exosomes. Companies with undisclosed funding are positioned on the left with small bubbles.
+            with 4 companies. <strong>Germany</strong> demonstrates scientific excellence with 13+ companies focusing on 
+            AI-powered clinical solutions, bioprinting, therapeutic exosomes, and premium orthomolecular supplements. Companies with undisclosed funding are positioned on the left with small bubbles.
           </p>
         </div>
         
@@ -856,7 +866,7 @@ const MarketAnalysisChart = () => {
               <div className="p-6">
                 <div className="grid md:grid-cols-3 gap-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-blue-600">$8.1B+</div>
+                    <div className="text-2xl font-bold text-blue-600">$9.1B+</div>
                     <div className="text-sm text-gray-600">Total disclosed funding</div>
                   </div>
                   <div className="text-center">
@@ -939,7 +949,7 @@ const MarketAnalysisChart = () => {
                 <div className="absolute bottom-6 left-8 text-xs text-gray-600">Undisclosed</div>
                 <div className="absolute bottom-6 left-1/4 text-xs text-gray-600">$5M</div>
                 <div className="absolute bottom-6 left-1/2 text-xs text-gray-600">$15M</div>
-                <div className="absolute bottom-6 right-20 text-xs text-gray-600">$875M</div>
+                <div className="absolute bottom-6 right-20 text-xs text-gray-600">$1B</div>
                 
                 {germanCompanies.map((company, index) => <CompanyBubble key={`german-${company.name}-${index}`} company={company} region="german" index={index} />)}
               </div>
@@ -950,6 +960,7 @@ const MarketAnalysisChart = () => {
                     <div>
                       <h4 className="font-semibold mb-2">Consumer Health Leaders</h4>
                       <ul className="text-sm space-y-1">
+                        <li>• Orthomol: $1B orthomolecular supplements</li>
                         <li>• Sunday Natural: $875M (acquired)</li>
                         <li>• Aware Health: $15M preventive medicine</li>
                         <li>• AERA Health: $4M P4 medicine</li>
@@ -973,8 +984,9 @@ const MarketAnalysisChart = () => {
                       <strong>{germanCompanies.length} companies</strong> tracked with diverse focus areas from consumer health to advanced therapeutics.
                     </p>
                     <p className="text-sm">
-                      Germany demonstrates strong capabilities across the longevity spectrum, from Berlin's consumer health ecosystem 
-                      to advanced clinical research in RNA therapeutics, bioprinting technologies, and therapeutic exosomes.
+                      Germany demonstrates strong capabilities across the longevity spectrum, from established players like Orthomol 
+                      to Berlin's consumer health ecosystem and advanced clinical research in RNA therapeutics, bioprinting technologies, 
+                      and therapeutic exosomes.
                     </p>
                   </div>
                 </div>
@@ -993,11 +1005,11 @@ const MarketAnalysisChart = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-3 bg-red-50 rounded">
                     <span>Top 10 Companies</span>
-                    <span className="font-bold">$7.4B (91%)</span>
+                    <span className="font-bold">$8.4B (92%)</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-orange-50 rounded">
                     <span>Companies 11-25</span>
-                    <span className="font-bold">$500M (6%)</span>
+                    <span className="font-bold">$500M (5%)</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-yellow-50 rounded">
                     <span>Companies 26-50</span>
@@ -1024,19 +1036,19 @@ const MarketAnalysisChart = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-3 bg-blue-50 rounded">
                     <span>🇺🇸 United States</span>
-                    <span className="font-bold">20 companies (40%)</span>
+                    <span className="font-bold">20 companies (35%)</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-green-50 rounded">
                     <span>🇪🇺 Europe</span>
-                    <span className="font-bold">15 companies (30%)</span>
+                    <span className="font-bold">18 companies (32%)</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-red-50 rounded">
                     <span>🇨🇳 China</span>
-                    <span className="font-bold">6 companies (12%)</span>
+                    <span className="font-bold">6 companies (11%)</span>
                   </div>
                   <div className="flex justify-between items-center p-3 bg-purple-50 rounded">
                     <span>🌏 Other</span>
-                    <span className="font-bold">9 companies (18%)</span>
+                    <span className="font-bold">13 companies (22%)</span>
                   </div>
                 </div>
                 
@@ -1045,7 +1057,7 @@ const MarketAnalysisChart = () => {
                   <ul className="text-sm space-y-1">
                     <li>• Switzerland: 4 companies, strong corporate backing</li>
                     <li>• UK: 6 companies, research excellence</li>
-                    <li>• Germany: 12 companies, technical innovation</li>
+                    <li>• Germany: 13 companies, from €1B Orthomol to technical innovation</li>
                     <li>• Strong regulatory and academic environment</li>
                   </ul>
                 </div>
