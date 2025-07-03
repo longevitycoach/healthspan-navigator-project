@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Linkedin, ExternalLink } from "lucide-react";
 import HeroSection from "@/components/HeroSection";
 import PersonalJourney from "@/components/PersonalJourney";
 import ContactSection from "@/components/ContactSection";
@@ -15,6 +16,37 @@ const Index = () => {
       <HeroSection />
       <FeatureShowcase />
       <PersonalJourney />
+      
+      {/* LinkedIn Article Reference */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <Linkedin className="w-8 h-8 text-blue-600 flex-shrink-0 mt-1" />
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-slate-800 mb-2">
+                    Featured Article: The Science Behind Personalized Health Coaching
+                  </h3>
+                  <p className="text-slate-600 mb-4 text-sm">
+                    Dive deeper into the scientific foundation of our approach with this comprehensive article 
+                    exploring how current longevity research can be applied to create personalized health coaching solutions.
+                  </p>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="text-blue-600 border-blue-200 hover:bg-blue-50"
+                    onClick={() => window.open('https://www.linkedin.com/pulse/build-personalized-health-coach-based-current-state-buchhorn-roth-ptyfe/', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Read: "Build a personalized Health Coach based on the current state of science"
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
       
       {/* Educational Disclaimer */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
