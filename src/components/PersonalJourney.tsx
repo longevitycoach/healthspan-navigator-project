@@ -103,6 +103,14 @@ const PersonalJourney = () => {
             Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time per week gym, Wim Hof Breathing.
           </p>
           
+          <div className="mb-6">
+            <img 
+              src="/lovable-uploads/c5ad2084-994a-48f4-b281-8edcf4d1d99a.png" 
+              alt="Blood Test Oracle Interface - Blood Test Analysis Form"
+              className="rounded-lg shadow-lg border border-slate-200 mx-auto max-w-4xl w-full"
+            />
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               asChild
