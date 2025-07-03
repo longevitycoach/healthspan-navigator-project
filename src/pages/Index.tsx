@@ -2,12 +2,12 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Linkedin, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
 import HeroSection from "@/components/HeroSection";
 import PersonalJourney from "@/components/PersonalJourney";
 import ContactSection from "@/components/ContactSection";
 import Navigation from "@/components/Navigation";
 import FeatureShowcase from "@/components/FeatureShowcase";
-import BusinessPlan from "@/components/BusinessPlan";
 
 const Index = () => {
   return (
@@ -100,18 +100,64 @@ const Index = () => {
                 </div>
               </div>
               <Button 
-                onClick={() => window.location.href = '/reference-values'}
+                asChild
                 size="lg"
                 className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-3 text-lg font-semibold"
               >
-                Explore Complete Reference Values →
+                <Link to="/reference-values">
+                  Explore Complete Reference Values →
+                </Link>
               </Button>
             </CardContent>
           </Card>
         </div>
       </section>
       
-      <BusinessPlan />
+      {/* Business Plan Teaser */}
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200">
+            <CardContent className="p-8 text-center">
+              <div className="mb-4">
+                <span className="text-4xl">📊</span>
+              </div>
+              <h3 className="text-2xl font-bold text-slate-800 mb-3">
+                Comprehensive Business Strategy
+              </h3>
+              <p className="text-lg text-slate-600 mb-6 max-w-2xl mx-auto">
+                Explore our complete business plan covering market analysis, revenue model, competitive positioning, 
+                and growth strategy for democratizing longevity science.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
+                <div className="flex items-center gap-2 text-sm text-slate-600">
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    Market Analysis
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                    Revenue Model
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <span className="w-2 h-2 bg-emerald-500 rounded-full"></span>
+                    Growth Strategy
+                  </span>
+                </div>
+              </div>
+              <Button 
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 text-lg font-semibold"
+              >
+                <Link to="/business-plan">
+                  View Complete Business Plan →
+                </Link>
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+      
       <ContactSection />
     </div>
   );

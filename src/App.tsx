@@ -11,6 +11,7 @@ import LazyWrapper from "@/components/LazyWrapper";
 const Index = lazy(() => import("./pages/Index"));
 const Resources = lazy(() => import("./pages/Resources"));
 const ReferenceValuesPage = lazy(() => import("./pages/ReferenceValuesPage"));
+const BusinessPlanPage = lazy(() => import("./pages/BusinessPlanPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -51,6 +52,14 @@ const App = () => (
             element={
               <LazyWrapper>
                 <ReferenceValuesPage />
+              </LazyWrapper>
+            } 
+          />
+          <Route 
+            path="/business-plan" 
+            element={
+              <LazyWrapper>
+                <BusinessPlanPage />
               </LazyWrapper>
             } 
           />
