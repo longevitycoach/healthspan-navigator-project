@@ -194,7 +194,7 @@ const PersonalJourney = () => {
               
               <div>
                 <img 
-                  src="/lovable-uploads/c5ad2084-994a-48f4-b281-8edcf4d1d99a.png" 
+                  src="/lovable-uploads/22aee038-5083-49ea-be98-a5a007fc656d.png" 
                   alt="Blood Test Oracle Interface - Blood Test Analysis Form"
                   className="rounded-lg shadow-lg border border-slate-200 w-full"
                 />
