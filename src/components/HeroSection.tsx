@@ -38,7 +38,7 @@ const HeroSection = () => {
             <Button size="lg" className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => document.getElementById('contact')?.scrollIntoView({
             behavior: 'smooth'
           })}>
-              Start Your Journey
+              My Journey
             </Button>
             <Button variant="outline" size="lg" onClick={scrollToFeatures} className="text-lg px-8 py-6 border-2 border-white hover:border-white/90 transition-all duration-300 shadow-lg backdrop-blur-sm bg-fuchsia-500 hover:bg-fuchsia-400 text-fuchsia-100 rounded-full">
               Learn More
