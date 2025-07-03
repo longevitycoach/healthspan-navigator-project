@@ -90,7 +90,7 @@ const Navigation = () => {
                 Contact
               </button>
               <Button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => scrollToSection('prototypes')}
                 className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700"
               >
                 Early Access
@@ -151,7 +151,7 @@ const Navigation = () => {
               </button>
               <div className="pt-2">
                 <Button 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection('prototypes')}
                   className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700"
                 >
                   Early Access

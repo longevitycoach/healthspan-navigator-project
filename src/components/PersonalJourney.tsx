@@ -103,8 +103,71 @@ const PersonalJourney = () => {
             Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time per week gym, Wim Hof Breathing.
           </p>
           
+        </div>
+
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-emerald-500 hidden md:block"></div>
+          
+          <div className="space-y-8">
+            {timelineEvents.map((event, index) => (
+              <div key={index} className="relative flex items-start">
+                {/* Timeline dot */}
+                <div className="hidden md:flex absolute left-6 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 border-4 border-white shadow-lg z-10"></div>
+                
+                {/* Content card */}
+                <Card className={`ml-0 md:ml-16 w-full transition-all duration-300 hover:shadow-lg ${
+                  event.status === 'current' ? 'ring-2 ring-blue-500 bg-blue-50/50' : 
+                  event.status === 'planned' ? 'bg-slate-50/50' : 'bg-white'
+                }`}>
+                  <CardHeader>
+                    <div className="flex items-center justify-between">
+                      <CardTitle className="text-xl text-slate-800">
+                        {event.year} - {event.title}
+                      </CardTitle>
+                      <Badge 
+                        variant={
+                          event.status === 'completed' ? 'default' : 
+                          event.status === 'current' ? 'secondary' : 'outline'
+                        }
+                        className={
+                          event.status === 'completed' ? 'bg-emerald-500' :
+                          event.status === 'current' ? 'bg-blue-500' : ''
+                        }
+                      >
+                        {event.status}
+                      </Badge>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600 mb-4">{event.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                      {event.metrics.map((metric, metricIndex) => (
+                        <Badge key={metricIndex} variant="outline" className="text-xs">
+                          {metric}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Prototypes Section */}
+        <div id="prototypes" className="mt-16 pt-16 border-t border-slate-200">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">
+              Current Prototypes
+            </h3>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              Exploring what brings the most benefit for health and longevity enthusiasts in the discovery phase.
+            </p>
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Left Column - Buttons and Screenshot */}
+            {/* Left Column - Blood Test Oracle */}
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                 <Button 
@@ -161,56 +224,6 @@ const PersonalJourney = () => {
                 />
               </div>
             </div>
-          </div>
-        </div>
-
-        <div className="relative">
-          {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 to-emerald-500 hidden md:block"></div>
-          
-          <div className="space-y-8">
-            {timelineEvents.map((event, index) => (
-              <div key={index} className="relative flex items-start">
-                {/* Timeline dot */}
-                <div className="hidden md:flex absolute left-6 w-4 h-4 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 border-4 border-white shadow-lg z-10"></div>
-                
-                {/* Content card */}
-                <Card className={`ml-0 md:ml-16 w-full transition-all duration-300 hover:shadow-lg ${
-                  event.status === 'current' ? 'ring-2 ring-blue-500 bg-blue-50/50' : 
-                  event.status === 'planned' ? 'bg-slate-50/50' : 'bg-white'
-                }`}>
-                  <CardHeader>
-                    <div className="flex items-center justify-between">
-                      <CardTitle className="text-xl text-slate-800">
-                        {event.year} - {event.title}
-                      </CardTitle>
-                      <Badge 
-                        variant={
-                          event.status === 'completed' ? 'default' : 
-                          event.status === 'current' ? 'secondary' : 'outline'
-                        }
-                        className={
-                          event.status === 'completed' ? 'bg-emerald-500' :
-                          event.status === 'current' ? 'bg-blue-500' : ''
-                        }
-                      >
-                        {event.status}
-                      </Badge>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-slate-600 mb-4">{event.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {event.metrics.map((metric, metricIndex) => (
-                        <Badge key={metricIndex} variant="outline" className="text-xs">
-                          {metric}
-                        </Badge>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            ))}
           </div>
         </div>
       </div>
