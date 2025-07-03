@@ -34,7 +34,7 @@ serve(async (req) => {
     console.log('Request data:', { name, email, messageLength: message?.length })
 
     const emailPayload = {
-      from: 'noreply@mabu.red',
+      from: 'onboarding@resend.dev', // Using Resend's default verified domain
       to: ['info@mabu.red'],
       subject: `New Contact Request from ${name}`,
       html: `
@@ -45,6 +45,7 @@ serve(async (req) => {
         <p>${message || 'No message provided'}</p>
         <hr>
         <p><em>This email was sent from your LongevityCoa.ch contact form.</em></p>
+        <p><em>Reply to: ${email}</em></p>
       `,
     }
 
