@@ -160,6 +160,25 @@ const Index = () => {
           </div>
         </div>
       </section>
+      
+      {/* Footer */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center space-y-4">
+            <p className="text-slate-500 text-sm">
+              Coming Q2 2024 • Built with privacy and security in mind
+            </p>
+            <div className="flex justify-center gap-6 text-sm">
+              <Link 
+                to="/impress" 
+                className="text-slate-500 hover:text-slate-700 transition-colors"
+              >
+                Impressum
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
