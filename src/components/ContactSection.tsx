@@ -107,21 +107,6 @@ const ContactSection = () => {
           </p>
         </div>
 
-        {/* Educational Disclaimer */}
-        <div className="mb-12 p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border-l-4 border-amber-400">
-          <div className="flex items-start gap-3">
-            <BookOpen className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
-            <div>
-              <h3 className="text-lg font-semibold text-amber-800 mb-2">Educational Purpose & Lifestyle Exploration</h3>
-              <p className="text-amber-700 text-sm leading-relaxed">
-                This project was started for educational purposes and lifestyle exploration. The information and tools provided 
-                are intended to help users learn about longevity science and health optimization. This platform is not intended 
-                to replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare providers 
-                before making changes to your health regimen.
-              </p>
-            </div>
-          </div>
-        </div>
 
         {/* LinkedIn Article Reference */}
         <div className="mb-12">
@@ -257,6 +242,22 @@ const ContactSection = () => {
               </form>
             </CardContent>
           </Card>
+        </div>
+
+        {/* Educational Disclaimer */}
+        <div className="mt-12 p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border-l-4 border-amber-400">
+          <div className="flex items-start gap-3">
+            <BookOpen className="w-6 h-6 text-amber-600 mt-1 flex-shrink-0" />
+            <div>
+              <h3 className="text-lg font-semibold text-amber-800 mb-2">Educational Purpose & Lifestyle Exploration</h3>
+              <p className="text-amber-700 text-sm leading-relaxed">
+                This project was started for educational purposes and lifestyle exploration. The information and tools provided 
+                are intended to help users learn about longevity science and health optimization. This platform is not intended 
+                to replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare providers 
+                before making changes to your health regimen.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 text-center">
