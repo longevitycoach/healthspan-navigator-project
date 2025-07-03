@@ -20,8 +20,9 @@ const ImpressPage = () => {
                   Angaben gemäß § 5 TMG
                 </h3>
                 <div className="space-y-2 text-slate-600">
-                  <p>LongevityCoa.ch</p>
-                  <p>Mabu.red</p>
+                  <p>Matthias Buchhorn</p>
+                  <p>Simplonstrasse 56</p>
+                  <p>10245 Berlin</p>
                   <p>Deutschland</p>
                 </div>
               </div>
@@ -31,6 +32,7 @@ const ImpressPage = () => {
                   Kontakt
                 </h3>
                 <div className="space-y-2 text-slate-600">
+                  <p>Telefon: +49 160 7467106</p>
                   <p>E-Mail: info@mabu.red</p>
                 </div>
               </div>
@@ -40,7 +42,9 @@ const ImpressPage = () => {
                   Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV
                 </h3>
                 <div className="space-y-2 text-slate-600">
-                  <p>LongevityCoa.ch</p>
+                  <p>Matthias Buchhorn</p>
+                  <p>Simplonstrasse 56</p>
+                  <p>10245 Berlin</p>
                   <p>Deutschland</p>
                 </div>
               </div>
