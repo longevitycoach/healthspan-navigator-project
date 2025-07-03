@@ -16,6 +16,26 @@ const Index = () => {
       <FeatureShowcase />
       <PersonalJourney />
       
+      {/* Educational Disclaimer */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border-l-4 border-amber-400">
+            <div className="flex items-start gap-3">
+              <span className="text-xl">📚</span>
+              <div>
+                <h3 className="text-lg font-semibold text-amber-800 mb-2">Educational Purpose & Lifestyle Exploration</h3>
+                <p className="text-amber-700 text-sm leading-relaxed">
+                  This project was started for educational purposes and lifestyle exploration. The information and tools provided 
+                  are intended to help users learn about longevity science and health optimization. This platform is not intended 
+                  to replace professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare providers 
+                  before making changes to your health regimen.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Reference Values Teaser */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
