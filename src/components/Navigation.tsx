@@ -84,12 +84,6 @@ const Navigation = () => {
                 Business Plan
               </button>
               <button 
-                onClick={() => navigateToPage('/prototypes')}
-                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
-              >
-                Prototypes
-              </button>
-              <button 
                 onClick={() => scrollToSection('contact')}
                 className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
@@ -148,12 +142,6 @@ const Navigation = () => {
                 className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
               >
                 Business Plan
-              </button>
-              <button 
-                onClick={() => navigateToPage('/prototypes')}
-                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
-              >
-                Prototypes
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
