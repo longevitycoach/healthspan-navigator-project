@@ -204,12 +204,6 @@ const englishYouTube = [
     "url": "https://www.youtube.com/@BenGreenfieldLife"
   },
   {
-    "title": "Thomas DeLauer",
-    "description": "Intermittent fasting, keto, and metabolic health education",
-    "handle": "@ThomasDeLauer",
-    "url": "https://www.youtube.com/@ThomasDeLauer"
-  },
-  {
     "title": "Huberman Lab Clips",
     "description": "Key insights from the Huberman Lab podcast",
     "handle": "@HubermanLabClips",
