@@ -40,7 +40,7 @@ const Navigation = () => {
             <img 
               src="https://raw.githubusercontent.com/ma3u/blood-test/main/public/lovable-uploads/a8f58481-d0d4-4ad7-9810-0adfab52053a.png" 
               alt="LongevityCoa.ch Logo" 
-              className="h-10 w-10 object-contain"
+              className="h-full w-auto object-cover"
             />
             <button 
               onClick={() => navigateToPage('/')}
