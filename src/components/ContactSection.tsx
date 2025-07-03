@@ -101,10 +101,10 @@ const ContactSection = () => {
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-            Contact me for Collaboration
+            Join the Mission
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Looking for contributors to bring the vision of healthspan to the people.
+            Ready to revolutionize healthspan optimization? I'm seeking passionate developers, health experts, and entrepreneurs to collaborate on building the future of personalized longevity coaching.
           </p>
         </div>
 
