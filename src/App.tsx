@@ -12,6 +12,7 @@ const Index = lazy(() => import("./pages/Index"));
 const Resources = lazy(() => import("./pages/Resources"));
 const ReferenceValuesPage = lazy(() => import("./pages/ReferenceValuesPage"));
 const BusinessPlanPage = lazy(() => import("./pages/BusinessPlanPage"));
+const PrototypesPage = lazy(() => import("./pages/PrototypesPage"));
 const ImpressPage = lazy(() => import("./pages/ImpressPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -61,6 +62,14 @@ const App = () => (
             element={
               <LazyWrapper>
                 <BusinessPlanPage />
+              </LazyWrapper>
+            } 
+          />
+          <Route 
+            path="/prototypes" 
+            element={
+              <LazyWrapper>
+                <PrototypesPage />
               </LazyWrapper>
             } 
           />

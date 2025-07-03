@@ -155,75 +155,24 @@ const PersonalJourney = () => {
           </div>
         </div>
 
-        {/* Prototypes Section */}
+        {/* Prototypes Teaser */}
         <div id="prototypes" className="mt-16 pt-16 border-t border-slate-200">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">
               Current Prototypes
             </h3>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
               Exploring what brings the most benefit for health and longevity enthusiasts in the discovery phase.
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-            {/* Left Column - Blood Test Oracle */}
-            <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                <Button 
-                  asChild
-                  variant="outline" 
-                  className="flex items-center gap-2 hover:bg-blue-50"
-                >
-                  <a href="https://github.com/ma3u/blood-test/" target="_blank" rel="noopener noreferrer">
-                    <Github size={16} />
-                    First Prototype (GitHub)
-                  </a>
-                </Button>
-                <Button 
-                  asChild
-                  variant="outline" 
-                  className="flex items-center gap-2 hover:bg-emerald-50"
-                >
-                  <a href="https://mabu.red/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={16} />
-                    Live Demo Blood Test
-                  </a>
-                </Button>
-              </div>
-              
-              <div>
-                <img 
-                  src="/lovable-uploads/22aee038-5083-49ea-be98-a5a007fc656d.png" 
-                  alt="Blood Test Oracle Interface - Blood Test Analysis Form"
-                  className="rounded-lg shadow-lg border border-slate-200 w-full"
-                />
-              </div>
-            </div>
-            
-            {/* Right Column - Habbit Builder Prototype */}
-            <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                <Button 
-                  asChild
-                  variant="outline" 
-                  className="flex items-center gap-2 hover:bg-blue-50"
-                >
-                  <a href="https://longevity-coach-et8m506.public.builtwithrocket.new/" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={16} />
-                    Habbit Builder Prototype
-                  </a>
-                </Button>
-              </div>
-              
-              <div>
-                <img 
-                  src="/lovable-uploads/cd68eedd-9546-47a8-bf00-a772884954f2.png" 
-                  alt="Habbit Builder Interface - Daily Health Tracking Dashboard"
-                  className="rounded-lg shadow-lg border border-slate-200 w-full"
-                />
-              </div>
-            </div>
+            <Button 
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-3 text-lg font-semibold"
+            >
+              <a href="/prototypes">
+                View All Prototypes →
+              </a>
+            </Button>
           </div>
         </div>
       </div>
