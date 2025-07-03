@@ -48,6 +48,45 @@ const Index = () => {
         </div>
       </section>
       
+      {/* German Market Educational Material */}
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <Card className="bg-gradient-to-r from-emerald-50 to-green-50 border-emerald-200">
+            <CardContent className="p-6">
+              <div className="flex items-start gap-4">
+                <span className="text-2xl">🇩🇪</span>
+                <div className="flex-1">
+                  <h3 className="text-lg font-semibold text-slate-800 mb-2">
+                    German Market Research: Understanding Health Optimization Needs
+                  </h3>
+                  <p className="text-slate-600 mb-4 text-sm">
+                    Help us understand the German-speaking market's specific needs for longevity and health optimization. 
+                    Your insights will shape our localized approach and educational content.
+                  </p>
+                  <div className="mb-4 text-sm text-slate-600">
+                    <p className="font-medium mb-1">Key questions we're exploring:</p>
+                    <ul className="list-disc list-inside space-y-1 text-xs">
+                      <li>What are the primary health concerns in German-speaking regions?</li>
+                      <li>How do cultural attitudes towards preventive health differ?</li>
+                      <li>What educational formats resonate best with this market?</li>
+                      <li>Which biomarkers and health metrics are most valued?</li>
+                    </ul>
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="text-emerald-600 border-emerald-200 hover:bg-emerald-50"
+                    onClick={() => window.open('https://gesund.longevitycoa.ch/', '_blank')}
+                  >
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Explore German Educational Material
+                  </Button>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
       
       {/* Reference Values Teaser */}
       <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
