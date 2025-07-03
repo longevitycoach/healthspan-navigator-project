@@ -12,6 +12,7 @@ const Index = lazy(() => import("./pages/Index"));
 const Resources = lazy(() => import("./pages/Resources"));
 const ReferenceValuesPage = lazy(() => import("./pages/ReferenceValuesPage"));
 const BusinessPlanPage = lazy(() => import("./pages/BusinessPlanPage"));
+const ImpressPage = lazy(() => import("./pages/ImpressPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 const queryClient = new QueryClient({
@@ -60,6 +61,14 @@ const App = () => (
             element={
               <LazyWrapper>
                 <BusinessPlanPage />
+              </LazyWrapper>
+            } 
+          />
+          <Route 
+            path="/impress" 
+            element={
+              <LazyWrapper>
+                <ImpressPage />
               </LazyWrapper>
             } 
           />

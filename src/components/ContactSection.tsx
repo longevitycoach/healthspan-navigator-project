@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Linkedin, ExternalLink, BookOpen } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
+import { Link } from "react-router-dom";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -216,10 +217,18 @@ const ContactSection = () => {
           </Card>
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 text-center space-y-4">
           <p className="text-slate-500 text-sm">
             Coming Q2 2024 • Built with privacy and security in mind
           </p>
+          <div className="flex justify-center gap-6 text-sm">
+            <Link 
+              to="/impress" 
+              className="text-slate-500 hover:text-slate-700 transition-colors"
+            >
+              Impressum
+            </Link>
+          </div>
         </div>
       </div>
     </section>
