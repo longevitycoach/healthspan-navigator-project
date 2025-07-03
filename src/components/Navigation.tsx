@@ -78,7 +78,7 @@ const Navigation = () => {
                 Resources
               </button>
               <button 
-                onClick={() => scrollToSection('businessplan')}
+                onClick={() => navigateToPage('/business-plan')}
                 className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
               >
                 Business Plan
@@ -138,7 +138,7 @@ const Navigation = () => {
                 Resources
               </button>
               <button 
-                onClick={() => scrollToSection('businessplan')}
+                onClick={() => navigateToPage('/business-plan')}
                 className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
               >
                 Business Plan
