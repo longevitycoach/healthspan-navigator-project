@@ -125,7 +125,7 @@ const ContactSection = () => {
                 <div className="w-2 h-2 rounded-full bg-emerald-500 mt-3 mr-4 flex-shrink-0"></div>
                 <div>
                   <h4 className="font-semibold text-slate-800">Growing Market Opportunity</h4>
-                  <p className="text-slate-600">Longevity and healthspan optimization is a rapidly expanding $25B+ market</p>
+                  <p className="text-slate-600">Discover together the Longevity and healthspan optimization community</p>
                 </div>
               </div>
               <div className="flex items-start">
