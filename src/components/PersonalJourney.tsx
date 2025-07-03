@@ -103,35 +103,45 @@ const PersonalJourney = () => {
             Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time per week gym, Wim Hof Breathing.
           </p>
           
-          <div className="mb-6">
-            <img 
-              src="/lovable-uploads/c5ad2084-994a-48f4-b281-8edcf4d1d99a.png" 
-              alt="Blood Test Oracle Interface - Blood Test Analysis Form"
-              className="rounded-lg shadow-lg border border-slate-200 mx-auto max-w-4xl w-full"
-            />
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              asChild
-              variant="outline" 
-              className="flex items-center gap-2 hover:bg-blue-50"
-            >
-              <a href="https://github.com/ma3u/blood-test/" target="_blank" rel="noopener noreferrer">
-                <Github size={16} />
-                First Prototype (GitHub)
-              </a>
-            </Button>
-            <Button 
-              asChild
-              variant="outline" 
-              className="flex items-center gap-2 hover:bg-emerald-50"
-            >
-              <a href="https://mabu.red/" target="_blank" rel="noopener noreferrer">
-                <ExternalLink size={16} />
-                Live Demo Blood Test
-              </a>
-            </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            {/* Left Column - Buttons and Screenshot */}
+            <div className="space-y-6">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-blue-50"
+                >
+                  <a href="https://github.com/ma3u/blood-test/" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} />
+                    First Prototype (GitHub)
+                  </a>
+                </Button>
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-emerald-50"
+                >
+                  <a href="https://mabu.red/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={16} />
+                    Live Demo Blood Test
+                  </a>
+                </Button>
+              </div>
+              
+              <div>
+                <img 
+                  src="/lovable-uploads/c5ad2084-994a-48f4-b281-8edcf4d1d99a.png" 
+                  alt="Blood Test Oracle Interface - Blood Test Analysis Form"
+                  className="rounded-lg shadow-lg border border-slate-200 w-full"
+                />
+              </div>
+            </div>
+            
+            {/* Right Column - Empty for now */}
+            <div className="space-y-6">
+              {/* Content can be added here later */}
+            </div>
           </div>
         </div>
 
