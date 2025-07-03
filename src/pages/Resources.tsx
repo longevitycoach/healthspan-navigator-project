@@ -142,6 +142,12 @@ const englishPodcasts = [
     "host": "Dr. Gil Blander",
     "description": "Conversations with leading scientists about aging research and practical strategies",
     "url": "https://open.spotify.com/show/04NcUniuNSDObfUpY8aiPO"
+  },
+  {
+    "title": "The Diary of a CEO",
+    "host": "Steven Bartlett",
+    "description": "Conversations with successful entrepreneurs, leaders, and high-performers about their journey and insights",
+    "url": "https://www.youtube.com/@TheDiaryOfACEO"
   }
 ];
 
