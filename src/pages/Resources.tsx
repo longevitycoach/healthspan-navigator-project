@@ -142,12 +142,6 @@ const englishPodcasts = [
     "host": "Dr. Gil Blander",
     "description": "Conversations with leading scientists about aging research and practical strategies",
     "url": "https://open.spotify.com/show/04NcUniuNSDObfUpY8aiPO"
-  },
-  {
-    "title": "The Diary of a CEO",
-    "host": "Steven Bartlett",
-    "description": "Conversations with successful entrepreneurs, leaders, and high-performers about their journey and insights",
-    "url": "https://www.youtube.com/@TheDiaryOfACEO"
   }
 ];
 
@@ -220,6 +214,12 @@ const englishYouTube = [
     "description": "Key insights from the Huberman Lab podcast",
     "handle": "@HubermanLabClips",
     "url": "https://www.youtube.com/@HubermanLabClips"
+  },
+  {
+    "title": "The Diary of a CEO",
+    "description": "Health and longevity conversations with leading experts",
+    "handle": "@TheDiaryOfACEO",
+    "url": "https://www.youtube.com/playlist?list=PL22egh3ok4cNCQxTjydDfUxDtX5mMj4l8"
   }
 ];
 
