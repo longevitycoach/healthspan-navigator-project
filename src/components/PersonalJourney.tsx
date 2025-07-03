@@ -121,7 +121,7 @@ const PersonalJourney = () => {
             >
               <a href="https://mabu.red/" target="_blank" rel="noopener noreferrer">
                 <ExternalLink size={16} />
-                Live Demo
+                Live Demo Blood Test
               </a>
             </Button>
           </div>
