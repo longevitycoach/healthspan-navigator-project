@@ -18,7 +18,7 @@ const Index = () => {
       <PersonalJourney />
       
       {/* LinkedIn Article Reference */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border-blue-200">
             <CardContent className="p-6">
@@ -49,7 +49,7 @@ const Index = () => {
       </section>
       
       {/* German Market Educational Material */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <Card className="bg-gradient-to-r from-emerald-50 to-green-50 border-emerald-200">
             <CardContent className="p-6">
@@ -89,7 +89,7 @@ const Index = () => {
       </section>
       
       {/* Reference Values Teaser */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-10 bg-gradient-to-br from-slate-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="bg-gradient-to-r from-blue-50 to-emerald-50 border-2 border-blue-200">
             <CardContent className="p-8 text-center">
@@ -134,7 +134,7 @@ const Index = () => {
       </section>
       
       {/* Business Plan Teaser */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-purple-50">
+      <section className="py-10 bg-gradient-to-br from-slate-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Card className="bg-gradient-to-r from-purple-50 to-blue-50 border-2 border-purple-200">
             <CardContent className="p-8 text-center">
@@ -181,7 +181,7 @@ const Index = () => {
       <ContactSection />
       
       {/* Educational Disclaimer */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="p-6 bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg border-l-4 border-amber-400">
             <div className="flex items-start gap-3">
@@ -201,7 +201,7 @@ const Index = () => {
       </section>
       
       {/* Footer */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
           <div className="text-center space-y-4">
             <p className="text-slate-500 text-sm">
