@@ -112,27 +112,27 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div>
-            <h3 className="text-2xl font-bold text-slate-800 mb-6">Why Join Early?</h3>
+            <h3 className="text-2xl font-bold text-slate-800 mb-6">Why Collaborate with Me?</h3>
             <div className="space-y-4 mb-8">
               <div className="flex items-start">
                 <div className="w-2 h-2 rounded-full bg-blue-500 mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="font-semibold text-slate-800">Exclusive Beta Access</h4>
-                  <p className="text-slate-600">Be the first to test new features and provide feedback</p>
+                  <h4 className="font-semibold text-slate-800">Proven Track Record</h4>
+                  <p className="text-slate-600">Published research and working prototypes in health optimization and blood test analysis</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 rounded-full bg-emerald-500 mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="font-semibold text-slate-800">Personalized Onboarding</h4>
-                  <p className="text-slate-600">Get individual guidance on setting up your health optimization journey</p>
+                  <h4 className="font-semibold text-slate-800">Growing Market Opportunity</h4>
+                  <p className="text-slate-600">Longevity and healthspan optimization is a rapidly expanding $25B+ market</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <div className="w-2 h-2 rounded-full bg-purple-500 mt-3 mr-4 flex-shrink-0"></div>
                 <div>
-                  <h4 className="font-semibold text-slate-800">Early Bird Pricing</h4>
-                  <p className="text-slate-600">Special pricing for early adopters and founding members</p>
+                  <h4 className="font-semibold text-slate-800">Meaningful Impact</h4>
+                  <p className="text-slate-600">Help millions of people live healthier, longer lives through data-driven insights</p>
                 </div>
               </div>
             </div>
