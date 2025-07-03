@@ -4,8 +4,24 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Navigation from "@/components/Navigation";
 import { Book, Youtube, Link, ExternalLink } from "lucide-react";
+import { useSearchParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const Resources = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const activeTab = searchParams.get('tab') || 'english';
+
+  const handleTabChange = (value: string) => {
+    setSearchParams({ tab: value });
+  };
+
+  // Update URL on tab change
+  useEffect(() => {
+    if (activeTab !== 'english' && activeTab !== 'german') {
+      setSearchParams({ tab: 'english' });
+    }
+  }, [activeTab, setSearchParams]);
+
 const englishBooks = [
   {
     "title": "Lifespan: Why We Age―and Why We Don't Have To",
@@ -293,7 +309,7 @@ const germanYouTube = [
             </p>
           </div>
 
-          <Tabs defaultValue="english" className="w-full">
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
             <TabsList className="grid w-full grid-cols-2 mb-8">
               <TabsTrigger value="english">English Resources</TabsTrigger>
               <TabsTrigger value="german">German Resources</TabsTrigger>
