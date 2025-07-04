@@ -210,7 +210,7 @@ const ContactSection = () => {
                   className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-lg py-6"
                   disabled={isSubmitting}
                 >
-                  {isSubmitting ? "Submitting..." : "Join Early Access"}
+                  {isSubmitting ? "Submitting..." : "Contact Me"}
                 </Button>
               </form>
             </CardContent>
