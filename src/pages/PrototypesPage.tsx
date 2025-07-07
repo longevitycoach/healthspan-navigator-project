@@ -18,7 +18,7 @@ const PrototypesPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {/* Left Column - Blood Test Oracle */}
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
@@ -53,7 +53,7 @@ const PrototypesPage = () => {
               </div>
             </div>
             
-            {/* Right Column - Habbit Builder Prototype */}
+            {/* Middle Column - Habbit Builder Prototype */}
             <div className="space-y-6">
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
                 <Button 
@@ -72,6 +72,30 @@ const PrototypesPage = () => {
                 <img 
                   src="/lovable-uploads/cd68eedd-9546-47a8-bf00-a772884954f2.png" 
                   alt="Habbit Builder Interface - Daily Health Tracking Dashboard"
+                  className="rounded-lg shadow-lg border border-slate-200 w-full"
+                />
+              </div>
+            </div>
+            
+            {/* Right Column - Health Longevity Dashboard */}
+            <div className="space-y-6">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-emerald-50"
+                >
+                  <a href="https://gesund.longevitycoa.ch/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={16} />
+                    Health Dashboard
+                  </a>
+                </Button>
+              </div>
+              
+              <div>
+                <img 
+                  src="/lovable-uploads/60e01b13-c72b-42e1-8663-eb59a7779ffd.png" 
+                  alt="Health Longevity Dashboard - Aging Statistics and Health Insights"
                   className="rounded-lg shadow-lg border border-slate-200 w-full"
                 />
               </div>
