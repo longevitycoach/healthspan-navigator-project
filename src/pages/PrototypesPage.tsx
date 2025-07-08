@@ -21,6 +21,13 @@ const PrototypesPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {/* Left Column - Blood Test Oracle */}
             <div className="space-y-6">
+              <div className="text-center lg:text-left">
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Blood Test Oracle</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  An AI-powered tool that analyzes blood test results and provides personalized health insights based on reference values and longevity research. Upload your lab results to get actionable recommendations for optimal health.
+                </p>
+              </div>
+              
               <div className="flex justify-center lg:justify-start">
                 <Button 
                   asChild
@@ -56,9 +63,16 @@ const PrototypesPage = () => {
               </div>
             </div>
             
-            {/* Middle Column - Habbit Builder Prototype */}
+            {/* Middle Column - Habit Builder Prototype */}
             <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+              <div className="text-center lg:text-left">
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Habit Builder</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  A comprehensive habit tracking and building platform designed to help users develop sustainable healthy behaviors. Features daily tracking, progress visualization, and science-based habit formation strategies.
+                </p>
+              </div>
+              
+              <div className="flex justify-center lg:justify-start">
                 <Button 
                   asChild
                   variant="outline" 
@@ -74,7 +88,7 @@ const PrototypesPage = () => {
               <div>
                 <img 
                   src="/lovable-uploads/cd68eedd-9546-47a8-bf00-a772884954f2.png" 
-                  alt="Habbit Builder Interface - Daily Health Tracking Dashboard"
+                  alt="Habit Builder Interface - Daily Health Tracking Dashboard"
                   className="rounded-lg shadow-lg border border-slate-200 w-full"
                 />
               </div>
@@ -82,7 +96,14 @@ const PrototypesPage = () => {
             
             {/* Right Column - Health Longevity Dashboard */}
             <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
+              <div className="text-center lg:text-left">
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Educational Healthspan</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  A German-language educational platform focused on healthspan optimization and longevity science. Provides evidence-based information about aging, health metrics, and lifestyle interventions for extending healthy lifespan.
+                </p>
+              </div>
+              
+              <div className="flex justify-center lg:justify-start">
                 <Button 
                   asChild
                   variant="outline" 
