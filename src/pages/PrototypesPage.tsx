@@ -66,7 +66,7 @@ const PrototypesPage = () => {
                 >
                   <a href="https://longevity-coach-et8m506.public.builtwithrocket.new/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} />
-                    Habbit Builder Prototype
+                    Habit Builder Prototype
                   </a>
                 </Button>
               </div>
