@@ -21,17 +21,7 @@ const PrototypesPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
             {/* Left Column - Blood Test Oracle */}
             <div className="space-y-6">
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center">
-                <Button 
-                  asChild
-                  variant="outline" 
-                  className="flex items-center gap-2 hover:bg-blue-50"
-                >
-                  <a href="https://github.com/ma3u/blood-test/" target="_blank" rel="noopener noreferrer">
-                    <Github size={16} />
-                    First Prototype (GitHub)
-                  </a>
-                </Button>
+              <div className="flex justify-center lg:justify-start">
                 <Button 
                   asChild
                   variant="outline" 
@@ -50,6 +40,19 @@ const PrototypesPage = () => {
                   alt="Blood Test Oracle Interface - Blood Test Analysis Form"
                   className="rounded-lg shadow-lg border border-slate-200 w-full"
                 />
+              </div>
+              
+              <div className="flex justify-center lg:justify-start">
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-blue-50"
+                >
+                  <a href="https://github.com/ma3u/blood-test/" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} />
+                    First Prototype (GitHub)
+                  </a>
+                </Button>
               </div>
             </div>
             
