@@ -90,7 +90,7 @@ const PrototypesPage = () => {
                 >
                   <a href="https://gesund.longevitycoa.ch/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink size={16} />
-                    Health Dashboard
+                    Educational Healthspan (German)
                   </a>
                 </Button>
               </div>
