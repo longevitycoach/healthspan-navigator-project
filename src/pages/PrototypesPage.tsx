@@ -102,6 +102,19 @@ const PrototypesPage = () => {
                   className="rounded-lg shadow-lg border border-slate-200 w-full"
                 />
               </div>
+              
+              <div className="flex justify-center lg:justify-start">
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-blue-50"
+                >
+                  <a href="https://github.com/longevitycoach/gesund-deutschland-jetzt" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} />
+                    GitHub Repository
+                  </a>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
