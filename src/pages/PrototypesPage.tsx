@@ -18,7 +18,7 @@ const PrototypesPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 items-start">
             {/* Left Column - Blood Test Oracle */}
             <div className="space-y-6">
               <div className="text-center lg:text-left">
@@ -133,6 +133,58 @@ const PrototypesPage = () => {
                   <a href="https://github.com/longevitycoach/gesund-deutschland-jetzt" target="_blank" rel="noopener noreferrer">
                     <Github size={16} />
                     GitHub Repository
+                  </a>
+                </Button>
+              </div>
+            </div>
+            
+            {/* Fourth Column - Blood Test MCP Server */}
+            <div className="space-y-6">
+              <div className="text-center lg:text-left">
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Blood Test MCP Server</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  An MCP (Model Context Protocol) server for AI agents that provides blood test analysis capabilities. Features multi-format support, German medical literature integration, and personalized supplement recommendations through API endpoints.
+                </p>
+              </div>
+              
+              <div className="flex justify-center lg:justify-start">
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-emerald-50"
+                >
+                  <a href="https://supplement-therapy.up.railway.app" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={16} />
+                    Web Interface
+                  </a>
+                </Button>
+              </div>
+              
+              <div className="bg-slate-100 rounded-lg p-4 text-sm">
+                <h4 className="font-semibold text-slate-800 mb-3">Key Features:</h4>
+                <ul className="space-y-2 text-slate-600">
+                  <li>• Blood test analysis with optimal ranges</li>
+                  <li>• Multi-format support (PDF, JPG, PNG)</li>
+                  <li>• German medical literature powered</li>
+                  <li>• Personalized supplement recommendations</li>
+                  <li>• API endpoints for AI agent integration</li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-slate-200">
+                  <p className="text-xs text-slate-500">
+                    <strong>API Base:</strong> https://supplement-therapy.up.railway.app/sse
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex justify-center lg:justify-start">
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-blue-50"
+                >
+                  <a href="https://github.com/ma3u/Bloodtest-mcp-server" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} />
+                    MCP Server Repository
                   </a>
                 </Button>
               </div>
