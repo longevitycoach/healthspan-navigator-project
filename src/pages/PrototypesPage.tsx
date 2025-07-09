@@ -147,18 +147,6 @@ const PrototypesPage = () => {
                 </p>
               </div>
               
-              <div className="flex justify-center lg:justify-start">
-                <Button 
-                  asChild
-                  variant="outline" 
-                  className="flex items-center gap-2 hover:bg-emerald-50"
-                >
-                  <a href="https://supplement-therapy.up.railway.app" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink size={16} />
-                    Web Interface
-                  </a>
-                </Button>
-              </div>
               
               <div className="bg-slate-100 rounded-lg p-4 text-sm">
                 <h4 className="font-semibold text-slate-800 mb-3">Key Features:</h4>
