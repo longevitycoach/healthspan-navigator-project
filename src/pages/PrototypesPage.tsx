@@ -151,10 +151,10 @@ const PrototypesPage = () => {
               </div>
               
               
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Tooltip>
-                    <TooltipTrigger asChild>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Dialog>
+                    <DialogTrigger asChild>
                       <div className="cursor-pointer">
                         <img 
                           src="/lovable-uploads/b704a07a-a89c-404e-9518-7890c192ba53.png" 
@@ -162,122 +162,122 @@ const PrototypesPage = () => {
                           className="rounded-lg shadow-lg border border-slate-200 w-full hover:opacity-90 transition-opacity"
                         />
                       </div>
-                    </TooltipTrigger>
-                    <TooltipContent>
-                      <p>Click here to get the result of the MCP Server.</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </DialogTrigger>
-                <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
-                  <DialogHeader>
-                    <DialogTitle>Blood Test Analysis Results</DialogTitle>
-                    <DialogDescription>
-                      Personalized supplement recommendations based on your blood work
-                    </DialogDescription>
-                  </DialogHeader>
-                  <div className="space-y-6 text-sm">
-                    <div className="bg-blue-50 p-4 rounded-lg">
-                      <h3 className="font-semibold text-blue-900 mb-2">SUMMARY OF FINDINGS:</h3>
-                      <p className="text-blue-800">
-                        Your blood work reveals several areas that are within "normal" laboratory ranges but not optimal for health and longevity. Key concerns include elevated cholesterol levels, elevated fasting glucose suggesting early insulin resistance, low DHA omega-3 levels, and reduced immune function (low IgG). Your TSH is also in the upper normal range, which isn't optimal for energy and metabolism.
-                      </p>
-                    </div>
-                    
-                    <div>
-                      <h3 className="font-semibold mb-3">PERSONALIZED SUPPLEMENT PLAN:</h3>
-                      <div className="overflow-x-auto">
-                        <table className="w-full border-collapse border border-gray-300 text-xs">
-                          <thead className="bg-gray-50">
-                            <tr>
-                              <th className="border border-gray-300 p-2 text-left">Supplement</th>
-                              <th className="border border-gray-300 p-2 text-left">Recommended Dose</th>
-                              <th className="border border-gray-300 p-2 text-left">Form</th>
-                              <th className="border border-gray-300 p-2 text-left">When to Take</th>
-                              <th className="border border-gray-300 p-2 text-left">Rationale</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td className="border border-gray-300 p-2 font-medium">Omega-3 (EPA/DHA)</td>
-                              <td className="border border-gray-300 p-2">2,000-3,000 mg daily</td>
-                              <td className="border border-gray-300 p-2">Fish oil or algae oil</td>
-                              <td className="border border-gray-300 p-2">With meals</td>
-                              <td className="border border-gray-300 p-2">DHA low (15.93 mg/l vs optimal greater than 61 mg/l). Reduces inflammation, supports cardiovascular health.</td>
-                            </tr>
-                            <tr className="bg-gray-50">
-                              <td className="border border-gray-300 p-2 font-medium">Chromium</td>
-                              <td className="border border-gray-300 p-2">200 µg daily</td>
-                              <td className="border border-gray-300 p-2">Chromium picolinate</td>
-                              <td className="border border-gray-300 p-2">With breakfast</td>
-                              <td className="border border-gray-300 p-2">Fasting glucose elevated (6.38 mmol/l). Enhances insulin sensitivity.</td>
-                            </tr>
-                            <tr>
-                              <td className="border border-gray-300 p-2 font-medium">Selenium</td>
-                              <td className="border border-gray-300 p-2">200 µg daily</td>
-                              <td className="border border-gray-300 p-2">Sodium selenite</td>
-                              <td className="border border-gray-300 p-2">With breakfast</td>
-                              <td className="border border-gray-300 p-2">Supports immune function (IgG low at 6.5 g/l) and thyroid optimization.</td>
-                            </tr>
-                            <tr className="bg-gray-50">
-                              <td className="border border-gray-300 p-2 font-medium">Vitamin D3 + K2</td>
-                              <td className="border border-gray-300 p-2">2,000-4,000 IU D3 + 100 µg K2</td>
-                              <td className="border border-gray-300 p-2">D3 with K2 MK-7</td>
-                              <td className="border border-gray-300 p-2">With breakfast</td>
-                              <td className="border border-gray-300 p-2">Supports immune function and cardiovascular health.</td>
-                            </tr>
-                            <tr>
-                              <td className="border border-gray-300 p-2 font-medium">Zinc</td>
-                              <td className="border border-gray-300 p-2">15-25 mg daily</td>
-                              <td className="border border-gray-300 p-2">Zinc bisglycinate</td>
-                              <td className="border border-gray-300 p-2">Evening, away from meals</td>
-                              <td className="border border-gray-300 p-2">Supports immune function and low IgG levels. Critical for B-cell function.</td>
-                            </tr>
-                            <tr className="bg-gray-50">
-                              <td className="border border-gray-300 p-2 font-medium">Magnesium</td>
-                              <td className="border border-gray-300 p-2">400-600 mg daily</td>
-                              <td className="border border-gray-300 p-2">Magnesium glycinate</td>
-                              <td className="border border-gray-300 p-2">Before bed</td>
-                              <td className="border border-gray-300 p-2">Supports cardiovascular health, insulin sensitivity, and stress reduction.</td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
+                    </DialogTrigger>
+                    <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
+                      <DialogHeader>
+                        <DialogTitle>Blood Test Analysis Results</DialogTitle>
+                        <DialogDescription>
+                          Personalized supplement recommendations based on your blood work
+                        </DialogDescription>
+                      </DialogHeader>
+                      <div className="space-y-6 text-sm">
+                        <div className="bg-blue-50 p-4 rounded-lg">
+                          <h3 className="font-semibold text-blue-900 mb-2">SUMMARY OF FINDINGS:</h3>
+                          <p className="text-blue-800">
+                            Your blood work reveals several areas that are within "normal" laboratory ranges but not optimal for health and longevity. Key concerns include elevated cholesterol levels, elevated fasting glucose suggesting early insulin resistance, low DHA omega-3 levels, and reduced immune function (low IgG). Your TSH is also in the upper normal range, which isn't optimal for energy and metabolism.
+                          </p>
+                        </div>
+                        
+                        <div>
+                          <h3 className="font-semibold mb-3">PERSONALIZED SUPPLEMENT PLAN:</h3>
+                          <div className="overflow-x-auto">
+                            <table className="w-full border-collapse border border-gray-300 text-xs">
+                              <thead className="bg-gray-50">
+                                <tr>
+                                  <th className="border border-gray-300 p-2 text-left">Supplement</th>
+                                  <th className="border border-gray-300 p-2 text-left">Recommended Dose</th>
+                                  <th className="border border-gray-300 p-2 text-left">Form</th>
+                                  <th className="border border-gray-300 p-2 text-left">When to Take</th>
+                                  <th className="border border-gray-300 p-2 text-left">Rationale</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td className="border border-gray-300 p-2 font-medium">Omega-3 (EPA/DHA)</td>
+                                  <td className="border border-gray-300 p-2">2,000-3,000 mg daily</td>
+                                  <td className="border border-gray-300 p-2">Fish oil or algae oil</td>
+                                  <td className="border border-gray-300 p-2">With meals</td>
+                                  <td className="border border-gray-300 p-2">DHA low (15.93 mg/l vs optimal greater than 61 mg/l). Reduces inflammation, supports cardiovascular health.</td>
+                                </tr>
+                                <tr className="bg-gray-50">
+                                  <td className="border border-gray-300 p-2 font-medium">Chromium</td>
+                                  <td className="border border-gray-300 p-2">200 µg daily</td>
+                                  <td className="border border-gray-300 p-2">Chromium picolinate</td>
+                                  <td className="border border-gray-300 p-2">With breakfast</td>
+                                  <td className="border border-gray-300 p-2">Fasting glucose elevated (6.38 mmol/l). Enhances insulin sensitivity.</td>
+                                </tr>
+                                <tr>
+                                  <td className="border border-gray-300 p-2 font-medium">Selenium</td>
+                                  <td className="border border-gray-300 p-2">200 µg daily</td>
+                                  <td className="border border-gray-300 p-2">Sodium selenite</td>
+                                  <td className="border border-gray-300 p-2">With breakfast</td>
+                                  <td className="border border-gray-300 p-2">Supports immune function (IgG low at 6.5 g/l) and thyroid optimization.</td>
+                                </tr>
+                                <tr className="bg-gray-50">
+                                  <td className="border border-gray-300 p-2 font-medium">Vitamin D3 + K2</td>
+                                  <td className="border border-gray-300 p-2">2,000-4,000 IU D3 + 100 µg K2</td>
+                                  <td className="border border-gray-300 p-2">D3 with K2 MK-7</td>
+                                  <td className="border border-gray-300 p-2">With breakfast</td>
+                                  <td className="border border-gray-300 p-2">Supports immune function and cardiovascular health.</td>
+                                </tr>
+                                <tr>
+                                  <td className="border border-gray-300 p-2 font-medium">Zinc</td>
+                                  <td className="border border-gray-300 p-2">15-25 mg daily</td>
+                                  <td className="border border-gray-300 p-2">Zinc bisglycinate</td>
+                                  <td className="border border-gray-300 p-2">Evening, away from meals</td>
+                                  <td className="border border-gray-300 p-2">Supports immune function and low IgG levels. Critical for B-cell function.</td>
+                                </tr>
+                                <tr className="bg-gray-50">
+                                  <td className="border border-gray-300 p-2 font-medium">Magnesium</td>
+                                  <td className="border border-gray-300 p-2">400-600 mg daily</td>
+                                  <td className="border border-gray-300 p-2">Magnesium glycinate</td>
+                                  <td className="border border-gray-300 p-2">Before bed</td>
+                                  <td className="border border-gray-300 p-2">Supports cardiovascular health, insulin sensitivity, and stress reduction.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
 
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <h3 className="font-semibold mb-2">DIETARY RECOMMENDATIONS:</h3>
-                        <ul className="space-y-1 text-xs">
-                          <li><strong>Cholesterol:</strong> Increase soluble fiber, nuts, reduce refined carbs</li>
-                          <li><strong>Glucose:</strong> Low-glycemic foods, protein with meals, intermittent fasting</li>
-                          <li><strong>Omega-3:</strong> Fatty fish 2-3x/week, flax/chia seeds</li>
-                        </ul>
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-2">LIFESTYLE RECOMMENDATIONS:</h3>
-                        <ul className="space-y-1 text-xs">
-                          <li><strong>Cardio:</strong> 30-45 min exercise, 4-5x/week</li>
-                          <li><strong>Stress:</strong> Meditation, yoga, adequate sleep (7-9h)</li>
-                          <li><strong>Immune:</strong> Quality sleep, stress management, sauna</li>
-                        </ul>
-                      </div>
-                    </div>
+                        <div className="grid md:grid-cols-2 gap-4">
+                          <div>
+                            <h3 className="font-semibold mb-2">DIETARY RECOMMENDATIONS:</h3>
+                            <ul className="space-y-1 text-xs">
+                              <li><strong>Cholesterol:</strong> Increase soluble fiber, nuts, reduce refined carbs</li>
+                              <li><strong>Glucose:</strong> Low-glycemic foods, protein with meals, intermittent fasting</li>
+                              <li><strong>Omega-3:</strong> Fatty fish 2-3x/week, flax/chia seeds</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h3 className="font-semibold mb-2">LIFESTYLE RECOMMENDATIONS:</h3>
+                            <ul className="space-y-1 text-xs">
+                              <li><strong>Cardio:</strong> 30-45 min exercise, 4-5x/week</li>
+                              <li><strong>Stress:</strong> Meditation, yoga, adequate sleep (7-9h)</li>
+                              <li><strong>Immune:</strong> Quality sleep, stress management, sauna</li>
+                            </ul>
+                          </div>
+                        </div>
 
-                    <div className="bg-amber-50 p-4 rounded-lg">
-                      <h3 className="font-semibold text-amber-900 mb-2">MONITORING (3-Month Follow-up):</h3>
-                      <p className="text-amber-800 text-xs">
-                        Complete lipid panel, fasting glucose, HbA1c, Omega-3 index, IgG levels, TSH/T3/T4, comprehensive metabolic panel
-                      </p>
-                    </div>
+                        <div className="bg-amber-50 p-4 rounded-lg">
+                          <h3 className="font-semibold text-amber-900 mb-2">MONITORING (3-Month Follow-up):</h3>
+                          <p className="text-amber-800 text-xs">
+                            Complete lipid panel, fasting glucose, HbA1c, Omega-3 index, IgG levels, TSH/T3/T4, comprehensive metabolic panel
+                          </p>
+                        </div>
 
-                    <div className="bg-red-50 p-4 rounded-lg">
-                      <p className="text-red-800 text-xs">
-                        <strong>Disclaimer:</strong> This analysis is for educational purposes based on specialized literature about optimal nutrient levels. Not a substitute for medical advice. Consult your healthcare professional before starting new supplements.
-                      </p>
-                    </div>
-                  </div>
-                </DialogContent>
-              </Dialog>
+                        <div className="bg-red-50 p-4 rounded-lg">
+                          <p className="text-red-800 text-xs">
+                            <strong>Disclaimer:</strong> This analysis is for educational purposes based on specialized literature about optimal nutrient levels. Not a substitute for medical advice. Consult your healthcare professional before starting new supplements.
+                          </p>
+                        </div>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Click here to get the result of the MCP Server.</p>
+                </TooltipContent>
+              </Tooltip>
 
               <div className="bg-slate-100 rounded-lg p-4 text-sm">
                 <h4 className="font-semibold text-slate-800 mb-3">Key Features:</h4>
