@@ -157,8 +157,8 @@ const PrototypesPage = () => {
                     <TooltipTrigger asChild>
                       <div className="cursor-pointer">
                         <img 
-                          src="/lovable-uploads/b704a07a-a89c-404e-9518-7890c192ba53.png" 
-                          alt="Claude Desktop MCP Integration - Screenshot showing supplement_therapy tool enabled"
+                          src="/lovable-uploads/ClaudeDesktop-Bloodtest-MCP.gif" 
+                          alt="Claude Desktop MCP Integration - Animated demonstration of supplement_therapy tool"
                           className="rounded-lg shadow-lg border border-slate-200 w-full hover:opacity-90 transition-opacity"
                         />
                       </div>
