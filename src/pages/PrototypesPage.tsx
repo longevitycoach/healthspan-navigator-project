@@ -191,7 +191,7 @@ const PrototypesPage = () => {
                 >
                   <a href="https://github.com/ma3u/Bloodtest-mcp-server" target="_blank" rel="noopener noreferrer">
                     <Github size={16} />
-                    MCP Server Repository
+                    MCP Blood Test and Supplement Advice GitHub (private)
                   </a>
                 </Button>
               </div>
