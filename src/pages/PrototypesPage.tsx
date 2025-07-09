@@ -143,7 +143,7 @@ const PrototypesPage = () => {
               <div className="text-center lg:text-left">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Blood Test MCP Server</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  An MCP (Model Context Protocol) server for AI agents that provides blood test analysis capabilities. Features multi-format support, German medical literature integration, and personalized supplement recommendations through API endpoints.
+                  An MCP (Model Context Protocol) server for AI agents that provides blood test analysis capabilities. Features multi-format support, access to modern Epi-genetic and Molecular medicine expert knowledge, and personalized supplement recommendations through API endpoints.
                 </p>
               </div>
               
