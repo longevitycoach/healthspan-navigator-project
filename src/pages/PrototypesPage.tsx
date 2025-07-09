@@ -170,8 +170,19 @@ const PrototypesPage = () => {
                   <li>• API endpoints for AI agent integration</li>
                 </ul>
                 <div className="mt-4 pt-3 border-t border-slate-200">
+                  <p className="text-xs text-slate-500 mb-2">
+                    <strong>API Base:</strong>{" "}
+                    <a 
+                      href="https://supplement-therapy.up.railway.app/sse" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      https://supplement-therapy.up.railway.app/sse
+                    </a>
+                  </p>
                   <p className="text-xs text-slate-500">
-                    <strong>API Base:</strong> https://supplement-therapy.up.railway.app/sse
+                    <strong>Claude Desktop Setup:</strong> Add to MCP settings in <code className="bg-slate-200 px-1 rounded">claude_desktop_config.json</code>
                   </p>
                 </div>
               </div>
