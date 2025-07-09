@@ -153,7 +153,7 @@ const PrototypesPage = () => {
                 <ul className="space-y-2 text-slate-600">
                   <li>• Blood test analysis with optimal ranges</li>
                   <li>• Multi-format support (PDF, JPG, PNG)</li>
-                  <li>• German medical literature powered</li>
+                  <li>• Access to modern Epi-genetic and Molecular medicine expert knowledge</li>
                   <li>• Personalized supplement recommendations</li>
                   <li>• API endpoints for AI agent integration</li>
                 </ul>
@@ -170,9 +170,17 @@ const PrototypesPage = () => {
                     </a>
                   </p>
                   <p className="text-xs text-slate-500">
-                    <strong>Claude Desktop Setup:</strong> Add to MCP settings in <code className="bg-slate-200 px-1 rounded">claude_desktop_config.json</code>
+                    <strong>Claude Desktop Setup:</strong> Simply add the SSE URL to the MCP Integration dialog
                   </p>
                 </div>
+              </div>
+              
+              <div>
+                <img 
+                  src="/lovable-uploads/b704a07a-a89c-404e-9518-7890c192ba53.png" 
+                  alt="Claude Desktop MCP Integration - Screenshot showing supplement_therapy tool enabled"
+                  className="rounded-lg shadow-lg border border-slate-200 w-full"
+                />
               </div>
               
               <div className="flex justify-center lg:justify-start">
