@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Github, ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
 
 const PrototypesPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
+    <TooltipProvider>
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
       <Navigation />
       
       <main className="pt-24 pb-20 px-4 sm:px-6 lg:px-8">
@@ -149,42 +151,22 @@ const PrototypesPage = () => {
               </div>
               
               
-              <div className="bg-slate-100 rounded-lg p-4 text-sm">
-                <h4 className="font-semibold text-slate-800 mb-3">Key Features:</h4>
-                <ul className="space-y-2 text-slate-600">
-                  <li>• Blood test analysis with optimal ranges</li>
-                  <li>• Multi-format support (PDF, JPG, PNG)</li>
-                  <li>• Access to modern Epi-genetic and Molecular medicine expert knowledge</li>
-                  <li>• Personalized supplement recommendations</li>
-                  <li>• API endpoints for AI agent integration</li>
-                </ul>
-                <div className="mt-4 pt-3 border-t border-slate-200">
-                  <p className="text-xs text-slate-500 mb-2">
-                    <strong>API Base:</strong>{" "}
-                    <a 
-                      href="https://supplement-therapy.up.railway.app/sse" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-blue-600 hover:text-blue-800 underline"
-                    >
-                      https://supplement-therapy.up.railway.app/sse
-                    </a>
-                  </p>
-                  <p className="text-xs text-slate-500">
-                    <strong>Claude Desktop Setup:</strong> Simply add the SSE URL to the MCP Integration dialog
-                  </p>
-                </div>
-              </div>
-              
               <Dialog>
                 <DialogTrigger asChild>
-                  <div className="cursor-pointer">
-                    <img 
-                      src="/lovable-uploads/b704a07a-a89c-404e-9518-7890c192ba53.png" 
-                      alt="Claude Desktop MCP Integration - Screenshot showing supplement_therapy tool enabled"
-                      className="rounded-lg shadow-lg border border-slate-200 w-full hover:opacity-90 transition-opacity"
-                    />
-                  </div>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <div className="cursor-pointer">
+                        <img 
+                          src="/lovable-uploads/b704a07a-a89c-404e-9518-7890c192ba53.png" 
+                          alt="Claude Desktop MCP Integration - Screenshot showing supplement_therapy tool enabled"
+                          className="rounded-lg shadow-lg border border-slate-200 w-full hover:opacity-90 transition-opacity"
+                        />
+                      </div>
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>Click here to get the result of the MCP Server.</p>
+                    </TooltipContent>
+                  </Tooltip>
                 </DialogTrigger>
                 <DialogContent className="max-w-4xl max-h-[80vh] overflow-y-auto">
                   <DialogHeader>
@@ -296,6 +278,33 @@ const PrototypesPage = () => {
                   </div>
                 </DialogContent>
               </Dialog>
+
+              <div className="bg-slate-100 rounded-lg p-4 text-sm">
+                <h4 className="font-semibold text-slate-800 mb-3">Key Features:</h4>
+                <ul className="space-y-2 text-slate-600">
+                  <li>• Blood test analysis with optimal ranges</li>
+                  <li>• Multi-format support (PDF, JPG, PNG)</li>
+                  <li>• Access to modern Epi-genetic and Molecular medicine expert knowledge</li>
+                  <li>• Personalized supplement recommendations</li>
+                  <li>• API endpoints for AI agent integration</li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-slate-200">
+                  <p className="text-xs text-slate-500 mb-2">
+                    <strong>API Base:</strong>{" "}
+                    <a 
+                      href="https://supplement-therapy.up.railway.app/sse" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      https://supplement-therapy.up.railway.app/sse
+                    </a>
+                  </p>
+                  <p className="text-xs text-slate-500">
+                    <strong>Claude Desktop Setup:</strong> Simply add the SSE URL to the MCP Integration dialog
+                  </p>
+                </div>
+              </div>
               
               <div className="flex justify-center lg:justify-start">
                 <Button 
@@ -313,7 +322,8 @@ const PrototypesPage = () => {
           </div>
         </div>
       </main>
-    </div>
+      </div>
+    </TooltipProvider>
   );
 };
 
