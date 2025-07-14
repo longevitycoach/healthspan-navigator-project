@@ -357,7 +357,7 @@ const PrototypesPage = () => {
                     </a>
                   </p>
                   <p className="text-xs text-slate-500">
-                    <strong>Integration:</strong> Dockerized service using LLM accessed via Meta-Cognitive Prompting (MCP) protocol
+                    <strong>Integration:</strong> Dockerized service using LLM accessed via Model Context Protocol (MCP)
                   </p>
                 </div>
               </div>
