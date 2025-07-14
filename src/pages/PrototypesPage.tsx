@@ -3,6 +3,7 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Github, ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
+import StrunzChatWidget from "@/components/StrunzChatWidget";
 
 const PrototypesPage = () => {
   return (
@@ -21,7 +22,7 @@ const PrototypesPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-8 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-5 gap-8 items-start">
             {/* Left Column - Blood Test Oracle */}
             <div className="space-y-6">
               <div className="text-center lg:text-left">
@@ -315,6 +316,58 @@ const PrototypesPage = () => {
                   <a href="https://github.com/ma3u/Bloodtest-mcp-server" target="_blank" rel="noopener noreferrer">
                     <Github size={16} />
                     MCP Server (Github)
+                  </a>
+                </Button>
+              </div>
+            </div>
+            
+            {/* Fifth Column - Dr. Strunz Knowledge MCP Server */}
+            <div className="space-y-6">
+              <div className="text-center lg:text-left">
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Dr. Strunz Knowledge</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Access to Dr. Ulrich Strunz's comprehensive knowledge base on orthomolecular medicine, nutrition, and health optimization. This MCP server provides intelligent access to his extensive research through natural language queries.
+                </p>
+              </div>
+              
+              <StrunzChatWidget />
+              
+              <div className="bg-slate-100 rounded-lg p-4 text-sm">
+                <h4 className="font-semibold text-slate-800 mb-3">Knowledge Base Features:</h4>
+                <ul className="space-y-2 text-slate-600">
+                  <li>• Comprehensive Dr. Strunz articles and forum posts</li>
+                  <li>• Orthomolecular medicine protocols</li>
+                  <li>• Nutrition and supplement recommendations</li>
+                  <li>• Evidence-based health optimization strategies</li>
+                  <li>• MCP protocol integration for AI agents</li>
+                </ul>
+                <div className="mt-4 pt-3 border-t border-slate-200">
+                  <p className="text-xs text-slate-500 mb-2">
+                    <strong>API Endpoint:</strong>{" "}
+                    <a 
+                      href="https://strunz.up.railway.app/sse" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:text-blue-800 underline"
+                    >
+                      https://strunz.up.railway.app/sse
+                    </a>
+                  </p>
+                  <p className="text-xs text-slate-500">
+                    <strong>Integration:</strong> Dockerized service using LLM accessed via Meta-Cognitive Prompting (MCP) protocol
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex justify-center lg:justify-start">
+                <Button 
+                  asChild
+                  variant="outline" 
+                  className="flex items-center gap-2 hover:bg-blue-50"
+                >
+                  <a href="https://github.com/longevitycoach/StrunzKnowledge" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} />
+                    Strunz Knowledge (GitHub)
                   </a>
                 </Button>
               </div>
