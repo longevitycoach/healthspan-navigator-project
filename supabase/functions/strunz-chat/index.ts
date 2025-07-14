@@ -6,6 +6,46 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+// MCP Client implementation for Server-Sent Events
+class MCPClient {
+  private baseUrl: string;
+
+  constructor(baseUrl: string) {
+    this.baseUrl = baseUrl;
+  }
+
+  async queryKnowledge(question: string): Promise<string> {
+    try {
+      console.log('Querying MCP server with question:', question);
+      
+      const response = await fetch(this.baseUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          question: question,
+          stream: false
+        })
+      });
+
+      if (!response.ok) {
+        console.error('MCP server error:', response.status, response.statusText);
+        throw new Error(`MCP server error: ${response.status}`);
+      }
+
+      const data = await response.json();
+      console.log('MCP server response received');
+      
+      return data.answer || data.response || 'No response from knowledge base';
+    } catch (error) {
+      console.error('Error querying MCP server:', error);
+      throw error;
+    }
+  }
+}
+
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === 'OPTIONS') {
@@ -26,7 +66,39 @@ serve(async (req) => {
 
     console.log('Processing question:', question);
 
-    // Call Gemini API
+    // Initialize MCP client
+    const mcpClient = new MCPClient('https://strunz.up.railway.app/sse');
+    
+    // Query the Strunz knowledge base via MCP
+    let knowledgeBase = '';
+    try {
+      knowledgeBase = await mcpClient.queryKnowledge(question);
+      console.log('Knowledge base response received');
+    } catch (mcpError) {
+      console.log('MCP query failed, proceeding with Gemini only:', mcpError);
+      knowledgeBase = 'Knowledge base temporarily unavailable';
+    }
+
+    // Enhance the prompt with knowledge base context
+    const enhancedPrompt = `You are Dr. Ulrich Strunz's AI assistant with access to his comprehensive knowledge base on orthomolecular medicine, nutrition, and health optimization.
+
+Dr. Strunz Knowledge Base Context:
+${knowledgeBase}
+
+Based on the above knowledge base context and Dr. Strunz's expertise in orthomolecular medicine, answer the following question. If the knowledge base provides specific information, incorporate it into your response. If not, rely on Dr. Strunz's general principles of:
+
+- Orthomolecular medicine and optimal nutrition
+- Vitamin and mineral supplementation protocols  
+- Anti-aging and longevity strategies
+- Sports medicine and performance optimization
+- Stress management and hormonal balance
+- Evidence-based preventive medicine
+
+Be specific about supplements, dosages, and protocols when relevant. Always emphasize the importance of lab testing and individualized approaches.
+
+Question: ${question}`;
+
+    // Call Gemini API with enhanced context
     const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${GEMINI_API_KEY}`, {
       method: 'POST',
       headers: {
@@ -35,18 +107,7 @@ serve(async (req) => {
       body: JSON.stringify({
         contents: [{
           parts: [{
-            text: `You are Dr. Ulrich Strunz's AI assistant with access to his comprehensive knowledge base on orthomolecular medicine, nutrition, and health optimization. Dr. Strunz is a renowned German physician and author who specializes in:
-
-- Orthomolecular medicine and optimal nutrition
-- Vitamin and mineral supplementation protocols
-- Anti-aging and longevity strategies
-- Sports medicine and performance optimization
-- Stress management and hormonal balance
-- Evidence-based preventive medicine
-
-Answer this question based on Dr. Strunz's research, philosophy, and recommendations. Be specific about supplements, dosages, and protocols when relevant. Always emphasize the importance of lab testing and individualized approaches. Keep responses informative but concise.
-
-Question: ${question}`
+            text: enhancedPrompt
           }]
         }],
         generationConfig: {
@@ -70,6 +131,7 @@ Question: ${question}`
     
     return new Response(JSON.stringify({ 
       answer: content,
+      knowledge_source: knowledgeBase !== 'Knowledge base temporarily unavailable' ? 'MCP + Gemini' : 'Gemini only',
       success: true 
     }), {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },

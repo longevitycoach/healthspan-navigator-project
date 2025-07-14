@@ -18,7 +18,7 @@ const StrunzChatWidget = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: 'Hello! I have access to Dr. Ulrich Strunz\'s comprehensive knowledge base on orthomolecular medicine, nutrition, and health optimization. Ask me anything about supplements, nutrition protocols, or health strategies from his extensive research.',
+      content: 'Hello! I\'m connected to Dr. Ulrich Strunz\'s comprehensive knowledge base via MCP (Model Context Protocol) and enhanced with Gemini AI. Ask me anything about orthomolecular medicine, nutrition protocols, or health optimization strategies from his extensive research.',
       role: 'assistant',
       timestamp: new Date()
     }
@@ -66,7 +66,7 @@ const StrunzChatWidget = () => {
       
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: data.answer || 'I apologize, but I could not generate a response at this time.',
+        content: `${data.answer || 'I apologize, but I could not generate a response at this time.'}${data.knowledge_source ? `\n\n*Source: ${data.knowledge_source}*` : ''}`,
         role: 'assistant',
         timestamp: new Date()
       };

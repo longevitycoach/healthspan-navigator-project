@@ -327,26 +327,27 @@ const PrototypesPage = () => {
             {/* Dr. Strunz Knowledge MCP Server */}
             <div className="space-y-6">
               <div className="text-center lg:text-left">
-                <h3 className="text-xl font-semibold text-slate-800 mb-2">Dr. Strunz Knowledge</h3>
+                <h3 className="text-xl font-semibold text-slate-800 mb-2">Dr. Strunz Knowledge MCP</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  Access to Dr. Ulrich Strunz's comprehensive knowledge base on orthomolecular medicine, nutrition, and health optimization. This MCP server provides intelligent access to his extensive research through natural language queries.
+                  Advanced MCP (Model Context Protocol) client that connects to Dr. Ulrich Strunz's knowledge base server via SSE. Combines real-time access to his comprehensive research with Gemini AI for enhanced responses on orthomolecular medicine and health optimization.
                 </p>
               </div>
               
               <StrunzChatWidget />
               
               <div className="bg-slate-100 rounded-lg p-4 text-sm">
-                <h4 className="font-semibold text-slate-800 mb-3">Knowledge Base Features:</h4>
+                <h4 className="font-semibold text-slate-800 mb-3">MCP Client Features:</h4>
                 <ul className="space-y-2 text-slate-600">
-                  <li>• Comprehensive Dr. Strunz articles and forum posts</li>
-                  <li>• Orthomolecular medicine protocols</li>
-                  <li>• Nutrition and supplement recommendations</li>
-                  <li>• Evidence-based health optimization strategies</li>
-                  <li>• MCP protocol integration for AI agents</li>
+                  <li>• Real-time MCP client with SSE connectivity</li>
+                  <li>• Direct access to Dr. Strunz's knowledge server</li>
+                  <li>• Gemini AI enhancement for comprehensive responses</li>
+                  <li>• Orthomolecular medicine protocol queries</li>
+                  <li>• Evidence-based supplement recommendations</li>
+                  <li>• Model Context Protocol implementation</li>
                 </ul>
                 <div className="mt-4 pt-3 border-t border-slate-200">
                   <p className="text-xs text-slate-500 mb-2">
-                    <strong>API Endpoint:</strong>{" "}
+                    <strong>MCP Server:</strong>{" "}
                     <a 
                       href="https://strunz.up.railway.app/sse" 
                       target="_blank" 
@@ -357,7 +358,7 @@ const PrototypesPage = () => {
                     </a>
                   </p>
                   <p className="text-xs text-slate-500">
-                    <strong>Integration:</strong> Dockerized service using LLM accessed via Model Context Protocol (MCP)
+                    <strong>Architecture:</strong> MCP Client → SSE → Knowledge Base → Gemini AI Enhancement
                   </p>
                 </div>
               </div>
