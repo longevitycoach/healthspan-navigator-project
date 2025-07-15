@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Send, MessageCircle, User, Bot } from 'lucide-react';
+import { Send, MessageCircle, UserRound, Stethoscope } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 import ReactMarkdown from 'react-markdown';
@@ -22,7 +22,7 @@ const StrunzChatWidget = () => {
       id: '1',
       content: `# Dr. Strunz Knowledge Assistant
 
-Hello! I'm connected to Dr. Ulrich Strunz's comprehensive knowledge base via **MCP (Model Context Protocol)** and enhanced with **Gemini AI**. 
+Hello! I'm connected to Dr. Ulrich Strunz's comprehensive knowledge base via **MCP (Model Context Protocol)** at \`https://strunz.up.railway.app/sse\` and enhanced with **Gemini AI**. 
 
 Ask me anything about:
 - Orthomolecular medicine
@@ -31,7 +31,9 @@ Ask me anything about:
 - Sports medicine
 - Anti-aging approaches
 
-*All responses are based on Dr. Strunz's extensive research and clinical experience.*`,
+*All responses are based on Dr. Strunz's extensive research and clinical experience.*
+
+**SSE Endpoint:** https://strunz.up.railway.app/sse`,
       role: 'assistant',
       timestamp: new Date()
     }
@@ -121,7 +123,7 @@ Ask me anything about:
         </CardTitle>
       </CardHeader>
       <CardContent className="flex-1 flex flex-col p-4 pt-0">
-        <ScrollArea ref={scrollAreaRef} className="flex-1 pr-4">
+        <ScrollArea ref={scrollAreaRef} className="flex-1 pr-4 max-h-[350px] overflow-y-auto">
           <div className="space-y-4">
             {messages.map((message) => (
               <div
@@ -137,7 +139,7 @@ Ask me anything about:
                       : 'bg-emerald-600 text-white'
                   }`}
                 >
-                  {message.role === 'user' ? <User size={16} /> : <Bot size={16} />}
+                  {message.role === 'user' ? <UserRound size={16} /> : <Stethoscope size={16} />}
                 </div>
                 <div
                   className={`max-w-[80%] rounded-lg p-3 ${
@@ -177,7 +179,7 @@ Ask me anything about:
             {isLoading && (
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center">
-                  <Bot size={16} />
+                  <Stethoscope size={16} />
                 </div>
                 <div className="bg-slate-100 rounded-lg p-3">
                   <div className="flex space-x-1">
