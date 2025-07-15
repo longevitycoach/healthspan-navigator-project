@@ -17,28 +17,48 @@ class MCPClient {
   async queryKnowledge(question: string): Promise<string> {
     try {
       console.log('Querying MCP server with question:', question);
+      console.log('MCP server URL:', this.baseUrl);
+      
+      const requestBody = {
+        question: question,
+        stream: false
+      };
+      console.log('Request body:', JSON.stringify(requestBody));
       
       const response = await fetch(this.baseUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
+          'User-Agent': 'Supabase-Edge-Function',
         },
-        body: JSON.stringify({
-          question: question,
-          stream: false
-        })
+        body: JSON.stringify(requestBody)
       });
 
+      console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
       if (!response.ok) {
-        console.error('MCP server error:', response.status, response.statusText);
-        throw new Error(`MCP server error: ${response.status}`);
+        const errorText = await response.text();
+        console.error('MCP server error response:', errorText);
+        throw new Error(`MCP server error: ${response.status} - ${errorText}`);
       }
 
-      const data = await response.json();
-      console.log('MCP server response received');
+      const responseText = await response.text();
+      console.log('Raw response text:', responseText);
       
-      return data.answer || data.response || 'No response from knowledge base';
+      let data;
+      try {
+        data = JSON.parse(responseText);
+      } catch (parseError) {
+        console.error('Failed to parse JSON response:', parseError);
+        console.error('Response was:', responseText);
+        throw new Error('Invalid JSON response from MCP server');
+      }
+      
+      console.log('Parsed MCP server response:', data);
+      
+      return data.answer || data.response || data.text || 'No response from knowledge base';
     } catch (error) {
       console.error('Error querying MCP server:', error);
       throw error;

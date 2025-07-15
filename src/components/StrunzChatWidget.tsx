@@ -6,6 +6,8 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Send, MessageCircle, User, Bot } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 
 interface Message {
   id: string;
@@ -133,7 +135,28 @@ const StrunzChatWidget = () => {
                       : 'bg-slate-100 text-slate-800'
                   }`}
                 >
-                  <p className="text-sm whitespace-pre-wrap">{message.content}</p>
+                  <div className="text-sm prose prose-sm max-w-none">
+                    {message.role === 'user' ? (
+                      <p className="whitespace-pre-wrap">{message.content}</p>
+                    ) : (
+                      <ReactMarkdown 
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          p: ({children}) => <p className="mb-2 last:mb-0">{children}</p>,
+                          ul: ({children}) => <ul className="list-disc list-inside mb-2">{children}</ul>,
+                          ol: ({children}) => <ol className="list-decimal list-inside mb-2">{children}</ol>,
+                          li: ({children}) => <li className="mb-1">{children}</li>,
+                          strong: ({children}) => <strong className="font-semibold">{children}</strong>,
+                          em: ({children}) => <em className="italic">{children}</em>,
+                          h1: ({children}) => <h1 className="text-lg font-bold mb-2">{children}</h1>,
+                          h2: ({children}) => <h2 className="text-base font-bold mb-2">{children}</h2>,
+                          h3: ({children}) => <h3 className="text-sm font-bold mb-1">{children}</h3>,
+                        }}
+                      >
+                        {message.content}
+                      </ReactMarkdown>
+                    )}
+                  </div>
                   <div className="text-xs opacity-70 mt-1">
                     {message.timestamp.toLocaleTimeString()}
                   </div>
