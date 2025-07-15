@@ -31,9 +31,7 @@ Ask me anything about:
 - Sports medicine
 - Anti-aging approaches
 
-*All responses are based on Dr. Strunz's extensive research and clinical experience.*
-
-**SSE Endpoint:** https://strunz.up.railway.app/sse`,
+*All responses are based on Dr. Strunz's extensive research and clinical experience.*`,
       role: 'assistant',
       timestamp: new Date()
     }
