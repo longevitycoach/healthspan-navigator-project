@@ -19,6 +19,8 @@ class MCPClient {
       console.log('Querying MCP server with question:', question);
       console.log('MCP server URL:', this.baseUrl);
       
+      // For SSE endpoints, we might need to use a different approach
+      // Let's try a regular POST first, then modify if needed
       const requestBody = {
         question: question,
         stream: false
@@ -31,6 +33,7 @@ class MCPClient {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
           'User-Agent': 'Supabase-Edge-Function',
+          'Origin': 'https://ttglcxuznhhcdnuyxhqd.supabase.co',
         },
         body: JSON.stringify(requestBody)
       });
@@ -58,10 +61,59 @@ class MCPClient {
       
       console.log('Parsed MCP server response:', data);
       
-      return data.answer || data.response || data.text || 'No response from knowledge base';
+      return data.answer || data.response || data.text || data.content || 'No response from knowledge base';
     } catch (error) {
       console.error('Error querying MCP server:', error);
-      throw error;
+      // Let's try alternative approach for SSE endpoint
+      return await this.queryKnowledgeSSE(question);
+    }
+  }
+
+  async queryKnowledgeSSE(question: string): Promise<string> {
+    try {
+      console.log('Trying SSE approach for MCP server');
+      
+      // Alternative approach - try GET with query params
+      const url = new URL(this.baseUrl);
+      url.searchParams.set('question', question);
+      
+      const response = await fetch(url.toString(), {
+        method: 'GET',
+        headers: {
+          'Accept': 'text/event-stream',
+          'Cache-Control': 'no-cache',
+          'User-Agent': 'Supabase-Edge-Function',
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`SSE connection failed: ${response.status}`);
+      }
+
+      const text = await response.text();
+      console.log('SSE response:', text);
+      
+      // Parse SSE format
+      const lines = text.split('\n');
+      let result = '';
+      
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          const data = line.substring(6);
+          if (data === '[DONE]') break;
+          try {
+            const parsed = JSON.parse(data);
+            result += parsed.content || parsed.text || parsed.answer || '';
+          } catch {
+            result += data;
+          }
+        }
+      }
+      
+      return result || 'No content received from SSE stream';
+    } catch (error) {
+      console.error('SSE query failed:', error);
+      throw new Error('Both POST and SSE approaches failed for MCP server');
     }
   }
 }

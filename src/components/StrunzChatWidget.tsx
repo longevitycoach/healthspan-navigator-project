@@ -20,7 +20,18 @@ const StrunzChatWidget = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: 'Hello! I\'m connected to Dr. Ulrich Strunz\'s comprehensive knowledge base via MCP (Model Context Protocol) and enhanced with Gemini AI. Ask me anything about orthomolecular medicine, nutrition protocols, or health optimization strategies from his extensive research.',
+      content: `# Dr. Strunz Knowledge Assistant
+
+Hello! I'm connected to Dr. Ulrich Strunz's comprehensive knowledge base via **MCP (Model Context Protocol)** and enhanced with **Gemini AI**. 
+
+Ask me anything about:
+- Orthomolecular medicine
+- Nutrition protocols  
+- Health optimization strategies
+- Sports medicine
+- Anti-aging approaches
+
+*All responses are based on Dr. Strunz's extensive research and clinical experience.*`,
       role: 'assistant',
       timestamp: new Date()
     }
