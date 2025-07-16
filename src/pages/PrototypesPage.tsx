@@ -21,10 +21,46 @@ const PrototypesPage = () => {
               Exploring what brings the most benefit for health and longevity enthusiasts in the discovery phase.
             </p>
           </div>
+
+          {/* Modern Horizontal Navigation */}
+          <div className="mb-12 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-slate-200/50 p-4">
+            <nav className="flex flex-wrap justify-center gap-2 sm:gap-4">
+              <a 
+                href="#blood-test-oracle" 
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
+              >
+                Blood Test Oracle
+              </a>
+              <a 
+                href="#habit-builder" 
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 border border-transparent hover:border-blue-200"
+              >
+                Habit Builder
+              </a>
+              <a 
+                href="#educational-healthspan" 
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
+              >
+                Educational Healthspan
+              </a>
+              <a 
+                href="#blood-test-mcp" 
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200 border border-transparent hover:border-purple-200"
+              >
+                Blood Test MCP
+              </a>
+              <a 
+                href="#strunz-knowledge" 
+                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 border border-transparent hover:border-indigo-200"
+              >
+                Dr. Strunz Knowledge
+              </a>
+            </nav>
+          </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* Blood Test Oracle */}
-            <div className="space-y-6">
+            <div id="blood-test-oracle" className="space-y-6 scroll-mt-32">
               <div className="text-center lg:text-left">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Blood Test Oracle</h3>
                 <p className="text-slate-600 text-sm mb-4">
@@ -69,7 +105,7 @@ const PrototypesPage = () => {
             
             
             {/* Habit Builder Prototype */}
-            <div className="space-y-6">
+            <div id="habit-builder" className="space-y-6 scroll-mt-32">
               <div className="text-center lg:text-left">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Habit Builder</h3>
                 <p className="text-slate-600 text-sm mb-4">
@@ -101,7 +137,7 @@ const PrototypesPage = () => {
             
             
             {/* Educational Healthspan */}
-            <div className="space-y-6">
+            <div id="educational-healthspan" className="space-y-6 scroll-mt-32">
               <div className="text-center lg:text-left">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Educational Healthspan</h3>
                 <p className="text-slate-600 text-sm mb-4">
@@ -146,7 +182,7 @@ const PrototypesPage = () => {
             
             
             {/* Blood Test MCP Server */}
-            <div className="space-y-6">
+            <div id="blood-test-mcp" className="space-y-6 scroll-mt-32">
               <div className="text-center lg:text-left">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Blood Test MCP Server</h3>
                 <p className="text-slate-600 text-sm mb-4">
@@ -325,7 +361,7 @@ const PrototypesPage = () => {
             </div>
             
             {/* Dr. Strunz Knowledge MCP Server */}
-            <div className="space-y-6">
+            <div id="strunz-knowledge" className="space-y-6 scroll-mt-32">
               <div className="text-center lg:text-left">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Dr. Strunz Knowledge MCP</h3>
                 <p className="text-slate-600 text-sm mb-4">
