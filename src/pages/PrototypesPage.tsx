@@ -22,81 +22,81 @@ const PrototypesPage = () => {
                 These MVP prototypes validate core hypotheses about personalized health optimization through AI-powered analysis, habit formation, and knowledge integration. Our goal is to identify which approaches deliver the highest impact for longevity enthusiasts in the discovery phase.
               </p>
             </div>
-          </div>
-
-          {/* Modern Horizontal Navigation */}
-          <div className="mb-12 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-slate-200/50 p-4">
-            <nav className="flex flex-wrap justify-center gap-2 sm:gap-4">
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a 
-                    href="#blood-test-oracle" 
-                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
-                  >
-                    Blood Test Oracle
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <p><strong>Hypothesis:</strong> AI-powered analysis of blood test results can provide more personalized and actionable supplement recommendations than generic health advice</p>
-                </TooltipContent>
-              </Tooltip>
-              
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a 
-                    href="#habit-builder" 
-                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 border border-transparent hover:border-blue-200"
-                  >
-                    Habit Builder
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <p><strong>Hypothesis:</strong> Gamified habit tracking with science-based formation strategies leads to better long-term health behavior adoption</p>
-                </TooltipContent>
-              </Tooltip>
-              
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a 
-                    href="#educational-healthspan" 
-                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
-                  >
-                    Educational Healthspan
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <p><strong>Hypothesis:</strong> Evidence-based longevity education in native language increases user engagement and knowledge retention</p>
-                </TooltipContent>
-              </Tooltip>
-              
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a 
-                    href="#blood-test-mcp" 
-                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200 border border-transparent hover:border-purple-200"
-                  >
-                    Blood Test MCP
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <p><strong>Hypothesis:</strong> AI agents with specialized health knowledge can provide more accurate and personalized health analysis than general-purpose AI</p>
-                </TooltipContent>
-              </Tooltip>
-              
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <a 
-                    href="#strunz-knowledge" 
-                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 border border-transparent hover:border-indigo-200"
-                  >
-                    Dr. Strunz Knowledge
-                  </a>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-xs">
-                  <p><strong>Hypothesis:</strong> Access to orthomolecular medicine expertise through AI agents can bridge the gap between complex medical knowledge and practical application</p>
-                </TooltipContent>
-              </Tooltip>
-            </nav>
+            
+            {/* Modern Horizontal Navigation */}
+            <div className="mt-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-slate-200/50 p-4">
+              <nav className="flex flex-wrap justify-center gap-2 sm:gap-4">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a 
+                      href="#blood-test-oracle" 
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
+                    >
+                      Blood Test Oracle
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p><strong>Hypothesis:</strong> AI-powered analysis of blood test results can provide more personalized and actionable supplement recommendations than generic health advice</p>
+                  </TooltipContent>
+                </Tooltip>
+                
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a 
+                      href="#habit-builder" 
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 border border-transparent hover:border-blue-200"
+                    >
+                      Habit Builder
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p><strong>Hypothesis:</strong> Gamified habit tracking with science-based formation strategies leads to better long-term health behavior adoption</p>
+                  </TooltipContent>
+                </Tooltip>
+                
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a 
+                      href="#educational-healthspan" 
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
+                    >
+                      Educational Healthspan
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p><strong>Hypothesis:</strong> Evidence-based longevity education in native language increases user engagement and knowledge retention</p>
+                  </TooltipContent>
+                </Tooltip>
+                
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a 
+                      href="#blood-test-mcp" 
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200 border border-transparent hover:border-purple-200"
+                    >
+                      Blood Test MCP
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p><strong>Hypothesis:</strong> AI agents with specialized health knowledge can provide more accurate and personalized health analysis than general-purpose AI</p>
+                  </TooltipContent>
+                </Tooltip>
+                
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a 
+                      href="#strunz-knowledge" 
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 border border-transparent hover:border-indigo-200"
+                    >
+                      Dr. Strunz Knowledge
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p><strong>Hypothesis:</strong> Access to orthomolecular medicine expertise through AI agents can bridge the gap between complex medical knowledge and practical application</p>
+                  </TooltipContent>
+                </Tooltip>
+              </nav>
+            </div>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
