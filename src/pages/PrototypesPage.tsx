@@ -102,7 +102,7 @@ const PrototypesPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* Blood Test Oracle */}
             <div id="blood-test-oracle" className="space-y-6 scroll-mt-32">
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-4 bg-emerald-50">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Blood Test Oracle</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   An AI-powered tool that analyzes blood test results and provides personalized health insights based on reference values and longevity research. Upload your lab results to get actionable recommendations for optimal health.
@@ -147,7 +147,7 @@ const PrototypesPage = () => {
             
             {/* Habit Builder Prototype */}
             <div id="habit-builder" className="space-y-6 scroll-mt-32">
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-4 bg-blue-50">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Habit Builder</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   A comprehensive habit tracking and building platform designed to help users develop sustainable healthy behaviors. Features daily tracking, progress visualization, and science-based habit formation strategies.
@@ -179,7 +179,7 @@ const PrototypesPage = () => {
             
             {/* Educational Healthspan */}
             <div id="educational-healthspan" className="space-y-6 scroll-mt-32">
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-4 bg-emerald-50">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Educational Healthspan</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   A German-language educational platform focused on healthspan optimization and longevity science. Provides evidence-based information about aging, health metrics, and lifestyle interventions for extending healthy lifespan.
@@ -224,7 +224,7 @@ const PrototypesPage = () => {
             
             {/* Blood Test MCP Server */}
             <div id="blood-test-mcp" className="space-y-6 scroll-mt-32">
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-4 bg-purple-50">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Blood Test MCP Server</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   An MCP (Model Context Protocol) server for AI agents that provides blood test analysis capabilities. Features multi-format support, access to modern Epi-genetic and Molecular medicine expert knowledge, and personalized supplement recommendations through API endpoints.
@@ -403,7 +403,7 @@ const PrototypesPage = () => {
             
             {/* Dr. Strunz Knowledge MCP Server */}
             <div id="strunz-knowledge" className="space-y-6 scroll-mt-32">
-              <div className="text-center lg:text-left">
+              <div className="text-center lg:text-left -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-4 bg-indigo-50">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Dr. Strunz Knowledge MCP</h3>
                 <p className="text-slate-600 text-sm mb-4">
                   Advanced MCP (Model Context Protocol) client that connects to Dr. Ulrich Strunz's knowledge base server via SSE. Combines real-time access to his comprehensive research with Gemini AI for enhanced responses on orthomolecular medicine and health optimization.
