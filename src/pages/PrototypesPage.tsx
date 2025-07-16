@@ -393,7 +393,7 @@ const PrototypesPage = () => {
                   variant="outline" 
                   className="flex items-center gap-2 hover:bg-blue-50"
                 >
-                  <a href="https://github.com/ma3u/Bloodtest-mcp-server" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/longevitycoach/bloodtest-mcp-server" target="_blank" rel="noopener noreferrer">
                     <Github size={16} />
                     MCP Server (Github)
                   </a>
