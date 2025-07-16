@@ -36,8 +36,8 @@ const PrototypesPage = () => {
                     Blood Test Oracle
                   </a>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>Provides personalized supplement recommendations from lab results</p>
+                <TooltipContent className="max-w-xs">
+                  <p><strong>Hypothesis:</strong> AI-powered analysis of blood test results can provide more personalized and actionable supplement recommendations than generic health advice</p>
                 </TooltipContent>
               </Tooltip>
               
@@ -50,8 +50,8 @@ const PrototypesPage = () => {
                     Habit Builder
                   </a>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>Tracks sustainable health behaviors</p>
+                <TooltipContent className="max-w-xs">
+                  <p><strong>Hypothesis:</strong> Gamified habit tracking with science-based formation strategies leads to better long-term health behavior adoption</p>
                 </TooltipContent>
               </Tooltip>
               
@@ -64,8 +64,8 @@ const PrototypesPage = () => {
                     Educational Healthspan
                   </a>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>Delivers evidence-based longevity science</p>
+                <TooltipContent className="max-w-xs">
+                  <p><strong>Hypothesis:</strong> Evidence-based longevity education in native language increases user engagement and knowledge retention</p>
                 </TooltipContent>
               </Tooltip>
               
@@ -78,8 +78,8 @@ const PrototypesPage = () => {
                     Blood Test MCP
                   </a>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>Enable AI agents to access specialized health knowledge and analysis capabilities</p>
+                <TooltipContent className="max-w-xs">
+                  <p><strong>Hypothesis:</strong> AI agents with specialized health knowledge can provide more accurate and personalized health analysis than general-purpose AI</p>
                 </TooltipContent>
               </Tooltip>
               
@@ -92,8 +92,8 @@ const PrototypesPage = () => {
                     Dr. Strunz Knowledge
                   </a>
                 </TooltipTrigger>
-                <TooltipContent>
-                  <p>MCP Server enables AI agents access to orthomolecular medicine expertise</p>
+                <TooltipContent className="max-w-xs">
+                  <p><strong>Hypothesis:</strong> Access to orthomolecular medicine expertise through AI agents can bridge the gap between complex medical knowledge and practical application</p>
                 </TooltipContent>
               </Tooltip>
             </nav>
