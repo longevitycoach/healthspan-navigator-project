@@ -22,7 +22,7 @@ const PrototypesPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* Blood Test Oracle */}
             <div className="space-y-6">
               <div className="text-center lg:text-left">
