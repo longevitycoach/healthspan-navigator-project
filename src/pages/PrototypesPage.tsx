@@ -58,7 +58,7 @@ const PrototypesPage = () => {
                   <TooltipTrigger asChild>
                     <a 
                       href="#educational-healthspan" 
-                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-red-600 hover:bg-red-50 rounded-lg transition-all duration-200 border border-transparent hover:border-red-200"
                     >
                       Educational Healthspan
                     </a>
