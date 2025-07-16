@@ -25,7 +25,7 @@ const PrototypesPage = () => {
           </div>
 
           {/* Modern Horizontal Navigation */}
-          <div className="mb-12 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-slate-200/50 p-4">
+          <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-slate-200/50 p-4">
             <nav className="flex flex-wrap justify-center gap-2 sm:gap-4">
               <Tooltip>
                 <TooltipTrigger asChild>
