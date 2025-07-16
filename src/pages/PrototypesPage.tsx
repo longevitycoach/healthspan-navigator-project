@@ -86,7 +86,7 @@ const PrototypesPage = () => {
                   <TooltipTrigger asChild>
                     <a 
                       href="#strunz-knowledge" 
-                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 border border-transparent hover:border-indigo-200"
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-yellow-600 hover:bg-yellow-50 rounded-lg transition-all duration-200 border border-transparent hover:border-yellow-200"
                     >
                       Dr. Strunz Knowledge
                     </a>
