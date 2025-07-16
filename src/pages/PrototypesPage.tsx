@@ -17,9 +17,11 @@ const PrototypesPage = () => {
             <h1 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
               Current Prototypes
             </h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-              Exploring what brings the most benefit for health and longevity enthusiasts in the discovery phase.
-            </p>
+            <div className="w-full bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl p-6 border border-slate-200/50">
+              <p className="text-lg text-slate-700 leading-relaxed">
+                These MVP prototypes validate core hypotheses about personalized health optimization through AI-powered analysis, habit formation, and knowledge integration. Our goal is to identify which approaches deliver the highest impact for longevity enthusiasts: <strong>Blood Test Oracle</strong> provides personalized supplement recommendations from lab results, <strong>Habit Builder</strong> tracks sustainable health behaviors, <strong>Educational Healthspan</strong> delivers evidence-based longevity science, and our <strong>MCP Servers</strong> enable AI agents to access specialized health knowledge and analysis capabilities.
+              </p>
+            </div>
           </div>
 
           {/* Modern Horizontal Navigation */}
