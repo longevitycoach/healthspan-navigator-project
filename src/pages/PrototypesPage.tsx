@@ -402,7 +402,7 @@ const PrototypesPage = () => {
             </div>
             
             {/* Dr. Strunz Knowledge MCP Server */}
-            <div id="strunz-knowledge" className="space-y-6 scroll-mt-32 bg-indigo-50 border border-indigo-200 rounded-xl p-6">
+            <div id="strunz-knowledge" className="space-y-6 scroll-mt-32 bg-yellow-50 border border-yellow-200 rounded-xl p-6">
               <div className="text-center lg:text-left">
                 <h3 className="text-xl font-semibold text-slate-800 mb-2">Dr. Strunz Knowledge MCP</h3>
                 <p className="text-slate-600 text-sm mb-4">
