@@ -19,7 +19,7 @@ const PrototypesPage = () => {
             </h1>
             <div className="w-full bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl p-6 border border-slate-200/50">
               <p className="text-lg text-slate-700 leading-relaxed">
-                These MVP prototypes validate core hypotheses about personalized health optimization through AI-powered analysis, habit formation, and knowledge integration. Our goal is to identify which approaches deliver the highest impact for longevity enthusiasts: <strong>Blood Test Oracle</strong> provides personalized supplement recommendations from lab results, <strong>Habit Builder</strong> tracks sustainable health behaviors, <strong>Educational Healthspan</strong> delivers evidence-based longevity science, and our <strong>MCP Servers</strong> enable AI agents to access specialized health knowledge and analysis capabilities.
+                These MVP prototypes validate core hypotheses about personalized health optimization through AI-powered analysis, habit formation, and knowledge integration. Our goal is to identify which approaches deliver the highest impact for longevity enthusiasts in the discovery phase.
               </p>
             </div>
           </div>
@@ -27,36 +27,75 @@ const PrototypesPage = () => {
           {/* Modern Horizontal Navigation */}
           <div className="mb-12 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-slate-200/50 p-4">
             <nav className="flex flex-wrap justify-center gap-2 sm:gap-4">
-              <a 
-                href="#blood-test-oracle" 
-                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
-              >
-                Blood Test Oracle
-              </a>
-              <a 
-                href="#habit-builder" 
-                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 border border-transparent hover:border-blue-200"
-              >
-                Habit Builder
-              </a>
-              <a 
-                href="#educational-healthspan" 
-                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
-              >
-                Educational Healthspan
-              </a>
-              <a 
-                href="#blood-test-mcp" 
-                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200 border border-transparent hover:border-purple-200"
-              >
-                Blood Test MCP
-              </a>
-              <a 
-                href="#strunz-knowledge" 
-                className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 border border-transparent hover:border-indigo-200"
-              >
-                Dr. Strunz Knowledge
-              </a>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="#blood-test-oracle" 
+                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
+                  >
+                    Blood Test Oracle
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Provides personalized supplement recommendations from lab results</p>
+                </TooltipContent>
+              </Tooltip>
+              
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="#habit-builder" 
+                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 border border-transparent hover:border-blue-200"
+                  >
+                    Habit Builder
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Tracks sustainable health behaviors</p>
+                </TooltipContent>
+              </Tooltip>
+              
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="#educational-healthspan" 
+                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-emerald-600 hover:bg-emerald-50 rounded-lg transition-all duration-200 border border-transparent hover:border-emerald-200"
+                  >
+                    Educational Healthspan
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Delivers evidence-based longevity science</p>
+                </TooltipContent>
+              </Tooltip>
+              
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="#blood-test-mcp" 
+                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-all duration-200 border border-transparent hover:border-purple-200"
+                  >
+                    Blood Test MCP
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Enable AI agents to access specialized health knowledge and analysis capabilities</p>
+                </TooltipContent>
+              </Tooltip>
+              
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <a 
+                    href="#strunz-knowledge" 
+                    className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-all duration-200 border border-transparent hover:border-indigo-200"
+                  >
+                    Dr. Strunz Knowledge
+                  </a>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>MCP Server enables AI agents access to orthomolecular medicine expertise</p>
+                </TooltipContent>
+              </Tooltip>
             </nav>
           </div>
           
