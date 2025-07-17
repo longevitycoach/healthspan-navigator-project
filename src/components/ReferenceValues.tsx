@@ -1587,7 +1587,7 @@ const ReferenceValues = () => {
         <div className="flex flex-col lg:flex-row gap-6 max-w-full">
           {/* Mobile Navigation */}
           {isMobile ? (
-            <div className="lg:hidden mb-4">
+            <div className="md:hidden mb-4">
               <Sheet>
                 <SheetTrigger asChild>
                   <Button variant="outline" className="w-full justify-between">
@@ -1676,7 +1676,7 @@ const ReferenceValues = () => {
             </div>
           ) : (
             /* Desktop Navigation */
-            <div className="hidden lg:block w-80 flex-shrink-0">
+            <div className="hidden md:block w-80 flex-shrink-0">
               <Card className="sticky top-6">
                 <CardHeader className="pb-3">
                   <Tooltip>

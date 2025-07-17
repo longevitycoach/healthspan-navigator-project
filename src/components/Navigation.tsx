@@ -52,7 +52,7 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-6 flex items-baseline space-x-2">
+            <div className="ml-4 flex items-baseline space-x-1">
               <button 
                 onClick={() => scrollToSection('hero')}
                 className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
