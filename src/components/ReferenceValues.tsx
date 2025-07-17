@@ -1484,6 +1484,28 @@ const ReferenceValues = () => {
     }
   };
 
+  const getCategoryImpactDescription = (categoryId: string): string => {
+    switch (categoryId) {
+      case "cardiovascular": return "Critical markers for preventing heart disease, stroke, and vascular dysfunction";
+      case "metabolic": return "Essential for blood sugar control, diabetes prevention, and metabolic flexibility";
+      case "neurological": return "Protect brain health, prevent dementia, and optimize cognitive function";
+      case "advanced-inflammatory": return "Early detection markers for cancer risk and chronic inflammation";
+      case "hormones": return "Balance endocrine function for energy, mood, and reproductive health";
+      case "microbiome": return "Gut health foundation influencing immunity, mood, and systemic inflammation";
+      case "vitamins": return "Essential micronutrients for cellular function, immunity, and disease prevention";
+      case "minerals": return "Critical cofactors for enzymatic processes, bone health, and energy production";
+      case "oxidative-stress": return "Cellular protection against aging, DNA damage, and chronic disease";
+      case "fitness-performance": return "Optimize physical capacity, muscle health, and exercise recovery";
+      case "longevity": return "Biological age markers and cellular health indicators for lifespan extension";
+      case "amino-acids": return "Protein building blocks for muscle synthesis, neurotransmitters, and recovery";
+      case "heavy-metals": return "Detect toxic exposures that impair cognition, immunity, and organ function";
+      case "liver": return "Optimize detoxification, metabolism, and liver function for overall health";
+      case "kidney": return "Maintain filtration capacity, electrolyte balance, and cardiovascular health";
+      case "bone-health": return "Prevent osteoporosis, fractures, and maintain skeletal integrity with aging";
+      default: return "Evidence-based optimal ranges for longevity and health optimization";
+    }
+  };
+
   return (
     <section id="reference-values" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -1644,7 +1666,7 @@ const ReferenceValues = () => {
                       {categories.find(cat => cat.id === activeCategory)?.label}
                     </CardTitle>
                     <p className="text-sm text-slate-600 mt-1">
-                      Evidence-based optimal ranges for longevity and health optimization
+                      {getCategoryImpactDescription(activeCategory)}
                     </p>
                   </div>
                 </div>
