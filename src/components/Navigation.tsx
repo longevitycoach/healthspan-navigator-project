@@ -52,10 +52,10 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-4">
+            <div className="ml-6 flex items-baseline space-x-2">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   location.pathname === '/' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -65,27 +65,27 @@ const Navigation = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('journey')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   location.pathname === '/' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
                 }`}
               >
-                My Journey
+                Journey
               </button>
               <button 
                 onClick={() => navigateToPage('/reference-values')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   location.pathname === '/reference-values' 
                     ? 'text-blue-600 bg-blue-50 font-semibold' 
                     : 'text-slate-600 hover:text-blue-600'
                 }`}
               >
-                Reference Values
+                References
               </button>
               <button 
                 onClick={() => navigateToPage('/resources')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   location.pathname === '/resources' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -95,17 +95,17 @@ const Navigation = () => {
               </button>
               <button 
                 onClick={() => navigateToPage('/business-plan')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   location.pathname === '/business-plan' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
                 }`}
               >
-                Business Plan
+                Business
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
                   location.pathname === '/' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -115,7 +115,8 @@ const Navigation = () => {
               </button>
               <Button 
                 onClick={() => navigateToPage('/prototypes')}
-                className={`bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 ${
+                size="sm"
+                className={`text-xs bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 ${
                   location.pathname === '/prototypes' ? 'ring-2 ring-blue-300' : ''
                 }`}
               >
