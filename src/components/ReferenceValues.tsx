@@ -1629,9 +1629,19 @@ const ReferenceValues = () => {
             <div className="hidden lg:block w-80 flex-shrink-0">
               <Card className="sticky top-6">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg">
-                    {viewMode === "traditional" ? "Biomarker Categories" : "12 Hallmarks of Aging"}
-                  </CardTitle>
+                  <Tooltip>
+                    <TooltipTrigger asChild>
+                      <CardTitle className="text-lg cursor-help">
+                        {viewMode === "traditional" ? "Biomarker Categories" : "12 Hallmarks of Aging"}
+                      </CardTitle>
+                    </TooltipTrigger>
+                    <TooltipContent side="top" className="max-w-xs">
+                      <p>{viewMode === "traditional" 
+                        ? "Biomarkers organized by body systems and health priorities based on Peter Attia's Four Horsemen approach" 
+                        : "The 12 fundamental biological mechanisms that drive aging, as defined by leading aging researchers"
+                      }</p>
+                    </TooltipContent>
+                  </Tooltip>
                   {viewMode === "hallmarks" && (
                     <p className="text-sm text-slate-600">
                       Fundamental mechanisms of biological aging
