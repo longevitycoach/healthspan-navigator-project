@@ -6,7 +6,7 @@ import { Info, User, BookOpen, Users, Globe, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -1160,6 +1160,7 @@ const internationalExperts = [
 const ReferenceValues = () => {
   const [activeCategory, setActiveCategory] = useState("cardiovascular");
   const [viewMode, setViewMode] = useState("traditional"); // "traditional" or "hallmarks"
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isMobile = useIsMobile();
 
   const categories = [
@@ -1584,39 +1585,60 @@ const ReferenceValues = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6 max-w-full">
-          {/* Mobile Navigation */}
-          {isMobile ? (
-            <div className="md:hidden mb-4">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="outline" className="w-full justify-between">
-                    <div className="flex items-center">
-                      <Menu className="h-4 w-4 mr-2" />
-                      {viewMode === "traditional" 
-                        ? categories.find(cat => cat.id === activeCategory)?.label || "Select Category"
-                        : hallmarksCategories.find(h => h.id === activeCategory)?.label || "Select Hallmark"
-                      }
-                    </div>
-                    <span className="text-lg">
-                      {viewMode === "traditional" 
-                        ? categories.find(cat => cat.id === activeCategory)?.icon
-                        : hallmarksCategories.find(h => h.id === activeCategory)?.icon
-                      }
-                    </span>
+        <div className="flex gap-4 max-w-full relative">
+          {/* Collapsible Sidebar Navigation */}
+          <div className={`${
+            isMobile 
+              ? `fixed top-16 left-0 h-full z-40 transition-transform duration-300 ${
+                  isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+                }`
+              : 'relative'
+          }`}>
+            <div className={`${
+              isMobile 
+                ? 'w-72' 
+                : 'w-12 hover:w-80 transition-all duration-300 group'
+            }`}>
+              <Card className="h-full bg-white shadow-lg">
+                {/* Hamburger Header */}
+                <div className="p-3 border-b flex items-center justify-between">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    className={isMobile ? '' : 'p-1'}
+                  >
+                    {isMobile && isMenuOpen ? (
+                      <X className="h-4 w-4" />
+                    ) : (
+                      <Menu className="h-4 w-4" />
+                    )}
                   </Button>
-                </SheetTrigger>
-                <SheetContent side="left" className="w-80">
-                  <SheetHeader>
-                    <SheetTitle>{viewMode === "traditional" ? "Biomarker Categories" : "12 Hallmarks of Aging"}</SheetTitle>
-                    <SheetDescription>
-                      {viewMode === "traditional" 
-                        ? "Select a category to view optimal reference values"
-                        : "Select a hallmark to view related biomarkers"
-                      }
-                    </SheetDescription>
-                  </SheetHeader>
-                  <div className="mt-6">
+                  
+                  {/* Title - Only visible on hover for desktop */}
+                  {!isMobile && (
+                    <div className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <CardTitle className="text-sm text-center">
+                        {viewMode === "traditional" ? "Categories" : "12 Hallmarks"}
+                      </CardTitle>
+                    </div>
+                  )}
+                  
+                  {/* Mobile Title */}
+                  {isMobile && (
+                    <CardTitle className="text-sm">
+                      {viewMode === "traditional" ? "Categories" : "12 Hallmarks"}
+                    </CardTitle>
+                  )}
+                </div>
+
+                {/* Navigation Content */}
+                <div className={`${
+                  isMobile 
+                    ? 'block' 
+                    : 'hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                }`}>
+                  <CardContent className="p-2">
                     {viewMode === "traditional" ? (
                       <CategoryMenu 
                         categories={categories}
@@ -1624,7 +1646,7 @@ const ReferenceValues = () => {
                         setActiveCategory={setActiveCategory}
                       />
                     ) : (
-                      <div className="space-y-2">
+                      <div className="space-y-1 max-h-[calc(100vh-200px)] overflow-y-auto">
                         {hallmarksCategories.map((hallmark) => (
                           <Tooltip key={hallmark.id}>
                             <TooltipTrigger asChild>
@@ -1632,17 +1654,17 @@ const ReferenceValues = () => {
                                 onClick={() => {
                                   console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.id);
                                   setActiveCategory(hallmark.id);
+                                  if (isMobile) setIsMenuOpen(false);
                                 }}
-                                className={`w-full flex items-center p-3 rounded-lg border transition-colors text-left ${
+                                className={`w-full flex items-center p-2 rounded-lg border transition-colors text-left ${
                                   activeCategory === hallmark.id
                                     ? 'bg-primary/10 border-primary/20' 
                                     : 'hover:bg-slate-50'
                                 }`}
                               >
-                                <span className="text-xl mr-3">{hallmark.icon}</span>
-                                <div className="flex-1">
-                                  <div className="font-medium text-sm">{hallmark.label}</div>
-                                  
+                                <span className="text-lg mr-2 flex-shrink-0">{hallmark.icon}</span>
+                                <div className="flex-1 min-w-0">
+                                  <div className="font-medium text-xs truncate">{hallmark.label}</div>
                                 </div>
                               </button>
                             </TooltipTrigger>
@@ -1670,85 +1692,45 @@ const ReferenceValues = () => {
                         ))}
                       </div>
                     )}
-                  </div>
-                </SheetContent>
-              </Sheet>
-            </div>
-          ) : (
-            /* Desktop Navigation */
-            <div className="hidden md:block w-80 flex-shrink-0">
-              <Card className="sticky top-6">
-                <CardHeader className="pb-3">
-                  <Tooltip>
-                    <TooltipTrigger asChild>
-                      <CardTitle className="text-lg cursor-help text-center">
-                        {viewMode === "traditional" ? "Biomarker Categories" : "12 Hallmarks of Aging"}
-                      </CardTitle>
-                    </TooltipTrigger>
-                    <TooltipContent side="top" className="max-w-xs">
-                      <p>{viewMode === "traditional" 
-                        ? "Biomarkers organized by body systems and health priorities based on Peter Attia's Four Horsemen approach" 
-                        : "The 12 fundamental biological mechanisms that drive aging, as defined by leading aging researchers"
-                      }</p>
-                    </TooltipContent>
-                  </Tooltip>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  {viewMode === "traditional" ? (
-                    <CategoryMenu 
-                      categories={categories}
-                      activeCategory={activeCategory}
-                      setActiveCategory={setActiveCategory}
-                    />
-                  ) : (
-                    <div className="space-y-2 max-h-[calc(100vh-200px)] overflow-y-auto">
-                      {hallmarksCategories.map((hallmark) => (
-                        <Tooltip key={hallmark.id}>
+                  </CardContent>
+                </div>
+
+                {/* Collapsed Icons - Desktop Only */}
+                {!isMobile && (
+                  <div className="group-hover:hidden p-2">
+                    <div className="space-y-1">
+                      {(viewMode === "traditional" ? categories.slice(0, 6) : hallmarksCategories.slice(0, 6)).map((item) => (
+                        <Tooltip key={item.id}>
                           <TooltipTrigger asChild>
                             <button
-                              onClick={() => {
-                                console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.id);
-                                setActiveCategory(hallmark.id);
-                              }}
-                              className={`w-full flex items-center p-3 rounded-lg border transition-colors text-left ${
-                                activeCategory === hallmark.id
+                              onClick={() => setActiveCategory(item.id)}
+                              className={`w-full p-1.5 rounded-lg border transition-colors flex justify-center ${
+                                activeCategory === item.id
                                   ? 'bg-primary/10 border-primary/20' 
                                   : 'hover:bg-slate-50'
                               }`}
                             >
-                              <span className="text-xl mr-3">{hallmark.icon}</span>
-                              <div className="flex-1">
-                                <div className="font-medium text-sm">{hallmark.label}</div>
-                              </div>
+                              <span className="text-sm">{item.icon}</span>
                             </button>
                           </TooltipTrigger>
-                          <TooltipContent side="right" className="max-w-xs">
-                            <div className="space-y-2">
-                              <h4 className="font-semibold">{hallmark.label}</h4>
-                              <p className="text-sm">{hallmark.description}</p>
-                              <div className="flex flex-wrap gap-1">
-                                {hallmark.biomarkers.map((biomarker) => {
-                                  const category = categories.find(c => c.id === biomarker);
-                                  return category ? (
-                                    <Badge 
-                                      key={biomarker} 
-                                      variant="outline" 
-                                      className="text-xs"
-                                    >
-                                      {category.label}
-                                    </Badge>
-                                  ) : null;
-                                })}
-                              </div>
-                            </div>
+                          <TooltipContent side="right">
+                            <p className="text-xs">{item.label}</p>
                           </TooltipContent>
                         </Tooltip>
                       ))}
                     </div>
-                  )}
-                </CardContent>
+                  </div>
+                )}
               </Card>
             </div>
+          </div>
+
+          {/* Overlay for mobile */}
+          {isMobile && isMenuOpen && (
+            <div 
+              className="fixed inset-0 bg-black/20 z-30"
+              onClick={() => setIsMenuOpen(false)}
+            />
           )}
 
           {/* Content Area */}
