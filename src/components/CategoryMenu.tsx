@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 interface Category {
   id: string;
@@ -46,24 +47,25 @@ const CategoryMenu = ({ categories, activeCategory, setActiveCategory }: Categor
             </h3>
             <div className="space-y-1">
               {categoryGroup.map((category) => (
-                <Button
-                  key={category.id}
-                  variant={activeCategory === category.id ? "default" : "ghost"}
-                  className="w-full justify-start text-left h-auto p-3"
-                  onClick={() => setActiveCategory(category.id)}
-                >
-                  <div className="flex items-start gap-3 w-full">
-                    <span className="text-lg">{category.icon}</span>
-                    <div className="flex-1 min-w-0 text-left">
-                      <div className="font-medium text-sm">{category.label}</div>
-                      {category.description && (
-                        <div className="text-xs mt-0.5 opacity-70">
-                          {category.description}
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </Button>
+                <Tooltip key={category.id}>
+                  <TooltipTrigger asChild>
+                    <Button
+                      variant={activeCategory === category.id ? "default" : "ghost"}
+                      className="w-full justify-start text-left h-auto px-3 py-2"
+                      onClick={() => setActiveCategory(category.id)}
+                    >
+                      <div className="flex items-center gap-2 w-full">
+                        <span className="text-base">{category.icon}</span>
+                        <span className="font-medium text-sm">{category.label}</span>
+                      </div>
+                    </Button>
+                  </TooltipTrigger>
+                  {category.description && (
+                    <TooltipContent side="right">
+                      <p className="max-w-xs">{category.description}</p>
+                    </TooltipContent>
+                  )}
+                </Tooltip>
               ))}
             </div>
           </div>
