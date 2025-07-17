@@ -55,43 +55,69 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-4">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname === '/' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('journey')}
-                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname === '/' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 My Journey
               </button>
               <button 
                 onClick={() => navigateToPage('/reference-values')}
-                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname === '/reference-values' 
+                    ? 'text-blue-600 bg-blue-50 font-semibold' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Reference Values
               </button>
               <button 
                 onClick={() => navigateToPage('/resources')}
-                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname === '/resources' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Resources
               </button>
               <button 
                 onClick={() => navigateToPage('/business-plan')}
-                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname === '/business-plan' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Business Plan
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  location.pathname === '/' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Contact
               </button>
               <Button 
                 onClick={() => navigateToPage('/prototypes')}
-                className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700"
+                className={`bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 ${
+                  location.pathname === '/prototypes' ? 'ring-2 ring-blue-300' : ''
+                }`}
               >
                 Early Access
               </Button>
@@ -115,44 +141,70 @@ const Navigation = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white/95 backdrop-blur-md rounded-lg mt-2 border border-slate-200">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  location.pathname === '/' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Home
               </button>
               <button 
                 onClick={() => scrollToSection('journey')}
-                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  location.pathname === '/' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 My Journey
               </button>
               <button 
                 onClick={() => navigateToPage('/reference-values')}
-                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  location.pathname === '/reference-values' 
+                    ? 'text-blue-600 bg-blue-50 font-semibold' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Reference Values
               </button>
               <button 
                 onClick={() => navigateToPage('/resources')}
-                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  location.pathname === '/resources' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Resources
               </button>
               <button 
                 onClick={() => navigateToPage('/business-plan')}
-                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  location.pathname === '/business-plan' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Business Plan
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left text-slate-600 hover:text-blue-600 px-3 py-2 rounded-md text-base font-medium transition-colors"
+                className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  location.pathname === '/' 
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-slate-600 hover:text-blue-600'
+                }`}
               >
                 Contact
               </button>
               <div className="pt-2">
                 <Button 
                   onClick={() => navigateToPage('/prototypes')}
-                  className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700"
+                  className={`w-full bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 ${
+                    location.pathname === '/prototypes' ? 'ring-2 ring-blue-300' : ''
+                  }`}
                 >
                   Early Access
                 </Button>
