@@ -1173,6 +1173,7 @@ const internationalExperts = [
 
 const ReferenceValues = () => {
   const [activeCategory, setActiveCategory] = useState("cardiovascular");
+  const [viewMode, setViewMode] = useState("traditional"); // "traditional" or "hallmarks"
   const isMobile = useIsMobile();
 
   const categories = [
@@ -1184,6 +1185,7 @@ const ReferenceValues = () => {
     { id: "liver", label: "Liver", icon: "🫘" },
     { id: "kidney", label: "Kidney", icon: "💧" },
     { id: "longevity", label: "Longevity", icon: "🧪" },
+    { id: "microbiome", label: "Microbiome", icon: "🦠" },
     { id: "amino-acids", label: "Amino Acids", icon: "🧱" },
     { id: "oxidative-stress", label: "Oxidative Stress", icon: "🔥" },
     { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️" },
@@ -1193,6 +1195,94 @@ const ReferenceValues = () => {
     { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊" },
     { id: "fitness-performance", label: "Fitness & Performance", icon: "💪" },
     { id: "specialized", label: "Specialized", icon: "🔬" }
+  ];
+
+  // 12 Hallmarks of Aging Categories
+  const hallmarksCategories = [
+    { 
+      id: "genomic-instability", 
+      label: "Genomic Instability", 
+      icon: "🧬",
+      description: "DNA damage accumulation and chromosomal instability",
+      biomarkers: ["longevity"] // Maps to existing biomarker categories
+    },
+    { 
+      id: "telomere-attrition", 
+      label: "Telomere Attrition", 
+      icon: "🔗",
+      description: "Progressive shortening of chromosome protective caps",
+      biomarkers: ["longevity", "advanced-inflammatory"]
+    },
+    { 
+      id: "epigenetic-alterations", 
+      label: "Epigenetic Alterations", 
+      icon: "🎭",
+      description: "Changes in gene expression patterns without DNA sequence changes",
+      biomarkers: ["longevity", "hormones"]
+    },
+    { 
+      id: "loss-proteostasis", 
+      label: "Loss of Proteostasis", 
+      icon: "🔄",
+      description: "Decline in protein quality control and cellular housekeeping",
+      biomarkers: ["oxidative-stress", "neurological", "liver"]
+    },
+    { 
+      id: "disabled-macroautophagy", 
+      label: "Disabled Macroautophagy", 
+      icon: "♻️",
+      description: "Impaired cellular recycling and waste removal systems",
+      biomarkers: ["metabolic", "longevity", "liver"]
+    },
+    { 
+      id: "deregulated-nutrient-sensing", 
+      label: "Deregulated Nutrient Sensing", 
+      icon: "⚖️",
+      description: "Disrupted metabolic signaling pathways (mTOR, AMPK, insulin)",
+      biomarkers: ["metabolic", "enhanced-metabolic", "hormones"]
+    },
+    { 
+      id: "mitochondrial-dysfunction", 
+      label: "Mitochondrial Dysfunction", 
+      icon: "⚡",
+      description: "Decline in cellular energy production and respiratory capacity",
+      biomarkers: ["oxidative-stress", "fitness-performance", "metabolic"]
+    },
+    { 
+      id: "cellular-senescence", 
+      label: "Cellular Senescence", 
+      icon: "🧓",
+      description: "Accumulation of permanently growth-arrested cells",
+      biomarkers: ["advanced-inflammatory", "longevity"]
+    },
+    { 
+      id: "stem-cell-exhaustion", 
+      label: "Stem Cell Exhaustion", 
+      icon: "🌱",
+      description: "Decline in regenerative capacity and tissue repair",
+      biomarkers: ["hormones", "vitamins", "minerals"]
+    },
+    { 
+      id: "altered-intercellular-communication", 
+      label: "Altered Intercellular Communication", 
+      icon: "📡",
+      description: "Disrupted cell-to-cell signaling and tissue coordination",
+      biomarkers: ["hormones", "neurological", "advanced-inflammatory"]
+    },
+    { 
+      id: "chronic-inflammation", 
+      label: "Chronic Inflammation", 
+      icon: "🔥",
+      description: "Low-grade systemic inflammation (inflammaging)",
+      biomarkers: ["cardiovascular", "advanced-inflammatory", "microbiome"]
+    },
+    { 
+      id: "dysbiosis", 
+      label: "Dysbiosis", 
+      icon: "🦠",
+      description: "Imbalanced gut microbiome affecting systemic health",
+      biomarkers: ["microbiome", "specialized"]
+    }
   ];
 
   const ExpertSourcesModal = () => (
@@ -1420,6 +1510,32 @@ const ReferenceValues = () => {
               Research-Based
             </Badge>
           </div>
+          
+          {/* View Mode Toggle */}
+          <div className="mt-6 flex justify-center">
+            <div className="flex bg-slate-100 rounded-lg p-1">
+              <button
+                onClick={() => setViewMode("traditional")}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  viewMode === "traditional" 
+                    ? "bg-white text-slate-900 shadow-sm" 
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                Traditional Categories
+              </button>
+              <button
+                onClick={() => setViewMode("hallmarks")}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  viewMode === "hallmarks" 
+                    ? "bg-white text-slate-900 shadow-sm" 
+                    : "text-slate-600 hover:text-slate-900"
+                }`}
+              >
+                12 Hallmarks of Aging
+              </button>
+            </div>
+          </div>
         </div>
 
         <div className="flex flex-col lg:flex-row gap-6">
@@ -1460,14 +1576,51 @@ const ReferenceValues = () => {
             <div className="hidden lg:block w-80 flex-shrink-0">
               <Card className="sticky top-6">
                 <CardHeader className="pb-3">
-                  <CardTitle className="text-lg">Biomarker Categories</CardTitle>
+                  <CardTitle className="text-lg">
+                    {viewMode === "traditional" ? "Biomarker Categories" : "12 Hallmarks of Aging"}
+                  </CardTitle>
+                  {viewMode === "hallmarks" && (
+                    <p className="text-sm text-slate-600">
+                      Fundamental mechanisms of biological aging
+                    </p>
+                  )}
                 </CardHeader>
                 <CardContent className="pt-0">
-                  <CategoryMenu 
-                    categories={categories}
-                    activeCategory={activeCategory}
-                    setActiveCategory={setActiveCategory}
-                  />
+                  {viewMode === "traditional" ? (
+                    <CategoryMenu 
+                      categories={categories}
+                      activeCategory={activeCategory}
+                      setActiveCategory={setActiveCategory}
+                    />
+                  ) : (
+                    <div className="space-y-2">
+                      {hallmarksCategories.map((hallmark) => (
+                        <button
+                          key={hallmark.id}
+                          onClick={() => {
+                            // Set to first biomarker category for this hallmark
+                            setActiveCategory(hallmark.biomarkers[0]);
+                          }}
+                          className="w-full text-left p-3 rounded-lg border hover:bg-slate-50 transition-colors"
+                        >
+                          <div className="flex items-start gap-3">
+                            <span className="text-xl">{hallmark.icon}</span>
+                            <div>
+                              <h4 className="font-medium text-slate-800 text-sm">{hallmark.label}</h4>
+                              <p className="text-xs text-slate-600 mt-1">{hallmark.description}</p>
+                              <div className="flex flex-wrap gap-1 mt-2">
+                                {hallmark.biomarkers.map((biomarker) => (
+                                  <Badge key={biomarker} variant="secondary" className="text-xs">
+                                    {categories.find(c => c.id === biomarker)?.label}
+                                  </Badge>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  )}
                 </CardContent>
               </Card>
             </div>
