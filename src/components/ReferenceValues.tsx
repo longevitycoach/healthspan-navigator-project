@@ -1593,26 +1593,83 @@ const ReferenceValues = () => {
                   <Button variant="outline" className="w-full justify-between">
                     <div className="flex items-center">
                       <Menu className="h-4 w-4 mr-2" />
-                      {categories.find(cat => cat.id === activeCategory)?.label || "Select Category"}
+                      {viewMode === "traditional" 
+                        ? categories.find(cat => cat.id === activeCategory)?.label || "Select Category"
+                        : hallmarksCategories.find(h => h.id === activeCategory)?.label || "Select Hallmark"
+                      }
                     </div>
                     <span className="text-lg">
-                      {categories.find(cat => cat.id === activeCategory)?.icon}
+                      {viewMode === "traditional" 
+                        ? categories.find(cat => cat.id === activeCategory)?.icon
+                        : hallmarksCategories.find(h => h.id === activeCategory)?.icon
+                      }
                     </span>
                   </Button>
                 </SheetTrigger>
                 <SheetContent side="left" className="w-80">
                   <SheetHeader>
-                    <SheetTitle>Biomarker Categories</SheetTitle>
+                    <SheetTitle>{viewMode === "traditional" ? "Biomarker Categories" : "12 Hallmarks of Aging"}</SheetTitle>
                     <SheetDescription>
-                      Select a category to view optimal reference values
+                      {viewMode === "traditional" 
+                        ? "Select a category to view optimal reference values"
+                        : "Select a hallmark to view related biomarkers"
+                      }
                     </SheetDescription>
                   </SheetHeader>
                   <div className="mt-6">
-                    <CategoryMenu 
-                      categories={categories}
-                      activeCategory={activeCategory}
-                      setActiveCategory={setActiveCategory}
-                    />
+                    {viewMode === "traditional" ? (
+                      <CategoryMenu 
+                        categories={categories}
+                        activeCategory={activeCategory}
+                        setActiveCategory={setActiveCategory}
+                      />
+                    ) : (
+                      <div className="space-y-2">
+                        {hallmarksCategories.map((hallmark) => (
+                          <Tooltip key={hallmark.id}>
+                            <TooltipTrigger asChild>
+                              <button
+                                onClick={() => {
+                                  console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.id);
+                                  setActiveCategory(hallmark.id);
+                                }}
+                                className={`w-full flex items-center p-3 rounded-lg border transition-colors text-left ${
+                                  activeCategory === hallmark.id
+                                    ? 'bg-primary/10 border-primary/20' 
+                                    : 'hover:bg-slate-50'
+                                }`}
+                              >
+                                <span className="text-xl mr-3">{hallmark.icon}</span>
+                                <div className="flex-1">
+                                  <div className="font-medium text-sm">{hallmark.label}</div>
+                                  <div className="text-xs text-slate-500 mt-1 line-clamp-2">{hallmark.description}</div>
+                                </div>
+                              </button>
+                            </TooltipTrigger>
+                            <TooltipContent side="right" className="max-w-xs">
+                              <div className="space-y-2">
+                                <h4 className="font-semibold">{hallmark.label}</h4>
+                                <p className="text-sm">{hallmark.description}</p>
+                                <div className="flex flex-wrap gap-1">
+                                  {hallmark.biomarkers.map((biomarker) => {
+                                    const category = categories.find(c => c.id === biomarker);
+                                    return category ? (
+                                      <Badge 
+                                        key={biomarker} 
+                                        variant="outline" 
+                                        className="text-xs"
+                                      >
+                                        {category.label}
+                                      </Badge>
+                                    ) : null;
+                                  })}
+                                </div>
+                              </div>
+                            </TooltipContent>
+                          </Tooltip>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </SheetContent>
               </Sheet>
@@ -1644,7 +1701,7 @@ const ReferenceValues = () => {
                       setActiveCategory={setActiveCategory}
                     />
                   ) : (
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="space-y-2 max-h-[calc(100vh-200px)] overflow-y-auto">
                       {hallmarksCategories.map((hallmark) => (
                         <Tooltip key={hallmark.id}>
                           <TooltipTrigger asChild>
@@ -1653,14 +1710,17 @@ const ReferenceValues = () => {
                                 console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.id);
                                 setActiveCategory(hallmark.id);
                               }}
-                              className={`flex flex-col items-center p-3 rounded-lg border transition-colors ${
+                              className={`w-full flex items-center p-3 rounded-lg border transition-colors text-left ${
                                 activeCategory === hallmark.id
                                   ? 'bg-primary/10 border-primary/20' 
                                   : 'hover:bg-slate-50'
                               }`}
                             >
-                              <span className="text-2xl mb-1">{hallmark.icon}</span>
-                              <span className="text-xs text-center text-slate-600 leading-tight">{hallmark.label}</span>
+                              <span className="text-xl mr-3">{hallmark.icon}</span>
+                              <div className="flex-1">
+                                <div className="font-medium text-sm">{hallmark.label}</div>
+                                <div className="text-xs text-slate-500 mt-1 line-clamp-2">{hallmark.description}</div>
+                              </div>
                             </button>
                           </TooltipTrigger>
                           <TooltipContent side="right" className="max-w-xs">
