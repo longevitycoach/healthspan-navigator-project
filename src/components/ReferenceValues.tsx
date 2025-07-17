@@ -1413,11 +1413,11 @@ const ReferenceValues = () => {
                       <Info className="h-4 w-4 text-slate-400" />
                     </Button>
                   </HoverCardTrigger>
-                  <HoverCardContent className="w-80 p-4" side="left">
-                    <div className="space-y-3">
+                  <HoverCardContent className="w-96 p-4 text-left" side="left">
+                    <div className="space-y-3 text-left">
                       <div>
-                        <h4 className="font-semibold text-slate-800 mb-2">{biomarker.name}</h4>
-                        <p className="text-sm text-slate-600 leading-relaxed">{biomarker.description}</p>
+                        <h4 className="font-semibold text-slate-800 mb-2 text-left">{biomarker.name}</h4>
+                        <p className="text-sm text-slate-600 leading-relaxed text-left">{biomarker.description}</p>
                       </div>
                       
                       {biomarker.clinicalNotes && (
@@ -1431,7 +1431,7 @@ const ReferenceValues = () => {
                               </Badge>
                             )}
                           </h5>
-                          <p className="text-xs text-slate-600 leading-relaxed">{biomarker.clinicalNotes}</p>
+                          <p className="text-xs text-slate-600 leading-relaxed text-left">{biomarker.clinicalNotes}</p>
                         </div>
                       )}
                       
