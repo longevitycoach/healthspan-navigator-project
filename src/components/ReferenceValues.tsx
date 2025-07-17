@@ -1597,7 +1597,7 @@ const ReferenceValues = () => {
             <div className={`${
               isMobile 
                 ? 'w-72' 
-                : 'w-12 hover:w-80 transition-all duration-300 group'
+                : 'w-12 lg:w-80 hover:w-80 transition-all duration-300 group'
             }`}>
               <Card className="h-full bg-white shadow-lg">
                 {/* Hamburger Header */}
@@ -1615,9 +1615,16 @@ const ReferenceValues = () => {
                     )}
                   </Button>
                   
-                  {/* Title - Only visible on hover for desktop */}
+                  {/* Title - Visible on large screens, hidden on hover for medium screens */}
                   {!isMobile && (
-                    <div className="hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <div className="hidden lg:block group-hover:hidden">
+                      <CardTitle className="text-sm text-center">
+                        {viewMode === "traditional" ? "Categories" : "12 Hallmarks"}
+                      </CardTitle>
+                    </div>
+                  )}
+                  {!isMobile && (
+                    <div className="hidden md:group-hover:block lg:hidden opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <CardTitle className="text-sm text-center">
                         {viewMode === "traditional" ? "Categories" : "12 Hallmarks"}
                       </CardTitle>
@@ -1636,7 +1643,7 @@ const ReferenceValues = () => {
                 <div className={`${
                   isMobile 
                     ? 'block' 
-                    : 'hidden group-hover:block opacity-0 group-hover:opacity-100 transition-opacity duration-300'
+                    : 'hidden md:group-hover:block lg:block opacity-0 md:group-hover:opacity-100 lg:opacity-100 transition-opacity duration-300'
                 }`}>
                   <CardContent className="p-2">
                     {viewMode === "traditional" ? (
@@ -1697,7 +1704,7 @@ const ReferenceValues = () => {
 
                 {/* Collapsed Icons - Desktop Only */}
                 {!isMobile && (
-                  <div className="group-hover:hidden p-2">
+                  <div className="md:group-hover:hidden lg:hidden p-2">
                     <div className="space-y-1">
                       {(viewMode === "traditional" ? categories.slice(0, 6) : hallmarksCategories.slice(0, 6)).map((item) => (
                         <Tooltip key={item.id}>
