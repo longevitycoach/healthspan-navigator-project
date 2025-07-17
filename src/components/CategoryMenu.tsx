@@ -25,13 +25,12 @@ const CategoryMenu = ({ categories, activeCategory, setActiveCategory }: Categor
     return acc;
   }, {} as Record<string, Category[]>);
 
-  const priorityOrder = ['horseman', 'foundation', 'performance', 'organ', 'specialized'];
+  const priorityOrder = ['horseman', 'foundation', 'performance', 'organ'];
   const priorityLabels = {
     horseman: '🏇 Four Horsemen',
     foundation: '🏗️ Foundation', 
     performance: '🎯 Performance',
-    organ: '🏥 Organ Function',
-    specialized: '🔬 Specialized'
+    organ: '🏥 Organ Function'
   };
 
   return (

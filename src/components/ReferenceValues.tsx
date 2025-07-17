@@ -1178,15 +1178,8 @@ const ReferenceValues = () => {
     // 🎯 PERFORMANCE & LONGEVITY
     { id: "fitness-performance", label: "Fitness & Performance", icon: "💪", priority: "performance", description: "Exercise capacity & muscle health" },
     { id: "longevity", label: "Longevity", icon: "🧪", priority: "performance", description: "Biological age & lifespan markers" },
-    
-    // 🏥 ORGAN FUNCTION
-    { id: "liver", label: "Liver", icon: "🫘", priority: "organ", description: "Detoxification & metabolism" },
-    { id: "kidney", label: "Kidney", icon: "💧", priority: "organ", description: "Filtration & electrolyte balance" },
-    { id: "bone-health", label: "Bone Health", icon: "🦴", priority: "organ", description: "Skeletal integrity & osteoporosis prevention" },
-    
-    // 🔬 SPECIALIZED TESTING
-    { id: "amino-acids", label: "Amino Acids", icon: "🧱", priority: "specialized", description: "Protein building blocks" },
-    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️", priority: "specialized", description: "Toxic element exposure" }
+    { id: "amino-acids", label: "Amino Acids", icon: "🧱", priority: "performance", description: "Protein building blocks" },
+    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️", priority: "performance", description: "Toxic element exposure" }
   ];
 
   // 12 Hallmarks of Aging Categories
