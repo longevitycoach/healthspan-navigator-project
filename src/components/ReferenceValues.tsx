@@ -126,12 +126,39 @@ const metabolicBiomarkers = [
   },
   {
     name: "Continuous Glucose Monitoring (CGM)",
-    optimalRange: "70-140 mg/dL (minimal spikes)",
-    officialRange: "Not established",
-    description: "Monitors blood sugar spikes throughout the day. Rapid increases are undesirable as they can lead to energy crashes and cravings.",
-    clinicalNotes: "Important for individuals aiming for stable energy, weight management, and prevention of type 2 diabetes. Can reveal glucose patterns not visible in single measurements.",
+    optimalRange: "Time in range 70-180 mg/dL: >70%, Mean glucose <140 mg/dL",
+    officialRange: "Fasting: 70-100 mg/dL, Random: <200 mg/dL",
+    description: "Real-time glucose variability and patterns over 14 days",
+    clinicalNotes: "Provides insights into metabolic flexibility, meal responses, and optimal eating patterns for individual optimization. Can reveal glucose patterns not visible in single measurements.",
     factors: ["Diet timing", "Food composition", "Exercise", "Stress", "Sleep"],
-    expertSource: "Jessie Inchauspé"
+    expertSource: "Inchauspé Glucose Goddess"
+  },
+  {
+    name: "Glucose Variability Index (GVI)",
+    optimalRange: "<1.2",
+    officialRange: "Not established",
+    description: "Glucose stability measurement from CGM data",
+    clinicalNotes: "Lower variability indicates better metabolic health and reduced diabetes risk. Measures glucose stability throughout the day.",
+    factors: ["Meal timing", "Food composition", "Exercise timing", "Sleep"],
+    expertSource: "Inchauspé Glucose Goddess"
+  },
+  {
+    name: "Dawn Phenomenon Glucose Rise",
+    optimalRange: "<20 mg/dL increase",
+    officialRange: "Not established",
+    description: "Morning glucose elevation from CGM",
+    clinicalNotes: "Smaller rise indicates better glucose control and insulin sensitivity. Normal cortisol awakening response.",
+    factors: ["Sleep quality", "Cortisol rhythm", "Insulin sensitivity", "Evening meal timing"],
+    expertSource: "Inchauspé Glucose Goddess"
+  },
+  {
+    name: "Post-Meal Glucose Spike",
+    optimalRange: "<40 mg/dL above baseline",
+    officialRange: "Not established", 
+    description: "Maximum glucose increase after meals",
+    clinicalNotes: "Smaller spikes indicate better metabolic flexibility and reduced inflammatory response to food.",
+    factors: ["Food composition", "Meal order", "Exercise", "Fiber intake"],
+    expertSource: "Inchauspé Glucose Goddess"
   }
 ];
 
@@ -799,46 +826,6 @@ const advancedInflammatoryBiomarkers = [
 ];
 
 
-// Enhanced Metabolic Biomarkers (Inchauspé recommendations)
-const enhancedMetabolicBiomarkers = [
-  {
-    name: "Glucose Variability Index (GVI)",
-    optimalRange: "<1.2",
-    officialRange: "Not established",
-    description: "Glucose stability measurement from CGM data",
-    clinicalNotes: "Lower variability indicates better metabolic health and reduced diabetes risk. Measures glucose stability throughout the day.",
-    factors: ["Meal timing", "Food composition", "Exercise timing", "Sleep"],
-    expertSource: "Inchauspé Glucose Goddess"
-  },
-  {
-    name: "Dawn Phenomenon Glucose Rise",
-    optimalRange: "<20 mg/dL increase",
-    officialRange: "Not established",
-    description: "Morning glucose elevation from CGM",
-    clinicalNotes: "Smaller rise indicates better glucose control and insulin sensitivity. Normal cortisol awakening response.",
-    factors: ["Sleep quality", "Cortisol rhythm", "Insulin sensitivity", "Evening meal timing"],
-    expertSource: "Inchauspé Glucose Goddess"
-  },
-  {
-    name: "Post-Meal Glucose Spike",
-    optimalRange: "<40 mg/dL above baseline",
-    officialRange: "Not established", 
-    description: "Maximum glucose increase after meals",
-    clinicalNotes: "Smaller spikes indicate better metabolic flexibility and reduced inflammatory response to food.",
-    factors: ["Food composition", "Meal order", "Exercise", "Fiber intake"],
-    expertSource: "Inchauspé Glucose Goddess"
-  },
-  {
-    name: "Continuous Glucose Monitoring (CGM)",
-    optimalRange: "Time in range 70-180 mg/dL: >70%, Mean glucose <140 mg/dL",
-    officialRange: "Fasting: 70-100 mg/dL, Random: <200 mg/dL",
-    description: "Real-time glucose variability and patterns over 14 days",
-    clinicalNotes: "Provides insights into metabolic flexibility, meal responses, and optimal eating patterns for individual optimization.",
-    factors: ["Diet timing", "Food composition", "Exercise", "Stress", "Sleep"],
-    expertSource: "Inchauspé Glucose Goddess"
-  }
-];
-
 // Comprehensive Fitness Biomarkers (Froböse recommendations)
 // Comprehensive Microbiome Biomarkers (Expert analysis compilation)
 const microbiomeBiomarkers = [
@@ -1191,7 +1178,6 @@ const ReferenceValues = () => {
     // 🎯 PERFORMANCE & LONGEVITY
     { id: "fitness-performance", label: "Fitness & Performance", icon: "💪", priority: "performance", description: "Exercise capacity & muscle health" },
     { id: "longevity", label: "Longevity", icon: "🧪", priority: "performance", description: "Biological age & lifespan markers" },
-    { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊", priority: "performance", description: "Advanced glucose optimization" },
     
     // 🏥 ORGAN FUNCTION
     { id: "liver", label: "Liver", icon: "🫘", priority: "organ", description: "Detoxification & metabolism" },
@@ -1493,7 +1479,6 @@ const ReferenceValues = () => {
       case "bone-health": return boneHealthBiomarkers;
       case "neurological": return neurologicalBiomarkers;
       case "advanced-inflammatory": return advancedInflammatoryBiomarkers;
-      case "enhanced-metabolic": return enhancedMetabolicBiomarkers;
       case "fitness-performance": return fitnessPerformanceBiomarkers;
       default: 
         console.warn('Unknown category:', categoryId);
