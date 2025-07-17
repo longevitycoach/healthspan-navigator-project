@@ -827,6 +827,15 @@ const enhancedMetabolicBiomarkers = [
     clinicalNotes: "Smaller spikes indicate better metabolic flexibility and reduced inflammatory response to food.",
     factors: ["Food composition", "Meal order", "Exercise", "Fiber intake"],
     expertSource: "Inchauspé Glucose Goddess"
+  },
+  {
+    name: "Continuous Glucose Monitoring (CGM)",
+    optimalRange: "Time in range 70-180 mg/dL: >70%, Mean glucose <140 mg/dL",
+    officialRange: "Fasting: 70-100 mg/dL, Random: <200 mg/dL",
+    description: "Real-time glucose variability and patterns over 14 days",
+    clinicalNotes: "Provides insights into metabolic flexibility, meal responses, and optimal eating patterns for individual optimization.",
+    factors: ["Diet timing", "Food composition", "Exercise", "Stress", "Sleep"],
+    expertSource: "Inchauspé Glucose Goddess"
   }
 ];
 
@@ -976,6 +985,42 @@ const microbiomeBiomarkers = [
     clinicalNotes: "Critical for mood regulation and neurological health. Imbalances linked to depression and anxiety disorders.",
     factors: ["Gut bacteria", "Inflammation", "Stress", "Diet", "Mental health"],
     expertSource: "Prof. Dr. Bernd Kleine-Gunk"
+  },
+  {
+    name: "Short-Chain Fatty Acids (SCFA)",
+    optimalRange: "High diversity and concentration",
+    officialRange: "Not established",
+    description: "Beneficial metabolites produced by gut bacteria",
+    clinicalNotes: "Butyrate, acetate, and propionate levels indicate gut health and influence metabolism, immunity, and brain function.",
+    factors: ["Gut microbiome", "Fiber intake", "Diet quality", "Prebiotics"],
+    expertSource: "Microbiome Research"
+  },
+  {
+    name: "Microbiome Analysis",
+    optimalRange: "High diversity (Shannon >3.5)",
+    officialRange: "Not established",
+    description: "Assessment of gut bacterial composition and metabolite production",
+    clinicalNotes: "Can explain non-specific symptoms like fatigue and inflammation. Links gut health to systemic wellness.",
+    factors: ["Diet", "Antibiotics", "Stress", "Environment", "Birth method"],
+    expertSource: "Microbiome Research"
+  },
+  {
+    name: "Food Intolerance Panel",
+    optimalRange: "No significant IgG reactions",
+    officialRange: "Not established",
+    description: "Identifies delayed food sensitivities contributing to inflammation",
+    clinicalNotes: "Can identify trigger foods causing gut inflammation, brain fog, and systemic symptoms.",
+    factors: ["Gut health", "Immune system", "Genetics", "Exposure history"],
+    expertSource: "Functional Medicine"
+  },
+  {
+    name: "Gut Permeability (Leaky Gut) Test",
+    optimalRange: "Lactulose/Mannitol ratio <0.03",
+    officialRange: "Not established",
+    description: "Assesses intestinal barrier integrity",
+    clinicalNotes: "Increased permeability allows toxins and food particles to enter bloodstream, triggering systemic inflammation.",
+    factors: ["Diet", "Stress", "NSAIDs", "Infections", "Alcohol"],
+    expertSource: "Functional Medicine"
   }
 ];
 
@@ -1018,53 +1063,6 @@ const fitnessPerformanceBiomarkers = [
   }
 ];
 
-const specializedBiomarkers = [
-  {
-    name: "Continuous Glucose Monitoring (CGM)",
-    optimalRange: "Time in range 70-180 mg/dL: >70%, Mean glucose <140 mg/dL",
-    officialRange: "Fasting: 70-100 mg/dL, Random: <200 mg/dL",
-    description: "Real-time glucose variability and patterns over 14 days",
-    clinicalNotes: "Provides insights into metabolic flexibility, meal responses, and optimal eating patterns for individual optimization.",
-    factors: ["Diet timing", "Food composition", "Exercise", "Stress", "Sleep"],
-    expertSource: "Inchauspé Glucose Goddess"
-  },
-  {
-    name: "Short-Chain Fatty Acids (SCFA)",
-    optimalRange: "High diversity and concentration",
-    officialRange: "Not established",
-    description: "Beneficial metabolites produced by gut bacteria",
-    clinicalNotes: "Butyrate, acetate, and propionate levels indicate gut health and influence metabolism, immunity, and brain function.",
-    factors: ["Gut microbiome", "Fiber intake", "Diet quality", "Prebiotics"],
-    expertSource: "Microbiome Research"
-  },
-  {
-    name: "Microbiome Analysis",
-    optimalRange: "High diversity (Shannon >3.5)",
-    officialRange: "Not established",
-    description: "Assessment of gut bacterial composition and metabolite production",
-    clinicalNotes: "Can explain non-specific symptoms like fatigue and inflammation. Links gut health to systemic wellness.",
-    factors: ["Diet", "Antibiotics", "Stress", "Environment", "Birth method"],
-    expertSource: "Microbiome Research"
-  },
-  {
-    name: "Food Intolerance Panel",
-    optimalRange: "No significant IgG reactions",
-    officialRange: "Not established",
-    description: "Identifies delayed food sensitivities contributing to inflammation",
-    clinicalNotes: "Can identify trigger foods causing gut inflammation, brain fog, and systemic symptoms.",
-    factors: ["Gut health", "Immune system", "Genetics", "Exposure history"],
-    expertSource: "Functional Medicine"
-  },
-  {
-    name: "Gut Permeability (Leaky Gut) Test",
-    optimalRange: "Lactulose/Mannitol ratio <0.03",
-    officialRange: "Not established",
-    description: "Assesses intestinal barrier integrity",
-    clinicalNotes: "Increased permeability allows toxins and food particles to enter bloodstream, triggering systemic inflammation.",
-    factors: ["Diet", "Stress", "NSAIDs", "Infections", "Alcohol"],
-    expertSource: "Functional Medicine"
-  }
-];
 
 const germanExperts = [
   {
@@ -1202,8 +1200,7 @@ const ReferenceValues = () => {
     
     // 🔬 SPECIALIZED TESTING
     { id: "amino-acids", label: "Amino Acids", icon: "🧱", priority: "specialized", description: "Protein building blocks" },
-    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️", priority: "specialized", description: "Toxic element exposure" },
-    { id: "specialized", label: "Gut Function", icon: "🔬", priority: "specialized", description: "Advanced digestive testing" }
+    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️", priority: "specialized", description: "Toxic element exposure" }
   ];
 
   // 12 Hallmarks of Aging Categories
@@ -1498,7 +1495,6 @@ const ReferenceValues = () => {
       case "advanced-inflammatory": return advancedInflammatoryBiomarkers;
       case "enhanced-metabolic": return enhancedMetabolicBiomarkers;
       case "fitness-performance": return fitnessPerformanceBiomarkers;
-      case "specialized": return specializedBiomarkers;
       default: 
         console.warn('Unknown category:', categoryId);
         return [];
