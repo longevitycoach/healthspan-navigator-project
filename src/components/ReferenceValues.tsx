@@ -1624,7 +1624,7 @@ const ReferenceValues = () => {
                 <CardHeader className="pb-3">
                   <Tooltip>
                     <TooltipTrigger asChild>
-                      <CardTitle className="text-lg cursor-help">
+                      <CardTitle className="text-lg cursor-help text-center">
                         {viewMode === "traditional" ? "Biomarker Categories" : "12 Hallmarks of Aging"}
                       </CardTitle>
                     </TooltipTrigger>
