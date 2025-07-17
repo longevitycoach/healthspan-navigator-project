@@ -48,12 +48,6 @@ const englishBooks = [
     "url": "https://www.amazon.com/dp/1426216130"
   },
   {
-    "title": "Super Human: The Bulletproof Plan to Age Backward and Maybe Even Live Forever",
-    "author": "Dave Asprey",
-    "description": "Bulletproof plan for aging backward and maybe even living forever",
-    "url": "https://www.amazon.com/dp/006285325X"
-  },
-  {
     "title": "Breath: The New Science of a Lost Art",
     "author": "James Nestor",
     "description": "Revolutionary insights into the science of breathing and its impact on health",
