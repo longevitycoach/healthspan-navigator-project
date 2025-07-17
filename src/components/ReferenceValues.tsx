@@ -831,6 +831,154 @@ const enhancedMetabolicBiomarkers = [
 ];
 
 // Comprehensive Fitness Biomarkers (Froböse recommendations)
+// Comprehensive Microbiome Biomarkers (Expert analysis compilation)
+const microbiomeBiomarkers = [
+  {
+    name: "Shannon Diversity Index",
+    optimalRange: "5.0-7.6 (stool), 5.6-7.7 (saliva)",
+    officialRange: "Not established",
+    description: "Most crucial microbiome health marker representing bacterial diversity",
+    clinicalNotes: "Higher diversity consistently correlates with better health outcomes. Values below 5.0 indicate significant dysbiosis and compromised gut health.",
+    factors: ["Diet diversity", "Fiber intake", "Antibiotics", "Stress", "Age"],
+    expertSource: "Giulia Enders"
+  },
+  {
+    name: "Observed Species Count",
+    optimalRange: "400-1000 species",
+    officialRange: "Not established",
+    description: "Total number of different bacterial species in comprehensive gut analysis",
+    clinicalNotes: "Complements Shannon diversity. Higher species count indicates healthier, more resilient microbiome ecosystem.",
+    factors: ["Plant variety", "Fermented foods", "Environmental exposure", "Lifestyle"],
+    expertSource: "Giulia Enders"
+  },
+  {
+    name: "Firmicutes/Bacteroidetes Ratio",
+    optimalRange: "2-4 (healthy adults)",
+    officialRange: "Variable by age",
+    description: "Primary bacterial phyla balance crucial for metabolic health",
+    clinicalNotes: "Optimal ratio varies by age: 0.4 in infants, 10.9 in adults, 0.6 in elderly. Higher ratios may indicate obesity risk.",
+    factors: ["Diet composition", "Age", "BMI", "Fiber intake"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Firmicutes Abundance",
+    optimalRange: "60-80%",
+    officialRange: "40-80%",
+    description: "Primary bacterial phylum responsible for SCFA production",
+    clinicalNotes: "Optimal levels around 80% maximize short-chain fatty acid production. Essential for immune function and gut barrier integrity.",
+    factors: ["Fiber intake", "Resistant starch", "Diet quality", "Age"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Bacteroidetes Abundance",
+    optimalRange: "15-30%",
+    officialRange: "15-30%",
+    description: "Key phylum for fiber metabolism and nutrient extraction",
+    clinicalNotes: "Optimal levels around 15% for balanced fiber metabolism. Higher levels associated with plant-based diets.",
+    factors: ["Plant fiber", "Protein intake", "Geographic location", "Diet type"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Bifidobacterium Levels",
+    optimalRange: "2-10%",
+    officialRange: "1-10%",
+    description: "Critical beneficial bacteria for immune function and infant health",
+    clinicalNotes: "Women typically show higher levels than men. Deficiency below 0.5% indicates compromised immune function. Declines significantly with age.",
+    factors: ["Age", "Gender", "Prebiotics", "Stress", "Antibiotics"],
+    expertSource: "Giulia Enders"
+  },
+  {
+    name: "Faecalibacterium Levels",
+    optimalRange: "5-12%",
+    officialRange: "2-12%",
+    description: "Primary butyrate producer with anti-inflammatory properties",
+    clinicalNotes: "F. prausnitzii is crucial for gut health. Levels below 1% indicate reduced anti-inflammatory capacity and increased disease risk.",
+    factors: ["Fiber intake", "Inflammation", "Antibiotics", "Diet quality"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Prevotella Abundance",
+    optimalRange: "5-30% (plant-based), 0.5-5% (Western diet)",
+    officialRange: "0.5-30%",
+    description: "Plant fiber specialist varying by geography and diet",
+    clinicalNotes: "Higher levels correlate with plant-based diets and improved weight management. Geographic variation is significant.",
+    factors: ["Plant intake", "Geographic location", "Diet type", "Fiber variety"],
+    expertSource: "Giulia Enders"
+  },
+  {
+    name: "Colonic pH",
+    optimalRange: "6.0-6.5",
+    officialRange: "5.5-7.0",
+    description: "Critical parameter for beneficial bacteria growth",
+    clinicalNotes: "Optimal pH 6.0-6.5 promotes beneficial bacteria while suppressing pathogenic species. Often overlooked but crucial marker.",
+    factors: ["SCFA production", "Diet", "Bacterial balance", "Inflammation"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Secretory IgA (sIgA)",
+    optimalRange: "Variable (consistent levels)",
+    officialRange: "Individual baseline",
+    description: "Gut immune barrier function indicator",
+    clinicalNotes: "Individual variation is high, but consistent levels indicate healthy gut barrier. Depends on protein intake and stress levels.",
+    factors: ["Stress", "Protein intake", "Gut health", "Immune status"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Pancreatic Elastase-1",
+    optimalRange: "> 200 mcg/g",
+    officialRange: "> 200 mcg/g",
+    description: "Digestive enzyme function affecting microbiome composition",
+    clinicalNotes: "Levels 100-200 mcg/g suggest moderate pancreatic insufficiency. Below 100 mcg/g indicates severe insufficiency affecting nutrient absorption.",
+    factors: ["Pancreatic health", "Age", "Inflammation", "Diet"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Zonulin Levels",
+    optimalRange: "< 107 ng/mL",
+    officialRange: "Not established",
+    description: "Intestinal permeability (leaky gut) assessment",
+    clinicalNotes: "Critical marker for gut barrier integrity. Elevated levels indicate increased intestinal permeability and systemic inflammation risk.",
+    factors: ["Gut health", "Stress", "NSAIDs", "Infections", "Diet"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Calprotectin",
+    optimalRange: "< 50 mg/kg",
+    officialRange: "< 50 mg/kg",
+    description: "Intestinal inflammation marker",
+    clinicalNotes: "Elevated levels indicate gut inflammation. Values > 150 mg/kg suggest significant inflammatory bowel conditions.",
+    factors: ["Gut inflammation", "Diet", "Stress", "Infections", "Medications"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Short-Chain Fatty Acids (SCFAs)",
+    optimalRange: "Butyrate: 10-25 mM, Total: 50-100 mM",
+    officialRange: "Not established",
+    description: "Most important microbiome metabolites for health",
+    clinicalNotes: "Butyrate is crucial for gut health, immune function, and inflammation control. Primary energy source for colonocytes.",
+    factors: ["Fiber intake", "Bacterial diversity", "Diet quality", "Resistant starch"],
+    expertSource: "Giulia Enders"
+  },
+  {
+    name: "Beta-glucuronidase Activity",
+    optimalRange: "Low activity preferred",
+    officialRange: "Not established",
+    description: "Enzyme affecting estrogen metabolism and toxin clearance",
+    clinicalNotes: "High activity can lead to estrogen reactivation and reduced toxin elimination. Important for hormone balance and detoxification.",
+    factors: ["Bacterial composition", "Diet", "Fiber intake", "Probiotics"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Tryptophan Metabolites",
+    optimalRange: "Balanced serotonin/kynurenine ratio",
+    officialRange: "Not established",
+    description: "Gut-brain axis neurotransmitter pathway markers",
+    clinicalNotes: "Critical for mood regulation and neurological health. Imbalances linked to depression and anxiety disorders.",
+    factors: ["Gut bacteria", "Inflammation", "Stress", "Diet", "Mental health"],
+    expertSource: "Prof. Dr. Bernd Kleine-Gunk"
+  }
+];
+
 const fitnessPerformanceBiomarkers = [
   {
     name: "VO2 Max",
@@ -1241,6 +1389,7 @@ const ReferenceValues = () => {
       case "liver": return liverBiomarkers;
       case "kidney": return kidneyBiomarkers;
       case "longevity": return longevityBiomarkers;
+      case "microbiome": return microbiomeBiomarkers;
       case "amino-acids": return aminoAcidBiomarkers;
       case "oxidative-stress": return oxidativeStressBiomarkers;
       case "heavy-metals": return heavyMetalsBiomarkers;
