@@ -1170,9 +1170,9 @@ const ReferenceValues = () => {
     
     // 🏗️ FOUNDATIONAL HEALTH (Supporting the Four Horsemen)
     { id: "vitamins", label: "Vitamins", icon: "🍊", priority: "foundation", description: "Essential micronutrients" },
+    { id: "minerals", label: "Minerals", icon: "⚗️", priority: "foundation", description: "Trace elements & cofactors" },
     { id: "hormones", label: "Hormones", icon: "🧬", priority: "foundation", description: "Endocrine system optimization" },
     { id: "microbiome", label: "Microbiome", icon: "🦠", priority: "foundation", description: "Gut health & systemic inflammation" },
-    { id: "minerals", label: "Minerals", icon: "⚗️", priority: "foundation", description: "Trace elements & cofactors" },
     { id: "oxidative-stress", label: "Oxidative Stress", icon: "🔥", priority: "foundation", description: "Cellular damage & aging" },
     
     // 🎯 PERFORMANCE & LONGEVITY
