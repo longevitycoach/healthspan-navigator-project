@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
 import { Info, User, BookOpen, Users, Globe, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
@@ -1645,33 +1646,36 @@ const ReferenceValues = () => {
                       setActiveCategory={setActiveCategory}
                     />
                   ) : (
-                    <div className="space-y-2">
+                    <div className="grid grid-cols-2 gap-2">
                       {hallmarksCategories.map((hallmark) => (
-                        <button
-                          key={hallmark.id}
-                          onClick={() => {
-                            console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.id);
-                            // Set the hallmark ID directly so getBiomarkersForCategory can handle it
-                            setActiveCategory(hallmark.id);
-                          }}
-                          className={`w-full text-left p-3 rounded-lg border transition-colors ${
-                            activeCategory === hallmark.id
-                              ? 'bg-primary/10 border-primary/20' 
-                              : 'hover:bg-slate-50'
-                          }`}
-                        >
-                          <div className="flex items-start gap-3">
-                            <span className="text-xl">{hallmark.icon}</span>
-                            <div>
-                              <h4 className="font-medium text-slate-800 text-sm">{hallmark.label}</h4>
-                              <p className="text-xs text-slate-600 mt-1">{hallmark.description}</p>
-                              <div className="flex flex-wrap gap-1 mt-2">
+                        <Tooltip key={hallmark.id}>
+                          <TooltipTrigger asChild>
+                            <button
+                              onClick={() => {
+                                console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.id);
+                                setActiveCategory(hallmark.id);
+                              }}
+                              className={`flex flex-col items-center p-3 rounded-lg border transition-colors ${
+                                activeCategory === hallmark.id
+                                  ? 'bg-primary/10 border-primary/20' 
+                                  : 'hover:bg-slate-50'
+                              }`}
+                            >
+                              <span className="text-2xl mb-1">{hallmark.icon}</span>
+                              <span className="text-xs text-center text-slate-600 leading-tight">{hallmark.label}</span>
+                            </button>
+                          </TooltipTrigger>
+                          <TooltipContent side="right" className="max-w-xs">
+                            <div className="space-y-2">
+                              <h4 className="font-semibold">{hallmark.label}</h4>
+                              <p className="text-sm">{hallmark.description}</p>
+                              <div className="flex flex-wrap gap-1">
                                 {hallmark.biomarkers.map((biomarker) => {
                                   const category = categories.find(c => c.id === biomarker);
                                   return category ? (
                                     <Badge 
                                       key={biomarker} 
-                                      variant={biomarker === activeCategory ? "default" : "secondary"} 
+                                      variant="outline" 
                                       className="text-xs"
                                     >
                                       {category.label}
@@ -1680,8 +1684,8 @@ const ReferenceValues = () => {
                                 })}
                               </div>
                             </div>
-                          </div>
-                        </button>
+                          </TooltipContent>
+                        </Tooltip>
                       ))}
                     </div>
                   )}
