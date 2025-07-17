@@ -1470,6 +1470,7 @@ const ReferenceValues = () => {
   );
 
   const getBiomarkersForCategory = (categoryId) => {
+    console.log('Getting biomarkers for category:', categoryId);
     switch (categoryId) {
       case "cardiovascular": return cardiovascularBiomarkers;
       case "metabolic": return metabolicBiomarkers;
@@ -1489,7 +1490,9 @@ const ReferenceValues = () => {
       case "enhanced-metabolic": return enhancedMetabolicBiomarkers;
       case "fitness-performance": return fitnessPerformanceBiomarkers;
       case "specialized": return specializedBiomarkers;
-      default: return [];
+      default: 
+        console.warn('Unknown category:', categoryId);
+        return [];
     }
   };
 
@@ -1598,10 +1601,17 @@ const ReferenceValues = () => {
                         <button
                           key={hallmark.id}
                           onClick={() => {
+                            console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.biomarkers[0]);
                             // Set to first biomarker category for this hallmark
                             setActiveCategory(hallmark.biomarkers[0]);
+                            // Also switch back to traditional view to see the results
+                            setViewMode("traditional");
                           }}
-                          className="w-full text-left p-3 rounded-lg border hover:bg-slate-50 transition-colors"
+                          className={`w-full text-left p-3 rounded-lg border transition-colors ${
+                            hallmark.biomarkers.includes(activeCategory) 
+                              ? 'bg-primary/10 border-primary/20' 
+                              : 'hover:bg-slate-50'
+                          }`}
                         >
                           <div className="flex items-start gap-3">
                             <span className="text-xl">{hallmark.icon}</span>
@@ -1609,11 +1619,18 @@ const ReferenceValues = () => {
                               <h4 className="font-medium text-slate-800 text-sm">{hallmark.label}</h4>
                               <p className="text-xs text-slate-600 mt-1">{hallmark.description}</p>
                               <div className="flex flex-wrap gap-1 mt-2">
-                                {hallmark.biomarkers.map((biomarker) => (
-                                  <Badge key={biomarker} variant="secondary" className="text-xs">
-                                    {categories.find(c => c.id === biomarker)?.label}
-                                  </Badge>
-                                ))}
+                                {hallmark.biomarkers.map((biomarker) => {
+                                  const category = categories.find(c => c.id === biomarker);
+                                  return category ? (
+                                    <Badge 
+                                      key={biomarker} 
+                                      variant={biomarker === activeCategory ? "default" : "secondary"} 
+                                      className="text-xs"
+                                    >
+                                      {category.label}
+                                    </Badge>
+                                  ) : null;
+                                })}
                               </div>
                             </div>
                           </div>
