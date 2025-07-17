@@ -1548,7 +1548,7 @@ const ReferenceValues = () => {
 
   return (
     <section id="reference-values" className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-slate-800 mb-4">
             Comprehensive Reference Values
@@ -1584,7 +1584,7 @@ const ReferenceValues = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className="flex flex-col lg:flex-row gap-6 max-w-full">
           {/* Mobile Navigation */}
           {isMobile ? (
             <div className="lg:hidden mb-4">
