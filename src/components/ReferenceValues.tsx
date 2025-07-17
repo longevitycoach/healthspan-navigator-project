@@ -1177,24 +1177,33 @@ const ReferenceValues = () => {
   const isMobile = useIsMobile();
 
   const categories = [
-    { id: "cardiovascular", label: "Cardiovascular", icon: "❤️" },
-    { id: "metabolic", label: "Metabolic", icon: "⚡" },
-    { id: "vitamins", label: "Vitamins", icon: "🍊" },
-    { id: "minerals", label: "Minerals", icon: "⚗️" },
-    { id: "hormones", label: "Hormones", icon: "🧬" },
-    { id: "liver", label: "Liver", icon: "🫘" },
-    { id: "kidney", label: "Kidney", icon: "💧" },
-    { id: "longevity", label: "Longevity", icon: "🧪" },
-    { id: "microbiome", label: "Microbiome", icon: "🦠" },
-    { id: "amino-acids", label: "Amino Acids", icon: "🧱" },
-    { id: "oxidative-stress", label: "Oxidative Stress", icon: "🔥" },
-    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️" },
-    { id: "bone-health", label: "Bone Health", icon: "🦴" },
-    { id: "neurological", label: "Neurological", icon: "🧠" },
-    { id: "advanced-inflammatory", label: "Advanced Inflammatory", icon: "🔬" },
-    { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊" },
-    { id: "fitness-performance", label: "Fitness & Performance", icon: "💪" },
-    { id: "specialized", label: "Specialized", icon: "🔬" }
+    // 🏇 THE FOUR HORSEMEN (Peter Attia's primary mortality causes)
+    { id: "cardiovascular", label: "Cardiovascular", icon: "❤️", priority: "horseman", description: "Heart disease & stroke prevention" },
+    { id: "metabolic", label: "Metabolic", icon: "⚡", priority: "horseman", description: "Diabetes & insulin resistance" },
+    { id: "neurological", label: "Neurological", icon: "🧠", priority: "horseman", description: "Alzheimer's & neurodegenerative diseases" },
+    { id: "advanced-inflammatory", label: "Cancer Markers", icon: "🔬", priority: "horseman", description: "Advanced inflammatory & cancer biomarkers" },
+    
+    // 🏗️ FOUNDATIONAL HEALTH (Supporting the Four Horsemen)
+    { id: "hormones", label: "Hormones", icon: "🧬", priority: "foundation", description: "Endocrine system optimization" },
+    { id: "microbiome", label: "Microbiome", icon: "🦠", priority: "foundation", description: "Gut health & systemic inflammation" },
+    { id: "vitamins", label: "Vitamins", icon: "🍊", priority: "foundation", description: "Essential micronutrients" },
+    { id: "minerals", label: "Minerals", icon: "⚗️", priority: "foundation", description: "Trace elements & cofactors" },
+    { id: "oxidative-stress", label: "Oxidative Stress", icon: "🔥", priority: "foundation", description: "Cellular damage & aging" },
+    
+    // 🎯 PERFORMANCE & LONGEVITY
+    { id: "fitness-performance", label: "Fitness & Performance", icon: "💪", priority: "performance", description: "Exercise capacity & muscle health" },
+    { id: "longevity", label: "Longevity", icon: "🧪", priority: "performance", description: "Biological age & lifespan markers" },
+    { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊", priority: "performance", description: "Advanced glucose optimization" },
+    
+    // 🏥 ORGAN FUNCTION
+    { id: "liver", label: "Liver", icon: "🫘", priority: "organ", description: "Detoxification & metabolism" },
+    { id: "kidney", label: "Kidney", icon: "💧", priority: "organ", description: "Filtration & electrolyte balance" },
+    { id: "bone-health", label: "Bone Health", icon: "🦴", priority: "organ", description: "Skeletal integrity & osteoporosis prevention" },
+    
+    // 🔬 SPECIALIZED TESTING
+    { id: "amino-acids", label: "Amino Acids", icon: "🧱", priority: "specialized", description: "Protein building blocks" },
+    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️", priority: "specialized", description: "Toxic element exposure" },
+    { id: "specialized", label: "Gut Function", icon: "🔬", priority: "specialized", description: "Advanced digestive testing" }
   ];
 
   // 12 Hallmarks of Aging Categories
