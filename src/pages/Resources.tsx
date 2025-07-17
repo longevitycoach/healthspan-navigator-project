@@ -39,7 +39,7 @@ const englishBooks = [
     "title": "The Blue Zones Solution",
     "author": "Dan Buettner",
     "description": "Lessons from the world's longest-lived populations",
-    "url": "https://www.amazon.com/dp/1426216130"
+    "url": "https://www.amazon.com/The-Blue-Zones-Solution-audiobook/dp/B00UY0DOF4/ref=sr_1_1?crid=O8XT0LCZ8CKP&dib=eyJ2IjoiMSJ9.Y2IYHXhX02UIqpiqQVzlqWfELxo0JQqcPzDTdgz5cTt8jbluaSYcILOuNGBbYzTxWbIjMvglPoHt_bWmKk1WZ2-YpIjftN2yGJWq32scO0kNNzvgeUBK873X2nWPZFAUHMLtl7G7KY4fifKqfJaHFA6BH6Wz-4ncmeInoiUIDqHldDqvIKjMoofpt4FF2ofaYOPK8e0szCtduw6BTprYYnm1YO3EspU18ikK4jXmgSs.7bF2Rrv_I5kQEvLnSCPY4u5mEEMtqFBa1LZv83wVXD4&dib_tag=se&keywords=The+Blue+Zones+Solution&qid=1752747743&s=books&sprefix=the+blue+zones+solution%2Cstripbooks-intl-ship%2C131&sr=1-1"
   },
   {
     "title": "Breath: The New Science of a Lost Art",
