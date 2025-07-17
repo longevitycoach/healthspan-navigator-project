@@ -1461,6 +1461,38 @@ const ReferenceValues = () => {
 
   const getBiomarkersForCategory = (categoryId) => {
     console.log('Getting biomarkers for category:', categoryId);
+    
+    // Check if this is a hallmark category
+    const hallmark = hallmarksCategories.find(h => h.id === categoryId);
+    if (hallmark) {
+      console.log('Found hallmark:', hallmark.label, 'with biomarkers:', hallmark.biomarkers);
+      // Combine biomarkers from all mapped categories for this hallmark
+      const allBiomarkers = hallmark.biomarkers.flatMap(cat => {
+        switch (cat) {
+          case "cardiovascular": return cardiovascularBiomarkers;
+          case "metabolic": return metabolicBiomarkers;
+          case "vitamins": return vitaminsBiomarkers;
+          case "minerals": return mineralsBiomarkers;
+          case "hormones": return hormonesBiomarkers;
+          case "liver": return liverBiomarkers;
+          case "kidney": return kidneyBiomarkers;
+          case "longevity": return longevityBiomarkers;
+          case "microbiome": return microbiomeBiomarkers;
+          case "amino-acids": return aminoAcidBiomarkers;
+          case "oxidative-stress": return oxidativeStressBiomarkers;
+          case "heavy-metals": return heavyMetalsBiomarkers;
+          case "bone-health": return boneHealthBiomarkers;
+          case "neurological": return neurologicalBiomarkers;
+          case "advanced-inflammatory": return advancedInflammatoryBiomarkers;
+          case "fitness-performance": return fitnessPerformanceBiomarkers;
+          default: return [];
+        }
+      });
+      console.log('Combined biomarkers for hallmark:', allBiomarkers.length);
+      return allBiomarkers;
+    }
+
+    // Regular category lookup
     switch (categoryId) {
       case "cardiovascular": return cardiovascularBiomarkers;
       case "metabolic": return metabolicBiomarkers;
@@ -1485,6 +1517,13 @@ const ReferenceValues = () => {
   };
 
   const getCategoryImpactDescription = (categoryId: string): string => {
+    // Check if this is a hallmark category first
+    const hallmark = hallmarksCategories.find(h => h.id === categoryId);
+    if (hallmark) {
+      return hallmark.description;
+    }
+
+    // Regular category descriptions
     switch (categoryId) {
       case "cardiovascular": return "Critical markers for preventing heart disease, stroke, and vascular dysfunction";
       case "metabolic": return "Essential for blood sugar control, diabetes prevention, and metabolic flexibility";
@@ -1611,14 +1650,12 @@ const ReferenceValues = () => {
                         <button
                           key={hallmark.id}
                           onClick={() => {
-                            console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.biomarkers[0]);
-                            // Set to first biomarker category for this hallmark
-                            setActiveCategory(hallmark.biomarkers[0]);
-                            // Also switch back to traditional view to see the results
-                            setViewMode("traditional");
+                            console.log('Hallmark clicked:', hallmark.label, 'Setting category to:', hallmark.id);
+                            // Set the hallmark ID directly so getBiomarkersForCategory can handle it
+                            setActiveCategory(hallmark.id);
                           }}
                           className={`w-full text-left p-3 rounded-lg border transition-colors ${
-                            hallmark.biomarkers.includes(activeCategory) 
+                            activeCategory === hallmark.id
                               ? 'bg-primary/10 border-primary/20' 
                               : 'hover:bg-slate-50'
                           }`}
