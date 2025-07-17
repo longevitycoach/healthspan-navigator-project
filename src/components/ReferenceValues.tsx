@@ -1586,10 +1586,21 @@ const ReferenceValues = () => {
         </div>
 
         <div className="flex gap-4 max-w-full relative">
+          {/* Mobile Hamburger Button - Always Visible */}
+          {isMobile && (
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="fixed top-20 left-4 z-50 bg-white shadow-lg border-2"
+            >
+              <Menu className="h-4 w-4" />
+            </Button>
+          )}
           {/* Collapsible Sidebar Navigation */}
           <div className={`${
             isMobile 
-              ? `fixed top-16 left-0 h-full z-40 transition-transform duration-300 ${
+              ? `fixed top-16 left-0 h-full z-50 transition-transform duration-300 ${
                   isMenuOpen ? 'translate-x-0' : '-translate-x-full'
                 }`
               : 'relative'
@@ -1602,18 +1613,28 @@ const ReferenceValues = () => {
               <Card className="h-full bg-white shadow-lg">
                 {/* Hamburger Header */}
                 <div className="p-3 border-b flex items-center justify-between">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={() => setIsMenuOpen(!isMenuOpen)}
-                    className={isMobile ? '' : 'p-1'}
-                  >
-                    {isMobile && isMenuOpen ? (
-                      <X className="h-4 w-4" />
-                    ) : (
+                  {!isMobile && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setIsMenuOpen(!isMenuOpen)}
+                      className="p-1"
+                    >
                       <Menu className="h-4 w-4" />
-                    )}
-                  </Button>
+                    </Button>
+                  )}
+                  
+                  {/* Close button for mobile */}
+                  {isMobile && (
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={() => setIsMenuOpen(false)}
+                      className="ml-auto"
+                    >
+                      <X className="h-4 w-4" />
+                    </Button>
+                  )}
                   
                   {/* Title - Visible on large screens, hidden on hover for medium screens */}
                   {!isMobile && (
@@ -1735,7 +1756,7 @@ const ReferenceValues = () => {
           {/* Overlay for mobile */}
           {isMobile && isMenuOpen && (
             <div 
-              className="fixed inset-0 bg-black/20 z-30"
+              className="fixed inset-0 bg-black/20 z-40"
               onClick={() => setIsMenuOpen(false)}
             />
           )}
