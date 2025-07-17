@@ -1635,11 +1635,6 @@ const ReferenceValues = () => {
                       }</p>
                     </TooltipContent>
                   </Tooltip>
-                  {viewMode === "hallmarks" && (
-                    <p className="text-sm text-slate-600">
-                      Fundamental mechanisms of biological aging
-                    </p>
-                  )}
                 </CardHeader>
                 <CardContent className="pt-0">
                   {viewMode === "traditional" ? (
