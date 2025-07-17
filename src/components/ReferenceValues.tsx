@@ -288,9 +288,54 @@ const mineralsBiomarkers = [
     optimalRange: "70-140 µg/dL",
     officialRange: "70-140 µg/dL",
     description: "A co-factor whose deficiency can impair iron absorption.",
-    clinicalNotes: "A co-factor whose deficiency can impair iron absorption. Important for connective tissue formation.",
+    clinicalNotes: "A co-factor whose deficiency can impair iron absorption. Important for connective tissue formation. Balance with zinc is crucial - excess copper accelerates aging while adequate selenium protects.",
     factors: ["Diet", "Zinc balance", "Absorption"],
     expertSource: "Thiemo Osterhaus"
+  },
+  {
+    name: "Lithium (Micro-dose)",
+    optimalRange: "1-5 mg/day",
+    officialRange: "No official range",
+    description: "Trace mineral showing the most promising longevity benefits in current research.",
+    clinicalNotes: "Studies show 46% lifespan increase in animal models. Provides neuroprotection, reduces dementia risk, supports mood stabilization, and protects against telomere shortening. Currently the most discussed 'hot' longevity supplement with substantial research backing.",
+    factors: ["Supplementation", "Water source", "Geographic location"],
+    expertSource: "Multiple Longevity Researchers"
+  },
+  {
+    name: "Boron",
+    optimalRange: "1-3 mg/day",
+    officialRange: "No established RDA",
+    description: "Essential for bone health, hormone metabolism, and cognitive function.",
+    clinicalNotes: "Supports bone mineralization, testosterone and estrogen metabolism, and brain function. Often overlooked despite beneficial effects on multiple body systems.",
+    factors: ["Diet", "Supplementation", "Soil content"],
+    expertSource: "Prof. Dr. Ingo Froböse"
+  },
+  {
+    name: "Silicon",
+    optimalRange: "5-20 mg/day",
+    officialRange: "No established range",
+    description: "Supports connective tissue, bone health, and skin integrity.",
+    clinicalNotes: "Important for collagen synthesis, bone formation, and maintaining healthy skin, hair, and nails. Often deficient in modern diets.",
+    factors: ["Diet", "Age", "Processing of foods"],
+    expertSource: "Dr. Helena Orfanos-Boeckel"
+  },
+  {
+    name: "Molybdenum",
+    optimalRange: "45-2000 µg/day",
+    officialRange: "45 µg/day",
+    description: "Essential trace mineral for enzyme function and sulfur amino acid metabolism.",
+    clinicalNotes: "Important for detoxification processes and protein metabolism. Deficiency rare but can affect sulfur metabolism.",
+    factors: ["Diet", "Soil content", "Processing"],
+    expertSource: "Trace Mineral Research"
+  },
+  {
+    name: "Chromium",
+    optimalRange: "25-200 µg/day",
+    officialRange: "35 µg/day (men), 25 µg/day (women)",
+    description: "Supports glucose metabolism and insulin sensitivity.",
+    clinicalNotes: "Important for glucose tolerance and may help with blood sugar control. Levels can be depleted by high sugar intake.",
+    factors: ["Diet", "Blood sugar control", "Exercise"],
+    expertSource: "Metabolic Health Research"
   }
 ];
 
@@ -722,6 +767,38 @@ const neurologicalBiomarkers = [
   }
 ];
 
+// Advanced Inflammatory Markers (Missing from current panel)
+const advancedInflammatoryBiomarkers = [
+  {
+    name: "IL-6 (Interleukin-6)",
+    optimalRange: "<1.8 pg/mL",
+    officialRange: "<3.4 pg/mL",
+    description: "Pro-inflammatory cytokine marker",
+    clinicalNotes: "Elevated levels associated with chronic inflammation, cardiovascular disease, and accelerated aging. Often missed in standard panels.",
+    factors: ["Chronic inflammation", "Stress", "Diet", "Exercise", "Sleep"],
+    expertSource: "Advanced Longevity Research"
+  },
+  {
+    name: "TNF-α (Tumor Necrosis Factor Alpha)",
+    optimalRange: "<8.1 pg/mL",
+    officialRange: "<15.6 pg/mL", 
+    description: "Key inflammatory cytokine",
+    clinicalNotes: "Central mediator of inflammation and immune response. Elevated levels accelerate aging and increase disease risk.",
+    factors: ["Autoimmune conditions", "Chronic infections", "Gut health", "Stress"],
+    expertSource: "Advanced Longevity Research"
+  },
+  {
+    name: "CRP-hs (High-Sensitivity)",
+    optimalRange: "<0.5 mg/L",
+    officialRange: "<1.0 mg/L",
+    description: "Ultra-sensitive inflammation marker",
+    clinicalNotes: "More sensitive than standard CRP. Values <0.5 mg/L associated with optimal cardiovascular health and longevity.",
+    factors: ["Diet quality", "Exercise", "Sleep", "Stress management", "Gut health"],
+    expertSource: "Dr. Strunz & Longevity Research"
+  }
+];
+
+
 // Enhanced Metabolic Biomarkers (Inchauspé recommendations)
 const enhancedMetabolicBiomarkers = [
   {
@@ -980,6 +1057,13 @@ const ReferenceValues = () => {
     { id: "kidney", label: "Kidney", icon: "💧" },
     { id: "longevity", label: "Longevity", icon: "🧪" },
     { id: "amino-acids", label: "Amino Acids", icon: "🧱" },
+    { id: "oxidative-stress", label: "Oxidative Stress", icon: "🔥" },
+    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️" },
+    { id: "bone-health", label: "Bone Health", icon: "🦴" },
+    { id: "neurological", label: "Neurological", icon: "🧠" },
+    { id: "advanced-inflammatory", label: "Advanced Inflammatory", icon: "🔬" },
+    { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊" },
+    { id: "fitness-performance", label: "Fitness & Performance", icon: "💪" },
     { id: "oxidative-stress", label: "Oxidative Stress", icon: "⚡" },
     { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️" },
     { id: "bone-health", label: "Bone Health", icon: "🦴" },
@@ -1188,6 +1272,7 @@ const ReferenceValues = () => {
       case "heavy-metals": return heavyMetalsBiomarkers;
       case "bone-health": return boneHealthBiomarkers;
       case "neurological": return neurologicalBiomarkers;
+      case "advanced-inflammatory": return advancedInflammatoryBiomarkers;
       case "enhanced-metabolic": return enhancedMetabolicBiomarkers;
       case "fitness-performance": return fitnessPerformanceBiomarkers;
       case "specialized": return specializedBiomarkers;
