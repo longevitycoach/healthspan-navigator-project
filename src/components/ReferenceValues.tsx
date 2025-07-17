@@ -1556,13 +1556,6 @@ const ReferenceValues = () => {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Optimal biomarker ranges based on cutting-edge longevity research and expert recommendations
           </p>
-          <div className="mt-4 flex flex-wrap justify-center gap-2">
-            <ExpertSourcesModal />
-            <Badge variant="outline" className="bg-white">
-              <BookOpen className="h-3 w-3 mr-1" />
-              Research-Based
-            </Badge>
-          </div>
           
           {/* View Mode Toggle */}
           <div className="mt-6 flex justify-center">
