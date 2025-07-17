@@ -20,7 +20,7 @@ const cardiovascularBiomarkers = [
     description: "Found on all 'bad' lipoproteins (like LDL), strongly correlated with increased cardiovascular disease risk. More informative than LDL alone.",
     clinicalNotes: "Essential marker for cardiovascular risk assessment, superior to LDL-C for risk prediction. This marker is found on all 'bad' lipoproteins and provides better cardiovascular risk stratification than traditional cholesterol panels.",
     factors: ["Diet", "Exercise", "Statins", "Genetics"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "Lipoprotein(a) [Lp(a)]",
@@ -29,7 +29,7 @@ const cardiovascularBiomarkers = [
     description: "Genetic risk factor for cardiovascular disease, independent of other lipid parameters.",
     clinicalNotes: "Managing Lp(a) levels may require specialized interventions and monitoring. Genetic component makes it less responsive to lifestyle changes. A genetic risk factor for cardiovascular disease that operates independently of other cholesterol markers.",
     factors: ["Genetics", "Niacin", "PCSK9 Inhibitors"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "HDL Cholesterol",
@@ -38,7 +38,7 @@ const cardiovascularBiomarkers = [
     description: "High-density lipoprotein, often referred to as 'good cholesterol'. Higher levels are generally protective.",
     clinicalNotes: "Essential component of cardiovascular risk assessment, though quality matters more than quantity. Functions as reverse cholesterol transport system.",
     factors: ["Exercise", "Diet", "Genetics", "Alcohol (moderate)"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "LDL Cholesterol",
@@ -47,7 +47,7 @@ const cardiovascularBiomarkers = [
     description: "Low-density lipoprotein, one of the 'bad' lipoproteins that carries ApoB.",
     clinicalNotes: "Traditional marker for cardiovascular risk, though ApoB is more predictive. Still important for overall lipid profile assessment.",
     factors: ["Diet", "Exercise", "Genetics", "Medications"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "Triglycerides",
@@ -56,7 +56,7 @@ const cardiovascularBiomarkers = [
     description: "Type of fat transported in the blood, influenced by diet and metabolic health.",
     clinicalNotes: "Elevated levels associated with increased cardiovascular risk and metabolic dysfunction. Responds well to dietary modifications.",
     factors: ["Diet", "Exercise", "Alcohol", "Genetics"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "Omega-3 Index",
@@ -65,7 +65,7 @@ const cardiovascularBiomarkers = [
     description: "Percentage of EPA and DHA in red blood cell membranes. Low levels linked to higher mortality risk, called 'the new smoking'.",
     clinicalNotes: "Critical for cardiovascular health, brain function, and inflammation control. Most people have insufficient levels due to poor Omega-3 to Omega-6 ratios. Best measured in EDTA blood samples, not serum.",
     factors: ["Fish consumption", "Supplementation", "Diet quality", "Antioxidants (co-factor)"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Ingo Froböse"
   },
   {
     name: "Homocysteine",
@@ -74,7 +74,7 @@ const cardiovascularBiomarkers = [
     description: "Amino acid whose elevated levels are linked to cardiovascular risk. Often correlates with B-vitamin deficiencies.",
     clinicalNotes: "Elevated levels indicate increased cardiovascular risk and potential B6, B9, or B12 deficiencies. High homocysteine often correlates with deficiencies in Vitamin B6, Vitamin B9 (Folic acid), or Vitamin B12.",
     factors: ["Vitamin B6", "Vitamin B9 (Folate)", "Vitamin B12", "Genetics"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "hs-CRP (High-Sensitivity C-Reactive Protein)",
@@ -83,7 +83,7 @@ const cardiovascularBiomarkers = [
     description: "Marker of general inflammation in the body. High levels indicate 'silent inflammation' contributing to aging.",
     clinicalNotes: "Should always be measured with ferritin as inflammation can falsely elevate ferritin levels. High CRP indicates 'silent inflammation' which contributes to aging (inflammaging).",
     factors: ["Diet", "Exercise", "Stress", "Infections"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "Blood Pressure (Systolic/Diastolic)",
@@ -104,7 +104,7 @@ const metabolicBiomarkers = [
     description: "Blood sugar levels after overnight fast. Values over 100 mg/dL indicate disturbed glucose metabolism.",
     clinicalNotes: "Key marker for metabolic health and diabetes risk assessment. Essential for longevity optimization.",
     factors: ["Diet", "Exercise", "Stress", "Sleep"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Jessie Inchauspé"
   },
   {
     name: "HbA1c (Hemoglobin A1c)",
@@ -113,7 +113,7 @@ const metabolicBiomarkers = [
     description: "Average blood sugar level over 2-3 months. Key diagnostic marker for diabetes and longevity parameter.",
     clinicalNotes: "Values from 5.7% indicate beginning disturbance. Measurement method can influence results. Provides an average blood sugar level over several months and is a relevant parameter for longevity.",
     factors: ["Diet", "Exercise", "Medications", "Stress"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Jessie Inchauspé"
   },
   {
     name: "HOMA Index",
@@ -122,7 +122,7 @@ const metabolicBiomarkers = [
     description: "Reflects insulin sensitivity and resistance, serving as indicator for pre-diabetic states.",
     clinicalNotes: "Often not routinely measured in conventional medicine but crucial for metabolic assessment. This index reflects insulin sensitivity and resistance, serving as an indicator for pre-diabetic states.",
     factors: ["Diet", "Exercise", "Body weight", "Stress"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Jessie Inchauspé"
   },
   {
     name: "Continuous Glucose Monitoring (CGM)",
@@ -131,7 +131,7 @@ const metabolicBiomarkers = [
     description: "Monitors blood sugar spikes throughout the day. Rapid increases are undesirable as they can lead to energy crashes and cravings.",
     clinicalNotes: "Important for individuals aiming for stable energy, weight management, and prevention of type 2 diabetes. Can reveal glucose patterns not visible in single measurements.",
     factors: ["Diet timing", "Food composition", "Exercise", "Stress", "Sleep"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Jessie Inchauspé"
   }
 ];
 
@@ -143,7 +143,7 @@ const vitaminsBiomarkers = [
     description: "Crucial for immune function, bone health, mood regulation, neurotransmitter formation, and hormone modulation.",
     clinicalNotes: "Up to 60% of Germans estimated deficient, especially in winter. Higher doses recommended than official guidelines (2500 IU summer, 5000 IU winter). Important for brain health, protecting against autoimmune diseases, and preventing 'winter blues' or depression. Critical for fertility and egg quality.",
     factors: ["Sun exposure", "Supplementation", "Skin color", "Geographic location", "Vitamin K2 (co-factor)", "Magnesium (co-factor)"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Vitamin D (1,25-OH)",
@@ -152,7 +152,7 @@ const vitaminsBiomarkers = [
     description: "Active form of Vitamin D. Testing alongside 25-OH can be relevant for immune system problems or autoimmune diseases.",
     clinicalNotes: "Helps understand Vitamin D metabolism, particularly important for autoimmune conditions. This is the active form of Vitamin D and testing this in addition to 25-OH Vitamin D can be particularly relevant for individuals with immune system problems.",
     factors: ["Kidney function", "PTH levels", "Calcium status"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Vitamin K2 (MK-7)",
@@ -161,7 +161,7 @@ const vitaminsBiomarkers = [
     description: "Vital for bone health (calcium distribution) and heart health. Works synergistically with Vitamin D.",
     clinicalNotes: "Ensures calcium is deposited in bones, not arteries. Studies explore effects on immune health and athletic performance. Works synergistically with Vitamin D to ensure calcium is deposited in bones and not in arteries.",
     factors: ["Diet", "Supplementation", "Gut bacteria"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Vitamin C",
@@ -170,7 +170,7 @@ const vitaminsBiomarkers = [
     description: "'Queen of vitamins' - crucial for immune system, collagen formation, nerve health. Key antioxidant and co-factor for cortisol/DHEA production.",
     clinicalNotes: "Essential for iron absorption, often underestimated. Important for fertility and egg quality. Crucial for a strong immune system, collagen formation, and healthy nerve cells. Co-factor for Cortisol and DHEA production.",
     factors: ["Diet", "Supplementation", "Stress", "Smoking"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Bernd Kleine-Gunk"
   },
   {
     name: "Vitamin B12 (Holotranscobalamin)",
@@ -179,7 +179,7 @@ const vitaminsBiomarkers = [
     description: "Essential for nervous system function and reducing fatigue. Deficiency can cause irreversible nerve damage.",
     clinicalNotes: "Critical for vegetarians/vegans. High doses recommended for neurodegenerative diseases. Holotranscobalamin more accurate than total B12. Particularly critical for vegetarians and vegans as it is primarily found in animal products.",
     factors: ["Diet", "Absorption", "Age", "Medications"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Folate (Vitamin B9)",
@@ -188,7 +188,7 @@ const vitaminsBiomarkers = [
     description: "Essential for blood formation and reducing fatigue. Increased demand in women of childbearing age.",
     clinicalNotes: "Critical during pregnancy and lactation. Works with B12 and B6 to control homocysteine. Essential for normal blood formation and there is an increased demand in women of childbearing age.",
     factors: ["Diet", "Pregnancy", "Alcohol", "Medications"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "B-Complex Vitamins",
@@ -197,7 +197,7 @@ const vitaminsBiomarkers = [
     description: "Complex of vitamins vital for energy production, nerve function, blood formation, and neurotransmitter synthesis.",
     clinicalNotes: "A comprehensive B-complex is recommended over individual B vitamins for balanced intake. Especially important for brain health, nervous system support during stress, and for the gut-brain axis in managing pain.",
     factors: ["Diet", "Stress", "Age", "Absorption"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Vitamin B6 (Pyridoxine)",
@@ -206,7 +206,7 @@ const vitaminsBiomarkers = [
     description: "Important for steroid hormone synthesis. Deficiency linked to homocysteine levels and mood swings.",
     clinicalNotes: "Important for steroid hormone synthesis. Its deficiency is linked to homocysteine levels and can affect mood swings and psychological well-being. Care should be taken with synthetic forms.",
     factors: ["Diet", "Hormonal status", "Stress"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Vitamin B5 (Pantothenic Acid)",
@@ -215,7 +215,7 @@ const vitaminsBiomarkers = [
     description: "Crucial co-factor for Cortisol and DHEA production in the adrenal glands.",
     clinicalNotes: "A crucial co-factor for Cortisol and DHEA production in the adrenal glands, especially beneficial for exhaustion and burnout.",
     factors: ["Stress", "Adrenal function", "Diet"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   }
 ];
 
@@ -227,7 +227,7 @@ const mineralsBiomarkers = [
     description: "Primary marker for iron stores. Low levels indicate iron deficiency even if hemoglobin is normal.",
     clinicalNotes: "Very common deficiency, especially in menstruating women, athletes, vegetarians. Can be falsely elevated by inflammation (check CRP). Symptoms include chronic fatigue, hair loss, brittle nails, concentration problems, and reduced fertility. Always include Hemoglobin, Transferrin Saturation, and CRP alongside Ferritin for accurate diagnosis.",
     factors: ["Menstruation", "Diet", "Absorption", "Blood loss", "Vitamin C (co-factor)"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "Hemoglobin (HB)",
@@ -236,7 +236,7 @@ const mineralsBiomarkers = [
     description: "The protein in red blood cells that carries oxygen. Used to diagnose anemia.",
     clinicalNotes: "Used to diagnose anemia (blood deficiency), with defined cut-offs for women (<12 g/dL), men (<13 g/dL), and pregnant women (<11 g/dL).",
     factors: ["Iron status", "B12", "Folate", "Chronic disease"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Ulrich Strunz"
   },
   {
     name: "Magnesium (Whole Blood)",
@@ -245,7 +245,7 @@ const mineralsBiomarkers = [
     description: "Involved in 600+ metabolic processes. Crucial for muscle function, nervous system, energy production, neurotransmitter formation.",
     clinicalNotes: "~80% of population deficient. High demand for athletes and high-stress individuals. Whole blood analysis more accurate than serum. Crucial for muscle function, energy production (ATP synthesis depends on Magnesium), and sleep quality.",
     factors: ["Diet", "Stress", "Exercise", "Medications"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Ingo Froböse"
   },
   {
     name: "Zinc",
@@ -254,7 +254,7 @@ const mineralsBiomarkers = [
     description: "Important for immune system, cell division, collagen formation, steroid hormone synthesis. Deficiency causes hair loss, brittle nails.",
     clinicalNotes: "Critical for vegetarians/vegans due to phytate binding. Recommended for athletes and gut barrier healing. Important for synthesis of steroid hormones (Testosterone, Progesterone, Estrogen).",
     factors: ["Diet", "Phytates", "Absorption", "Stress"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Ingo Froböse"
   },
   {
     name: "Selenium",
@@ -263,7 +263,7 @@ const mineralsBiomarkers = [
     description: "Important for oxidative stress protection, immune system, antioxidant function, and thyroid health.",
     clinicalNotes: "European soil often selenium-poor, leading to common deficiencies. Higher doses may be needed than standard recommendations. Vital for healthy antioxidant and thyroid function.",
     factors: ["Soil content", "Diet", "Geographic location"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Bernd Kleine-Gunk"
   },
   {
     name: "Iodine",
@@ -272,7 +272,7 @@ const mineralsBiomarkers = [
     description: "Essential for normal thyroid function and cognitive function.",
     clinicalNotes: "Many regions (like Germany) are iodine-poor. Common in those consuming little iodized salt or fish. High doses can be used for thyroid support in fertility contexts.",
     factors: ["Geographic location", "Salt intake", "Fish consumption"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Calcium",
@@ -281,7 +281,7 @@ const mineralsBiomarkers = [
     description: "Essential for normal bone and tooth formation and muscle function.",
     clinicalNotes: "Requires adequate Vitamin D for proper absorption. People who avoid dairy products often show a deficiency.",
     factors: ["Vitamin D", "Diet", "Parathyroid function"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Copper",
@@ -290,7 +290,7 @@ const mineralsBiomarkers = [
     description: "A co-factor whose deficiency can impair iron absorption.",
     clinicalNotes: "A co-factor whose deficiency can impair iron absorption. Important for connective tissue formation. Balance with zinc is crucial - excess copper accelerates aging while adequate selenium protects.",
     factors: ["Diet", "Zinc balance", "Absorption"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Bernd Kleine-Gunk"
   },
   {
     name: "Lithium (Micro-dose)",
@@ -347,7 +347,7 @@ const hormonesBiomarkers = [
     description: "While commonly measured, TSH alone is insufficient for comprehensive thyroid assessment.",
     clinicalNotes: "Should be evaluated alongside fT3 and fT4 for complete thyroid function assessment. Experts emphasize that TSH alone is insufficient for a comprehensive assessment of thyroid function.",
     factors: ["Thyroid disease", "Stress", "Medications", "Age"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "fT3 (Free Triiodothyronine)",
@@ -356,7 +356,7 @@ const hormonesBiomarkers = [
     description: "The active thyroid hormone, critical for metabolism and energy.",
     clinicalNotes: "More indicative of thyroid function than TSH alone. Essential for comprehensive assessment. The active thyroid hormone critical for metabolism and energy.",
     factors: ["Thyroid health", "Iodine", "Selenium", "Stress"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "fT4 (Free Thyroxine)",
@@ -365,7 +365,7 @@ const hormonesBiomarkers = [
     description: "Precursor to fT3, important for overall thyroid function assessment.",
     clinicalNotes: "Should be evaluated with fT3 and TSH for complete picture. A precursor to fT3 and important for overall thyroid function assessment.",
     factors: ["Thyroid health", "Medications", "Stress"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Testosterone (Free)",
@@ -374,7 +374,7 @@ const hormonesBiomarkers = [
     description: "Important for dopaminergic system, learning, memory, concentration. Has neuroprotective qualities.",
     clinicalNotes: "Men in 30s-40s can experience deficiency. Measure SHBG alongside total testosterone to calculate free testosterone. Important for the dopaminergic system, acetylcholine (learning, memory, concentration), and can help prevent depression and cognitive impairment.",
     factors: ["Vitamin D3", "Vitamin B6", "Zinc", "Magnesium", "Age"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Estradiol (E2)",
@@ -383,7 +383,7 @@ const hormonesBiomarkers = [
     description: "Important for happiness, well-being, serotonergic/dopaminergic systems, and acetylcholine (learning/memory).",
     clinicalNotes: "Protective against cardiovascular disease in women. Decline during menopause can increase blood pressure. Important for the proper functioning of the serotonergic and dopaminergic systems.",
     factors: ["Age", "Menopause", "Stress", "Body weight"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Progesterone",
@@ -392,7 +392,7 @@ const hormonesBiomarkers = [
     description: "Important for relaxation, mood stabilization, sleep quality, GABAergic system. Deficiency causes irritability, sleep issues.",
     clinicalNotes: "Test on cycle day 19-21 for women. Can be measured in serum or saliva (saliva preferred for free hormones). Important for the GABAergic system (which promotes calm) and deficiency can lead to irritability and sleep disturbances.",
     factors: ["Stress", "Age", "Cycle phase", "Sleep"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "DHEA (Dehydroepiandrosterone)",
@@ -401,7 +401,7 @@ const hormonesBiomarkers = [
     description: "Precursor hormone for testosterone and estrogen production. Often described as 'healing' hormone.",
     clinicalNotes: "Vitamin C and Pantothenic acid (B5) are crucial co-factors for production. A precursor hormone that the body uses to produce Testosterone and Estrogen.",
     factors: ["Age", "Stress", "Vitamin C", "Vitamin B5"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "SHBG (Sex Hormone-Binding Globulin)",
@@ -410,7 +410,7 @@ const hormonesBiomarkers = [
     description: "A binding protein that transports sex hormones in the blood.",
     clinicalNotes: "Essential to measure alongside total testosterone to accurately calculate free (bioavailable) testosterone.",
     factors: ["Age", "Thyroid function", "Insulin resistance"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   }
 ];
 
@@ -422,7 +422,7 @@ const liverBiomarkers = [
     description: "Glutamate Pyruvate Transaminase - enzyme indicating liver function and potential damage.",
     clinicalNotes: "Elevated levels indicate liver stress or damage. Part of comprehensive liver function assessment.",
     factors: ["Alcohol", "Medications", "Liver disease", "Diet"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "AST (GOT)", 
@@ -431,7 +431,7 @@ const liverBiomarkers = [
     description: "Glutamate Oxaloacetate Transaminase - enzyme indicating liver function and potential damage.",
     clinicalNotes: "Can also indicate muscle damage, should be interpreted with other liver markers. Part of liver function assessment panel.",
     factors: ["Alcohol", "Medications", "Liver disease", "Exercise"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Gamma-GT",
@@ -440,7 +440,7 @@ const liverBiomarkers = [
     description: "Gamma-Glutamyl Transferase - elevated levels correlated with higher risk of earlier mortality.",
     clinicalNotes: "Sensitive marker for liver stress and alcohol consumption. Elevated levels have been correlated with a higher risk of earlier mortality.",
     factors: ["Alcohol", "Medications", "Liver disease"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   }
 ];
 
@@ -452,7 +452,7 @@ const kidneyBiomarkers = [
     description: "Waste product from muscle metabolism, indicates kidney function.",
     clinicalNotes: "Basic marker for kidney function assessment. Should be interpreted alongside eGFR and other kidney markers.",
     factors: ["Kidney disease", "Dehydration", "Muscle mass"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "Cystatin C",
@@ -461,7 +461,7 @@ const kidneyBiomarkers = [
     description: "More sensitive marker for kidney function than creatinine, less affected by muscle mass.",
     clinicalNotes: "Superior to creatinine for early kidney function assessment. More sensitive marker for kidney function than creatinine and less affected by muscle mass.",
     factors: ["Kidney function", "Age", "Inflammation"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   },
   {
     name: "eGFR (Estimated Glomerular Filtration Rate)",
@@ -470,7 +470,7 @@ const kidneyBiomarkers = [
     description: "Calculated measure of kidney function based on creatinine, age, sex, and race.",
     clinicalNotes: "Standard measure for assessing kidney function and staging chronic kidney disease.",
     factors: ["Age", "Kidney health", "Hydration", "Medications"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Dr. Helena Orfanos-Boeckel"
   }
 ];
 
@@ -482,7 +482,7 @@ const longevityBiomarkers = [
     description: "Vital for mitochondrial energy production, heart health, combating chronic fatigue. Levels decline with age.",
     clinicalNotes: "Works with Vitamin B12 for mitochondrial function. Essential for cellular energy production. Vital for mitochondrial energy production ('fuel for the furnace') and heart health.",
     factors: ["Age", "Statin use", "Heart disease", "Supplementation"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Bernd Kleine-Gunk"
   },
   {
     name: "Glutathione",
@@ -491,7 +491,7 @@ const longevityBiomarkers = [
     description: "Master antioxidant and main detoxification molecule. Protects cells, supports immune system, guards gut/brain barriers.",
     clinicalNotes: "Deficiency common due to environmental toxins. Critical for detoxification and cellular protection. Considered the body's 'master antioxidant' and main detoxification molecule.",
     factors: ["Environmental toxins", "Age", "Stress", "Diet"],
-    expertSource: "Thiemo Osterhaus"
+    expertSource: "Prof. Dr. Bernd Kleine-Gunk"
   },
   {
     name: "VO2 Max",
@@ -920,49 +920,34 @@ const specializedBiomarkers = [
 
 const germanExperts = [
   {
-    name: "Prof. Dr. Sven Voelpel",
-    specialty: "Aging Research & Nutrition",
-    description: "Professor focused on scientifically-backed nutrition and lifestyle interventions to slow and reverse aging, with research on autophagy and dietary effects on cancer cells."
+    name: "Dr. Ulrich Strunz",
+    specialty: "Froh- and Drohwerte System",
+    description: "Developer of the Frohwerte (happy values) and Drohwerte (threatening values) blood tuning philosophy, emphasizing optimal biomarker ranges for molecular medicine."
   },
   {
-    name: "Prof. Dr. Dr. Jürgen Gießing",
-    specialty: "Sports Science & Creatine Research",
-    description: "Professor studying creatine's effects on muscle metabolism, brain function, and neurodegenerative diseases, plus supplement quality control."
+    name: "Dr. Helena Orfanos-Boeckel",
+    specialty: "Metabolic Medicine & Precision Diagnostics",
+    description: "Expert in precision medicine with extensive laboratory diagnostics, specializing in bone health biomarkers, neurological markers, and individualized nutrient therapy."
   },
   {
-    name: "Dr. Christina Enzmann",
-    specialty: "Women's Health & Functional Medicine",
-    description: "Gynecologist expert in menopause, researching molecular mechanisms like the gut-hormone axis and nutrient deficiencies."
+    name: "Prof. Dr. Ingo Froböse",
+    specialty: "Sports Nutrition & Fitness Medicine",
+    description: "Leading expert in functional sports nutrition and evidence-based supplementation, emphasizing fitness biomarkers and performance optimization."
   },
   {
-    name: "Prof. Dr. Gregor Hasler",
-    specialty: "Gut-Brain Axis",
-    description: "Psychiatrist and neuroscientist studying how gut bacteria and their metabolites affect mental health at the molecular level."
+    name: "Prof. Dr. Bernd Kleine-Gunk",
+    specialty: "Anti-Aging & Longevity Medicine",
+    description: "Longevity-focused physician emphasizing holistic approaches combining nutrition, supplementation, and lifestyle modifications for healthy aging."
   },
   {
-    name: "Prof. Dr. Klaus Günther",
-    specialty: "Micronutrient Diagnostics",
-    description: "Specialist focusing on iron deficiency and molecular diagnostics of essential trace elements."
+    name: "Giulia Enders",
+    specialty: "Gut Health & Microbiome",
+    description: "Medical doctor and bestselling author specializing in gut health optimization through microbiome research, probiotics, and digestive wellness."
   },
   {
-    name: "Dr. Darja Wagner",
-    specialty: "Fertility & Reproductive Health",
-    description: "Biologist optimizing egg and sperm quality through nutrition and micronutrients, researching MTHFR gene effects on folate metabolism."
-  },
-  {
-    name: "Dr. Reinhard Hannen",
-    specialty: "Reproductive Medicine",
-    description: "Specialist integrating molecular diagnostics into fertility treatments, focusing on thyroid hormones and environmental toxins."
-  },
-  {
-    name: "Dr. Alina Lessenich",
-    specialty: "Brain Health & Neurodegeneration",
-    description: "Expert researching neurodegenerative diseases and neuroinflammation, advocating molecular interventions like magnesium L-threonate."
-  },
-  {
-    name: "Thiemo Osterhaus",
-    specialty: "Blood Diagnostics & Personalized Medicine",
-    description: "Expert in developing optimal biomarker ranges and holistic, evidence-based molecular and nutrient medicine."
+    name: "Jessie Inchauspé (Glucose Goddess)",
+    specialty: "Glucose Optimization & Metabolic Health",
+    description: "Biochemist specializing in glucose management protocols, continuous glucose monitoring optimization, and metabolic flexibility enhancement."
   },
   {
     name: "Prof. Dr. Andreas Michalsen",
@@ -978,11 +963,6 @@ const germanExperts = [
     name: "Prof. Dr. Jörn Walter",
     specialty: "Epigenetics",
     description: "Leading epigeneticist at University of Saarland, known for foundational research on DNA methylation and epigenomics."
-  },
-  {
-    name: "Prof. Dr. Bernd Kleine-Gunk",
-    specialty: "Preventive Medicine & Anti-Aging",
-    description: "Chief physician prominent in preventive medicine, epigenetics, anti-aging, and lifestyle medicine."
   }
 ];
 
@@ -1062,12 +1042,6 @@ const ReferenceValues = () => {
     { id: "bone-health", label: "Bone Health", icon: "🦴" },
     { id: "neurological", label: "Neurological", icon: "🧠" },
     { id: "advanced-inflammatory", label: "Advanced Inflammatory", icon: "🔬" },
-    { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊" },
-    { id: "fitness-performance", label: "Fitness & Performance", icon: "💪" },
-    { id: "oxidative-stress", label: "Oxidative Stress", icon: "⚡" },
-    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️" },
-    { id: "bone-health", label: "Bone Health", icon: "🦴" },
-    { id: "neurological", label: "Neurological", icon: "🧠" },
     { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊" },
     { id: "fitness-performance", label: "Fitness & Performance", icon: "💪" },
     { id: "specialized", label: "Specialized", icon: "🔬" }
