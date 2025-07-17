@@ -5,7 +5,9 @@ const BusinessPlanPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
       <Navigation />
-      <BusinessPlan />
+      <div className="pt-24">
+        <BusinessPlan />
+      </div>
     </div>
   );
 };

@@ -35,16 +35,16 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-3">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center space-x-4">
             <img 
               src="https://raw.githubusercontent.com/ma3u/blood-test/main/public/lovable-uploads/a8f58481-d0d4-4ad7-9810-0adfab52053a.png" 
               alt="LongevityCoa.ch Logo" 
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
             <button 
               onClick={() => navigateToPage('/')}
-              className="text-lg font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent"
+              className="text-xl font-bold bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent"
             >
               LongevityCoa.ch
             </button>
@@ -52,10 +52,10 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
-            <div className="ml-4 flex items-baseline space-x-1">
+            <div className="ml-4 flex items-center space-x-2">
               <button 
                 onClick={() => scrollToSection('hero')}
-                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === '/' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -65,7 +65,7 @@ const Navigation = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('journey')}
-                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === '/' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -75,7 +75,7 @@ const Navigation = () => {
               </button>
               <button 
                 onClick={() => navigateToPage('/reference-values')}
-                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === '/reference-values' 
                     ? 'text-blue-600 bg-blue-50 font-semibold' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -85,7 +85,7 @@ const Navigation = () => {
               </button>
               <button 
                 onClick={() => navigateToPage('/resources')}
-                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === '/resources' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -95,7 +95,7 @@ const Navigation = () => {
               </button>
               <button 
                 onClick={() => navigateToPage('/business-plan')}
-                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === '/business-plan' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -105,7 +105,7 @@ const Navigation = () => {
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className={`px-2 py-1.5 rounded-md text-xs font-medium transition-colors ${
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === '/' 
                     ? 'text-blue-600 bg-blue-50' 
                     : 'text-slate-600 hover:text-blue-600'
@@ -115,8 +115,7 @@ const Navigation = () => {
               </button>
               <Button 
                 onClick={() => navigateToPage('/prototypes')}
-                size="sm"
-                className={`text-xs bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 ${
+                className={`text-sm px-4 py-2 bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 ${
                   location.pathname === '/prototypes' ? 'ring-2 ring-blue-300' : ''
                 }`}
               >
@@ -129,9 +128,9 @@ const Navigation = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-slate-600 hover:text-blue-600 p-2"
+              className="text-slate-600 hover:text-blue-600 p-3"
             >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
             </button>
           </div>
         </div>
