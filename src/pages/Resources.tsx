@@ -30,12 +30,6 @@ const englishBooks = [
     "url": "https://www.amazon.com/dp/1501191977"
   },
   {
-    "title": "The Longevity Diet",
-    "author": "Valter Longo",
-    "description": "Science-based approach to eating for longevity and health",
-    "url": "https://www.amazon.com/dp/0525534075"
-  },
-  {
     "title": "Outlive: The Science and Art of Longevity",
     "author": "Peter Attia",
     "description": "Comprehensive guide to extending healthspan through precision medicine",
