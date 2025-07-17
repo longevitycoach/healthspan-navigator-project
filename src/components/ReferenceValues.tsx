@@ -486,59 +486,357 @@ const longevityBiomarkers = [
   }
 ];
 
-const specializedBiomarkers = [
+// Essential Amino Acids (Dr. Strunz recommendations)
+const aminoAcidBiomarkers = [
   {
-    name: "Heavy Metals Panel (Mercury, Aluminum, Lead)",
-    optimalRange: "< Detection Limit",
-    officialRange: "Varies by metal",
-    description: "Exposure to these toxins is significant concern for brain health and linked to neurodegenerative diseases.",
-    clinicalNotes: "Exposure to these toxins is a significant concern for brain health and is linked to neurodegenerative diseases like Alzheimer's and Parkinson's. Testing for them is recommended.",
-    factors: ["Environmental exposure", "Dental work", "Diet", "Occupational exposure"],
-    expertSource: "Environmental Medicine"
+    name: "Methionine",
+    optimalRange: "20-40 μmol/L",
+    officialRange: "10-42 μmol/L",
+    description: "Essential sulfur-containing amino acid",
+    clinicalNotes: "Critical for protein synthesis and methylation reactions. Deficiency affects detoxification and neurotransmitter production.",
+    factors: ["Protein intake", "B-vitamin status", "Liver function"],
+    expertSource: "Dr. Strunz Blood Tuning"
   },
   {
-    name: "Amino Acids Panel",
-    optimalRange: "Varies by amino acid",
-    officialRange: "Varies by amino acid",
-    description: "Measuring individual amino acids helps assess protein metabolism, neurotransmitter synthesis, and hormone production.",
-    clinicalNotes: "Helps assess protein metabolism, neurotransmitter synthesis, and hormone production. Includes essential amino acids the body cannot produce.",
-    factors: ["Diet", "Protein intake", "Absorption", "Metabolism"],
-    expertSource: "Functional Medicine"
+    name: "Taurine",
+    optimalRange: "40-100 μmol/L",
+    officialRange: "20-200 μmol/L",
+    description: "Conditionally essential amino acid",
+    clinicalNotes: "Cardiovascular protection, neurological function, and bile acid conjugation. Synthesis declines with age.",
+    factors: ["Synthesis capacity", "Dietary intake", "Age", "Exercise"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Leucine",
+    optimalRange: "100-200 μmol/L",
+    officialRange: "70-170 μmol/L",
+    description: "Branched-chain amino acid (BCAA)",
+    clinicalNotes: "Primary trigger for muscle protein synthesis (mTOR pathway). Essential for muscle maintenance.",
+    factors: ["Protein quality", "Exercise", "Insulin sensitivity", "Age"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Isoleucine",
+    optimalRange: "50-120 μmol/L",
+    officialRange: "40-90 μmol/L",
+    description: "Branched-chain amino acid",
+    clinicalNotes: "Energy metabolism regulation and muscle recovery. Important for glucose homeostasis.",
+    factors: ["Protein intake", "Exercise", "Metabolic health"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Valine",
+    optimalRange: "180-350 μmol/L",
+    officialRange: "150-300 μmol/L",
+    description: "Branched-chain amino acid",
+    clinicalNotes: "Muscle metabolism and nervous system function. Works synergistically with other BCAAs.",
+    factors: ["Protein balance", "Physical activity", "Stress"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Lysine",
+    optimalRange: "120-300 μmol/L",
+    officialRange: "100-250 μmol/L",
+    description: "Essential amino acid",
+    clinicalNotes: "Critical for collagen synthesis, immune function, and calcium absorption. Often limiting in plant proteins.",
+    factors: ["Protein quality", "Absorption", "Stress", "Viral infections"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Phenylalanine",
+    optimalRange: "45-85 μmol/L",
+    officialRange: "35-70 μmol/L",
+    description: "Essential aromatic amino acid",
+    clinicalNotes: "Precursor to tyrosine, dopamine, norepinephrine. Critical for cognitive function and mood.",
+    factors: ["Protein intake", "Aromatic amino acid competition", "PKU genetics"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Histidine",
+    optimalRange: "60-120 μmol/L",
+    officialRange: "50-100 μmol/L",
+    description: "Semi-essential amino acid",
+    clinicalNotes: "Histamine precursor and metal chelation. Important for inflammatory regulation.",
+    factors: ["Inflammatory status", "Protein intake", "Allergic conditions"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Threonine",
+    optimalRange: "80-200 μmol/L",
+    officialRange: "70-150 μmol/L",
+    description: "Essential amino acid",
+    clinicalNotes: "Important for protein synthesis, immune function, and gut barrier integrity.",
+    factors: ["Protein quality", "Digestive health", "Immune status"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Tryptophan",
+    optimalRange: "40-80 μmol/L",
+    officialRange: "30-70 μmol/L",
+    description: "Essential aromatic amino acid",
+    clinicalNotes: "Precursor to serotonin and melatonin. Critical for mood, sleep, and immune function.",
+    factors: ["Protein intake", "Carbohydrate availability", "Mood disorders", "Sleep quality"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  }
+];
+
+// Oxidative Stress Markers (Dr. Strunz recommendations)
+const oxidativeStressBiomarkers = [
+  {
+    name: "Total Antioxidative Capacity (TAC)",
+    optimalRange: ">1.5 mmol/L",
+    officialRange: "0.8-1.8 mmol/L",
+    description: "Overall antioxidant defense capacity",
+    clinicalNotes: "Reflects body's total ability to neutralize free radicals. Higher values indicate better cellular protection.",
+    factors: ["Antioxidant intake", "Oxidative stress load", "Genetics", "Age"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Oxidative Burden (8-OHdG)",
+    optimalRange: "<10 ng/mL",
+    officialRange: "2-30 ng/mL",
+    description: "DNA oxidative damage marker",
+    clinicalNotes: "8-hydroxy-deoxyguanosine indicates DNA damage from oxidative stress. Lower values reflect better cellular protection.",
+    factors: ["Antioxidant status", "Environmental toxins", "Stress", "Exercise intensity"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Lipid Peroxidation (MDA)",
+    optimalRange: "<2.0 μmol/L",
+    officialRange: "1.0-4.0 μmol/L",
+    description: "Lipid oxidative damage marker",
+    clinicalNotes: "Malondialdehyde reflects membrane damage and cardiovascular risk. Lower levels indicate better membrane integrity.",
+    factors: ["Omega-3 status", "Vitamin E", "Oxidative stress", "Inflammation"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  }
+];
+
+// Heavy Metals (Dr. Strunz recommendations)
+const heavyMetalsBiomarkers = [
+  {
+    name: "Mercury (Blood)",
+    optimalRange: "<5 μg/L",
+    officialRange: "<10 μg/L",
+    description: "Neurotoxic heavy metal",
+    clinicalNotes: "Accumulates in brain and kidneys. Causes neurological symptoms, cognitive decline, and cardiovascular issues.",
+    factors: ["Fish consumption", "Dental amalgams", "Environmental exposure", "Chelation therapy"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Lead (Blood)",
+    optimalRange: "<25 μg/L",
+    officialRange: "<100 μg/L",
+    description: "Neurotoxic heavy metal",
+    clinicalNotes: "Affects neurological development, blood pressure, and kidney function. No safe level in children.",
+    factors: ["Environmental exposure", "Old paint", "Water contamination", "Occupational exposure"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Cadmium (Blood)",
+    optimalRange: "<5 μg/L",
+    officialRange: "<10 μg/L",
+    description: "Toxic heavy metal",
+    clinicalNotes: "Causes kidney damage, bone demineralization, and increases cancer risk. Accumulates with age.",
+    factors: ["Smoking", "Food contamination", "Industrial exposure", "Soil pollution"],
+    expertSource: "Dr. Strunz Blood Tuning"
+  },
+  {
+    name: "Aluminum (Blood)",
+    optimalRange: "<10 μg/L",
+    officialRange: "<50 μg/L",
+    description: "Neurotoxic metal",
+    clinicalNotes: "Linked to neurodegenerative diseases. Crosses blood-brain barrier and accumulates in brain tissue.",
+    factors: ["Cookware", "Deodorants", "Vaccines", "Food additives", "Water treatment"],
+    expertSource: "Environmental Medicine"
+  }
+];
+
+// Bone Health Biomarkers (Dr. Orfanos-Boeckel recommendations)
+const boneHealthBiomarkers = [
+  {
+    name: "Beta-Crosslaps (CTX)",
+    optimalRange: "Men: 100-400 pg/mL, Women: 50-350 pg/mL",
+    officialRange: "Variable by age and gender",
+    description: "Bone resorption marker",
+    clinicalNotes: "C-terminal telopeptide reflects osteoclast activity. Lower values indicate reduced bone breakdown.",
+    factors: ["Age", "Hormones", "Vitamin D", "Physical activity", "Calcium intake"],
+    expertSource: "Dr. Orfanos-Boeckel"
+  },
+  {
+    name: "Tartrate-resistant Acid Phosphatase 5b (TRAP5b)",
+    optimalRange: "Men: 1.5-4.2 U/L, Women: 1.0-4.2 U/L",
+    officialRange: "1.0-6.0 U/L",
+    description: "Osteoclast-specific enzyme",
+    clinicalNotes: "Highly specific marker of bone resorption. More specific than CTX for bone metabolism.",
+    factors: ["Bone turnover rate", "Hormonal status", "Age", "Disease state"],
+    expertSource: "Dr. Orfanos-Boeckel"
+  },
+  {
+    name: "Undercarboxylated Osteocalcin (ucOC)",
+    optimalRange: "<20% of total osteocalcin",
+    officialRange: "Variable",
+    description: "Vitamin K2 deficiency marker",
+    clinicalNotes: "Higher percentages indicate vitamin K2 insufficiency and poor bone matrix quality.",
+    factors: ["Vitamin K2 intake", "Gut health", "Warfarin use", "Age"],
+    expertSource: "Dr. Orfanos-Boeckel"
+  },
+  {
+    name: "Procollagen Type 1 N-Propeptide (P1NP)",
+    optimalRange: "15-60 ng/mL",
+    officialRange: "Variable by age and gender",
+    description: "Bone formation marker",
+    clinicalNotes: "Reflects osteoblast activity and collagen synthesis. Higher values indicate active bone building.",
+    factors: ["Growth", "Hormones", "Nutrition", "Exercise", "Age"],
+    expertSource: "Dr. Orfanos-Boeckel"
+  }
+];
+
+// Neurological Biomarkers (Dr. Orfanos-Boeckel recommendations)
+const neurologicalBiomarkers = [
+  {
+    name: "Brain-Derived Neurotrophic Factor (BDNF)",
+    optimalRange: ">20 ng/mL",
+    officialRange: "10-25 ng/mL",
+    description: "Neuroplasticity and cognitive function marker",
+    clinicalNotes: "Promotes neuronal survival and growth. Higher levels support brain health, memory, and learning.",
+    factors: ["Exercise", "Sleep", "Stress management", "Nutrition", "Meditation"],
+    expertSource: "Dr. Orfanos-Boeckel"
+  },
+  {
+    name: "Neurofilament Light Chain (NfL)",
+    optimalRange: "<20 pg/mL",
+    officialRange: "Variable by age",
+    description: "Neuronal damage marker",
+    clinicalNotes: "Indicates axonal damage. Lower values suggest better neuronal integrity and brain health.",
+    factors: ["Age", "Neurological health", "Inflammation", "Head trauma"],
+    expertSource: "Dr. Orfanos-Boeckel"
+  },
+  {
+    name: "S100 Calcium Binding Protein B (S100B)",
+    optimalRange: "<0.15 μg/L",
+    officialRange: "<0.5 μg/L",
+    description: "Blood-brain barrier integrity marker",
+    clinicalNotes: "Lower values indicate better blood-brain barrier function and reduced neuroinflammation.",
+    factors: ["Inflammation", "Stress", "Sleep quality", "Head trauma"],
+    expertSource: "Dr. Orfanos-Boeckel"
+  }
+];
+
+// Enhanced Metabolic Biomarkers (Inchauspé recommendations)
+const enhancedMetabolicBiomarkers = [
+  {
+    name: "Glucose Variability Index (GVI)",
+    optimalRange: "<1.2",
+    officialRange: "Not established",
+    description: "Glucose stability measurement from CGM data",
+    clinicalNotes: "Lower variability indicates better metabolic health and reduced diabetes risk. Measures glucose stability throughout the day.",
+    factors: ["Meal timing", "Food composition", "Exercise timing", "Sleep"],
+    expertSource: "Inchauspé Glucose Goddess"
+  },
+  {
+    name: "Dawn Phenomenon Glucose Rise",
+    optimalRange: "<20 mg/dL increase",
+    officialRange: "Not established",
+    description: "Morning glucose elevation from CGM",
+    clinicalNotes: "Smaller rise indicates better glucose control and insulin sensitivity. Normal cortisol awakening response.",
+    factors: ["Sleep quality", "Cortisol rhythm", "Insulin sensitivity", "Evening meal timing"],
+    expertSource: "Inchauspé Glucose Goddess"
+  },
+  {
+    name: "Post-Meal Glucose Spike",
+    optimalRange: "<40 mg/dL above baseline",
+    officialRange: "Not established", 
+    description: "Maximum glucose increase after meals",
+    clinicalNotes: "Smaller spikes indicate better metabolic flexibility and reduced inflammatory response to food.",
+    factors: ["Food composition", "Meal order", "Exercise", "Fiber intake"],
+    expertSource: "Inchauspé Glucose Goddess"
+  }
+];
+
+// Comprehensive Fitness Biomarkers (Froböse recommendations)
+const fitnessPerformanceBiomarkers = [
+  {
+    name: "VO2 Max",
+    optimalRange: "Age-adjusted: >85th percentile for age/gender",
+    officialRange: "Variable by age and fitness level",
+    description: "Maximum oxygen uptake capacity",
+    clinicalNotes: "Strongest predictor of cardiovascular health and all-cause mortality. Declines ~1% per year after age 30.",
+    factors: ["Aerobic exercise", "Altitude training", "Genetics", "Body composition"],
+    expertSource: "Froböse Sports Medicine"
+  },
+  {
+    name: "Muscle Mass Index (SMI)",
+    optimalRange: "Men: >10.75 kg/m², Women: >6.75 kg/m²",
+    officialRange: "Variable by age and method",
+    description: "Skeletal muscle mass relative to height squared",
+    clinicalNotes: "Higher values associated with longevity and metabolic health. Sarcopenia threshold indicator.",
+    factors: ["Resistance training", "Protein intake", "Age", "Hormones"],
+    expertSource: "Froböse Sports Medicine"
+  },
+  {
+    name: "Handgrip Strength",
+    optimalRange: "Age/gender adjusted: >75th percentile",
+    officialRange: "Variable by age and gender",
+    description: "Proxy for overall muscle strength and frailty",
+    clinicalNotes: "Strong predictor of mortality, functional decline, and cognitive health. Simple but powerful biomarker.",
+    factors: ["Muscle mass", "Neural activation", "Overall health", "Nutrition"],
+    expertSource: "Froböse Sports Medicine"
+  },
+  {
+    name: "Body Fat Percentage",
+    optimalRange: "Men: 10-18%, Women: 16-24%",
+    officialRange: "Variable by method",
+    description: "Proportion of body weight that is fat mass",
+    clinicalNotes: "More important than BMI for health assessment. Visceral fat more concerning than subcutaneous.",
+    factors: ["Diet", "Exercise", "Hormones", "Age", "Genetics"],
+    expertSource: "Froböse Sports Medicine"
+  }
+];
+
+const specializedBiomarkers = [
+  {
+    name: "Continuous Glucose Monitoring (CGM)",
+    optimalRange: "Time in range 70-180 mg/dL: >70%, Mean glucose <140 mg/dL",
+    officialRange: "Fasting: 70-100 mg/dL, Random: <200 mg/dL",
+    description: "Real-time glucose variability and patterns over 14 days",
+    clinicalNotes: "Provides insights into metabolic flexibility, meal responses, and optimal eating patterns for individual optimization.",
+    factors: ["Diet timing", "Food composition", "Exercise", "Stress", "Sleep"],
+    expertSource: "Inchauspé Glucose Goddess"
   },
   {
     name: "Short-Chain Fatty Acids (SCFA)",
-    optimalRange: "High diversity",
+    optimalRange: "High diversity and concentration",
     officialRange: "Not established",
-    description: "Beneficial metabolites produced by gut bacteria. Important indicators of gut health.",
-    clinicalNotes: "Their levels, assessed through microbiome analysis, are important indicators of gut health and can influence the gut barrier.",
-    factors: ["Gut microbiome", "Fiber intake", "Diet quality"],
+    description: "Beneficial metabolites produced by gut bacteria",
+    clinicalNotes: "Butyrate, acetate, and propionate levels indicate gut health and influence metabolism, immunity, and brain function.",
+    factors: ["Gut microbiome", "Fiber intake", "Diet quality", "Prebiotics"],
     expertSource: "Microbiome Research"
   },
   {
     name: "Microbiome Analysis",
-    optimalRange: "High diversity",
+    optimalRange: "High diversity (Shannon >3.5)",
     officialRange: "Not established",
-    description: "Assessment of gut bacterial composition and metabolite production.",
-    clinicalNotes: "Can help explain general, non-specific symptoms such as fatigue, body aches, and sensitive skin, linking them to gut imbalances.",
-    factors: ["Diet", "Antibiotics", "Stress", "Environment"],
+    description: "Assessment of gut bacterial composition and metabolite production",
+    clinicalNotes: "Can explain non-specific symptoms like fatigue and inflammation. Links gut health to systemic wellness.",
+    factors: ["Diet", "Antibiotics", "Stress", "Environment", "Birth method"],
     expertSource: "Microbiome Research"
   },
   {
     name: "Food Intolerance Panel",
-    optimalRange: "No significant reactions",
+    optimalRange: "No significant IgG reactions",
     officialRange: "Not established",
-    description: "Identifies specific foods that trigger symptoms and contribute to gut inflammation.",
-    clinicalNotes: "Can help identify specific foods (e.g., fructose, lactose, gluten) that trigger symptoms and contribute to gut inflammation.",
-    factors: ["Gut health", "Immune system", "Genetics"],
+    description: "Identifies delayed food sensitivities contributing to inflammation",
+    clinicalNotes: "Can identify trigger foods causing gut inflammation, brain fog, and systemic symptoms.",
+    factors: ["Gut health", "Immune system", "Genetics", "Exposure history"],
     expertSource: "Functional Medicine"
   },
   {
     name: "Gut Permeability (Leaky Gut) Test",
-    optimalRange: "Normal barrier function",
+    optimalRange: "Lactulose/Mannitol ratio <0.03",
     officialRange: "Not established",
-    description: "Assesses integrity of intestinal barrier. Increased permeability allows toxins to enter bloodstream.",
-    clinicalNotes: "These tests assess the integrity of the intestinal barrier. Increased permeability allows toxins and undigested food particles to enter the bloodstream, triggering inflammation.",
-    factors: ["Diet", "Stress", "Medications", "Infections"],
+    description: "Assesses intestinal barrier integrity",
+    clinicalNotes: "Increased permeability allows toxins and food particles to enter bloodstream, triggering systemic inflammation.",
+    factors: ["Diet", "Stress", "NSAIDs", "Infections", "Alcohol"],
     expertSource: "Functional Medicine"
   }
 ];
@@ -681,6 +979,13 @@ const ReferenceValues = () => {
     { id: "liver", label: "Liver", icon: "🫘" },
     { id: "kidney", label: "Kidney", icon: "💧" },
     { id: "longevity", label: "Longevity", icon: "🧪" },
+    { id: "amino-acids", label: "Amino Acids", icon: "🧱" },
+    { id: "oxidative-stress", label: "Oxidative Stress", icon: "⚡" },
+    { id: "heavy-metals", label: "Heavy Metals", icon: "⚠️" },
+    { id: "bone-health", label: "Bone Health", icon: "🦴" },
+    { id: "neurological", label: "Neurological", icon: "🧠" },
+    { id: "enhanced-metabolic", label: "Enhanced Metabolic", icon: "📊" },
+    { id: "fitness-performance", label: "Fitness & Performance", icon: "💪" },
     { id: "specialized", label: "Specialized", icon: "🔬" }
   ];
 
@@ -878,6 +1183,13 @@ const ReferenceValues = () => {
       case "liver": return liverBiomarkers;
       case "kidney": return kidneyBiomarkers;
       case "longevity": return longevityBiomarkers;
+      case "amino-acids": return aminoAcidBiomarkers;
+      case "oxidative-stress": return oxidativeStressBiomarkers;
+      case "heavy-metals": return heavyMetalsBiomarkers;
+      case "bone-health": return boneHealthBiomarkers;
+      case "neurological": return neurologicalBiomarkers;
+      case "enhanced-metabolic": return enhancedMetabolicBiomarkers;
+      case "fitness-performance": return fitnessPerformanceBiomarkers;
       case "specialized": return specializedBiomarkers;
       default: return [];
     }
