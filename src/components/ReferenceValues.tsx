@@ -1592,7 +1592,7 @@ const ReferenceValues = () => {
               variant="outline"
               size="sm"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="fixed top-20 left-4 z-50 bg-white shadow-lg border-2"
+              className="fixed top-36 left-4 z-50 bg-white shadow-lg border-2"
             >
               <Menu className="h-4 w-4" />
             </Button>
