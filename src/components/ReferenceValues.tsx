@@ -1696,11 +1696,23 @@ const ReferenceValues = () => {
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <span className="text-2xl">
-                    {categories.find(cat => cat.id === activeCategory)?.icon}
+                    {(() => {
+                      // First check if it's a hallmark
+                      const hallmark = hallmarksCategories.find(h => h.id === activeCategory);
+                      if (hallmark) return hallmark.icon;
+                      // Otherwise check traditional categories
+                      return categories.find(cat => cat.id === activeCategory)?.icon;
+                    })()}
                   </span>
                   <div>
                     <CardTitle className="text-xl">
-                      {categories.find(cat => cat.id === activeCategory)?.label}
+                      {(() => {
+                        // First check if it's a hallmark
+                        const hallmark = hallmarksCategories.find(h => h.id === activeCategory);
+                        if (hallmark) return hallmark.label;
+                        // Otherwise check traditional categories
+                        return categories.find(cat => cat.id === activeCategory)?.label;
+                      })()}
                     </CardTitle>
                     <p className="text-sm text-slate-600 mt-1">
                       {getCategoryImpactDescription(activeCategory)}
