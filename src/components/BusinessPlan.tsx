@@ -3,7 +3,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, TrendingUp, Users, DollarSign, Target, Award, Phone, 
          Lightbulb, Shield, Zap, Globe, Brain, Heart, Star, CheckCircle, AlertCircle, 
-         Trophy, Rocket, BarChart3, PieChart, Cpu, Database, Lock, Microscope } from "lucide-react";
+         Trophy, Rocket, BarChart3, PieChart, Cpu, Database, Lock, Microscope, Linkedin, 
+         MessageCircle, Github } from "lucide-react";
 import MarketAnalysisChart from './MarketAnalysisChart';
 const BusinessPlan = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -1414,7 +1415,7 @@ const BusinessPlan = () => {
               <Phone className="w-6 h-6 text-blue-600" />
               Get in Touch
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
               <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
                 <Globe className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <div className="font-bold text-blue-900">Website</div>
@@ -1431,6 +1432,24 @@ const BusinessPlan = () => {
                 <Target className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                 <div className="font-bold text-purple-900">Location</div>
                 <div className="text-sm text-purple-700">Berlin, Germany</div>
+              </div>
+              
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
+                <Linkedin className="w-8 h-8 text-blue-700 mx-auto mb-2" />
+                <div className="font-bold text-blue-900">LinkedIn</div>
+                <div className="text-sm text-blue-700">mbuchhorn</div>
+              </div>
+              
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
+                <MessageCircle className="w-8 h-8 text-sky-600 mx-auto mb-2" />
+                <div className="font-bold text-sky-900">Bluesky</div>
+                <div className="text-sm text-sky-700">m43u.bsky.social</div>
+              </div>
+              
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
+                <Github className="w-8 h-8 text-gray-700 mx-auto mb-2" />
+                <div className="font-bold text-gray-900">GitHub</div>
+                <div className="text-sm text-gray-700">longevitycoach</div>
               </div>
             </div>
           </div>
