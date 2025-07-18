@@ -22,3 +22,14 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Security - Never commit sensitive data
+.env
+.env.local
+.env.production
+.mcp.json
+supabase/.env
+supabase/.env.local
+
+# Supabase
+.supabase/

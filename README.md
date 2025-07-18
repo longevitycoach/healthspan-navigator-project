@@ -1,8 +1,14 @@
-# Welcome to your Lovable project
+# Healthspan Navigator Project
+
+A React-based web application for health and longevity coaching, featuring AI-powered chat assistance and comprehensive health resources.
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/9392db23-626c-4971-be5d-f425b766b211
+**Production URL**: https://longevitycoa.ch/
+
+**Claude Code with SuperClaude**: This project supports advanced AI coding features powered by Claude Code and SuperClaude for seamless code interaction and enhancement.
+**GitHub Repository**: https://github.com/longevitycoach/healthspan-navigator-project/  
+**Lovable Project**: https://lovable.dev/projects/9392db23-626c-4971-be5d-f425b766b211
 
 ## How can I edit this code?
 
@@ -14,6 +20,14 @@ Simply visit the [Lovable Project](https://lovable.dev/projects/9392db23-626c-49
 
 Changes made via Lovable will be committed automatically to this repo.
 
+**Use Claude Code with SuperClaude (Recommended)**
+
+This project is optimized for Claude Code with SuperClaude integration, providing advanced AI-powered coding assistance.
+
+- **Default IDE**: VS Code with Claude Code extension
+- **AI Features**: Code completion, debugging assistance, and intelligent refactoring
+- **Setup**: Install the Claude Code extension in VS Code and configure SuperClaude for enhanced capabilities
+
 **Use your preferred IDE**
 
 If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
@@ -24,10 +38,10 @@ Follow these steps:
 
 ```sh
 # Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+git clone https://github.com/longevitycoach/healthspan-navigator-project.git
 
 # Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+cd healthspan-navigator-project
 
 # Step 3: Install the necessary dependencies.
 npm i
