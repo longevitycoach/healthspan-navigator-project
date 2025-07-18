@@ -162,8 +162,8 @@ const BusinessPlan = () => {
           
           <div className="grid md:grid-cols-3 gap-6">
             {/* Free Tier */}
-            <div className="bg-gray-50 p-6 rounded-lg border-2 border-gray-200">
-              <div className="text-center mb-4">
+            <div className="bg-gray-50 p-6 rounded-lg border-2 border-gray-200 transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:border-gray-300 cursor-pointer">
+              <div className="text-center mb-4 transition-all duration-300 hover:scale-105">
                 <h4 className="text-xl font-bold text-gray-900">Free Tier</h4>
                 <p className="text-2xl font-bold text-gray-600 mt-2">€0/month</p>
                 <p className="text-sm text-gray-500">Gateway to longevity</p>
@@ -172,19 +172,19 @@ const BusinessPlan = () => {
               <div className="space-y-3 mb-6">
                 <h5 className="font-semibold text-gray-800">Access Includes:</h5>
                 <ul className="text-sm text-gray-700 space-y-2">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Basic biomarker reference values</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>General health articles & resources</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Basic health calculators</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Community forum access</span>
                   </li>
@@ -194,23 +194,23 @@ const BusinessPlan = () => {
               <div className="border-t pt-4">
                 <h5 className="font-semibold text-gray-800 mb-2">Limitations:</h5>
                 <ul className="text-sm text-gray-600 space-y-1">
-                  <li>• No personalized recommendations</li>
-                  <li>• No biomarker analysis</li>
-                  <li>• No AI coaching</li>
-                  <li>• Limited content access</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• No personalized recommendations</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• No biomarker analysis</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• No AI coaching</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Limited content access</li>
                 </ul>
               </div>
             </div>
 
             {/* Premium Tier */}
-            <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+            <div className="bg-blue-50 p-6 rounded-lg border-2 border-blue-300 relative transition-all duration-300 hover:bg-blue-100 hover:scale-105 hover:shadow-lg hover:border-blue-400 cursor-pointer">
+              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 transition-all duration-300 hover:scale-110">
                 <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
                   MOST POPULAR
                 </span>
               </div>
               
-              <div className="text-center mb-4">
+              <div className="text-center mb-4 transition-all duration-300 hover:scale-105">
                 <h4 className="text-xl font-bold text-blue-900">Premium</h4>
                 <p className="text-2xl font-bold text-blue-600 mt-2">€9/month</p>
                 <p className="text-sm text-blue-700">Personal optimization</p>
@@ -219,31 +219,31 @@ const BusinessPlan = () => {
               <div className="space-y-3 mb-6">
                 <h5 className="font-semibold text-blue-800">Everything in Free +</h5>
                 <ul className="text-sm text-blue-800 space-y-2">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>AI-powered personalized protocols</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Comprehensive biomarker analysis</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>25% off personal coaching sessions</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Advanced tracking & analytics</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Supplement recommendations</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Lab test interpretations</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Priority support</span>
                   </li>
@@ -252,8 +252,8 @@ const BusinessPlan = () => {
             </div>
 
             {/* Enterprise Tier */}
-            <div className="bg-green-50 p-6 rounded-lg border-2 border-green-300">
-              <div className="text-center mb-4">
+            <div className="bg-green-50 p-6 rounded-lg border-2 border-green-300 transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg hover:border-green-400 cursor-pointer">
+              <div className="text-center mb-4 transition-all duration-300 hover:scale-105">
                 <h4 className="text-xl font-bold text-green-900">Enterprise</h4>
                 <p className="text-2xl font-bold text-green-600 mt-2">€29/month</p>
                 <p className="text-sm text-green-700">Complete optimization</p>
@@ -262,27 +262,27 @@ const BusinessPlan = () => {
               <div className="space-y-3 mb-6">
                 <h5 className="font-semibold text-green-800">Everything in Premium +</h5>
                 <ul className="text-sm text-green-800 space-y-2">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>50% off 1-on-1 expert consultations</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>50% off cutting-edge biomarker testing</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Concierge health coordination</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Custom protocol development</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>Direct physician access</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105 hover:translate-x-2">
                     <span className="text-green-500 mt-1">✓</span>
                     <span>White-label solutions</span>
                   </li>
@@ -292,46 +292,46 @@ const BusinessPlan = () => {
           </div>
 
           {/* B2B Revenue Streams */}
-          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg">
+          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg transition-all duration-300 hover:from-purple-100 hover:to-indigo-100 hover:scale-105 hover:shadow-lg cursor-pointer">
             <h4 className="text-xl font-semibold text-purple-900 mb-4">B2B Revenue Streams</h4>
             <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg">
+              <div className="bg-white p-4 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-md cursor-pointer">
                 <h5 className="font-semibold text-purple-900 mb-2">Corporate Wellness</h5>
                 <p className="text-sm text-purple-800 mb-2">€15-50/employee/month</p>
                 <ul className="text-xs text-purple-700 space-y-1">
-                  <li>• Company-wide health optimization</li>
-                  <li>• Executive health programs</li>
-                  <li>• Employee wellness dashboards</li>
-                  <li>• ROI tracking & reporting</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Company-wide health optimization</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Executive health programs</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Employee wellness dashboards</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• ROI tracking & reporting</li>
                 </ul>
               </div>
               
-              <div className="bg-white p-4 rounded-lg">
+              <div className="bg-white p-4 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-md cursor-pointer">
                 <h5 className="font-semibold text-purple-900 mb-2">Healthcare Partnerships</h5>
                 <p className="text-sm text-purple-800 mb-2">Revenue sharing 20-40%</p>
                 <ul className="text-xs text-purple-700 space-y-1">
-                  <li>• Clinic integration partnerships</li>
-                  <li>• Hospital preventive care programs</li>
-                  <li>• Insurance premium reductions</li>
-                  <li>• API licensing to health tech</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Clinic integration partnerships</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Hospital preventive care programs</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Insurance premium reductions</li>
+                  <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• API licensing to health tech</li>
                 </ul>
               </div>
             </div>
           </div>
 
           {/* Conversion Strategy */}
-          <div className="bg-yellow-50 p-4 rounded-lg">
+          <div className="bg-yellow-50 p-4 rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:scale-105 hover:shadow-lg cursor-pointer">
             <h4 className="font-semibold text-yellow-900 mb-2">Freemium Conversion Strategy</h4>
             <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div>
+              <div className="p-3 rounded-lg transition-all duration-300 hover:bg-white/60 hover:scale-105 cursor-pointer">
                 <div className="font-medium text-yellow-800">Free → Premium</div>
                 <div className="text-yellow-700">Target: 12-15% conversion rate</div>
               </div>
-              <div>
+              <div className="p-3 rounded-lg transition-all duration-300 hover:bg-white/60 hover:scale-105 cursor-pointer">
                 <div className="font-medium text-yellow-800">Premium → Enterprise</div>
                 <div className="text-yellow-700">Target: 18-22% upgrade rate</div>
               </div>
-              <div>
+              <div className="p-3 rounded-lg transition-all duration-300 hover:bg-white/60 hover:scale-105 cursor-pointer">
                 <div className="font-medium text-yellow-800">Average LTV</div>
                 <div className="text-yellow-700">€450+ per paid user</div>
               </div>
@@ -350,7 +350,7 @@ const BusinessPlan = () => {
           
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-4">
-              <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-400">
+              <div className="bg-blue-50 p-5 rounded-lg border-l-4 border-blue-400 transition-all duration-300 hover:bg-blue-100 hover:scale-105 hover:shadow-lg hover:border-blue-500 cursor-pointer">
                 <h4 className="font-semibold text-blue-900 mb-2">AI-Powered Personalization</h4>
                 <p className="text-sm text-blue-800">
                   Our proprietary algorithms analyze 60+ biomarkers to create truly personalized longevity protocols, 
@@ -358,7 +358,7 @@ const BusinessPlan = () => {
                 </p>
               </div>
               
-              <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-400">
+              <div className="bg-green-50 p-5 rounded-lg border-l-4 border-green-400 transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg hover:border-green-500 cursor-pointer">
                 <h4 className="font-semibold text-green-900 mb-2">Comprehensive Integration</h4>
                 <p className="text-sm text-green-800">
                   We integrate nutrition, exercise, supplementation, and lifestyle factors into one cohesive 
@@ -366,7 +366,7 @@ const BusinessPlan = () => {
                 </p>
               </div>
               
-              <div className="bg-purple-50 p-5 rounded-lg border-l-4 border-purple-400">
+              <div className="bg-purple-50 p-5 rounded-lg border-l-4 border-purple-400 transition-all duration-300 hover:bg-purple-100 hover:scale-105 hover:shadow-lg hover:border-purple-500 cursor-pointer">
                 <h4 className="font-semibold text-purple-900 mb-2">Scientific Rigor</h4>
                 <p className="text-sm text-purple-800">
                   Every recommendation is backed by peer-reviewed research, with transparent sourcing 
@@ -376,7 +376,7 @@ const BusinessPlan = () => {
             </div>
             
             <div className="space-y-4">
-              <div className="bg-orange-50 p-5 rounded-lg border-l-4 border-orange-400">
+              <div className="bg-orange-50 p-5 rounded-lg border-l-4 border-orange-400 transition-all duration-300 hover:bg-orange-100 hover:scale-105 hover:shadow-lg hover:border-orange-500 cursor-pointer">
                 <h4 className="font-semibold text-orange-900 mb-2">German Engineering Excellence</h4>
                 <p className="text-sm text-orange-800">
                   Built with German precision and privacy standards, ensuring data security 
@@ -384,7 +384,7 @@ const BusinessPlan = () => {
                 </p>
               </div>
               
-              <div className="bg-teal-50 p-5 rounded-lg border-l-4 border-teal-400">
+              <div className="bg-teal-50 p-5 rounded-lg border-l-4 border-teal-400 transition-all duration-300 hover:bg-teal-100 hover:scale-105 hover:shadow-lg hover:border-teal-500 cursor-pointer">
                 <h4 className="font-semibold text-teal-900 mb-2">Continuous Optimization</h4>
                 <p className="text-sm text-teal-800">
                   Our platform learns and adapts recommendations based on user results, 
@@ -392,7 +392,7 @@ const BusinessPlan = () => {
                 </p>
               </div>
               
-              <div className="bg-red-50 p-5 rounded-lg border-l-4 border-red-400">
+              <div className="bg-red-50 p-5 rounded-lg border-l-4 border-red-400 transition-all duration-300 hover:bg-red-100 hover:scale-105 hover:shadow-lg hover:border-red-500 cursor-pointer">
                 <h4 className="font-semibold text-red-900 mb-2">Holistic Approach</h4>
                 <p className="text-sm text-red-800">
                   Unlike competitors focusing on single aspects (just nutrition or just fitness), 
