@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, TrendingUp, Users, DollarSign, Target, Award, Phone } from "lucide-react";
+import { ChevronLeft, ChevronRight, TrendingUp, Users, DollarSign, Target, Award, Phone, 
+         Lightbulb, Shield, Zap, Globe, Brain, Heart, Star, CheckCircle, AlertCircle, 
+         Trophy, Rocket, BarChart3, PieChart, Cpu, Database, Lock, Microscope } from "lucide-react";
 import MarketAnalysisChart from './MarketAnalysisChart';
 const BusinessPlan = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -13,39 +15,106 @@ const BusinessPlan = () => {
     icon: <Target className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
           <div className="text-center">
-            <h3 className="text-3xl font-bold text-slate-900 mb-4">
+            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center justify-center gap-3">
+              <Target className="w-8 h-8 text-blue-600" />
               Democratizing Longevity Science
             </h3>
-            <p className="text-lg text-slate-600 mb-6">
-              Making evidence-based health optimization accessible to everyone through personalized coaching and cutting-edge biomarker analysis
-            </p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-blue-50 p-6 rounded-lg transition-all duration-300 hover:bg-blue-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-              <h4 className="text-xl font-semibold mb-3 text-blue-900">Our Mission</h4>
-              <p className="text-blue-800">
-                Transform healthcare from reactive treatment to proactive optimization, 
-                extending healthy lifespan through personalized, science-based interventions.
-              </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+            {/* Mission Symbol */}
+            <div className="group bg-blue-50 p-6 rounded-lg transition-all duration-300 hover:bg-blue-100 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Heart className="w-12 h-12 text-blue-600 mx-auto mb-2" />
+                <h4 className="font-bold text-blue-900">Mission</h4>
+              </div>
+              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">
+                  Transform healthcare from reactive treatment to proactive optimization, extending healthy lifespan through personalized interventions.
+                </p>
+              </div>
             </div>
-            <div className="bg-green-50 p-6 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-              <h4 className="text-xl font-semibold mb-3 text-green-900">Our Vision</h4>
-              <p className="text-green-800">
-                A world where everyone has access to personalized longevity protocols, 
-                enabling healthier, longer lives through precision health optimization.
-              </p>
+
+            {/* Vision Symbol */}
+            <div className="group bg-green-50 p-6 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Globe className="w-12 h-12 text-green-600 mx-auto mb-2" />
+                <h4 className="font-bold text-green-900">Vision</h4>
+              </div>
+              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">
+                  A world where everyone has access to personalized longevity protocols, enabling healthier, longer lives through precision health optimization.
+                </p>
+              </div>
+            </div>
+
+            {/* AI Power Symbol */}
+            <div className="group bg-purple-50 p-6 rounded-lg transition-all duration-300 hover:bg-purple-100 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Brain className="w-12 h-12 text-purple-600 mx-auto mb-2" />
+                <h4 className="font-bold text-purple-900">AI-Powered</h4>
+              </div>
+              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">
+                  Advanced algorithms analyze 60+ biomarkers to create truly personalized longevity protocols.
+                </p>
+              </div>
+            </div>
+
+            {/* Science Symbol */}
+            <div className="group bg-orange-50 p-6 rounded-lg transition-all duration-300 hover:bg-orange-100 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Microscope className="w-12 h-12 text-orange-600 mx-auto mb-2" />
+                <h4 className="font-bold text-orange-900">Evidence-Based</h4>
+              </div>
+              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">
+                  Every recommendation backed by peer-reviewed research with transparent sourcing and continuous updates.
+                </p>
+              </div>
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg transition-all duration-300 hover:from-blue-200 hover:to-green-200 hover:scale-105 hover:shadow-lg cursor-pointer">
-            <h4 className="text-xl font-semibold mb-3">Key Differentiators</h4>
-            <ul className="grid md:grid-cols-2 gap-2 text-sm">
-              <li className="transition-transform duration-200 hover:scale-105">• AI-powered personalized recommendations</li>
-              <li className="transition-transform duration-200 hover:scale-105">• Comprehensive biomarker analysis</li>
-              <li className="transition-transform duration-200 hover:scale-105">• Evidence-based protocols</li>
-              <li className="transition-transform duration-200 hover:scale-105">• Continuous optimization tracking</li>
-            </ul>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="group bg-gradient-to-br from-blue-100 to-purple-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Cpu className="w-8 h-8 text-blue-600 mx-auto mb-1" />
+                <span className="text-xs font-medium">Personalized</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs text-center">AI-powered personalized recommendations</p>
+              </div>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-green-100 to-teal-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Database className="w-8 h-8 text-green-600 mx-auto mb-1" />
+                <span className="text-xs font-medium">Comprehensive</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs text-center">Comprehensive biomarker analysis</p>
+              </div>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-purple-100 to-pink-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <BarChart3 className="w-8 h-8 text-purple-600 mx-auto mb-1" />
+                <span className="text-xs font-medium">Tracking</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs text-center">Continuous optimization tracking</p>
+              </div>
+            </div>
+            
+            <div className="group bg-gradient-to-br from-orange-100 to-red-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Shield className="w-8 h-8 text-orange-600 mx-auto mb-1" />
+                <span className="text-xs font-medium">Protocols</span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs text-center">Evidence-based protocols</p>
+              </div>
+            </div>
           </div>
         </div>
   }, {
@@ -53,99 +122,152 @@ const BusinessPlan = () => {
     title: "Market Analysis",
     icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg mb-6 transition-all duration-300 hover:from-blue-100 hover:to-green-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-            <h4 className="text-xl font-semibold mb-4 text-slate-900">Global Longevity Market Overview</h4>
-            <div className="grid md:grid-cols-3 gap-4 mb-4">
-              <div className="text-center p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
-                <div className="text-2xl font-bold text-blue-600">$8.5B</div>
-                <div className="text-sm text-gray-600">Global investment 2024</div>
-                <div className="text-xs text-gray-500">220% increase from 2023</div>
+          <div className="grid grid-cols-3 gap-6 mb-6">
+            {/* Market Size Symbol */}
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <PieChart className="w-16 h-16 text-blue-600 mx-auto mb-2" />
+                <div className="text-3xl font-bold text-blue-600">$8.5B</div>
+                <div className="text-sm text-blue-800">2024 Investment</div>
               </div>
-              <div className="text-center p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
-                <div className="text-2xl font-bold text-green-600">$8.1B</div>
-                <div className="text-sm text-gray-600">Top 50 disclosed funding</div>
-                <div className="text-xs text-gray-500">$169M average per company</div>
-              </div>
-              <div className="text-center p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
-                <div className="text-2xl font-bold text-purple-600">91%</div>
-                <div className="text-sm text-gray-600">Top 10 concentration</div>
-                <div className="text-xs text-gray-500">$7.4B in top tier</div>
+              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
+                <h4 className="font-bold mb-2">Global Investment 2024</h4>
+                <p className="text-sm text-center">220% increase from 2023, demonstrating explosive market growth</p>
               </div>
             </div>
-            <p className="text-sm text-slate-700">
-              The longevity market demonstrates extreme capital concentration, with breakthrough technologies requiring 
-              substantial resources for research, clinical trials, and regulatory approval. Europe represents 30% of 
-              top companies, with Switzerland leading through strategic corporate partnerships and Germany excelling 
-              in AI-powered clinical solutions.
-            </p>
+
+            {/* Funding Concentration */}
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <Trophy className="w-16 h-16 text-green-600 mx-auto mb-2" />
+                <div className="text-3xl font-bold text-green-600">$8.1B</div>
+                <div className="text-sm text-green-800">Top 50 Companies</div>
+              </div>
+              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
+                <h4 className="font-bold mb-2">Disclosed Funding</h4>
+                <p className="text-sm text-center">$169M average per company in top tier</p>
+              </div>
+            </div>
+
+            {/* Market Concentration */}
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <Star className="w-16 h-16 text-purple-600 mx-auto mb-2" />
+                <div className="text-3xl font-bold text-purple-600">91%</div>
+                <div className="text-sm text-purple-800">Top 10 Share</div>
+              </div>
+              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
+                <h4 className="font-bold mb-2">Market Concentration</h4>
+                <p className="text-sm text-center">$7.4B concentrated in top 10 companies</p>
+              </div>
+            </div>
           </div>
-          <MarketAnalysisChart />
+          
+          <div className="bg-gradient-to-r from-slate-100 to-blue-100 p-4 rounded-lg">
+            <MarketAnalysisChart />
+          </div>
         </div>
   }, {
     id: 2,
     title: "Problem & Solution",
     icon: <Target className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400 transition-all duration-300 hover:bg-red-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-              <h4 className="text-xl font-semibold mb-4 text-red-900">The Problem</h4>
-              <ul className="space-y-3 text-red-800">
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Healthcare systems focus on disease treatment, not prevention</span>
-                </li>
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Generic health advice ignores individual biomarker variations</span>
-                </li>
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Longevity science remains inaccessible to general population</span>
-                </li>
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-red-500 mt-1">•</span>
-                  <span>Lack of personalized optimization protocols</span>
-                </li>
-              </ul>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Problems */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                <AlertCircle className="w-6 h-6" />
+                Current Problems
+              </h3>
+              <div className="grid gap-3">
+                <div className="group bg-red-50 p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative">
+                  <div className="flex items-center gap-3">
+                    <Shield className="w-8 h-8 text-red-500" />
+                    <span className="font-medium text-red-900">Reactive Healthcare</span>
+                  </div>
+                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-sm">Healthcare systems focus on disease treatment, not prevention</p>
+                  </div>
+                </div>
+
+                <div className="group bg-red-50 p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative">
+                  <div className="flex items-center gap-3">
+                    <Users className="w-8 h-8 text-red-500" />
+                    <span className="font-medium text-red-900">Generic Advice</span>
+                  </div>
+                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-sm">Generic health advice ignores individual biomarker variations</p>
+                  </div>
+                </div>
+
+                <div className="group bg-red-50 p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative">
+                  <div className="flex items-center gap-3">
+                    <Lock className="w-8 h-8 text-red-500" />
+                    <span className="font-medium text-red-900">Inaccessible Science</span>
+                  </div>
+                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-sm">Longevity science remains inaccessible to general population</p>
+                  </div>
+                </div>
+              </div>
             </div>
-            
-            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400 transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-              <h4 className="text-xl font-semibold mb-4 text-green-900">Our Solution</h4>
-              <ul className="space-y-3 text-green-800">
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-green-500 mt-1">•</span>
-                  <span>Personalized longevity coaching based on biomarkers</span>
-                </li>
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-green-500 mt-1">•</span>
-                  <span>AI-driven recommendations from latest research</span>
-                </li>
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-green-500 mt-1">•</span>
-                  <span>Continuous monitoring and protocol optimization</span>
-                </li>
-                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
-                  <span className="text-green-500 mt-1">•</span>
-                  <span>Evidence-based interventions for healthspan extension</span>
-                </li>
-              </ul>
+
+            {/* Solutions */}
+            <div className="space-y-4">
+              <h3 className="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
+                <CheckCircle className="w-6 h-6" />
+                Our Solutions
+              </h3>
+              <div className="grid gap-3">
+                <div className="group bg-green-50 p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+                  <div className="flex items-center gap-3">
+                    <Brain className="w-8 h-8 text-green-500" />
+                    <span className="font-medium text-green-900">AI Personalization</span>
+                  </div>
+                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-sm">Personalized longevity coaching based on biomarkers</p>
+                  </div>
+                </div>
+
+                <div className="group bg-green-50 p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+                  <div className="flex items-center gap-3">
+                    <Zap className="w-8 h-8 text-green-500" />
+                    <span className="font-medium text-green-900">Smart Recommendations</span>
+                  </div>
+                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-sm">AI-driven recommendations from latest research</p>
+                  </div>
+                </div>
+
+                <div className="group bg-green-50 p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+                  <div className="flex items-center gap-3">
+                    <BarChart3 className="w-8 h-8 text-green-500" />
+                    <span className="font-medium text-green-900">Continuous Monitoring</span>
+                  </div>
+                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-sm">Continuous monitoring and protocol optimization</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           
-          <div className="bg-blue-50 p-6 rounded-lg transition-all duration-300 hover:bg-blue-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-            <h4 className="text-xl font-semibold mb-4 text-blue-900">Market Opportunity</h4>
-            <div className="grid md:grid-cols-3 gap-4 text-center">
-              <div className="p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+            <div className="grid grid-cols-3 gap-6 text-center">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
+                <Rocket className="w-12 h-12 text-blue-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-blue-600">$44.2B</div>
-                <div className="text-sm text-blue-800">Global longevity market by 2030</div>
+                <div className="text-sm text-blue-800">Market by 2030</div>
               </div>
-              <div className="p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
-                <div className="text-2xl font-bold text-blue-600">15.7%</div>
-                <div className="text-sm text-blue-800">Annual growth rate (CAGR)</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
+                <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-green-600">15.7%</div>
+                <div className="text-sm text-green-800">Annual CAGR</div>
               </div>
-              <div className="p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
-                <div className="text-2xl font-bold text-blue-600">400M+</div>
-                <div className="text-sm text-blue-800">Potential users in developed markets</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
+                <Globe className="w-12 h-12 text-purple-600 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-purple-600">400M+</div>
+                <div className="text-sm text-purple-800">Potential Users</div>
               </div>
             </div>
           </div>
