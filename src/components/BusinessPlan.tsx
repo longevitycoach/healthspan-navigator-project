@@ -478,8 +478,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <Brain className="w-16 h-16 text-blue-600 mx-auto mb-4" />
-                <h4 className="font-bold text-blue-900 text-lg mb-3">AI-Powered Personalization</h4>
-                <p className="text-sm text-blue-700">Our algorithms analyze 60+ biomarkers to create truly personalized longevity protocols, going beyond generic advice.</p>
+                <h4 className="font-bold text-blue-900 text-lg">AI-Powered Personalization</h4>
+              </div>
+              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">Our algorithms analyze 60+ biomarkers to create truly personalized longevity protocols, going beyond generic advice.</p>
               </div>
             </div>
 
@@ -487,8 +489,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <Zap className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                <h4 className="font-bold text-green-900 text-lg mb-3">Integration</h4>
-                <p className="text-sm text-green-700">We integrate nutrition, exercise, supplementation, and lifestyle factors into one cohesive optimization platform.</p>
+                <h4 className="font-bold text-green-900 text-lg">Integration</h4>
+              </div>
+              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">We integrate nutrition, exercise, supplementation, and lifestyle factors into one cohesive optimization platform.</p>
               </div>
             </div>
 
@@ -496,8 +500,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <Microscope className="w-16 h-16 text-purple-600 mx-auto mb-4" />
-                <h4 className="font-bold text-purple-900 text-lg mb-3">Science</h4>
-                <p className="text-sm text-purple-700">Every recommendation is backed by peer-reviewed research, with transparent sourcing and continuous updates.</p>
+                <h4 className="font-bold text-purple-900 text-lg">Science</h4>
+              </div>
+              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">Every recommendation is backed by peer-reviewed research, with transparent sourcing and continuous updates.</p>
               </div>
             </div>
 
@@ -505,8 +511,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <Shield className="w-16 h-16 text-orange-600 mx-auto mb-4" />
-                <h4 className="font-bold text-orange-900 text-lg mb-3">German</h4>
-                <p className="text-sm text-orange-700">Built with German precision and privacy standards, ensuring data security and algorithm reliability.</p>
+                <h4 className="font-bold text-orange-900 text-lg">German</h4>
+              </div>
+              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">Built with German precision and privacy standards, ensuring data security and algorithm reliability.</p>
               </div>
             </div>
 
@@ -514,8 +522,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <BarChart3 className="w-16 h-16 text-teal-600 mx-auto mb-4" />
-                <h4 className="font-bold text-teal-900 text-lg mb-3">Learning</h4>
-                <p className="text-sm text-teal-700">Our platform learns and adapts recommendations based on user results, creating effective feedback loops.</p>
+                <h4 className="font-bold text-teal-900 text-lg">Learning</h4>
+              </div>
+              <div className="absolute inset-0 bg-teal-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">Our platform learns and adapts recommendations based on user results, creating effective feedback loops.</p>
               </div>
             </div>
 
@@ -523,8 +533,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <Heart className="w-16 h-16 text-red-600 mx-auto mb-4" />
-                <h4 className="font-bold text-red-900 text-lg mb-3">Holistic</h4>
-                <p className="text-sm text-red-700">Unlike competitors focusing on single aspects, we address all pillars of longevity in an integrated manner.</p>
+                <h4 className="font-bold text-red-900 text-lg">Holistic</h4>
+              </div>
+              <div className="absolute inset-0 bg-red-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-sm text-center">Unlike competitors focusing on single aspects, we address all pillars of longevity in an integrated manner.</p>
               </div>
             </div>
           </div>
