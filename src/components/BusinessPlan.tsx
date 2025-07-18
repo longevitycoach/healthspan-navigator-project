@@ -1340,35 +1340,30 @@ const BusinessPlan = () => {
                {/* Hover Overlay */}
                <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
                  <h4 className="font-bold mb-3 text-center text-lg">Beta Program Benefits</h4>
-                 <div className="space-y-2 text-sm">
-                   <div className="bg-orange-500 p-2 rounded">
-                     <div className="font-semibold">Exclusive Access:</div>
-                     <div className="text-xs space-y-1">
-                       <div>• Beta access Q3/2025</div>
-                       <div>• New features first</div>
-                       <div>• Priority support</div>
-                       <div>• Direct feedback</div>
-                     </div>
-                   </div>
-                   
-                   <div className="bg-orange-500 p-2 rounded">
-                     <div className="font-semibold">Special Benefits:</div>
-                     <div className="text-xs space-y-1">
-                       <div>• Lifetime discounts</div>
-                       <div>• Grandfathered pricing</div>
-                       <div>• Beta features</div>
-                       <div>• Community recognition</div>
-                     </div>
-                   </div>
-                   
-                   <div className="bg-orange-500 p-2 rounded">
-                     <div className="font-semibold">Community:</div>
-                     <div className="text-xs space-y-1">
-                       <div>• Health optimizer network</div>
-                       <div>• Expert webinars</div>
-                       <div>• Early research access</div>
-                     </div>
-                   </div>
+                  <div className="space-y-2 text-sm">
+                    <div className="bg-orange-500 p-2 rounded">
+                      <div className="font-semibold">Exclusive Access:</div>
+                      <div className="text-xs space-y-1">
+                        <div>• Beta access Q3/2025</div>
+                        <div>• Priority support</div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-orange-500 p-2 rounded">
+                      <div className="font-semibold">Special Benefits:</div>
+                      <div className="text-xs space-y-1">
+                        <div>• Lifetime discounts</div>
+                        <div>• Beta features</div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-orange-500 p-2 rounded">
+                      <div className="font-semibold">Community:</div>
+                      <div className="text-xs space-y-1">
+                        <div>• Expert webinars</div>
+                        <div>• Early research access</div>
+                      </div>
+                    </div>
                    
                    <Button className="w-full mt-3 bg-orange-700 hover:bg-orange-800 text-xs py-2">
                      Join Beta Program
