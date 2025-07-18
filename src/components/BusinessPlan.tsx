@@ -22,14 +22,14 @@ const BusinessPlan = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-blue-50 p-6 rounded-lg">
+            <div className="bg-blue-50 p-6 rounded-lg transition-all duration-300 hover:bg-blue-100 hover:scale-105 hover:shadow-lg cursor-pointer">
               <h4 className="text-xl font-semibold mb-3 text-blue-900">Our Mission</h4>
               <p className="text-blue-800">
                 Transform healthcare from reactive treatment to proactive optimization, 
                 extending healthy lifespan through personalized, science-based interventions.
               </p>
             </div>
-            <div className="bg-green-50 p-6 rounded-lg">
+            <div className="bg-green-50 p-6 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg cursor-pointer">
               <h4 className="text-xl font-semibold mb-3 text-green-900">Our Vision</h4>
               <p className="text-green-800">
                 A world where everyone has access to personalized longevity protocols, 
@@ -38,13 +38,13 @@ const BusinessPlan = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg">
+          <div className="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg transition-all duration-300 hover:from-blue-200 hover:to-green-200 hover:scale-105 hover:shadow-lg cursor-pointer">
             <h4 className="text-xl font-semibold mb-3">Key Differentiators</h4>
             <ul className="grid md:grid-cols-2 gap-2 text-sm">
-              <li>• AI-powered personalized recommendations</li>
-              <li>• Comprehensive biomarker analysis</li>
-              <li>• Evidence-based protocols</li>
-              <li>• Continuous optimization tracking</li>
+              <li className="transition-transform duration-200 hover:scale-105">• AI-powered personalized recommendations</li>
+              <li className="transition-transform duration-200 hover:scale-105">• Comprehensive biomarker analysis</li>
+              <li className="transition-transform duration-200 hover:scale-105">• Evidence-based protocols</li>
+              <li className="transition-transform duration-200 hover:scale-105">• Continuous optimization tracking</li>
             </ul>
           </div>
         </div>
@@ -53,20 +53,20 @@ const BusinessPlan = () => {
     title: "Market Analysis",
     icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg mb-6">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg mb-6 transition-all duration-300 hover:from-blue-100 hover:to-green-100 hover:scale-105 hover:shadow-lg cursor-pointer">
             <h4 className="text-xl font-semibold mb-4 text-slate-900">Global Longevity Market Overview</h4>
             <div className="grid md:grid-cols-3 gap-4 mb-4">
-              <div className="text-center">
+              <div className="text-center p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
                 <div className="text-2xl font-bold text-blue-600">$8.5B</div>
                 <div className="text-sm text-gray-600">Global investment 2024</div>
                 <div className="text-xs text-gray-500">220% increase from 2023</div>
               </div>
-              <div className="text-center">
+              <div className="text-center p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
                 <div className="text-2xl font-bold text-green-600">$8.1B</div>
                 <div className="text-sm text-gray-600">Top 50 disclosed funding</div>
                 <div className="text-xs text-gray-500">$169M average per company</div>
               </div>
-              <div className="text-center">
+              <div className="text-center p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
                 <div className="text-2xl font-bold text-purple-600">91%</div>
                 <div className="text-sm text-gray-600">Top 10 concentration</div>
                 <div className="text-xs text-gray-500">$7.4B in top tier</div>
@@ -87,44 +87,44 @@ const BusinessPlan = () => {
     icon: <Target className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
+            <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400 transition-all duration-300 hover:bg-red-100 hover:scale-105 hover:shadow-lg cursor-pointer">
               <h4 className="text-xl font-semibold mb-4 text-red-900">The Problem</h4>
               <ul className="space-y-3 text-red-800">
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-red-500 mt-1">•</span>
                   <span>Healthcare systems focus on disease treatment, not prevention</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-red-500 mt-1">•</span>
                   <span>Generic health advice ignores individual biomarker variations</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-red-500 mt-1">•</span>
                   <span>Longevity science remains inaccessible to general population</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-red-500 mt-1">•</span>
                   <span>Lack of personalized optimization protocols</span>
                 </li>
               </ul>
             </div>
             
-            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
+            <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400 transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg cursor-pointer">
               <h4 className="text-xl font-semibold mb-4 text-green-900">Our Solution</h4>
               <ul className="space-y-3 text-green-800">
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-green-500 mt-1">•</span>
                   <span>Personalized longevity coaching based on biomarkers</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-green-500 mt-1">•</span>
                   <span>AI-driven recommendations from latest research</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-green-500 mt-1">•</span>
                   <span>Continuous monitoring and protocol optimization</span>
                 </li>
-                <li className="flex items-start gap-2">
+                <li className="flex items-start gap-2 transition-transform duration-200 hover:scale-105">
                   <span className="text-green-500 mt-1">•</span>
                   <span>Evidence-based interventions for healthspan extension</span>
                 </li>
@@ -132,18 +132,18 @@ const BusinessPlan = () => {
             </div>
           </div>
           
-          <div className="bg-blue-50 p-6 rounded-lg">
+          <div className="bg-blue-50 p-6 rounded-lg transition-all duration-300 hover:bg-blue-100 hover:scale-105 hover:shadow-lg cursor-pointer">
             <h4 className="text-xl font-semibold mb-4 text-blue-900">Market Opportunity</h4>
             <div className="grid md:grid-cols-3 gap-4 text-center">
-              <div>
+              <div className="p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
                 <div className="text-2xl font-bold text-blue-600">$44.2B</div>
                 <div className="text-sm text-blue-800">Global longevity market by 2030</div>
               </div>
-              <div>
+              <div className="p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
                 <div className="text-2xl font-bold text-blue-600">15.7%</div>
                 <div className="text-sm text-blue-800">Annual growth rate (CAGR)</div>
               </div>
-              <div>
+              <div className="p-4 rounded-lg transition-all duration-300 hover:bg-white/50 hover:scale-105 cursor-pointer">
                 <div className="text-2xl font-bold text-blue-600">400M+</div>
                 <div className="text-sm text-blue-800">Potential users in developed markets</div>
               </div>
