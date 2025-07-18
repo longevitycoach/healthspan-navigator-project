@@ -33,3 +33,8 @@ supabase/.env.local
 
 # Supabase
 .supabase/
+
+# SuperClaude - Don't commit to GitHub
+superclaude/
+.superclaude/
+**/superclaude/

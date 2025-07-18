@@ -25,12 +25,67 @@ This project is optimized for Claude Code with SuperClaude integration, providin
 - **Refactoring**: Smart code restructuring and optimization
 - **Documentation**: Automatic generation of code documentation and comments
 
+### SuperClaude Integration
+
+SuperClaude extends Claude Code with powerful commands, intelligent personas, and MCP server integrations. This framework is automatically available when using Claude Code.
+
+#### Available Commands
+
+**Development Commands:**
+- `/build` - Build projects with intelligent framework detection
+- `/implement` - Implement features with context-aware code generation
+- `/design` - Design system architectures and UI components
+
+**Analysis Commands:**
+- `/analyze` - Multi-dimensional code and system analysis
+- `/troubleshoot` - Problem investigation with root cause analysis
+- `/explain` - Educational explanations of code and concepts
+
+**Quality Commands:**
+- `/improve` - Evidence-based code enhancement
+- `/cleanup` - Technical debt reduction
+- `/test` - Comprehensive testing workflows
+
+**Documentation:**
+- `/document` - Generate professional documentation
+- `/git` - Git workflow assistance with commit message generation
+
+#### Intelligent Personas
+
+SuperClaude automatically activates specialized personas based on context:
+- **architect**: Systems design and architecture decisions
+- **frontend**: UI/UX development with accessibility focus
+- **backend**: Server-side development and API design
+- **security**: Security analysis and vulnerability assessment
+- **qa**: Testing strategies and quality assurance
+- **performance**: Optimization and bottleneck elimination
+
+#### MCP Server Integration
+
+The project leverages MCP (Model Context Protocol) servers for enhanced capabilities:
+- **Context7**: Official library documentation and patterns
+- **Sequential**: Complex multi-step analysis and reasoning
+- **Supabase**: Database operations and edge function management
+- **Browser-mcp**: Browser automation for testing and interaction
+
+#### Flags for Enhanced Control
+
+Common flags for fine-tuning SuperClaude behavior:
+- `--think` - Enable deep analysis mode
+- `--uc` - Ultra-compressed output for efficiency
+- `--validate` - Pre-operation validation
+- `--loop` - Iterative improvement mode
+- `--persona-[name]` - Manually activate specific personas
+
 ### SuperClaude Capabilities
 
 - **Context-Aware Development**: Understanding of the full project structure and dependencies
 - **TypeScript Integration**: Enhanced support for TypeScript development patterns
 - **React Best Practices**: Guidance on React hooks, components, and state management
 - **Supabase Integration**: Intelligent handling of database queries and edge functions
+- **Wave Orchestration**: Multi-stage execution for complex operations
+- **Task Management**: Automatic task tracking and progress monitoring
+- **Quality Gates**: 8-step validation cycle for all operations
 
 ## Essential Commands
 
@@ -116,3 +171,11 @@ This project is deployed through Lovable.dev, which handles:
 - Automatic deployments on git push
 
 When developing locally, you'll need to set up your own Supabase project and configure the environment variables accordingly.
+
+## Memory Log
+
+### Code Development and Review Process
+- Always go through each change meticulously and cross-check against original prompts
+- Systematically review changes to ensure accuracy and alignment with project requirements
+- Build, deploy, and test changes locally before committing to Github
+- Maintain a reflective approach, explaining decision-making process and any mind changes

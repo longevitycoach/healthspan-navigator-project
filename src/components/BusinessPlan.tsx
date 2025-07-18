@@ -12,110 +12,142 @@ const BusinessPlan = () => {
   const [direction, setDirection] = useState<'next' | 'prev'>('next');
   const slides = [{
     id: 0,
-    title: "Vision & Mission",
+    title: "Our Vision & Mission",
     icon: <Target className="w-8 h-8 text-blue-600" />,
-    content: <div className="space-y-6">
-          <div className="text-center">
-            <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 flex items-center justify-center gap-3">
-              <Target className="w-8 h-8 text-blue-600" />
-              Democratizing Longevity Science
-            </h3>
+    content: <div className="space-y-8">
+          {/* Hero Section with Logo */}
+          <div className="text-center space-y-6">
+            <div className="flex items-center justify-center mb-6">
+              <img 
+                src="https://raw.githubusercontent.com/ma3u/blood-test/main/public/lovable-uploads/a8f58481-d0d4-4ad7-9810-0adfab52053a.png" 
+                alt="LongevityCoa.ch Logo" 
+                className="h-16 sm:h-20 w-auto object-contain transition-all duration-300 hover:scale-105"
+              />
+            </div>
+            
+            <div className="space-y-4">
+              <h3 className="text-[clamp(1.5rem,4vw,2.5rem)] font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent leading-tight">
+                Democratizing Longevity Science
+              </h3>
+              
+              <div className="max-w-2xl mx-auto">
+                <p className="text-[clamp(1rem,2.5vw,1.25rem)] text-slate-700 font-medium leading-relaxed">
+                  Transform your health journey with AI-powered precision medicine
+                </p>
+                <p className="text-[clamp(0.875rem,2vw,1rem)] text-slate-600 mt-2 italic">
+                  "Where cutting-edge science meets personalized wellness"
+                </p>
+                
+                <div className="mt-6 flex justify-center">
+                  <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-medium shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer hover:scale-105">
+                    🚀 Explore Our Journey
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          {/* Core Pillars */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
             {/* Mission Symbol */}
-            <div className="group bg-blue-50 p-6 rounded-lg transition-all duration-300 hover:bg-blue-100 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-blue-50 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-blue-100 hover:scale-105 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Heart className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                <h4 className="font-bold text-blue-900">Mission</h4>
+                <Heart className="w-10 h-10 sm:w-12 sm:h-12 text-blue-600 mx-auto mb-2" />
+                <h4 className="font-bold text-blue-900 text-sm sm:text-base">Mission</h4>
               </div>
-              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <p className="text-sm text-center">
+              <div className="absolute inset-0 bg-blue-600 text-white p-3 sm:p-4 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs sm:text-sm text-center">
                   Transform healthcare from reactive treatment to proactive optimization, extending healthy lifespan through personalized interventions.
                 </p>
               </div>
             </div>
 
             {/* Vision Symbol */}
-            <div className="group bg-green-50 p-6 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-green-50 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Globe className="w-12 h-12 text-green-600 mx-auto mb-2" />
-                <h4 className="font-bold text-green-900">Vision</h4>
+                <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-green-600 mx-auto mb-2" />
+                <h4 className="font-bold text-green-900 text-sm sm:text-base">Vision</h4>
               </div>
-              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <p className="text-sm text-center">
+              <div className="absolute inset-0 bg-green-600 text-white p-3 sm:p-4 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs sm:text-sm text-center">
                   A world where everyone has access to personalized longevity protocols, enabling healthier, longer lives through precision health optimization.
                 </p>
               </div>
             </div>
 
             {/* AI Power Symbol */}
-            <div className="group bg-purple-50 p-6 rounded-lg transition-all duration-300 hover:bg-purple-100 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-purple-50 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-purple-100 hover:scale-105 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Brain className="w-12 h-12 text-purple-600 mx-auto mb-2" />
-                <h4 className="font-bold text-purple-900">AI-Powered</h4>
+                <Brain className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-2" />
+                <h4 className="font-bold text-purple-900 text-sm sm:text-base">AI-Powered</h4>
               </div>
-              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <p className="text-sm text-center">
+              <div className="absolute inset-0 bg-purple-600 text-white p-3 sm:p-4 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs sm:text-sm text-center">
                   Advanced algorithms analyze 60+ biomarkers to create truly personalized longevity protocols.
                 </p>
               </div>
             </div>
 
             {/* Science Symbol */}
-            <div className="group bg-orange-50 p-6 rounded-lg transition-all duration-300 hover:bg-orange-100 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-orange-50 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:bg-orange-100 hover:scale-105 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Microscope className="w-12 h-12 text-orange-600 mx-auto mb-2" />
-                <h4 className="font-bold text-orange-900">Evidence-Based</h4>
+                <Microscope className="w-10 h-10 sm:w-12 sm:h-12 text-orange-600 mx-auto mb-2" />
+                <h4 className="font-bold text-orange-900 text-sm sm:text-base">Evidence-Based</h4>
               </div>
-              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <p className="text-sm text-center">
+              <div className="absolute inset-0 bg-orange-600 text-white p-3 sm:p-4 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
+                <p className="text-xs sm:text-sm text-center">
                   Every recommendation backed by peer-reviewed research with transparent sourcing and continuous updates.
                 </p>
               </div>
             </div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="group bg-gradient-to-br from-blue-100 to-purple-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
-              <div className="text-center">
-                <Cpu className="w-8 h-8 text-blue-600 mx-auto mb-1" />
-                <span className="text-xs font-medium">Personalized</span>
+          {/* Key Features */}
+          <div className="bg-gradient-to-r from-slate-50 to-blue-50 p-6 rounded-xl">
+            <h4 className="text-[clamp(1rem,2vw,1.25rem)] font-semibold text-slate-800 text-center mb-4">
+              Powered by Advanced Technology
+            </h4>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+              <div className="group bg-gradient-to-br from-blue-100 to-purple-100 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative active:scale-95">
+                <div className="text-center">
+                  <Cpu className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 mx-auto mb-1" />
+                  <span className="text-xs font-medium">Personalized</span>
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 text-white p-2 sm:p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
+                  <p className="text-xs text-center">AI-powered personalized recommendations</p>
+                </div>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <p className="text-xs text-center">AI-powered personalized recommendations</p>
-              </div>
-            </div>
             
-            <div className="group bg-gradient-to-br from-green-100 to-teal-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-green-100 to-teal-100 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Database className="w-8 h-8 text-green-600 mx-auto mb-1" />
+                <Database className="w-6 h-6 sm:w-8 sm:h-8 text-green-600 mx-auto mb-1" />
                 <span className="text-xs font-medium">Comprehensive</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-green-600 to-teal-600 text-white p-2 sm:p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
                 <p className="text-xs text-center">Comprehensive biomarker analysis</p>
               </div>
             </div>
             
-            <div className="group bg-gradient-to-br from-purple-100 to-pink-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-purple-100 to-pink-100 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <BarChart3 className="w-8 h-8 text-purple-600 mx-auto mb-1" />
+                <BarChart3 className="w-6 h-6 sm:w-8 sm:h-8 text-purple-600 mx-auto mb-1" />
                 <span className="text-xs font-medium">Tracking</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-pink-600 text-white p-2 sm:p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
                 <p className="text-xs text-center">Continuous optimization tracking</p>
               </div>
             </div>
             
-            <div className="group bg-gradient-to-br from-orange-100 to-red-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-orange-100 to-red-100 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Shield className="w-8 h-8 text-orange-600 mx-auto mb-1" />
+                <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-orange-600 mx-auto mb-1" />
                 <span className="text-xs font-medium">Protocols</span>
               </div>
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-600 to-red-600 text-white p-2 sm:p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center justify-center">
                 <p className="text-xs text-center">Evidence-based protocols</p>
               </div>
             </div>
+          </div>
           </div>
         </div>
   }, {
@@ -123,43 +155,43 @@ const BusinessPlan = () => {
     title: "Market Analysis",
     icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
-          <div className="grid grid-cols-3 gap-6 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-6">
             {/* Market Size Symbol */}
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:scale-105 md:hover:scale-110 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <PieChart className="w-16 h-16 text-blue-600 mx-auto mb-2" />
-                <div className="text-3xl font-bold text-blue-600">$8.5B</div>
+                <PieChart className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600 mx-auto mb-2" />
+                <div className="text-2xl sm:text-3xl font-bold text-blue-600">$8.5B</div>
                 <div className="text-sm text-blue-800">2024 Investment</div>
               </div>
-              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
-                <h4 className="font-bold mb-2">Global Investment 2024</h4>
-                <p className="text-sm text-center">220% increase from 2023, demonstrating explosive market growth</p>
+              <div className="absolute inset-0 bg-blue-600 text-white p-3 sm:p-4 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
+                <h4 className="font-bold mb-2 text-sm sm:text-base">Global Investment 2024</h4>
+                <p className="text-xs sm:text-sm text-center">220% increase from 2023, demonstrating explosive market growth</p>
               </div>
             </div>
 
             {/* Funding Concentration */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:scale-105 md:hover:scale-110 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Trophy className="w-16 h-16 text-green-600 mx-auto mb-2" />
-                <div className="text-3xl font-bold text-green-600">$8.1B</div>
+                <Trophy className="w-12 h-12 sm:w-16 sm:h-16 text-green-600 mx-auto mb-2" />
+                <div className="text-2xl sm:text-3xl font-bold text-green-600">$8.1B</div>
                 <div className="text-sm text-green-800">Top 50 Companies</div>
               </div>
-              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
-                <h4 className="font-bold mb-2">Disclosed Funding</h4>
-                <p className="text-sm text-center">$169M average per company in top tier</p>
+              <div className="absolute inset-0 bg-green-600 text-white p-3 sm:p-4 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
+                <h4 className="font-bold mb-2 text-sm sm:text-base">Disclosed Funding</h4>
+                <p className="text-xs sm:text-sm text-center">$169M average per company in top tier</p>
               </div>
             </div>
 
             {/* Market Concentration */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:scale-105 md:hover:scale-110 cursor-pointer relative active:scale-95">
               <div className="text-center">
-                <Star className="w-16 h-16 text-purple-600 mx-auto mb-2" />
-                <div className="text-3xl font-bold text-purple-600">91%</div>
+                <Star className="w-12 h-12 sm:w-16 sm:h-16 text-purple-600 mx-auto mb-2" />
+                <div className="text-2xl sm:text-3xl font-bold text-purple-600">91%</div>
                 <div className="text-sm text-purple-800">Top 10 Share</div>
               </div>
-              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
-                <h4 className="font-bold mb-2">Market Concentration</h4>
-                <p className="text-sm text-center">$7.4B concentrated in top 10 companies</p>
+              <div className="absolute inset-0 bg-purple-600 text-white p-3 sm:p-4 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex flex-col items-center justify-center">
+                <h4 className="font-bold mb-2 text-sm sm:text-base">Market Concentration</h4>
+                <p className="text-xs sm:text-sm text-center">$7.4B concentrated in top 10 companies</p>
               </div>
             </div>
           </div>
@@ -173,41 +205,41 @@ const BusinessPlan = () => {
     title: "Problem & Solution",
     icon: <Target className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
             {/* Problems */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
-                <AlertCircle className="w-6 h-6" />
+              <h3 className="text-lg sm:text-xl font-bold text-red-900 mb-4 flex items-center gap-2">
+                <AlertCircle className="w-5 h-5 sm:w-6 sm:h-6" />
                 Current Problems
               </h3>
               <div className="grid gap-3">
-                <div className="group bg-red-50 p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative">
+                <div className="group bg-red-50 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative active:scale-95">
                   <div className="flex items-center gap-3">
-                    <Shield className="w-8 h-8 text-red-500" />
-                    <span className="font-medium text-red-900">Reactive Healthcare</span>
+                    <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
+                    <span className="font-medium text-red-900 text-sm sm:text-base">Reactive Healthcare</span>
                   </div>
-                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
-                    <p className="text-sm">Healthcare systems focus on disease treatment, not prevention</p>
+                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-xs sm:text-sm">Healthcare systems focus on disease treatment, not prevention</p>
                   </div>
                 </div>
 
-                <div className="group bg-red-50 p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative">
+                <div className="group bg-red-50 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative active:scale-95">
                   <div className="flex items-center gap-3">
-                    <Users className="w-8 h-8 text-red-500" />
-                    <span className="font-medium text-red-900">Generic Advice</span>
+                    <Users className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
+                    <span className="font-medium text-red-900 text-sm sm:text-base">Generic Advice</span>
                   </div>
-                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
+                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center">
                     <p className="text-sm">Generic health advice ignores individual biomarker variations</p>
                   </div>
                 </div>
 
-                <div className="group bg-red-50 p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative">
+                <div className="group bg-red-50 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-red-100 hover:scale-105 cursor-pointer relative active:scale-95">
                   <div className="flex items-center gap-3">
-                    <Lock className="w-8 h-8 text-red-500" />
-                    <span className="font-medium text-red-900">Inaccessible Science</span>
+                    <Lock className="w-6 h-6 sm:w-8 sm:h-8 text-red-500" />
+                    <span className="font-medium text-red-900 text-sm sm:text-base">Inaccessible Science</span>
                   </div>
-                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
-                    <p className="text-sm">Longevity science remains inaccessible to general population</p>
+                  <div className="absolute inset-0 bg-red-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-xs sm:text-sm">Longevity science remains inaccessible to general population</p>
                   </div>
                 </div>
               </div>
@@ -215,59 +247,59 @@ const BusinessPlan = () => {
 
             {/* Solutions */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
-                <CheckCircle className="w-6 h-6" />
+              <h3 className="text-lg sm:text-xl font-bold text-green-900 mb-4 flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />
                 Our Solutions
               </h3>
               <div className="grid gap-3">
-                <div className="group bg-green-50 p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+                <div className="group bg-green-50 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative active:scale-95">
                   <div className="flex items-center gap-3">
-                    <Brain className="w-8 h-8 text-green-500" />
-                    <span className="font-medium text-green-900">AI Personalization</span>
+                    <Brain className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
+                    <span className="font-medium text-green-900 text-sm sm:text-base">AI Personalization</span>
                   </div>
-                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
-                    <p className="text-sm">Personalized longevity coaching based on biomarkers</p>
+                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-xs sm:text-sm">Personalized longevity coaching based on biomarkers</p>
                   </div>
                 </div>
 
-                <div className="group bg-green-50 p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+                <div className="group bg-green-50 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative active:scale-95">
                   <div className="flex items-center gap-3">
-                    <Zap className="w-8 h-8 text-green-500" />
-                    <span className="font-medium text-green-900">Smart Recommendations</span>
+                    <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
+                    <span className="font-medium text-green-900 text-sm sm:text-base">Smart Recommendations</span>
                   </div>
-                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
-                    <p className="text-sm">AI-driven recommendations from latest research</p>
+                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-xs sm:text-sm">AI-driven recommendations from latest research</p>
                   </div>
                 </div>
 
-                <div className="group bg-green-50 p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative">
+                <div className="group bg-green-50 p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-green-100 hover:scale-105 cursor-pointer relative active:scale-95">
                   <div className="flex items-center gap-3">
-                    <BarChart3 className="w-8 h-8 text-green-500" />
-                    <span className="font-medium text-green-900">Continuous Monitoring</span>
+                    <BarChart3 className="w-6 h-6 sm:w-8 sm:h-8 text-green-500" />
+                    <span className="font-medium text-green-900 text-sm sm:text-base">Continuous Monitoring</span>
                   </div>
-                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center">
-                    <p className="text-sm">Continuous monitoring and protocol optimization</p>
+                  <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 group-active:opacity-95 transition-all duration-300 flex items-center">
+                    <p className="text-xs sm:text-sm">Continuous monitoring and protocol optimization</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
-            <div className="grid grid-cols-3 gap-6 text-center">
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
-                <Rocket className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-blue-600">$44.2B</div>
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 sm:p-6 rounded-lg">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 text-center">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 sm:hover:scale-110 active:scale-95">
+                <Rocket className="w-10 h-10 sm:w-12 sm:h-12 text-blue-600 mx-auto mb-2" />
+                <div className="text-xl sm:text-2xl font-bold text-blue-600">$44.2B</div>
                 <div className="text-sm text-blue-800">Market by 2030</div>
               </div>
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
-                <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-green-600">15.7%</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 sm:hover:scale-110 active:scale-95">
+                <TrendingUp className="w-10 h-10 sm:w-12 sm:h-12 text-green-600 mx-auto mb-2" />
+                <div className="text-xl sm:text-2xl font-bold text-green-600">15.7%</div>
                 <div className="text-sm text-green-800">Annual CAGR</div>
               </div>
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
-                <Globe className="w-12 h-12 text-purple-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-purple-600">400M+</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 sm:hover:scale-110 active:scale-95">
+                <Globe className="w-10 h-10 sm:w-12 sm:h-12 text-purple-600 mx-auto mb-2" />
+                <div className="text-xl sm:text-2xl font-bold text-purple-600">400M+</div>
                 <div className="text-sm text-purple-800">Potential Users</div>
               </div>
             </div>
@@ -279,11 +311,11 @@ const BusinessPlan = () => {
     icon: <DollarSign className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">Freemium to Enterprise Strategy</h3>
-            <p className="text-slate-600">Tiered access model driving user acquisition and revenue growth</p>
+            <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">Freemium to Enterprise Strategy</h3>
+            <p className="text-sm sm:text-base text-slate-600">Tiered access model driving user acquisition and revenue growth</p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Free Tier */}
             <div className="bg-gray-50 p-6 rounded-lg border-2 border-gray-200 transition-all duration-300 hover:bg-gray-100 hover:scale-105 hover:shadow-lg hover:border-gray-300 cursor-pointer">
               <div className="text-center mb-4 transition-all duration-300 hover:scale-105">
@@ -375,10 +407,10 @@ const BusinessPlan = () => {
             </div>
 
             {/* Enterprise Tier */}
-            <div className="bg-green-50 p-6 rounded-lg border-2 border-green-300 transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg hover:border-green-400 cursor-pointer">
+            <div className="bg-green-50 p-4 sm:p-6 rounded-lg border-2 border-green-300 transition-all duration-300 hover:bg-green-100 hover:scale-105 hover:shadow-lg hover:border-green-400 cursor-pointer active:scale-95">
               <div className="text-center mb-4 transition-all duration-300 hover:scale-105">
-                <h4 className="text-xl font-bold text-green-900">Enterprise</h4>
-                <p className="text-2xl font-bold text-green-600 mt-2">€29/month</p>
+                <h4 className="text-lg sm:text-xl font-bold text-green-900">Enterprise</h4>
+                <p className="text-xl sm:text-2xl font-bold text-green-600 mt-2">€29/month</p>
                 <p className="text-sm text-green-700">Complete optimization</p>
               </div>
               
@@ -415,12 +447,12 @@ const BusinessPlan = () => {
           </div>
 
           {/* B2B Revenue Streams */}
-          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg transition-all duration-300 hover:from-purple-100 hover:to-indigo-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-            <h4 className="text-xl font-semibold text-purple-900 mb-4">B2B Revenue Streams</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div className="bg-white p-4 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-md cursor-pointer">
-                <h5 className="font-semibold text-purple-900 mb-2">Corporate Wellness</h5>
-                <p className="text-sm text-purple-800 mb-2">€15-50/employee/month</p>
+          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-4 sm:p-6 rounded-lg transition-all duration-300 hover:from-purple-100 hover:to-indigo-100 hover:scale-105 hover:shadow-lg cursor-pointer active:scale-95">
+            <h4 className="text-lg sm:text-xl font-semibold text-purple-900 mb-4">B2B Revenue Streams</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-white p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-md cursor-pointer active:scale-95">
+                <h5 className="font-semibold text-purple-900 mb-2 text-sm sm:text-base">Corporate Wellness</h5>
+                <p className="text-xs sm:text-sm text-purple-800 mb-2">€15-50/employee/month</p>
                 <ul className="text-xs text-purple-700 space-y-1">
                   <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Company-wide health optimization</li>
                   <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Executive health programs</li>
@@ -429,9 +461,9 @@ const BusinessPlan = () => {
                 </ul>
               </div>
               
-              <div className="bg-white p-4 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-md cursor-pointer">
-                <h5 className="font-semibold text-purple-900 mb-2">Healthcare Partnerships</h5>
-                <p className="text-sm text-purple-800 mb-2">Revenue sharing 20-40%</p>
+              <div className="bg-white p-3 sm:p-4 rounded-lg transition-all duration-300 hover:bg-gray-50 hover:scale-105 hover:shadow-md cursor-pointer active:scale-95">
+                <h5 className="font-semibold text-purple-900 mb-2 text-sm sm:text-base">Healthcare Partnerships</h5>
+                <p className="text-xs sm:text-sm text-purple-800 mb-2">Revenue sharing 20-40%</p>
                 <ul className="text-xs text-purple-700 space-y-1">
                   <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Clinic integration partnerships</li>
                   <li className="transition-transform duration-200 hover:scale-105 hover:translate-x-2">• Hospital preventive care programs</li>
@@ -443,10 +475,10 @@ const BusinessPlan = () => {
           </div>
 
           {/* Conversion Strategy */}
-          <div className="bg-yellow-50 p-4 rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:scale-105 hover:shadow-lg cursor-pointer">
-            <h4 className="font-semibold text-yellow-900 mb-2">Freemium Conversion Strategy</h4>
-            <div className="grid md:grid-cols-3 gap-4 text-sm">
-              <div className="p-3 rounded-lg transition-all duration-300 hover:bg-white/60 hover:scale-105 cursor-pointer">
+          <div className="bg-yellow-50 p-4 rounded-lg transition-all duration-300 hover:bg-yellow-100 hover:scale-105 hover:shadow-lg cursor-pointer active:scale-95">
+            <h4 className="font-semibold text-yellow-900 mb-2 text-sm sm:text-base">Freemium Conversion Strategy</h4>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+              <div className="p-3 rounded-lg transition-all duration-300 hover:bg-white/60 hover:scale-105 cursor-pointer active:scale-95">
                 <div className="font-medium text-yellow-800">Free → Premium</div>
                 <div className="text-yellow-700">Target: 12-15% conversion rate</div>
               </div>
@@ -580,9 +612,9 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-green-50 to-green-100 p-10 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[312px]">
               <div className="text-center">
                 <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-green-600">€2.1M</div>
+                <div className="text-3xl font-bold text-green-600">€475K</div>
                 <div className="text-sm text-green-800 font-medium">Year 4 Revenue Target</div>
-                <div className="text-xs text-green-700 mt-1">+328% growth</div>
+                <div className="text-xs text-green-700 mt-1">+120% growth</div>
               </div>
               
               {/* Hover Overlay */}
@@ -590,22 +622,22 @@ const BusinessPlan = () => {
                 <h4 className="font-bold mb-3 text-center text-lg">Revenue Trajectory</h4>
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between border-b border-green-400 pb-1">
-                    <span>Q3-Q4 2025:</span><span className="font-semibold">€12K</span>
+                    <span>Q3-Q4 2025:</span><span className="font-semibold">€8K</span>
                   </div>
                   <div className="flex justify-between border-b border-green-400 pb-1">
-                    <span>Year 1 (2026):</span><span className="font-semibold">€68K</span>
+                    <span>Year 1 (2026):</span><span className="font-semibold">€45K</span>
                   </div>
                   <div className="flex justify-between border-b border-green-400 pb-1">
-                    <span>Year 2 (2027):</span><span className="font-semibold">€285K</span>
+                    <span>Year 2 (2027):</span><span className="font-semibold">€140K</span>
                   </div>
                   <div className="flex justify-between border-b border-green-400 pb-1">
-                    <span>Year 3 (2028):</span><span className="font-semibold">€920K</span>
+                    <span>Year 3 (2028):</span><span className="font-semibold">€280K</span>
                   </div>
                   <div className="flex justify-between bg-green-500 p-2 rounded mt-2">
-                    <span><strong>Year 4 (2029):</strong></span><span><strong>€2.1M</strong></span>
+                    <span><strong>Year 4 (2029):</strong></span><span><strong>€475K</strong></span>
                   </div>
                   <div className="mt-3 pt-2 border-t border-green-400 text-xs">
-                    <div>• MRR model, 15% monthly growth</div>
+                    <div>• MRR model, 8% monthly growth</div>
                     <div>• 70% from subscriptions</div>
                   </div>
                 </div>
@@ -616,9 +648,9 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[312px]">
               <div className="text-center">
                 <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-blue-600">80K</div>
+                <div className="text-3xl font-bold text-blue-600">20K</div>
                 <div className="text-sm text-blue-800 font-medium">Total Users Year 4</div>
-                <div className="text-xs text-blue-700 mt-1">229x growth</div>
+                <div className="text-xs text-blue-700 mt-1">57x growth</div>
               </div>
               
               {/* Hover Overlay */}
@@ -630,8 +662,8 @@ const BusinessPlan = () => {
                       <span>Q3-Q4 2025:</span><span>350 users</span>
                     </div>
                     <div className="text-xs mt-1 grid grid-cols-3 gap-1">
-                      <div>Free: 280</div>
-                      <div>Premium: 60</div>
+                      <div>Free: 300</div>
+                      <div>Premium: 40</div>
                       <div>Enterprise: 10</div>
                     </div>
                   </div>
@@ -641,20 +673,20 @@ const BusinessPlan = () => {
                       <span>Year 1 (2026):</span><span>2,100 users</span>
                     </div>
                     <div className="text-xs mt-1 grid grid-cols-3 gap-1">
-                      <div>Free: 1,680</div>
-                      <div>Premium: 360</div>
-                      <div>Enterprise: 60</div>
+                      <div>Free: 1,850</div>
+                      <div>Premium: 220</div>
+                      <div>Enterprise: 30</div>
                     </div>
                   </div>
                   
                   <div className="bg-blue-500 p-2 rounded">
                     <div className="flex justify-between font-semibold">
-                      <span>Year 4 (2029):</span><span>80,000 users</span>
+                      <span>Year 4 (2029):</span><span>20,000 users</span>
                     </div>
                     <div className="text-xs mt-1 grid grid-cols-3 gap-1">
-                      <div>Free: 52K</div>
-                      <div>Premium: 24K</div>
-                      <div>Enterprise: 4K</div>
+                      <div>Free: 17.6K</div>
+                      <div>Premium: 2.0K</div>
+                      <div>Enterprise: 0.4K</div>
                     </div>
                   </div>
                 </div>
@@ -714,7 +746,7 @@ const BusinessPlan = () => {
                 <div className="space-y-2 text-sm">
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Product:</span><span>€200K (40%)</span>
+                       <span>Product:</span><span>€450K (30%)</span>
                      </div>
                      <div className="text-xs mt-1">
                        AI
@@ -723,7 +755,7 @@ const BusinessPlan = () => {
                   
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Marketing:</span><span>€150K (30%)</span>
+                       <span>Marketing:</span><span>€450K (30%)</span>
                      </div>
                      <div className="text-xs mt-1">
                        Growth
@@ -732,7 +764,7 @@ const BusinessPlan = () => {
                   
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Team:</span><span>€100K (20%)</span>
+                       <span>Team:</span><span>€450K (30%)</span>
                      </div>
                     <div className="text-xs mt-1">
                       Engineering
@@ -741,7 +773,7 @@ const BusinessPlan = () => {
                   
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Legal:</span><span>€50K (10%)</span>
+                       <span>Operations:</span><span>€150K (10%)</span>
                      </div>
                     <div className="text-xs mt-1">
                       Legal
@@ -757,10 +789,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-gray-50 to-gray-100 p-10 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[338px]">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-400 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold text-lg">65%</span>
+                  <span className="text-white font-bold text-lg">88%</span>
                 </div>
                 <h4 className="font-bold text-gray-900 text-lg">Free Users</h4>
-                <div className="text-sm text-gray-600">52,000 by Year 4</div>
+                <div className="text-sm text-gray-600">17,600 by Year 4</div>
                 <div className="text-xs text-gray-500 mt-1">Acquisition focus</div>
               </div>
               
@@ -780,9 +812,9 @@ const BusinessPlan = () => {
                   <div className="bg-gray-500 p-2 rounded">
                     <div className="font-semibold mb-1">Conversion:</div>
                     <div className="text-xs space-y-1">
-                      <div>• 12-15% to Premium</div>
+                      <div>• 12% to Premium</div>
                       <div>• 90 days avg convert</div>
-                      <div>• €8 CAC</div>
+                      <div>• €15 CAC</div>
                     </div>
                   </div>
                 </div>
@@ -792,10 +824,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[338px]">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold text-lg">30%</span>
+                  <span className="text-white font-bold text-lg">10%</span>
                 </div>
                 <h4 className="font-bold text-blue-900 text-lg">Premium Users</h4>
-                <div className="text-sm text-blue-600">24,000 by Year 4</div>
+                <div className="text-sm text-blue-600">2,000 by Year 4</div>
                 <div className="text-xs text-blue-500 mt-1">€9/month revenue</div>
               </div>
               
@@ -817,8 +849,8 @@ const BusinessPlan = () => {
                     <div className="font-semibold mb-1">Metrics:</div>
                     <div className="text-xs space-y-1">
                       <div>• 65% total revenue</div>
-                      <div>• 20% to Enterprise</div>
-                      <div>• €450 LTV, 3% churn</div>
+                      <div>• 10% to Enterprise</div>
+                      <div>• €300 LTV, 3% churn</div>
                     </div>
                   </div>
                 </div>
@@ -828,10 +860,10 @@ const BusinessPlan = () => {
             <div className="group bg-gradient-to-br from-green-50 to-green-100 p-10 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[338px]">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-white font-bold text-lg">5%</span>
+                  <span className="text-white font-bold text-lg">2%</span>
                 </div>
                 <h4 className="font-bold text-green-900 text-lg">Enterprise</h4>
-                <div className="text-sm text-green-600">4,000 by Year 4</div>
+                <div className="text-sm text-green-600">400 by Year 4</div>
                 <div className="text-xs text-green-500 mt-1">€29/month revenue</div>
               </div>
               
@@ -852,8 +884,8 @@ const BusinessPlan = () => {
                   <div className="bg-green-500 p-2 rounded">
                     <div className="font-semibold mb-1">High Value Impact:</div>
                     <div className="text-xs space-y-1">
-                      <div>• 25% of total revenue</div>
-                      <div>• Average LTV: €1,200+</div>
+                      <div>• 50% of total revenue</div>
+                      <div>• Average LTV: €2,900</div>
                       <div>• 1% monthly churn</div>
                       <div>• B2B partnerships & corporate wellness</div>
                     </div>
@@ -864,33 +896,33 @@ const BusinessPlan = () => {
           </div>
 
           {/* Financial Summary */}
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-lg">
-            <h4 className="text-xl font-bold text-center mb-8">Financial Summary & Milestones</h4>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 lg:p-8 xl:p-12 rounded-lg">
+            <h4 className="text-[clamp(1.125rem,2.5vw,1.5rem)] font-bold text-center mb-6 lg:mb-8 xl:mb-12">Financial Summary & Milestones</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 lg:gap-8 xl:gap-12">
               <div className="group text-center cursor-pointer transition-all duration-300 hover:scale-110 p-4 rounded-lg hover:bg-white/80">
                 <DollarSign className="w-10 h-10 text-green-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-green-600">€3.3M</div>
-                <div className="text-sm text-green-700 font-medium">Cumulative Revenue</div>
-                <div className="text-xs text-green-600 mt-1">4.5-year projection</div>
+                <div className="text-2xl font-bold text-green-600">€475K</div>
+                <div className="text-sm text-green-700 font-medium">Annual Revenue (Y4)</div>
+                <div className="text-xs text-green-600 mt-1">Realistic projection</div>
               </div>
               
               <div className="group text-center cursor-pointer transition-all duration-300 hover:scale-110 p-4 rounded-lg hover:bg-white/80">
                 <BarChart3 className="w-10 h-10 text-blue-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-blue-600">18 Mo</div>
+                <div className="text-2xl font-bold text-blue-600">36 Mo</div>
                 <div className="text-sm text-blue-700 font-medium">Break-even Timeline</div>
-                <div className="text-xs text-blue-600 mt-1">Conservative estimate</div>
+                <div className="text-xs text-blue-600 mt-1">Realistic estimate</div>
               </div>
               
               <div className="group text-center cursor-pointer transition-all duration-300 hover:scale-110 p-4 rounded-lg hover:bg-white/80">
                 <Target className="w-10 h-10 text-purple-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-purple-600">15%</div>
+                <div className="text-2xl font-bold text-purple-600">8%</div>
                 <div className="text-sm text-purple-700 font-medium">Monthly Growth</div>
                 <div className="text-xs text-purple-600 mt-1">Sustainable rate</div>
               </div>
               
               <div className="group text-center cursor-pointer transition-all duration-300 hover:scale-110 p-4 rounded-lg hover:bg-white/80">
                 <Lightbulb className="w-10 h-10 text-orange-600 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-orange-600">€450</div>
+                <div className="text-2xl font-bold text-orange-600">€580</div>
                 <div className="text-sm text-orange-700 font-medium">Average LTV</div>
                 <div className="text-xs text-orange-600 mt-1">Customer lifetime value</div>
               </div>
@@ -1205,7 +1237,7 @@ const BusinessPlan = () => {
               <div className="text-center">
                 <DollarSign className="w-16 h-16 text-blue-600 mx-auto mb-3" />
                 <h4 className="font-bold text-blue-900 text-xl">Investors</h4>
-                <div className="text-base text-blue-700 font-medium">€500K Seed Round</div>
+                <div className="text-base text-blue-700 font-medium">€1.5M Seed Round</div>
                 <div className="text-sm text-blue-600 mt-1">Q1 2026 Opening</div>
               </div>
               
@@ -1216,9 +1248,9 @@ const BusinessPlan = () => {
                   <div className="bg-blue-500 p-2 rounded">
                     <div className="font-semibold">Funding Details:</div>
                     <div className="text-xs space-y-1">
-                      <div>• €500K Seed funding round</div>
+                      <div>• €1.5M Seed funding round</div>
                       <div>• Opening Q1 2026</div>
-                      <div>• Target 10x return within 5 years</div>
+                      <div>• Target 5x return within 5 years</div>
                       <div>• Growing market 15.7% CAGR</div>
                     </div>
                   </div>
@@ -1463,11 +1495,11 @@ const BusinessPlan = () => {
   return (
     <section 
       id="businessplan" 
-      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 animate-fade-in"
+      className="py-12 sm:py-16 lg:py-20 xl:py-24 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 animate-fade-in"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Header with animation */}
-        <div className="text-center mb-8 sm:mb-12 animate-scale-in">
+        <div className="text-center mb-8 sm:mb-12 xl:mb-16 animate-scale-in">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4 hover-scale">
             Business Plan
           </h2>
@@ -1493,7 +1525,7 @@ const BusinessPlan = () => {
                 <div className="p-2 rounded-lg bg-white/80 backdrop-blur-sm">
                   {slides[currentSlide].icon}
                 </div>
-                <CardTitle className="text-xl sm:text-2xl text-slate-900 font-bold">
+                <CardTitle className="text-[clamp(1.125rem,2.5vw,1.5rem)] text-slate-900 font-bold leading-tight">
                   {slides[currentSlide].title}
                 </CardTitle>
               </div>
@@ -1506,7 +1538,7 @@ const BusinessPlan = () => {
           </CardHeader>
           
           {/* Content with slide animation */}
-          <CardContent className="p-4 sm:p-6 lg:p-8 min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] relative overflow-hidden">
+          <CardContent className="p-4 sm:p-6 lg:p-8 xl:p-12 min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] xl:min-h-[650px] relative overflow-hidden">
             <div 
               className={`
                 transition-all duration-300 ease-in-out
@@ -1519,15 +1551,15 @@ const BusinessPlan = () => {
           </CardContent>
           
           {/* Enhanced navigation */}
-          <div className="flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 bg-gradient-to-r from-gray-50 to-blue-50 border-t gap-4">
+          <div className="flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 xl:p-8 bg-gradient-to-r from-gray-50 to-blue-50 border-t gap-4">
             <Button 
               variant="outline" 
               onClick={prevSlide} 
               disabled={isAnimating}
-              className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50"
+              className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50 min-h-[44px] touch-manipulation"
               title="Previous slide (← arrow key)"
             >
-              <ChevronLeft className="w-4 h-4" />
+              <ChevronLeft className="w-5 h-5" />
               <span className="hidden sm:inline">Previous</span>
               <span className="sm:hidden">Prev</span>
             </Button>
@@ -1540,10 +1572,10 @@ const BusinessPlan = () => {
                   onClick={() => goToSlide(index)} 
                   disabled={isAnimating}
                   className={`
-                    w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 hover-scale
+                    w-4 h-4 sm:w-5 sm:h-5 rounded-full transition-all duration-300 hover-scale touch-manipulation
                     ${index === currentSlide 
                       ? 'bg-gradient-to-r from-blue-500 to-indigo-500 scale-125' 
-                      : 'bg-gray-300 hover:bg-gray-400'
+                      : 'bg-gray-300 hover:bg-gray-400 active:bg-gray-500'
                     }
                   `}
                   title={slide.title}
@@ -1555,12 +1587,12 @@ const BusinessPlan = () => {
               variant="outline" 
               onClick={nextSlide} 
               disabled={isAnimating}
-              className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50"
+              className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50 min-h-[44px] touch-manipulation"
               title="Next slide (→ arrow key or 1-8 number keys)"
             >
               <span className="hidden sm:inline">Next</span>
               <span className="sm:hidden">Next</span>
-              <ChevronRight className="w-4 h-4" />
+              <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
           
@@ -1568,21 +1600,21 @@ const BusinessPlan = () => {
         
         {/* Mobile-only slide thumbnails */}
         <div className="mt-6 sm:hidden">
-          <div className="flex gap-2 overflow-x-auto pb-2">
+          <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
             {slides.map((slide, index) => (
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
                 className={`
-                  flex-shrink-0 p-3 rounded-lg border transition-all duration-200
+                  flex-shrink-0 p-3 rounded-lg border transition-all duration-200 touch-manipulation min-h-[44px]
                   ${index === currentSlide 
-                    ? 'bg-blue-50 border-blue-200' 
-                    : 'bg-white border-gray-200 hover:bg-gray-50'
+                    ? 'bg-blue-50 border-blue-200 shadow-sm' 
+                    : 'bg-white border-gray-200 hover:bg-gray-50 active:bg-gray-100'
                   }
                 `}
               >
                 <div className="flex items-center gap-2">
-                  <div className="text-blue-600">{slide.icon}</div>
+                  <div className="text-blue-600 shrink-0">{slide.icon}</div>
                   <span className="text-sm font-medium whitespace-nowrap">{slide.title}</span>
                 </div>
               </button>
