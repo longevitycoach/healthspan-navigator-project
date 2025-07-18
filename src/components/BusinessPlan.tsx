@@ -1234,11 +1234,11 @@ const BusinessPlan = () => {
             </div>
 
             {/* Partners */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[180px]">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-12 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[220px]">
               <div className="text-center">
-                <Users className="w-16 h-16 text-green-600 mx-auto mb-3" />
-                <h4 className="font-bold text-green-900 text-lg">Partners</h4>
-                <div className="text-sm text-green-700 font-medium">Strategic Alliances</div>
+                <Users className="w-20 h-20 text-green-600 mx-auto mb-4" />
+                <h4 className="font-bold text-green-900 text-xl">Partners</h4>
+                <div className="text-xs text-green-700 font-medium">Strategic Alliances</div>
                 <div className="text-xs text-green-600 mt-1">Healthcare Ecosystem</div>
               </div>
               
@@ -1281,11 +1281,11 @@ const BusinessPlan = () => {
             </div>
 
             {/* Talent */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[180px]">
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-12 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[220px]">
               <div className="text-center">
-                <Star className="w-16 h-16 text-purple-600 mx-auto mb-3" />
-                <h4 className="font-bold text-purple-900 text-lg">Talent</h4>
-                <div className="text-sm text-purple-700 font-medium">Join Our Team</div>
+                <Star className="w-20 h-20 text-purple-600 mx-auto mb-4" />
+                <h4 className="font-bold text-purple-900 text-xl">Talent</h4>
+                <div className="text-xs text-purple-700 font-medium">Join Our Team</div>
                 <div className="text-xs text-purple-600 mt-1">Remote Friendly</div>
               </div>
               
@@ -1330,11 +1330,11 @@ const BusinessPlan = () => {
             </div>
 
             {/* Early Users */}
-            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[180px]">
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-12 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[220px]">
               <div className="text-center">
-                <Lightbulb className="w-16 h-16 text-orange-600 mx-auto mb-3" />
-                <h4 className="font-bold text-orange-900 text-lg">Early Users</h4>
-                <div className="text-sm text-orange-700 font-medium">Beta Program</div>
+                <Lightbulb className="w-20 h-20 text-orange-600 mx-auto mb-4" />
+                <h4 className="font-bold text-orange-900 text-xl">Early Users</h4>
+                <div className="text-xs text-orange-700 font-medium">Beta Program</div>
                 <div className="text-xs text-orange-600 mt-1">Q3/2025 Launch</div>
               </div>
               
@@ -1385,41 +1385,41 @@ const BusinessPlan = () => {
               <Phone className="w-6 h-6 text-blue-600" />
               Get in Touch
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-center">
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
-                <Globe className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <div className="font-bold text-blue-900">Website</div>
-                <div className="text-sm text-blue-700">www.longevitycoa.ch</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <Globe className="w-12 h-12 text-blue-600 mx-auto mb-3" />
+                <div className="font-bold text-blue-900 text-lg">Website</div>
+                <div className="text-xs text-blue-700">www.longevitycoa.ch</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
-                <Phone className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <div className="font-bold text-green-900">Contact</div>
-                <div className="text-sm text-green-700">info@mabu.red</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <Phone className="w-12 h-12 text-green-600 mx-auto mb-3" />
+                <div className="font-bold text-green-900 text-lg">Contact</div>
+                <div className="text-xs text-green-700">info@mabu.red</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
-                <Target className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                <div className="font-bold text-purple-900">Location</div>
-                <div className="text-sm text-purple-700">Berlin, Germany</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <Target className="w-12 h-12 text-purple-600 mx-auto mb-3" />
+                <div className="font-bold text-purple-900 text-lg">Location</div>
+                <div className="text-xs text-purple-700">Berlin, Germany</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
-                <Linkedin className="w-8 h-8 text-blue-700 mx-auto mb-2" />
-                <div className="font-bold text-blue-900">LinkedIn</div>
-                <div className="text-sm text-blue-700">mbuchhorn</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <Linkedin className="w-12 h-12 text-blue-700 mx-auto mb-3" />
+                <div className="font-bold text-blue-900 text-lg">LinkedIn</div>
+                <div className="text-xs text-blue-700">mbuchhorn</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
-                <MessageCircle className="w-8 h-8 text-sky-600 mx-auto mb-2" />
-                <div className="font-bold text-sky-900">Bluesky</div>
-                <div className="text-sm text-sky-700">m43u.bsky.social</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <MessageCircle className="w-12 h-12 text-sky-600 mx-auto mb-3" />
+                <div className="font-bold text-sky-900 text-lg">Bluesky</div>
+                <div className="text-xs text-sky-700">m43u.bsky.social</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
-                <Github className="w-8 h-8 text-gray-700 mx-auto mb-2" />
-                <div className="font-bold text-gray-900">GitHub</div>
-                <div className="text-sm text-gray-700">longevitycoach</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <Github className="w-12 h-12 text-gray-700 mx-auto mb-3" />
+                <div className="font-bold text-gray-900 text-lg">GitHub</div>
+                <div className="text-xs text-gray-700">longevitycoach</div>
               </div>
             </div>
           </div>
