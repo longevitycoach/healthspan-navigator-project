@@ -885,6 +885,7 @@ const BusinessPlan = () => {
               onClick={prevSlide} 
               disabled={isAnimating}
               className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50"
+              title="Previous slide (← arrow key)"
             >
               <ChevronLeft className="w-4 h-4" />
               <span className="hidden sm:inline">Previous</span>
@@ -915,6 +916,7 @@ const BusinessPlan = () => {
               onClick={nextSlide} 
               disabled={isAnimating}
               className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50"
+              title="Next slide (→ arrow key or 1-8 number keys)"
             >
               <span className="hidden sm:inline">Next</span>
               <span className="sm:hidden">Next</span>
@@ -922,10 +924,6 @@ const BusinessPlan = () => {
             </Button>
           </div>
           
-          {/* Keyboard shortcuts hint - positioned at bottom to avoid overlap */}
-          <div className="hidden xl:block absolute bottom-16 left-4 text-xs text-slate-400 bg-white/90 px-3 py-2 rounded-lg backdrop-blur-sm shadow-sm border border-gray-200">
-            Use ← → arrows or 1-{slides.length} keys
-          </div>
         </Card>
         
         {/* Mobile-only slide thumbnails */}
