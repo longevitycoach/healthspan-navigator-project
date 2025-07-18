@@ -713,36 +713,36 @@ const BusinessPlan = () => {
                 <h4 className="font-bold mb-3 text-center text-lg">Funding Allocation</h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-orange-500 p-2 rounded">
-                    <div className="flex justify-between font-semibold">
-                      <span>Product Development:</span><span>€200K (40%)</span>
-                    </div>
-                    <div className="text-xs mt-1">
-                      AI, mobile
-                    </div>
+                     <div className="flex justify-between font-semibold">
+                       <span>Product:</span><span>€200K (40%)</span>
+                     </div>
+                     <div className="text-xs mt-1">
+                       AI
+                     </div>
                   </div>
                   
                   <div className="bg-orange-500 p-2 rounded">
-                    <div className="flex justify-between font-semibold">
-                      <span>Marketing & Growth:</span><span>€150K (30%)</span>
-                    </div>
-                    <div className="text-xs mt-1">
-                      Growth, marketing
-                    </div>
+                     <div className="flex justify-between font-semibold">
+                       <span>Marketing:</span><span>€150K (30%)</span>
+                     </div>
+                     <div className="text-xs mt-1">
+                       Growth
+                     </div>
                   </div>
                   
                   <div className="bg-orange-500 p-2 rounded">
-                    <div className="flex justify-between font-semibold">
-                      <span>Team Expansion:</span><span>€100K (20%)</span>
-                    </div>
+                     <div className="flex justify-between font-semibold">
+                       <span>Team:</span><span>€100K (20%)</span>
+                     </div>
                     <div className="text-xs mt-1">
                       Engineering
                     </div>
                   </div>
                   
                   <div className="bg-orange-500 p-2 rounded">
-                    <div className="flex justify-between font-semibold">
-                      <span>Operations & Legal:</span><span>€50K (10%)</span>
-                    </div>
+                     <div className="flex justify-between font-semibold">
+                       <span>Legal:</span><span>€50K (10%)</span>
+                     </div>
                     <div className="text-xs mt-1">
                       Legal
                     </div>
