@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, TrendingUp, Users, DollarSign, Target, Award, Phone } from "lucide-react";
 import MarketAnalysisChart from './MarketAnalysisChart';
 const BusinessPlan = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [direction, setDirection] = useState<'next' | 'prev'>('next');
   const slides = [{
     id: 0,
     title: "Vision & Mission",
@@ -773,61 +775,191 @@ const BusinessPlan = () => {
         </div>
   }];
   const nextSlide = () => {
+    if (isAnimating) return;
+    setDirection('next');
+    setIsAnimating(true);
     setCurrentSlide(prev => (prev + 1) % slides.length);
+    setTimeout(() => setIsAnimating(false), 300);
   };
+  
   const prevSlide = () => {
+    if (isAnimating) return;
+    setDirection('prev');
+    setIsAnimating(true);
     setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
+    setTimeout(() => setIsAnimating(false), 300);
   };
+  
   const goToSlide = (index: number) => {
+    if (isAnimating || index === currentSlide) return;
+    setDirection(index > currentSlide ? 'next' : 'prev');
+    setIsAnimating(true);
     setCurrentSlide(index);
+    setTimeout(() => setIsAnimating(false), 300);
   };
-  return <section id="businessplan" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+
+  // Auto-advance slides every 10 seconds (pause on hover)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (!isAnimating) {
+        nextSlide();
+      }
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [currentSlide, isAnimating]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key >= '1' && e.key <= String(slides.length)) {
+        goToSlide(parseInt(e.key) - 1);
+      }
+    };
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+  return (
+    <section 
+      id="businessplan" 
+      className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 animate-fade-in"
+      onMouseEnter={() => setIsAnimating(true)}
+      onMouseLeave={() => setIsAnimating(false)}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
+        {/* Header with animation */}
+        <div className="text-center mb-8 sm:mb-12 animate-scale-in">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4 hover-scale">
             Business Plan
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-4">
             Strategic roadmap for democratizing longevity science and building a sustainable health optimization platform
           </p>
+          
+          {/* Progress indicator */}
+          <div className="mt-6 w-full max-w-md mx-auto bg-gray-200 rounded-full h-2">
+            <div 
+              className="bg-gradient-to-r from-blue-500 to-indigo-500 h-2 rounded-full transition-all duration-500 ease-out"
+              style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
+            />
+          </div>
         </div>
 
-        <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-xl">
-          <CardHeader className="border-b bg-gradient-to-r from-blue-50 to-indigo-50">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                {slides[currentSlide].icon}
-                <CardTitle className="text-2xl text-slate-900">
+        {/* Main presentation card */}
+        <Card className="bg-white/90 backdrop-blur-sm border-0 shadow-2xl hover:shadow-3xl transition-all duration-300 overflow-hidden">
+          {/* Header */}
+          <CardHeader className="border-b bg-gradient-to-r from-blue-50 to-indigo-50 p-4 sm:p-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+              <div className="flex items-center gap-3 animate-slide-in-right">
+                <div className="p-2 rounded-lg bg-white/80 backdrop-blur-sm">
+                  {slides[currentSlide].icon}
+                </div>
+                <CardTitle className="text-xl sm:text-2xl text-slate-900 font-bold">
                   {slides[currentSlide].title}
                 </CardTitle>
               </div>
-              <div className="text-sm text-slate-500">
-                {currentSlide + 1} / {slides.length}
+              <div className="flex items-center gap-4">
+                <div className="text-sm text-slate-500 bg-white/60 px-3 py-1 rounded-full">
+                  {currentSlide + 1} / {slides.length}
+                </div>
+                {/* Auto-play indicator */}
+                <div className="hidden sm:flex items-center gap-2 text-xs text-slate-400">
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                  Auto-advancing
+                </div>
               </div>
             </div>
           </CardHeader>
           
-          <CardContent className="p-8 min-h-[600px]">
-            {slides[currentSlide].content}
+          {/* Content with slide animation */}
+          <CardContent className="p-4 sm:p-6 lg:p-8 min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] relative overflow-hidden">
+            <div 
+              className={`
+                transition-all duration-300 ease-in-out
+                ${isAnimating ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}
+                ${direction === 'next' ? 'animate-slide-in-right' : 'animate-slide-in-left'}
+              `}
+            >
+              {slides[currentSlide].content}
+            </div>
           </CardContent>
           
-          <div className="flex items-center justify-between p-6 bg-gray-50 border-t">
-            <Button variant="outline" onClick={prevSlide} disabled={currentSlide === 0} className="flex items-center gap-2">
+          {/* Enhanced navigation */}
+          <div className="flex flex-col sm:flex-row items-center justify-between p-4 sm:p-6 bg-gradient-to-r from-gray-50 to-blue-50 border-t gap-4">
+            <Button 
+              variant="outline" 
+              onClick={prevSlide} 
+              disabled={isAnimating}
+              className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50"
+            >
               <ChevronLeft className="w-4 h-4" />
-              Previous
+              <span className="hidden sm:inline">Previous</span>
+              <span className="sm:hidden">Prev</span>
             </Button>
             
-            <div className="flex gap-2">
-              {slides.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'}`} />)}
+            {/* Slide indicators with enhanced interactivity */}
+            <div className="flex gap-2 order-first sm:order-none">
+              {slides.map((slide, index) => (
+                <button 
+                  key={index} 
+                  onClick={() => goToSlide(index)} 
+                  disabled={isAnimating}
+                  className={`
+                    w-3 h-3 sm:w-4 sm:h-4 rounded-full transition-all duration-300 hover-scale
+                    ${index === currentSlide 
+                      ? 'bg-gradient-to-r from-blue-500 to-indigo-500 scale-125' 
+                      : 'bg-gray-300 hover:bg-gray-400'
+                    }
+                  `}
+                  title={slide.title}
+                />
+              ))}
             </div>
             
-            <Button variant="outline" onClick={nextSlide} disabled={currentSlide === slides.length - 1} className="flex items-center gap-2">
-              Next
+            <Button 
+              variant="outline" 
+              onClick={nextSlide} 
+              disabled={isAnimating}
+              className="flex items-center gap-2 hover-scale w-full sm:w-auto transition-all duration-200 disabled:opacity-50"
+            >
+              <span className="hidden sm:inline">Next</span>
+              <span className="sm:hidden">Next</span>
               <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
+          
+          {/* Keyboard shortcuts hint */}
+          <div className="hidden lg:block absolute bottom-4 right-4 text-xs text-slate-400 bg-white/80 px-3 py-2 rounded-lg backdrop-blur-sm">
+            Use ← → arrows or 1-{slides.length} keys
+          </div>
         </Card>
+        
+        {/* Mobile-only slide thumbnails */}
+        <div className="mt-6 sm:hidden">
+          <div className="flex gap-2 overflow-x-auto pb-2">
+            {slides.map((slide, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`
+                  flex-shrink-0 p-3 rounded-lg border transition-all duration-200
+                  ${index === currentSlide 
+                    ? 'bg-blue-50 border-blue-200' 
+                    : 'bg-white border-gray-200 hover:bg-gray-50'
+                  }
+                `}
+              >
+                <div className="flex items-center gap-2">
+                  <div className="text-blue-600">{slide.icon}</div>
+                  <span className="text-sm font-medium whitespace-nowrap">{slide.title}</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default BusinessPlan;
