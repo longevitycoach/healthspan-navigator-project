@@ -3,17 +3,13 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight, TrendingUp, Users, DollarSign, Target, Award, Phone } from "lucide-react";
 import MarketAnalysisChart from './MarketAnalysisChart';
-
 const BusinessPlan = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      id: 0,
-      title: "Vision & Mission",
-      icon: <Target className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  const slides = [{
+    id: 0,
+    title: "Vision & Mission",
+    icon: <Target className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="text-center">
             <h3 className="text-3xl font-bold text-slate-900 mb-4">
               Democratizing Longevity Science
@@ -50,14 +46,11 @@ const BusinessPlan = () => {
             </ul>
           </div>
         </div>
-      )
-    },
-    {
-      id: 1,
-      title: "Market Analysis",
-      icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  }, {
+    id: 1,
+    title: "Market Analysis",
+    icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg mb-6">
             <h4 className="text-xl font-semibold mb-4 text-slate-900">Global Longevity Market Overview</h4>
             <div className="grid md:grid-cols-3 gap-4 mb-4">
@@ -86,14 +79,11 @@ const BusinessPlan = () => {
           </div>
           <MarketAnalysisChart />
         </div>
-      )
-    },
-    {
-      id: 2,
-      title: "Problem & Solution",
-      icon: <Target className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  }, {
+    id: 2,
+    title: "Problem & Solution",
+    icon: <Target className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-red-50 p-6 rounded-lg border-l-4 border-red-400">
               <h4 className="text-xl font-semibold mb-4 text-red-900">The Problem</h4>
@@ -158,14 +148,11 @@ const BusinessPlan = () => {
             </div>
           </div>
         </div>
-      )
-    },
-    {
-      id: 3,
-      title: "Business Model",
-      icon: <DollarSign className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  }, {
+    id: 3,
+    title: "Business Model",
+    icon: <DollarSign className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-900 mb-2">Freemium to Enterprise Strategy</h3>
             <p className="text-slate-600">Tiered access model driving user acquisition and revenue growth</p>
@@ -349,14 +336,11 @@ const BusinessPlan = () => {
             </div>
           </div>
         </div>
-      )
-    },
-    {
-      id: 4,
-      title: "Competitive Advantage",
-      icon: <Award className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  }, {
+    id: 4,
+    title: "Competitive Advantage",
+    icon: <Award className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-900 mb-2">Our Unique Position</h3>
             <p className="text-slate-600">What sets us apart in the longevity market</p>
@@ -438,14 +422,11 @@ const BusinessPlan = () => {
             </div>
           </div>
         </div>
-      )
-    },
-    {
-      id: 5,
-      title: "Financial Projections",
-      icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  }, {
+    id: 5,
+    title: "Financial Projections",
+    icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-900 mb-2">5-Year Financial Outlook</h3>
             <p className="text-slate-600">Conservative projections starting Q3/2025</p>
@@ -618,14 +599,11 @@ const BusinessPlan = () => {
             </ul>
           </div>
         </div>
-      )
-    },
-    {
-      id: 6,
-      title: "Team & Expertise",
-      icon: <Users className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  }, {
+    id: 6,
+    title: "Team & Expertise",
+    icon: <Users className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-900 mb-2">Expert Team & Advisory Board</h3>
             <p className="text-slate-600">Combining scientific expertise with business execution</p>
@@ -723,14 +701,11 @@ const BusinessPlan = () => {
             </div>
           </div>
         </div>
-      )
-    },
-    {
-      id: 7,
-      title: "Call to Action",
-      icon: <Phone className="w-8 h-8 text-blue-600" />,
-      content: (
-        <div className="space-y-6">
+  }, {
+    id: 7,
+    title: "Call to Action",
+    icon: <Phone className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-900 mb-2">Join the Longevity Revolution</h3>
             <p className="text-slate-600">Partner with us to transform healthcare and extend healthy human lifespan</p>
@@ -794,39 +769,19 @@ const BusinessPlan = () => {
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white p-8 rounded-lg text-center">
-            <h4 className="text-2xl font-bold mb-4">Ready to Transform Longevity?</h4>
-            <p className="text-lg mb-6">
-              Contact us today to discuss how we can work together to make healthy longevity accessible to everyone.
-            </p>
-            <div className="flex justify-center gap-4">
-              <Button variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100">
-                hello@longevitycoach.com
-              </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white hover:text-blue-600">
-                Schedule a Call
-              </Button>
-            </div>
-          </div>
+          
         </div>
-      )
-    }
-  ];
-
+  }];
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
+    setCurrentSlide(prev => (prev + 1) % slides.length);
   };
-
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    setCurrentSlide(prev => (prev - 1 + slides.length) % slides.length);
   };
-
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
   };
-
-  return (
-    <section id="businessplan" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+  return <section id="businessplan" className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
@@ -857,44 +812,22 @@ const BusinessPlan = () => {
           </CardContent>
           
           <div className="flex items-center justify-between p-6 bg-gray-50 border-t">
-            <Button
-              variant="outline"
-              onClick={prevSlide}
-              disabled={currentSlide === 0}
-              className="flex items-center gap-2"
-            >
+            <Button variant="outline" onClick={prevSlide} disabled={currentSlide === 0} className="flex items-center gap-2">
               <ChevronLeft className="w-4 h-4" />
               Previous
             </Button>
             
             <div className="flex gap-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentSlide
-                      ? 'bg-blue-600'
-                      : 'bg-gray-300 hover:bg-gray-400'
-                  }`}
-                />
-              ))}
+              {slides.map((_, index) => <button key={index} onClick={() => goToSlide(index)} className={`w-3 h-3 rounded-full transition-colors ${index === currentSlide ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'}`} />)}
             </div>
             
-            <Button
-              variant="outline"
-              onClick={nextSlide}
-              disabled={currentSlide === slides.length - 1}
-              className="flex items-center gap-2"
-            >
+            <Button variant="outline" onClick={nextSlide} disabled={currentSlide === slides.length - 1} className="flex items-center gap-2">
               Next
               <ChevronRight className="w-4 h-4" />
             </Button>
           </div>
         </Card>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BusinessPlan;
