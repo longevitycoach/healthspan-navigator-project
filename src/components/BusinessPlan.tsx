@@ -717,7 +717,7 @@ const BusinessPlan = () => {
                       <span>Product Development:</span><span>€200K (40%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      AI, platform, mobile
+                      AI, mobile
                     </div>
                   </div>
                   
@@ -726,7 +726,7 @@ const BusinessPlan = () => {
                       <span>Marketing & Growth:</span><span>€150K (30%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      Growth, marketing, partnerships
+                      Growth, marketing
                     </div>
                   </div>
                   
@@ -735,7 +735,7 @@ const BusinessPlan = () => {
                       <span>Team Expansion:</span><span>€100K (20%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      Engineering, data science
+                      Engineering
                     </div>
                   </div>
                   
@@ -744,7 +744,7 @@ const BusinessPlan = () => {
                       <span>Operations & Legal:</span><span>€50K (10%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      Legal, compliance
+                      Legal
                     </div>
                   </div>
                 </div>
