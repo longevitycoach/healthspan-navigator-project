@@ -1411,7 +1411,7 @@ const ReferenceValues = () => {
               <td className="py-3 px-2 text-center">
                 <HoverCard>
                   <HoverCardTrigger asChild>
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                    <Button variant="ghost" size="sm" className="h-11 w-11 p-0 md:h-8 md:w-8">
                       <Info className="h-4 w-4 text-slate-400" />
                     </Button>
                   </HoverCardTrigger>
