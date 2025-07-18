@@ -1428,7 +1428,7 @@ const BusinessPlan = () => {
                 <div className="text-xs text-sky-700">m43u.bsky.social</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60" onClick={() => window.open('https://github.com/longevitycoach/', '_blank')}>
                 <Github className="w-12 h-12 text-gray-700 mx-auto mb-3" />
                 <div className="font-bold text-gray-900 text-lg">GitHub</div>
                 <div className="text-xs text-gray-700">longevitycoach</div>
