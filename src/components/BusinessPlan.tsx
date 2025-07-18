@@ -798,15 +798,15 @@ const BusinessPlan = () => {
     setTimeout(() => setIsAnimating(false), 300);
   };
 
-  // Auto-advance slides every 10 seconds (pause on hover)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (!isAnimating) {
-        nextSlide();
-      }
-    }, 10000);
-    return () => clearInterval(interval);
-  }, [currentSlide, isAnimating]);
+  // Auto-advance disabled per user request
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (!isAnimating) {
+  //       nextSlide();
+  //     }
+  //   }, 10000);
+  //   return () => clearInterval(interval);
+  // }, [currentSlide, isAnimating]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -862,11 +862,6 @@ const BusinessPlan = () => {
               <div className="flex items-center gap-4">
                 <div className="text-sm text-slate-500 bg-white/60 px-3 py-1 rounded-full">
                   {currentSlide + 1} / {slides.length}
-                </div>
-                {/* Auto-play indicator */}
-                <div className="hidden sm:flex items-center gap-2 text-xs text-slate-400">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  Auto-advancing
                 </div>
               </div>
             </div>
