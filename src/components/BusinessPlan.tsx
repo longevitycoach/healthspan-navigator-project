@@ -1293,7 +1293,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Talent */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-[10/7] flex flex-col justify-center items-center">
               <div className="text-center">
                 <Star className="w-16 h-16 text-purple-600 mx-auto mb-3" />
                 <h4 className="font-bold text-purple-900 text-xl">Talent</h4>
@@ -1342,7 +1342,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Early Users */}
-            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-[10/7] flex flex-col justify-center items-center">
               <div className="text-center">
                 <Lightbulb className="w-16 h-16 text-orange-600 mx-auto mb-3" />
                 <h4 className="font-bold text-orange-900 text-xl">Early Users</h4>
