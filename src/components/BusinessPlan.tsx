@@ -929,8 +929,8 @@ const BusinessPlan = () => {
             </Button>
           </div>
           
-          {/* Keyboard shortcuts hint */}
-          <div className="hidden lg:block absolute bottom-4 right-4 text-xs text-slate-400 bg-white/80 px-3 py-2 rounded-lg backdrop-blur-sm">
+          {/* Keyboard shortcuts hint - repositioned to avoid overlap */}
+          <div className="hidden lg:block absolute top-4 right-4 text-xs text-slate-400 bg-white/80 px-3 py-2 rounded-lg backdrop-blur-sm shadow-sm">
             Use ← → arrows or 1-{slides.length} keys
           </div>
         </Card>
