@@ -1208,10 +1208,10 @@ const BusinessPlan = () => {
             {/* Investors */}
             <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
               <div className="text-center">
-                <DollarSign className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                <h4 className="font-bold text-blue-900 text-base">Investors</h4>
-                <div className="text-sm text-blue-700 font-medium">€500K Seed Round</div>
-                <div className="text-xs text-blue-600 mt-1">Q1 2026 Opening</div>
+                <DollarSign className="w-16 h-16 text-blue-600 mx-auto mb-3" />
+                <h4 className="font-bold text-blue-900 text-xl">Investors</h4>
+                <div className="text-base text-blue-700 font-medium">€500K Seed Round</div>
+                <div className="text-sm text-blue-600 mt-1">Q1 2026 Opening</div>
               </div>
               
               {/* Hover Overlay */}
@@ -1248,10 +1248,10 @@ const BusinessPlan = () => {
             {/* Partners */}
             <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
               <div className="text-center">
-                <Users className="w-12 h-12 text-green-600 mx-auto mb-2" />
-                <h4 className="font-bold text-green-900 text-base">Partners</h4>
-                <div className="text-sm text-green-700 font-medium">Strategic Alliances</div>
-                <div className="text-xs text-green-600 mt-1">Healthcare Ecosystem</div>
+                <Users className="w-16 h-16 text-green-600 mx-auto mb-3" />
+                <h4 className="font-bold text-green-900 text-xl">Partners</h4>
+                <div className="text-base text-green-700 font-medium">Strategic Alliances</div>
+                <div className="text-sm text-green-600 mt-1">Healthcare Ecosystem</div>
               </div>
               
                {/* Hover Overlay */}
@@ -1295,10 +1295,10 @@ const BusinessPlan = () => {
             {/* Talent */}
             <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
               <div className="text-center">
-                <Star className="w-12 h-12 text-purple-600 mx-auto mb-2" />
-                <h4 className="font-bold text-purple-900 text-base">Talent</h4>
-                <div className="text-sm text-purple-700 font-medium">Join Our Team</div>
-                <div className="text-xs text-purple-600 mt-1">Remote Friendly</div>
+                <Star className="w-16 h-16 text-purple-600 mx-auto mb-3" />
+                <h4 className="font-bold text-purple-900 text-xl">Talent</h4>
+                <div className="text-base text-purple-700 font-medium">Join Our Team</div>
+                <div className="text-sm text-purple-600 mt-1">Remote Friendly</div>
               </div>
               
                {/* Hover Overlay */}
@@ -1344,10 +1344,10 @@ const BusinessPlan = () => {
             {/* Early Users */}
             <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
               <div className="text-center">
-                <Lightbulb className="w-12 h-12 text-orange-600 mx-auto mb-2" />
-                <h4 className="font-bold text-orange-900 text-base">Early Users</h4>
-                <div className="text-sm text-orange-700 font-medium">Beta Program</div>
-                <div className="text-xs text-orange-600 mt-1">Q3/2025 Launch</div>
+                <Lightbulb className="w-16 h-16 text-orange-600 mx-auto mb-3" />
+                <h4 className="font-bold text-orange-900 text-xl">Early Users</h4>
+                <div className="text-base text-orange-700 font-medium">Beta Program</div>
+                <div className="text-sm text-orange-600 mt-1">Q3/2025 Launch</div>
               </div>
               
                {/* Hover Overlay */}
