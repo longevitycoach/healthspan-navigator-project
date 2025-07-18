@@ -473,108 +473,78 @@ const BusinessPlan = () => {
             </h3>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
             {/* AI-Powered Personalization */}
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
-                <Brain className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                <h4 className="font-bold text-blue-900 text-sm">AI Power</h4>
-              </div>
-              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <div className="text-center">
-                  <h4 className="font-bold mb-2 text-sm">AI-Powered Personalization</h4>
-                  <p className="text-xs">Our algorithms analyze 60+ biomarkers to create truly personalized longevity protocols, going beyond generic advice.</p>
-                </div>
+                <Brain className="w-16 h-16 text-blue-600 mx-auto mb-4" />
+                <h4 className="font-bold text-blue-900 text-lg mb-3">AI-Powered Personalization</h4>
+                <p className="text-sm text-blue-700">Our algorithms analyze 60+ biomarkers to create truly personalized longevity protocols, going beyond generic advice.</p>
               </div>
             </div>
 
             {/* Comprehensive Integration */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
-                <Zap className="w-12 h-12 text-green-600 mx-auto mb-2" />
-                <h4 className="font-bold text-green-900 text-sm">Integration</h4>
-              </div>
-              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <div className="text-center">
-                  <h4 className="font-bold mb-2 text-sm">Comprehensive Integration</h4>
-                  <p className="text-xs">We integrate nutrition, exercise, supplementation, and lifestyle factors into one cohesive optimization platform.</p>
-                </div>
+                <Zap className="w-16 h-16 text-green-600 mx-auto mb-4" />
+                <h4 className="font-bold text-green-900 text-lg mb-3">Integration</h4>
+                <p className="text-sm text-green-700">We integrate nutrition, exercise, supplementation, and lifestyle factors into one cohesive optimization platform.</p>
               </div>
             </div>
 
             {/* Scientific Rigor */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
-                <Microscope className="w-12 h-12 text-purple-600 mx-auto mb-2" />
-                <h4 className="font-bold text-purple-900 text-sm">Science</h4>
-              </div>
-              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <div className="text-center">
-                  <h4 className="font-bold mb-2 text-sm">Scientific Rigor</h4>
-                  <p className="text-xs">Every recommendation is backed by peer-reviewed research, with transparent sourcing and continuous updates.</p>
-                </div>
+                <Microscope className="w-16 h-16 text-purple-600 mx-auto mb-4" />
+                <h4 className="font-bold text-purple-900 text-lg mb-3">Science</h4>
+                <p className="text-sm text-purple-700">Every recommendation is backed by peer-reviewed research, with transparent sourcing and continuous updates.</p>
               </div>
             </div>
 
             {/* German Engineering */}
-            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
-                <Shield className="w-12 h-12 text-orange-600 mx-auto mb-2" />
-                <h4 className="font-bold text-orange-900 text-sm">German</h4>
-              </div>
-              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <div className="text-center">
-                  <h4 className="font-bold mb-2 text-sm">German Engineering</h4>
-                  <p className="text-xs">Built with German precision and privacy standards, ensuring data security and algorithm reliability.</p>
-                </div>
+                <Shield className="w-16 h-16 text-orange-600 mx-auto mb-4" />
+                <h4 className="font-bold text-orange-900 text-lg mb-3">German</h4>
+                <p className="text-sm text-orange-700">Built with German precision and privacy standards, ensuring data security and algorithm reliability.</p>
               </div>
             </div>
 
             {/* Continuous Optimization */}
-            <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
-                <BarChart3 className="w-12 h-12 text-teal-600 mx-auto mb-2" />
-                <h4 className="font-bold text-teal-900 text-sm">Learning</h4>
-              </div>
-              <div className="absolute inset-0 bg-teal-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <div className="text-center">
-                  <h4 className="font-bold mb-2 text-sm">Continuous Optimization</h4>
-                  <p className="text-xs">Our platform learns and adapts recommendations based on user results, creating effective feedback loops.</p>
-                </div>
+                <BarChart3 className="w-16 h-16 text-teal-600 mx-auto mb-4" />
+                <h4 className="font-bold text-teal-900 text-lg mb-3">Learning</h4>
+                <p className="text-sm text-teal-700">Our platform learns and adapts recommendations based on user results, creating effective feedback loops.</p>
               </div>
             </div>
 
             {/* Holistic Approach */}
-            <div className="group bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
-                <Heart className="w-12 h-12 text-red-600 mx-auto mb-2" />
-                <h4 className="font-bold text-red-900 text-sm">Holistic</h4>
-              </div>
-              <div className="absolute inset-0 bg-red-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <div className="text-center">
-                  <h4 className="font-bold mb-2 text-sm">Holistic Approach</h4>
-                  <p className="text-xs">Unlike competitors focusing on single aspects, we address all pillars of longevity in an integrated manner.</p>
-                </div>
+                <Heart className="w-16 h-16 text-red-600 mx-auto mb-4" />
+                <h4 className="font-bold text-red-900 text-lg mb-3">Holistic</h4>
+                <p className="text-sm text-red-700">Unlike competitors focusing on single aspects, we address all pillars of longevity in an integrated manner.</p>
               </div>
             </div>
           </div>
           
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
-            <div className="grid grid-cols-3 gap-6 text-center">
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
-                <Users className="w-10 h-10 text-blue-600 mx-auto mb-2" />
-                <div className="font-bold text-blue-900 text-sm">Target Market</div>
-                <div className="text-xs text-blue-700">Health-conscious consumers</div>
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-lg">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />
+                <div className="font-bold text-blue-900 text-lg mb-2">Target Market</div>
+                <div className="text-sm text-blue-700">Health-conscious consumers seeking scientific approaches to longevity and wellness</div>
               </div>
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
-                <DollarSign className="w-10 h-10 text-green-600 mx-auto mb-2" />
-                <div className="font-bold text-green-900 text-sm">Price Position</div>
-                <div className="text-xs text-green-700">Affordable premium</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <DollarSign className="w-12 h-12 text-green-600 mx-auto mb-3" />
+                <div className="font-bold text-green-900 text-lg mb-2">Price Position</div>
+                <div className="text-sm text-green-700">Affordable premium - making advanced longevity science accessible to middle class</div>
               </div>
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
-                <Lightbulb className="w-10 h-10 text-purple-600 mx-auto mb-2" />
-                <div className="font-bold text-purple-900 text-sm">Value Proposition</div>
-                <div className="text-xs text-purple-700">Accessible longevity science</div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+                <Lightbulb className="w-12 h-12 text-purple-600 mx-auto mb-3" />
+                <div className="font-bold text-purple-900 text-lg mb-2">Value Proposition</div>
+                <div className="text-sm text-purple-700">Accessible longevity science with personalized recommendations and continuous optimization</div>
               </div>
             </div>
           </div>
