@@ -1213,69 +1213,227 @@ const BusinessPlan = () => {
     icon: <Phone className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">Join the Longevity Revolution</h3>
-            <p className="text-slate-600">Partner with us to transform healthcare and extend healthy human lifespan</p>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
+              <Rocket className="w-8 h-8 text-blue-600" />
+              Join Our Mission
+            </h3>
+            <p className="text-slate-600">Hover for opportunities • Click for detailed information</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <div className="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-400">
-                <h4 className="text-xl font-semibold text-blue-900 mb-3">For Investors</h4>
-                <ul className="text-blue-800 space-y-2">
-                  <li>• €500K Seed funding round opening Q1 2026</li>
-                  <li>• Target 10x return within 5 years</li>
-                  <li>• Growing market with 15.7% CAGR</li>
-                  <li>• Experienced team with proven track record</li>
-                </ul>
-                <Button className="mt-4 bg-blue-600 hover:bg-blue-700">
-                  Schedule Investor Meeting
-                </Button>
+          {/* Main Action Cards */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+            {/* Investors */}
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[180px]">
+              <div className="text-center">
+                <DollarSign className="w-16 h-16 text-blue-600 mx-auto mb-3" />
+                <h4 className="font-bold text-blue-900 text-lg">Investors</h4>
+                <div className="text-sm text-blue-700 font-medium">€500K Seed Round</div>
+                <div className="text-xs text-blue-600 mt-1">Q1 2026 Opening</div>
               </div>
               
-              <div className="bg-green-50 p-6 rounded-lg border-l-4 border-green-400">
-                <h4 className="text-xl font-semibold text-green-900 mb-3">For Partners</h4>
-                <ul className="text-green-800 space-y-2">
-                  <li>• Healthcare provider integrations</li>
-                  <li>• Corporate wellness partnerships</li>
-                  <li>• Laboratory testing collaborations</li>
-                  <li>• Research institution alliances</li>
-                </ul>
-                <Button className="mt-4 bg-green-600 hover:bg-green-700">
-                  Explore Partnerships
-                </Button>
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
+                <h4 className="font-bold mb-3 text-center text-lg">Investment Opportunity</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-blue-500 p-2 rounded">
+                    <div className="font-semibold">Funding Details:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• €500K Seed funding round</div>
+                      <div>• Opening Q1 2026</div>
+                      <div>• Target 10x return within 5 years</div>
+                      <div>• Growing market 15.7% CAGR</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-blue-500 p-2 rounded">
+                    <div className="font-semibold">Opportunity:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Experienced founding team</div>
+                      <div>• Proven market demand</div>
+                      <div>• Strong advisory board</div>
+                      <div>• Clear path to profitability</div>
+                    </div>
+                  </div>
+                  
+                  <Button className="w-full mt-3 bg-blue-700 hover:bg-blue-800 text-xs py-2">
+                    Schedule Investor Meeting
+                  </Button>
+                </div>
               </div>
             </div>
-            
-            <div className="space-y-4">
-              <div className="bg-purple-50 p-6 rounded-lg border-l-4 border-purple-400">
-                <h4 className="text-xl font-semibold text-purple-900 mb-3">For Talent</h4>
-                <ul className="text-purple-800 space-y-2">
-                  <li>• Work on cutting-edge longevity science</li>
-                  <li>• Competitive compensation + equity</li>
-                  <li>• Flexible remote/hybrid work</li>
-                  <li>• Make a meaningful impact on human health</li>
-                </ul>
-                <Button className="mt-4 bg-purple-600 hover:bg-purple-700">
-                  View Open Positions
-                </Button>
+
+            {/* Partners */}
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[180px]">
+              <div className="text-center">
+                <Users className="w-16 h-16 text-green-600 mx-auto mb-3" />
+                <h4 className="font-bold text-green-900 text-lg">Partners</h4>
+                <div className="text-sm text-green-700 font-medium">Strategic Alliances</div>
+                <div className="text-xs text-green-600 mt-1">Healthcare Ecosystem</div>
               </div>
               
-              <div className="bg-orange-50 p-6 rounded-lg border-l-4 border-orange-400">
-                <h4 className="text-xl font-semibold text-orange-900 mb-3">For Early Users</h4>
-                <ul className="text-orange-800 space-y-2">
-                  <li>• Beta access starting Q3/2025</li>
-                  <li>• Discounted lifetime membership</li>
-                  <li>• Direct input on product development</li>
-                  <li>• Community of health optimizers</li>
-                </ul>
-                <Button className="mt-4 bg-orange-600 hover:bg-orange-700">
-                  Join Beta Program
-                </Button>
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
+                <h4 className="font-bold mb-3 text-center text-lg">Partnership Opportunities</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-green-500 p-2 rounded">
+                    <div className="font-semibold">Healthcare Providers:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Clinic integrations</div>
+                      <div>• Provider dashboards</div>
+                      <div>• Patient optimization programs</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-green-500 p-2 rounded">
+                    <div className="font-semibold">Corporate Wellness:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Employee health programs</div>
+                      <div>• Executive wellness packages</div>
+                      <div>• ROI tracking & reporting</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-green-500 p-2 rounded">
+                    <div className="font-semibold">Research & Labs:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Laboratory testing collaborations</div>
+                      <div>• Research institution alliances</div>
+                      <div>• Data sharing partnerships</div>
+                    </div>
+                  </div>
+                  
+                  <Button className="w-full mt-3 bg-green-700 hover:bg-green-800 text-xs py-2">
+                    Explore Partnerships
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Talent */}
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[180px]">
+              <div className="text-center">
+                <Star className="w-16 h-16 text-purple-600 mx-auto mb-3" />
+                <h4 className="font-bold text-purple-900 text-lg">Talent</h4>
+                <div className="text-sm text-purple-700 font-medium">Join Our Team</div>
+                <div className="text-xs text-purple-600 mt-1">Remote Friendly</div>
+              </div>
+              
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
+                <h4 className="font-bold mb-3 text-center text-lg">Career Opportunities</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-purple-500 p-2 rounded">
+                    <div className="font-semibold">What We Offer:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Work on cutting-edge longevity science</div>
+                      <div>• Competitive compensation + equity</div>
+                      <div>• Flexible remote/hybrid work</div>
+                      <div>• Make meaningful impact on health</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-purple-500 p-2 rounded">
+                    <div className="font-semibold">Open Positions:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Senior Data Scientist</div>
+                      <div>• DevOps Engineer</div>
+                      <div>• Clinical Research Manager</div>
+                      <div>• Business Development Lead</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-purple-500 p-2 rounded">
+                    <div className="font-semibold">Company Culture:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Scientific rigor & innovation</div>
+                      <div>• Collaborative environment</div>
+                      <div>• Professional development focus</div>
+                    </div>
+                  </div>
+                  
+                  <Button className="w-full mt-3 bg-purple-700 hover:bg-purple-800 text-xs py-2">
+                    View Open Positions
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Early Users */}
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative min-h-[180px]">
+              <div className="text-center">
+                <Lightbulb className="w-16 h-16 text-orange-600 mx-auto mb-3" />
+                <h4 className="font-bold text-orange-900 text-lg">Early Users</h4>
+                <div className="text-sm text-orange-700 font-medium">Beta Program</div>
+                <div className="text-xs text-orange-600 mt-1">Q3/2025 Launch</div>
+              </div>
+              
+              {/* Hover Overlay */}
+              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
+                <h4 className="font-bold mb-3 text-center text-lg">Beta Program Benefits</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-orange-500 p-2 rounded">
+                    <div className="font-semibold">Exclusive Access:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Beta access starting Q3/2025</div>
+                      <div>• First to try new features</div>
+                      <div>• Priority customer support</div>
+                      <div>• Direct developer feedback channel</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-orange-500 p-2 rounded">
+                    <div className="font-semibold">Special Benefits:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Discounted lifetime membership</div>
+                      <div>• Grandfathered pricing</div>
+                      <div>• Exclusive beta features</div>
+                      <div>• Community recognition</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-orange-500 p-2 rounded">
+                    <div className="font-semibold">Community:</div>
+                    <div className="text-xs space-y-1">
+                      <div>• Network of health optimizers</div>
+                      <div>• Monthly expert webinars</div>
+                      <div>• Early research access</div>
+                    </div>
+                  </div>
+                  
+                  <Button className="w-full mt-3 bg-orange-700 hover:bg-orange-800 text-xs py-2">
+                    Join Beta Program
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
-          
-          
+
+          {/* Contact Information */}
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+            <h4 className="text-xl font-bold text-center mb-6 flex items-center justify-center gap-2">
+              <Phone className="w-6 h-6 text-blue-600" />
+              Get in Touch
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
+                <Globe className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                <div className="font-bold text-blue-900">Website</div>
+                <div className="text-sm text-blue-700">www.longevity-coach.com</div>
+              </div>
+              
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
+                <Phone className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                <div className="font-bold text-green-900">Contact</div>
+                <div className="text-sm text-green-700">hello@longevity-coach.com</div>
+              </div>
+              
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
+                <Target className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                <div className="font-bold text-purple-900">Location</div>
+                <div className="text-sm text-purple-700">Munich, Germany</div>
+              </div>
+            </div>
+          </div>
         </div>
   }];
   const nextSlide = () => {
