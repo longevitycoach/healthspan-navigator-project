@@ -588,18 +588,6 @@ const BusinessPlan = () => {
             </div>
           </div>
           
-          <div className="bg-yellow-50 p-4 rounded-lg">
-            <h4 className="font-semibold text-yellow-900 mb-2">Key Assumptions</h4>
-            <ul className="text-sm text-yellow-800 space-y-1">
-              <li>• Average revenue per user (ARPU) of €12/month by Year 2</li>
-              <li>• Customer acquisition cost (CAC) decreasing from €25 to €8</li>
-              <li>• Customer lifetime value (LTV) increasing to €450</li>
-              <li>• 8% monthly churn rate improving to 3% by Year 4</li>
-              <li>• Free-to-Premium conversion rate: 12-15%</li>
-              <li>• Premium-to-Enterprise upgrade rate: 18-22%</li>
-              <li>• Lower prices enable higher volume and conversion rates</li>
-            </ul>
-          </div>
         </div>
   }, {
     id: 6,
