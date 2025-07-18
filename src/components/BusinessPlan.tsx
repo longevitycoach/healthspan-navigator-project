@@ -925,98 +925,284 @@ const BusinessPlan = () => {
     icon: <Users className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">Expert Team & Advisory Board</h3>
-            <p className="text-slate-600">Combining scientific expertise with business execution</p>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
+              <Users className="w-8 h-8 text-blue-600" />
+              Team & Expertise
+            </h3>
+            <p className="text-slate-600">Hover to explore our team • Click for detailed expertise</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div>
-              <h4 className="text-xl font-semibold text-blue-900 mb-4">Current Team Structure</h4>
-              
-              <div className="space-y-4">
-                <div className="bg-blue-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-blue-900">Founding Team</h5>
-                  <ul className="text-sm text-blue-800 mt-2 space-y-1">
-                    <li>• CEO: Business strategy & partnerships</li>
-                    <li>• CTO: AI/ML development & platform</li>
-                    <li>• CMO: Medical advisory & protocols</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-green-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-green-900">Technical Team (4)</h5>
-                  <ul className="text-sm text-green-800 mt-2 space-y-1">
-                    <li>• 2 Full-stack developers</li>
-                    <li>• 1 Data scientist/ML engineer</li>
-                    <li>• 1 UX/UI designer</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-purple-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-purple-900">Content & Operations (3)</h5>
-                  <ul className="text-sm text-purple-800 mt-2 space-y-1">
-                    <li>• 1 Scientific content manager</li>
-                    <li>• 1 Customer success manager</li>
-                    <li>• 1 Marketing specialist</li>
-                  </ul>
+          {/* Core Team Structure */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            {/* Founding Team */}
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <Trophy className="w-12 h-12 text-blue-600 mx-auto mb-2" />
+                <h4 className="font-bold text-blue-900 text-sm">Founders</h4>
+                <div className="text-xs text-blue-700">3 Leaders</div>
+              </div>
+              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center text-lg">Founding Team</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-blue-500 p-2 rounded">
+                    <div className="font-semibold">CEO</div>
+                    <div className="text-xs">Business strategy & partnerships</div>
+                  </div>
+                  <div className="bg-blue-500 p-2 rounded">
+                    <div className="font-semibold">CTO</div>
+                    <div className="text-xs">AI/ML development & platform</div>
+                  </div>
+                  <div className="bg-blue-500 p-2 rounded">
+                    <div className="font-semibold">CMO</div>
+                    <div className="text-xs">Medical advisory & protocols</div>
+                  </div>
                 </div>
               </div>
             </div>
-            
-            <div>
-              <h4 className="text-xl font-semibold text-blue-900 mb-4">Advisory Board & Expertise</h4>
-              
-              <div className="space-y-4">
-                <div className="bg-orange-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-orange-900">Medical Advisory</h5>
-                  <ul className="text-sm text-orange-800 mt-2 space-y-1">
-                    <li>• Longevity medicine physicians</li>
-                    <li>• Preventive medicine specialists</li>
-                    <li>• Nutritional biochemists</li>
-                  </ul>
+
+            {/* Technical Team */}
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <Cpu className="w-12 h-12 text-green-600 mx-auto mb-2" />
+                <h4 className="font-bold text-green-900 text-sm">Tech Team</h4>
+                <div className="text-xs text-green-700">4 Engineers</div>
+              </div>
+              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center text-lg">Technical Expertise</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-green-500 p-2 rounded">
+                    <div className="font-semibold">Development (2)</div>
+                    <div className="text-xs">Full-stack engineers</div>
+                  </div>
+                  <div className="bg-green-500 p-2 rounded">
+                    <div className="font-semibold">Data Science (1)</div>
+                    <div className="text-xs">ML engineer & analytics</div>
+                  </div>
+                  <div className="bg-green-500 p-2 rounded">
+                    <div className="font-semibold">Design (1)</div>
+                    <div className="text-xs">UX/UI specialist</div>
+                  </div>
                 </div>
-                
-                <div className="bg-teal-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-teal-900">Technical Advisory</h5>
-                  <ul className="text-sm text-teal-800 mt-2 space-y-1">
-                    <li>• AI/ML researchers from Max Planck</li>
-                    <li>• Healthcare technology veterans</li>
-                    <li>• Data privacy & security experts</li>
-                  </ul>
+              </div>
+            </div>
+
+            {/* Operations Team */}
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <BarChart3 className="w-12 h-12 text-purple-600 mx-auto mb-2" />
+                <h4 className="font-bold text-purple-900 text-sm">Operations</h4>
+                <div className="text-xs text-purple-700">3 Specialists</div>
+              </div>
+              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center text-lg">Content & Operations</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-purple-500 p-2 rounded">
+                    <div className="font-semibold">Scientific Content</div>
+                    <div className="text-xs">Research & content manager</div>
+                  </div>
+                  <div className="bg-purple-500 p-2 rounded">
+                    <div className="font-semibold">Customer Success</div>
+                    <div className="text-xs">User experience & support</div>
+                  </div>
+                  <div className="bg-purple-500 p-2 rounded">
+                    <div className="font-semibold">Marketing</div>
+                    <div className="text-xs">Growth & acquisition specialist</div>
+                  </div>
                 </div>
-                
-                <div className="bg-red-50 p-4 rounded-lg">
-                  <h5 className="font-semibold text-red-900">Business Advisory</h5>
-                  <ul className="text-sm text-red-800 mt-2 space-y-1">
-                    <li>• Healthcare industry executives</li>
-                    <li>• Digital health entrepreneurs</li>
-                    <li>• Venture capital partners</li>
-                  </ul>
+              </div>
+            </div>
+
+            {/* Total Team Size */}
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <Users className="w-12 h-12 text-orange-600 mx-auto mb-2" />
+                <h4 className="font-bold text-orange-900 text-sm">Team Size</h4>
+                <div className="text-xs text-orange-700">10 Total</div>
+              </div>
+              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center text-lg">Current Structure</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-orange-500 p-2 rounded">
+                    <div className="flex justify-between">
+                      <span>Founders:</span><span>3</span>
+                    </div>
+                  </div>
+                  <div className="bg-orange-500 p-2 rounded">
+                    <div className="flex justify-between">
+                      <span>Technical:</span><span>4</span>
+                    </div>
+                  </div>
+                  <div className="bg-orange-500 p-2 rounded">
+                    <div className="flex justify-between">
+                      <span>Operations:</span><span>3</span>
+                    </div>
+                  </div>
+                  <div className="bg-orange-400 p-2 rounded mt-2">
+                    <div className="font-semibold text-center">Lean & Efficient</div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div className="bg-gradient-to-r from-blue-100 to-green-100 p-6 rounded-lg">
-            <h4 className="text-lg font-semibold mb-3">Recruitment Strategy</h4>
-            <div className="grid md:grid-cols-2 gap-4">
-              <div>
-                <h5 className="font-medium mb-2">Priority Hires (Starting Q3/2025)</h5>
-                <ul className="text-sm space-y-1">
-                  <li>• Senior Data Scientist (€80-100K)</li>
-                  <li>• DevOps Engineer (€70-90K)</li>
-                  <li>• Clinical Research Manager (€60-80K)</li>
-                  <li>• Business Development Lead (€70-90K)</li>
-                </ul>
+
+          {/* Advisory Board */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {/* Medical Advisory */}
+            <div className="group bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Heart className="w-16 h-16 text-red-600 mx-auto mb-3" />
+                <h4 className="font-bold text-red-900 text-lg">Medical Advisory</h4>
+                <div className="text-sm text-red-700">Clinical Expertise</div>
               </div>
-              <div>
-                <h5 className="font-medium mb-2">Talent Sources</h5>
-                <ul className="text-sm space-y-1">
-                  <li>• German university partnerships</li>
-                  <li>• Healthcare technology meetups</li>
-                  <li>• International longevity conferences</li>
-                  <li>• Competitive recruitment from FAANG</li>
-                </ul>
+              <div className="absolute inset-0 bg-red-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center text-lg">Medical Experts</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-red-500 p-2 rounded">
+                    <div className="font-semibold">Longevity Medicine</div>
+                    <div className="text-xs">Specialized physicians in aging science</div>
+                  </div>
+                  <div className="bg-red-500 p-2 rounded">
+                    <div className="font-semibold">Preventive Medicine</div>
+                    <div className="text-xs">Healthcare optimization specialists</div>
+                  </div>
+                  <div className="bg-red-500 p-2 rounded">
+                    <div className="font-semibold">Nutritional Biochemistry</div>
+                    <div className="text-xs">Biomarker analysis experts</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Technical Advisory */}
+            <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Brain className="w-16 h-16 text-teal-600 mx-auto mb-3" />
+                <h4 className="font-bold text-teal-900 text-lg">Technical Advisory</h4>
+                <div className="text-sm text-teal-700">AI & Technology</div>
+              </div>
+              <div className="absolute inset-0 bg-teal-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center text-lg">Tech Advisors</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-teal-500 p-2 rounded">
+                    <div className="font-semibold">AI/ML Research</div>
+                    <div className="text-xs">Max Planck Institute researchers</div>
+                  </div>
+                  <div className="bg-teal-500 p-2 rounded">
+                    <div className="font-semibold">HealthTech Veterans</div>
+                    <div className="text-xs">Industry experience & scaling</div>
+                  </div>
+                  <div className="bg-teal-500 p-2 rounded">
+                    <div className="font-semibold">Security & Privacy</div>
+                    <div className="text-xs">GDPR compliance & data protection</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Business Advisory */}
+            <div className="group bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Target className="w-16 h-16 text-indigo-600 mx-auto mb-3" />
+                <h4 className="font-bold text-indigo-900 text-lg">Business Advisory</h4>
+                <div className="text-sm text-indigo-700">Strategy & Growth</div>
+              </div>
+              <div className="absolute inset-0 bg-indigo-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center text-lg">Business Experts</h4>
+                <div className="space-y-2 text-sm">
+                  <div className="bg-indigo-500 p-2 rounded">
+                    <div className="font-semibold">Healthcare Executives</div>
+                    <div className="text-xs">Industry leadership & connections</div>
+                  </div>
+                  <div className="bg-indigo-500 p-2 rounded">
+                    <div className="font-semibold">Digital Health Entrepreneurs</div>
+                    <div className="text-xs">Startup scaling & product-market fit</div>
+                  </div>
+                  <div className="bg-indigo-500 p-2 rounded">
+                    <div className="font-semibold">VC Partners</div>
+                    <div className="text-xs">Funding strategy & investor relations</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Recruitment Strategy */}
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
+            <h4 className="text-xl font-bold text-center mb-6 flex items-center justify-center gap-2">
+              <Rocket className="w-6 h-6 text-blue-600" />
+              Growth Strategy
+            </h4>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              {/* Priority Hires */}
+              <div className="group bg-white p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+                <div className="text-center">
+                  <Lightbulb className="w-10 h-10 text-blue-600 mx-auto mb-2" />
+                  <div className="font-bold text-blue-900 text-sm">Priority Hires</div>
+                  <div className="text-xs text-blue-700">Q3/2025</div>
+                </div>
+                <div className="absolute inset-0 bg-blue-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                  <h4 className="font-bold mb-2 text-sm text-center">Next Hires</h4>
+                  <div className="space-y-1 text-xs">
+                    <div>• Senior Data Scientist (€80-100K)</div>
+                    <div>• DevOps Engineer (€70-90K)</div>
+                    <div>• Clinical Research Manager (€60-80K)</div>
+                    <div>• Business Development Lead (€70-90K)</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Talent Sources */}
+              <div className="group bg-white p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+                <div className="text-center">
+                  <Globe className="w-10 h-10 text-green-600 mx-auto mb-2" />
+                  <div className="font-bold text-green-900 text-sm">Talent Sources</div>
+                  <div className="text-xs text-green-700">Global Network</div>
+                </div>
+                <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                  <h4 className="font-bold mb-2 text-sm text-center">Recruitment</h4>
+                  <div className="space-y-1 text-xs">
+                    <div>• German university partnerships</div>
+                    <div>• Healthcare technology meetups</div>
+                    <div>• International longevity conferences</div>
+                    <div>• Competitive recruitment from FAANG</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Team Growth */}
+              <div className="group bg-white p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+                <div className="text-center">
+                  <TrendingUp className="w-10 h-10 text-purple-600 mx-auto mb-2" />
+                  <div className="font-bold text-purple-900 text-sm">Growth Plan</div>
+                  <div className="text-xs text-purple-700">15 by Year 2</div>
+                </div>
+                <div className="absolute inset-0 bg-purple-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                  <h4 className="font-bold mb-2 text-sm text-center">Scaling</h4>
+                  <div className="space-y-1 text-xs">
+                    <div>• Current: 10 team members</div>
+                    <div>• Year 1: 12 members (+2)</div>
+                    <div>• Year 2: 15 members (+3)</div>
+                    <div>• Focus: Technical & customer success</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Culture */}
+              <div className="group bg-white p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+                <div className="text-center">
+                  <Shield className="w-10 h-10 text-orange-600 mx-auto mb-2" />
+                  <div className="font-bold text-orange-900 text-sm">Culture</div>
+                  <div className="text-xs text-orange-700">German Quality</div>
+                </div>
+                <div className="absolute inset-0 bg-orange-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                  <h4 className="font-bold mb-2 text-sm text-center">Values</h4>
+                  <div className="space-y-1 text-xs">
+                    <div>• Scientific rigor & precision</div>
+                    <div>• Data privacy & security first</div>
+                    <div>• User-centric innovation</div>
+                    <div>• Sustainable growth mindset</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
