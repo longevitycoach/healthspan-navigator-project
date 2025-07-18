@@ -918,7 +918,7 @@ const BusinessPlan = () => {
           {/* Core Team Structure */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
             {/* Founding Team */}
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
               <div className="text-center">
                 <Trophy className="w-12 h-12 text-blue-600 mx-auto mb-2" />
                 <h4 className="font-bold text-blue-900 text-sm">Founders</h4>
@@ -944,7 +944,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Technical Team */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
               <div className="text-center">
                 <Cpu className="w-12 h-12 text-green-600 mx-auto mb-2" />
                 <h4 className="font-bold text-green-900 text-sm">Tech Team</h4>
@@ -970,7 +970,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Operations Team */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
               <div className="text-center">
                 <BarChart3 className="w-12 h-12 text-purple-600 mx-auto mb-2" />
                 <h4 className="font-bold text-purple-900 text-sm">Operations</h4>
@@ -996,7 +996,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Total Team Size */}
-            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
               <div className="text-center">
                 <Users className="w-12 h-12 text-orange-600 mx-auto mb-2" />
                 <h4 className="font-bold text-orange-900 text-sm">Team Size</h4>
@@ -1031,7 +1031,7 @@ const BusinessPlan = () => {
           {/* Advisory Board */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {/* Medical Advisory */}
-            <div className="group bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
               <div className="text-center">
                 <Heart className="w-16 h-16 text-red-600 mx-auto mb-3" />
                 <h4 className="font-bold text-red-900 text-lg">Medical Advisory</h4>
@@ -1057,7 +1057,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Technical Advisory */}
-            <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-teal-50 to-teal-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
               <div className="text-center">
                 <Brain className="w-16 h-16 text-teal-600 mx-auto mb-3" />
                 <h4 className="font-bold text-teal-900 text-lg">Technical Advisory</h4>
@@ -1083,7 +1083,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Business Advisory */}
-            <div className="group bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
               <div className="text-center">
                 <Target className="w-16 h-16 text-indigo-600 mx-auto mb-3" />
                 <h4 className="font-bold text-indigo-900 text-lg">Business Advisory</h4>
