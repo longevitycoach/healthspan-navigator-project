@@ -1206,7 +1206,7 @@ const BusinessPlan = () => {
           {/* Main Action Cards */}
           <div className="grid grid-cols-2 gap-6 mb-8">
             {/* Investors */}
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square">
               <div className="text-center">
                 <DollarSign className="w-12 h-12 text-blue-600 mx-auto mb-2" />
                 <h4 className="font-bold text-blue-900 text-base">Investors</h4>
@@ -1246,7 +1246,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Partners */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square">
               <div className="text-center">
                 <Users className="w-12 h-12 text-green-600 mx-auto mb-2" />
                 <h4 className="font-bold text-green-900 text-base">Partners</h4>
@@ -1293,7 +1293,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Talent */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square">
               <div className="text-center">
                 <Star className="w-12 h-12 text-purple-600 mx-auto mb-2" />
                 <h4 className="font-bold text-purple-900 text-base">Talent</h4>
@@ -1342,7 +1342,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Early Users */}
-            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square">
               <div className="text-center">
                 <Lightbulb className="w-12 h-12 text-orange-600 mx-auto mb-2" />
                 <h4 className="font-bold text-orange-900 text-base">Early Users</h4>
