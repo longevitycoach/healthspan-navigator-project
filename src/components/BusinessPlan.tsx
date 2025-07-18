@@ -824,8 +824,6 @@ const BusinessPlan = () => {
     <section 
       id="businessplan" 
       className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 animate-fade-in"
-      onMouseEnter={() => setIsAnimating(true)}
-      onMouseLeave={() => setIsAnimating(false)}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header with animation */}
@@ -924,8 +922,8 @@ const BusinessPlan = () => {
             </Button>
           </div>
           
-          {/* Keyboard shortcuts hint - repositioned to avoid overlap */}
-          <div className="hidden lg:block absolute top-4 right-4 text-xs text-slate-400 bg-white/80 px-3 py-2 rounded-lg backdrop-blur-sm shadow-sm">
+          {/* Keyboard shortcuts hint - positioned at bottom to avoid overlap */}
+          <div className="hidden xl:block absolute bottom-16 left-4 text-xs text-slate-400 bg-white/90 px-3 py-2 rounded-lg backdrop-blur-sm shadow-sm border border-gray-200">
             Use ← → arrows or 1-{slides.length} keys
           </div>
         </Card>
