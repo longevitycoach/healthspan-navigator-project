@@ -1398,13 +1398,13 @@ const BusinessPlan = () => {
               Get in Touch
             </h4>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60" onClick={() => window.open('https://www.longevitycoa.ch', '_blank')}>
                 <Globe className="w-12 h-12 text-blue-600 mx-auto mb-3" />
                 <div className="font-bold text-blue-900 text-lg">Website</div>
                 <div className="text-xs text-blue-700">www.longevitycoa.ch</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60" onClick={() => window.open('mailto:info@mabu.red', '_blank')}>
                 <Phone className="w-12 h-12 text-green-600 mx-auto mb-3" />
                 <div className="font-bold text-green-900 text-lg">Contact</div>
                 <div className="text-xs text-green-700">info@mabu.red</div>
@@ -1416,13 +1416,13 @@ const BusinessPlan = () => {
                 <div className="text-xs text-purple-700">Berlin, Germany</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60" onClick={() => window.open('https://linkedin.com/in/mbuchhorn', '_blank')}>
                 <Linkedin className="w-12 h-12 text-blue-700 mx-auto mb-3" />
                 <div className="font-bold text-blue-900 text-lg">LinkedIn</div>
                 <div className="text-xs text-blue-700">mbuchhorn</div>
               </div>
               
-              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-6 rounded-lg hover:bg-white/60" onClick={() => window.open('https://bsky.app/profile/m43u.bsky.social', '_blank')}>
                 <MessageCircle className="w-12 h-12 text-sky-600 mx-auto mb-3" />
                 <div className="font-bold text-sky-900 text-lg">Bluesky</div>
                 <div className="text-xs text-sky-700">m43u.bsky.social</div>
