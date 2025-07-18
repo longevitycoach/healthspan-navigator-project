@@ -1304,39 +1304,26 @@ const BusinessPlan = () => {
                {/* Hover Overlay */}
                <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
                  <h4 className="font-bold mb-3 text-center text-lg">Career Opportunities</h4>
-                 <div className="space-y-2 text-sm">
-                   <div className="bg-purple-500 p-2 rounded">
-                     <div className="font-semibold">What We Offer:</div>
-                     <div className="text-xs space-y-1">
-                       <div>• Longevity science work</div>
-                       <div>• Competitive pay + equity</div>
-                       <div>• Remote/hybrid work</div>
-                       <div>• Meaningful health impact</div>
-                     </div>
-                   </div>
-                   
-                   <div className="bg-purple-500 p-2 rounded">
-                     <div className="font-semibold">Open Positions:</div>
-                     <div className="text-xs space-y-1">
-                       <div>• Data Scientist</div>
-                       <div>• DevOps Engineer</div>
-                       <div>• Research Manager</div>
-                       <div>• Business Development</div>
-                     </div>
-                   </div>
-                   
-                   <div className="bg-purple-500 p-2 rounded">
-                     <div className="font-semibold">Culture:</div>
-                     <div className="text-xs space-y-1">
-                       <div>• Scientific innovation</div>
-                       <div>• Collaborative team</div>
-                       <div>• Growth focused</div>
-                     </div>
-                   </div>
-                   
-                   <Button className="w-full mt-3 bg-purple-700 hover:bg-purple-800 text-xs py-2">
-                     View Open Positions
-                   </Button>
+                  <div className="space-y-2 text-sm">
+                    <div className="bg-purple-500 p-2 rounded">
+                      <div className="font-semibold">What We Offer:</div>
+                      <div className="text-xs space-y-1">
+                        <div>• Longevity science work</div>
+                        <div>• Competitive pay + equity</div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-purple-500 p-2 rounded">
+                      <div className="font-semibold">Culture:</div>
+                      <div className="text-xs space-y-1">
+                        <div>• Scientific innovation</div>
+                        <div>• Collaborative team</div>
+                      </div>
+                    </div>
+                    
+                    <Button className="w-full mt-3 bg-purple-700 hover:bg-purple-800 text-xs py-2">
+                      Join Our Team
+                    </Button>
                  </div>
                </div>
             </div>
