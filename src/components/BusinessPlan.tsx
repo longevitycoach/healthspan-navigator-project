@@ -584,164 +584,171 @@ const BusinessPlan = () => {
     icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
           <div className="text-center mb-6">
-            <h3 className="text-2xl font-bold text-slate-900 mb-2">5-Year Financial Outlook</h3>
-            <p className="text-slate-600">Conservative projections starting Q3/2025</p>
+            <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
+              <BarChart3 className="w-8 h-8 text-blue-600" />
+              Financial Outlook
+            </h3>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-blue-900">Revenue Projections</h4>
-              
-              <div className="space-y-3">
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Q3-Q4 2025</span>
-                  <span className="font-bold text-green-600">€12K</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Year 1 (2026)</span>
-                  <span className="font-bold text-green-600">€68K</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Year 2 (2027)</span>
-                  <span className="font-bold text-green-600">€285K</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-gray-50 rounded">
-                  <span className="font-medium">Year 3 (2028)</span>
-                  <span className="font-bold text-green-600">€920K</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-green-50 rounded border border-green-200">
-                  <span className="font-medium">Year 4 (2029)</span>
-                  <span className="font-bold text-green-700">€2.1M</span>
+          {/* Key Metrics Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+            {/* Revenue Growth */}
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-green-600">€2.1M</div>
+                <div className="text-sm text-green-800">Year 4 Revenue</div>
+              </div>
+              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center">Revenue Projections</h4>
+                <div className="space-y-2 text-xs">
+                  <div className="flex justify-between"><span>Q3-Q4 2025:</span><span>€12K</span></div>
+                  <div className="flex justify-between"><span>Year 1 (2026):</span><span>€68K</span></div>
+                  <div className="flex justify-between"><span>Year 2 (2027):</span><span>€285K</span></div>
+                  <div className="flex justify-between"><span>Year 3 (2028):</span><span>€920K</span></div>
+                  <div className="flex justify-between border-t pt-1"><span><strong>Year 4 (2029):</strong></span><span><strong>€2.1M</strong></span></div>
                 </div>
               </div>
             </div>
-            
-            <div className="space-y-4">
-              <h4 className="text-xl font-semibold text-blue-900">User Growth by Tier</h4>
-              
-              <div className="space-y-3">
-                <div className="p-3 bg-blue-50 rounded">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Q3-Q4 2025</span>
-                    <span className="font-bold">350 total</span>
-                  </div>
-                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 280</div>
-                    <div>Premium: 60</div>
-                    <div>Enterprise: 10</div>
-                  </div>
+
+            {/* User Growth */}
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <Users className="w-12 h-12 text-blue-600 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-blue-600">80K</div>
+                <div className="text-sm text-blue-800">Total Users</div>
+              </div>
+              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center">User Growth</h4>
+                <div className="space-y-2 text-xs">
+                  <div className="flex justify-between"><span>Q3-Q4 2025:</span><span>350</span></div>
+                  <div className="flex justify-between"><span>Year 1:</span><span>2,100</span></div>
+                  <div className="flex justify-between"><span>Year 2:</span><span>10,500</span></div>
+                  <div className="flex justify-between"><span>Year 3:</span><span>35,000</span></div>
+                  <div className="flex justify-between border-t pt-1"><span><strong>Year 4:</strong></span><span><strong>80,000</strong></span></div>
                 </div>
-                <div className="p-3 bg-blue-50 rounded">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 1 (2026)</span>
-                    <span className="font-bold">2,100 total</span>
-                  </div>
-                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 1,680</div>
-                    <div>Premium: 360</div>
-                    <div>Enterprise: 60</div>
-                  </div>
+              </div>
+            </div>
+
+            {/* Gross Margin */}
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <PieChart className="w-12 h-12 text-purple-600 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-purple-600">70%</div>
+                <div className="text-sm text-purple-800">Gross Margin</div>
+              </div>
+              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center">Profitability</h4>
+                <div className="space-y-2 text-xs">
+                  <div>• Scalable SaaS model</div>
+                  <div>• Low marginal costs</div>
+                  <div>• Automated AI delivery</div>
+                  <div>• High customer retention</div>
+                  <div className="border-t pt-2"><strong>Target: 70% gross margin by Year 4</strong></div>
                 </div>
-                <div className="p-3 bg-blue-50 rounded">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 2 (2027)</span>
-                    <span className="font-bold">10,500 total</span>
-                  </div>
-                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 7,875</div>
-                    <div>Premium: 2,205</div>
-                    <div>Enterprise: 420</div>
-                  </div>
-                </div>
-                <div className="p-3 bg-blue-50 rounded">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 3 (2028)</span>
-                    <span className="font-bold">35,000 total</span>
-                  </div>
-                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 24,500</div>
-                    <div>Premium: 8,750</div>
-                    <div>Enterprise: 1,750</div>
-                  </div>
-                </div>
-                <div className="p-3 bg-blue-100 rounded border border-blue-200">
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Year 4 (2029)</span>
-                    <span className="font-bold">80,000 total</span>
-                  </div>
-                  <div className="text-xs text-gray-600 mt-1 grid grid-cols-3 gap-2">
-                    <div>Free: 52,000</div>
-                    <div>Premium: 24,000</div>
-                    <div>Enterprise: 4,000</div>
-                  </div>
+              </div>
+            </div>
+
+            {/* Funding */}
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-110 cursor-pointer relative">
+              <div className="text-center">
+                <Rocket className="w-12 h-12 text-orange-600 mx-auto mb-2" />
+                <div className="text-2xl font-bold text-orange-600">€500K</div>
+                <div className="text-sm text-orange-800">Seed Round</div>
+              </div>
+              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center">Funding Strategy</h4>
+                <div className="space-y-2 text-xs">
+                  <div>• Product development (40%)</div>
+                  <div>• Marketing & acquisition (30%)</div>
+                  <div>• Team expansion (20%)</div>
+                  <div>• Operations & legal (10%)</div>
+                  <div className="border-t pt-2"><strong>18-month runway to profitability</strong></div>
                 </div>
               </div>
             </div>
           </div>
-          
-          {/* User Distribution Breakdown */}
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
-            <h4 className="text-xl font-semibold mb-4">User Tier Distribution Strategy</h4>
-            <div className="grid md:grid-cols-3 gap-4">
-              <div className="bg-white p-4 rounded-lg">
-                <h5 className="font-semibold text-gray-900 mb-2">Free Users (65%)</h5>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  <li>• Primary acquisition channel</li>
-                  <li>• Community building focus</li>
-                  <li>• Content consumption drivers</li>
-                  <li>• Conversion funnel entry point</li>
-                </ul>
-                <div className="mt-3 text-xs text-gray-600">
-                  Target conversion: 12-15% to Premium
+
+          {/* User Tier Distribution */}
+          <div className="grid grid-cols-3 gap-4 mb-6">
+            <div className="group bg-gradient-to-br from-gray-50 to-gray-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <div className="w-10 h-10 bg-gray-400 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-white font-bold text-sm">65%</span>
+                </div>
+                <div className="font-bold text-gray-900 text-sm">Free Users</div>
+                <div className="text-xs text-gray-600">52K by Year 4</div>
+              </div>
+              <div className="absolute inset-0 bg-gray-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-2 text-sm">Free Tier Strategy</h4>
+                <div className="space-y-1 text-xs">
+                  <div>• Acquisition channel</div>
+                  <div>• Community building</div>
+                  <div>• Content consumption</div>
+                  <div>• 12-15% convert to Premium</div>
                 </div>
               </div>
-              
-              <div className="bg-white p-4 rounded-lg">
-                <h5 className="font-semibold text-blue-900 mb-2">Premium Users (30%)</h5>
-                <ul className="text-sm text-blue-800 space-y-1">
-                  <li>• Core revenue generators</li>
-                  <li>• Active platform users</li>
-                  <li>• Health optimization focused</li>
-                  <li>• Highest engagement rates</li>
-                </ul>
-                <div className="mt-3 text-xs text-blue-600">
-                  Target upgrade: 18-22% to Enterprise
+            </div>
+
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-white font-bold text-sm">30%</span>
+                </div>
+                <div className="font-bold text-blue-900 text-sm">Premium</div>
+                <div className="text-xs text-blue-600">24K by Year 4</div>
+              </div>
+              <div className="absolute inset-0 bg-blue-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-2 text-sm">Premium Strategy</h4>
+                <div className="space-y-1 text-xs">
+                  <div>• Core revenue drivers</div>
+                  <div>• Active optimization</div>
+                  <div>• High engagement</div>
+                  <div>• 18-22% upgrade to Enterprise</div>
                 </div>
               </div>
-              
-              <div className="bg-white p-4 rounded-lg">
-                <h5 className="font-semibold text-green-900 mb-2">Enterprise Users (5%)</h5>
-                <ul className="text-sm text-green-800 space-y-1">
-                  <li>• Highest value customers</li>
-                  <li>• B2B partnerships</li>
-                  <li>• Corporate wellness</li>
-                  <li>• White-label solutions</li>
-                </ul>
-                <div className="mt-3 text-xs text-green-600">
-                  Highest LTV: €1,200+ per user
+            </div>
+
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-4 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <span className="text-white font-bold text-sm">5%</span>
+                </div>
+                <div className="font-bold text-green-900 text-sm">Enterprise</div>
+                <div className="text-xs text-green-600">4K by Year 4</div>
+              </div>
+              <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-2 text-sm">Enterprise Strategy</h4>
+                <div className="space-y-1 text-xs">
+                  <div>• Highest value customers</div>
+                  <div>• B2B partnerships</div>
+                  <div>• Corporate wellness</div>
+                  <div>• €1,200+ LTV per user</div>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-4">
-            <div className="bg-green-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-green-600">€3.3M</div>
-              <div className="text-sm text-green-800">Cumulative Revenue</div>
-              <div className="text-xs text-gray-600 mt-1">4.5-year total</div>
-            </div>
-            <div className="bg-blue-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-blue-600">70%</div>
-              <div className="text-sm text-blue-800">Gross Margin</div>
-              <div className="text-xs text-gray-600 mt-1">Year 4 target</div>
-            </div>
-            <div className="bg-purple-50 p-4 rounded-lg text-center">
-              <div className="text-2xl font-bold text-purple-600">€500K</div>
-              <div className="text-sm text-purple-800">Funding Needed</div>
-              <div className="text-xs text-gray-600 mt-1">Seed round target</div>
+
+          {/* Summary Metrics */}
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-4 rounded-lg">
+            <div className="grid grid-cols-3 gap-4 text-center">
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
+                <DollarSign className="w-8 h-8 text-green-600 mx-auto mb-1" />
+                <div className="text-lg font-bold text-green-600">€3.3M</div>
+                <div className="text-xs text-green-700">Cumulative Revenue</div>
+              </div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
+                <BarChart3 className="w-8 h-8 text-blue-600 mx-auto mb-1" />
+                <div className="text-lg font-bold text-blue-600">4.5 Years</div>
+                <div className="text-xs text-blue-700">To Profitability</div>
+              </div>
+              <div className="group cursor-pointer transition-all duration-300 hover:scale-110">
+                <Target className="w-8 h-8 text-purple-600 mx-auto mb-1" />
+                <div className="text-lg font-bold text-purple-600">Conservative</div>
+                <div className="text-xs text-purple-700">Growth Model</div>
+              </div>
             </div>
           </div>
-          
         </div>
   }, {
     id: 6,
