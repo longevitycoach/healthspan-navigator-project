@@ -20,7 +20,7 @@ const HeroSection = () => {
       
       <div className="max-w-7xl mx-auto text-center relative z-10">
         <div className="animate-fade-in">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold mb-6">
+          <h1 className="text-3xl sm:text-5xl lg:text-7xl font-bold mb-4 sm:mb-6">
             <span className="bg-gradient-to-r from-white via-blue-100 to-emerald-100 bg-clip-text text-transparent">
               Change Your Life
             </span>
@@ -28,19 +28,19 @@ const HeroSection = () => {
             <span className="text-white drop-shadow-lg">with Small Habits</span>
           </h1>
           
-          <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
+          <p className="text-base sm:text-xl lg:text-2xl text-white mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
             <strong>Measure the progress - results in exponential Longevity.</strong>
             <br />
             Build your healthspan one atomic habit at a time—powered by secure AI agents that gather your biomarkers, wearable metrics, and lifestyle data. Measure key metrics, act on bite-sized lessons drawn from the latest studies, expert books, and top podcasts, then re-measure to refine your plan. Progress that compounds into lasting vitality.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => document.getElementById('contact')?.scrollIntoView({
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-8 sm:mb-12">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300" onClick={() => document.getElementById('contact')?.scrollIntoView({
             behavior: 'smooth'
           })}>
               My Journey
             </Button>
-            <Button variant="outline" size="lg" onClick={scrollToFeatures} className="text-lg px-8 py-6 border-2 border-white hover:border-white/90 transition-all duration-300 shadow-lg backdrop-blur-sm bg-fuchsia-500 hover:bg-fuchsia-400 text-fuchsia-100 rounded-full">
+            <Button variant="outline" size="lg" onClick={scrollToFeatures} className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 border-2 border-white hover:border-white/90 transition-all duration-300 shadow-lg backdrop-blur-sm bg-fuchsia-500 hover:bg-fuchsia-400 text-fuchsia-100 rounded-full">
               Learn More
             </Button>
           </div>
