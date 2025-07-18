@@ -592,9 +592,9 @@ const BusinessPlan = () => {
           </div>
           
           {/* Key Metrics Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Revenue Growth */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[120px]">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[180px]">
               <div className="text-center">
                 <TrendingUp className="w-12 h-12 text-green-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-green-600">€2.1M</div>
@@ -631,7 +631,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* User Growth */}
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[120px]">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[180px]">
               <div className="text-center">
                 <Users className="w-12 h-12 text-blue-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-blue-600">80K</div>
@@ -680,7 +680,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Profitability Metrics */}
-            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[120px]">
+            <div className="group bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[180px]">
               <div className="text-center">
                 <PieChart className="w-12 h-12 text-purple-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-purple-600">70%</div>
@@ -720,7 +720,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Funding & Investment */}
-            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[120px]">
+            <div className="group bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[180px]">
               <div className="text-center">
                 <Rocket className="w-12 h-12 text-orange-600 mx-auto mb-3" />
                 <div className="text-3xl font-bold text-orange-600">€500K</div>
@@ -773,8 +773,8 @@ const BusinessPlan = () => {
           </div>
 
           {/* User Tier Analysis */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="group bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="group bg-gradient-to-br from-gray-50 to-gray-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <div className="w-16 h-16 bg-gray-400 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold text-lg">65%</span>
@@ -810,7 +810,7 @@ const BusinessPlan = () => {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold text-lg">30%</span>
@@ -847,7 +847,7 @@ const BusinessPlan = () => {
               </div>
             </div>
 
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative min-h-[200px]">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-white font-bold text-lg">5%</span>
@@ -886,9 +886,9 @@ const BusinessPlan = () => {
           </div>
 
           {/* Financial Summary */}
-          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg">
-            <h4 className="text-xl font-bold text-center mb-6">Financial Summary & Milestones</h4>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div className="bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-lg">
+            <h4 className="text-xl font-bold text-center mb-8">Financial Summary & Milestones</h4>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="group text-center cursor-pointer transition-all duration-300 hover:scale-110 p-4 rounded-lg hover:bg-white/80">
                 <DollarSign className="w-10 h-10 text-green-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-green-600">€3.3M</div>
