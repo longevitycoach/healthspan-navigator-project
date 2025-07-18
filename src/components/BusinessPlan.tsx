@@ -1206,7 +1206,7 @@ const BusinessPlan = () => {
           {/* Main Action Cards */}
           <div className="grid grid-cols-2 gap-6 mb-8">
             {/* Investors */}
-            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-[10/7] flex flex-col justify-center items-center">
               <div className="text-center">
                 <DollarSign className="w-16 h-16 text-blue-600 mx-auto mb-3" />
                 <h4 className="font-bold text-blue-900 text-xl">Investors</h4>
@@ -1246,7 +1246,7 @@ const BusinessPlan = () => {
             </div>
 
             {/* Partners */}
-            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-square flex flex-col justify-center items-center">
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative aspect-[10/7] flex flex-col justify-center items-center">
               <div className="text-center">
                 <Users className="w-16 h-16 text-green-600 mx-auto mb-3" />
                 <h4 className="font-bold text-green-900 text-xl">Partners</h4>
