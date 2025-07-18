@@ -605,9 +605,8 @@ const BusinessPlan = () => {
                     <span><strong>Year 4 (2029):</strong></span><span><strong>€2.1M</strong></span>
                   </div>
                   <div className="mt-3 pt-2 border-t border-green-400 text-xs">
-                    <div>• Monthly recurring revenue model</div>
-                    <div>• 15% month-over-month growth</div>
-                    <div>• 70% from Premium & Enterprise</div>
+                    <div>• MRR model, 15% monthly growth</div>
+                    <div>• 70% from subscriptions</div>
                   </div>
                 </div>
               </div>
@@ -676,22 +675,20 @@ const BusinessPlan = () => {
                 <h4 className="font-bold mb-3 text-center text-lg">Profitability Model</h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-purple-500 p-2 rounded">
-                    <div className="font-semibold mb-1">Cost Structure:</div>
+                    <div className="font-semibold mb-1">Costs:</div>
                     <div className="text-xs space-y-1">
-                      <div>• Server & Infrastructure: 15%</div>
-                      <div>• Payment Processing: 3%</div>
-                      <div>• Third-party APIs: 7%</div>
-                      <div>• Customer Support: 5%</div>
+                      <div>• Infrastructure: 15%</div>
+                      <div>• APIs: 7%</div>
+                      <div>• Support: 5%</div>
                     </div>
                   </div>
                   
                   <div className="bg-purple-500 p-2 rounded">
-                    <div className="font-semibold mb-1">Revenue Breakdown:</div>
+                    <div className="font-semibold mb-1">Revenue:</div>
                     <div className="text-xs space-y-1">
-                      <div>• Premium Subscriptions: 65%</div>
-                      <div>• Enterprise Licenses: 25%</div>
-                      <div>• Coaching Services: 8%</div>
-                      <div>• Partnership Revenue: 2%</div>
+                      <div>• Premium: 65%</div>
+                      <div>• Enterprise: 25%</div>
+                      <div>• Services: 10%</div>
                     </div>
                   </div>
                   
@@ -720,7 +717,7 @@ const BusinessPlan = () => {
                       <span>Product Development:</span><span>€200K (40%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      AI development, platform features, mobile app
+                      AI, platform, mobile
                     </div>
                   </div>
                   
@@ -729,7 +726,7 @@ const BusinessPlan = () => {
                       <span>Marketing & Growth:</span><span>€150K (30%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      User acquisition, content marketing, partnerships
+                      Growth, marketing, partnerships
                     </div>
                   </div>
                   
@@ -738,7 +735,7 @@ const BusinessPlan = () => {
                       <span>Team Expansion:</span><span>€100K (20%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      Engineering, data science, customer success
+                      Engineering, data science
                     </div>
                   </div>
                   
@@ -747,7 +744,7 @@ const BusinessPlan = () => {
                       <span>Operations & Legal:</span><span>€50K (10%)</span>
                     </div>
                     <div className="text-xs mt-1">
-                      Legal, compliance, administrative costs
+                      Legal, compliance
                     </div>
                   </div>
                 </div>
@@ -772,21 +769,20 @@ const BusinessPlan = () => {
                 <h4 className="font-bold mb-3 text-center text-lg">Free Tier Strategy</h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-gray-500 p-2 rounded">
-                    <div className="font-semibold mb-1">Core Functions:</div>
+                    <div className="font-semibold mb-1">Features:</div>
                     <div className="text-xs space-y-1">
-                      <div>• Basic biomarker reference values</div>
-                      <div>• Health articles & resources</div>
-                      <div>• Community forum access</div>
-                      <div>• Basic health calculators</div>
+                      <div>• Basic biomarkers</div>
+                      <div>• Health articles</div>
+                      <div>• Community access</div>
                     </div>
                   </div>
                   
                   <div className="bg-gray-500 p-2 rounded">
-                    <div className="font-semibold mb-1">Conversion Goals:</div>
+                    <div className="font-semibold mb-1">Conversion:</div>
                     <div className="text-xs space-y-1">
-                      <div>• 12-15% conversion to Premium</div>
-                      <div>• Average time to convert: 90 days</div>
-                      <div>• CAC: €8 (Year 4)</div>
+                      <div>• 12-15% to Premium</div>
+                      <div>• 90 days avg convert</div>
+                      <div>• €8 CAC</div>
                     </div>
                   </div>
                 </div>
@@ -808,22 +804,21 @@ const BusinessPlan = () => {
                 <h4 className="font-bold mb-3 text-center text-lg">Premium Value Proposition</h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-blue-500 p-2 rounded">
-                    <div className="font-semibold mb-1">Advanced Features:</div>
+                    <div className="font-semibold mb-1">Features:</div>
                     <div className="text-xs space-y-1">
-                      <div>• AI-powered personalized protocols</div>
-                      <div>• Comprehensive biomarker analysis</div>
-                      <div>• Advanced tracking & analytics</div>
+                      <div>• AI protocols</div>
+                      <div>• Full biomarker analysis</div>
+                      <div>• Advanced tracking</div>
                       <div>• Priority support</div>
                     </div>
                   </div>
                   
                   <div className="bg-blue-500 p-2 rounded">
-                    <div className="font-semibold mb-1">Business Impact:</div>
+                    <div className="font-semibold mb-1">Metrics:</div>
                     <div className="text-xs space-y-1">
-                      <div>• 65% of total revenue</div>
-                      <div>• 18-22% upgrade to Enterprise</div>
-                      <div>• Average LTV: €450</div>
-                      <div>• 3% monthly churn (Year 4)</div>
+                      <div>• 65% total revenue</div>
+                      <div>• 20% to Enterprise</div>
+                      <div>• €450 LTV, 3% churn</div>
                     </div>
                   </div>
                 </div>
