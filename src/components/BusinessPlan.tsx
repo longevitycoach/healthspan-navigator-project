@@ -1418,19 +1418,19 @@ const BusinessPlan = () => {
               <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
                 <Globe className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                 <div className="font-bold text-blue-900">Website</div>
-                <div className="text-sm text-blue-700">www.longevity-coach.com</div>
+                <div className="text-sm text-blue-700">www.longevitycoa.ch</div>
               </div>
               
               <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
                 <Phone className="w-8 h-8 text-green-600 mx-auto mb-2" />
                 <div className="font-bold text-green-900">Contact</div>
-                <div className="text-sm text-green-700">hello@longevity-coach.com</div>
+                <div className="text-sm text-green-700">info@mabu.red</div>
               </div>
               
               <div className="group cursor-pointer transition-all duration-300 hover:scale-105 p-4 rounded-lg hover:bg-white/60">
                 <Target className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                 <div className="font-bold text-purple-900">Location</div>
-                <div className="text-sm text-purple-700">Munich, Germany</div>
+                <div className="text-sm text-purple-700">Berlin, Germany</div>
               </div>
             </div>
           </div>
