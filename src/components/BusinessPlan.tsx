@@ -1272,7 +1272,7 @@ const BusinessPlan = () => {
                      <div className="text-xs space-y-1">
                        <div>• Employee programs</div>
                        <div>• Executive packages</div>
-                       <div>• ROI tracking</div>
+                       <div>• ROI reports</div>
                      </div>
                    </div>
                    
