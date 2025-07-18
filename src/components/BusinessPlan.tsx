@@ -950,19 +950,19 @@ const BusinessPlan = () => {
                 <h4 className="font-bold text-green-900 text-sm">Tech Team</h4>
                 <div className="text-xs text-green-700">4 Engineers</div>
               </div>
-              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
-                <h4 className="font-bold mb-3 text-center text-lg">Technical Expertise</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="bg-green-500 p-2 rounded">
-                    <div className="font-semibold">Development (2)</div>
+              <div className="absolute inset-0 bg-green-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
+                <h4 className="font-bold mb-2 text-center text-base">Technical Expertise</h4>
+                <div className="space-y-1 text-xs">
+                  <div className="bg-green-500 p-1.5 rounded">
+                    <div className="font-semibold text-xs">Development (2)</div>
                     <div className="text-xs">Full-stack engineers</div>
                   </div>
-                  <div className="bg-green-500 p-2 rounded">
-                    <div className="font-semibold">Data Science (1)</div>
+                  <div className="bg-green-500 p-1.5 rounded">
+                    <div className="font-semibold text-xs">Data Science (1)</div>
                     <div className="text-xs">ML engineer & analytics</div>
                   </div>
-                  <div className="bg-green-500 p-2 rounded">
-                    <div className="font-semibold">Design (1)</div>
+                  <div className="bg-green-500 p-1.5 rounded">
+                    <div className="font-semibold text-xs">Design (1)</div>
                     <div className="text-xs">UX/UI specialist</div>
                   </div>
                 </div>
@@ -976,19 +976,19 @@ const BusinessPlan = () => {
                 <h4 className="font-bold text-purple-900 text-sm">Operations</h4>
                 <div className="text-xs text-purple-700">3 Specialists</div>
               </div>
-              <div className="absolute inset-0 bg-purple-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
-                <h4 className="font-bold mb-3 text-center text-lg">Content & Operations</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="bg-purple-500 p-2 rounded">
-                    <div className="font-semibold">Scientific Content</div>
+              <div className="absolute inset-0 bg-purple-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
+                <h4 className="font-bold mb-2 text-center text-base">Content & Operations</h4>
+                <div className="space-y-1 text-xs">
+                  <div className="bg-purple-500 p-1.5 rounded">
+                    <div className="font-semibold text-xs">Scientific Content</div>
                     <div className="text-xs">Research & content manager</div>
                   </div>
-                  <div className="bg-purple-500 p-2 rounded">
-                    <div className="font-semibold">Customer Success</div>
+                  <div className="bg-purple-500 p-1.5 rounded">
+                    <div className="font-semibold text-xs">Customer Success</div>
                     <div className="text-xs">User experience & support</div>
                   </div>
-                  <div className="bg-purple-500 p-2 rounded">
-                    <div className="font-semibold">Marketing</div>
+                  <div className="bg-purple-500 p-1.5 rounded">
+                    <div className="font-semibold text-xs">Marketing</div>
                     <div className="text-xs">Growth & acquisition specialist</div>
                   </div>
                 </div>
@@ -1002,26 +1002,26 @@ const BusinessPlan = () => {
                 <h4 className="font-bold text-orange-900 text-sm">Team Size</h4>
                 <div className="text-xs text-orange-700">10 Total</div>
               </div>
-              <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
-                <h4 className="font-bold mb-3 text-center text-lg">Current Structure</h4>
-                <div className="space-y-2 text-sm">
-                  <div className="bg-orange-500 p-2 rounded">
-                    <div className="flex justify-between">
+              <div className="absolute inset-0 bg-orange-600 text-white p-3 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
+                <h4 className="font-bold mb-2 text-center text-base">Current Structure</h4>
+                <div className="space-y-1 text-xs">
+                  <div className="bg-orange-500 p-1.5 rounded">
+                    <div className="flex justify-between text-xs">
                       <span>Founders:</span><span>3</span>
                     </div>
                   </div>
-                  <div className="bg-orange-500 p-2 rounded">
-                    <div className="flex justify-between">
+                  <div className="bg-orange-500 p-1.5 rounded">
+                    <div className="flex justify-between text-xs">
                       <span>Technical:</span><span>4</span>
                     </div>
                   </div>
-                  <div className="bg-orange-500 p-2 rounded">
-                    <div className="flex justify-between">
+                  <div className="bg-orange-500 p-1.5 rounded">
+                    <div className="flex justify-between text-xs">
                       <span>Operations:</span><span>3</span>
                     </div>
                   </div>
-                  <div className="bg-orange-400 p-2 rounded mt-2">
-                    <div className="font-semibold text-center">Lean & Efficient</div>
+                  <div className="bg-orange-400 p-1.5 rounded mt-1">
+                    <div className="font-semibold text-center text-xs">Lean & Efficient</div>
                   </div>
                 </div>
               </div>
