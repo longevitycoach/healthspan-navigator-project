@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Info, User, BookOpen, Users, Globe, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
@@ -1409,13 +1410,54 @@ const ReferenceValues = () => {
                 </Badge>
               </td>
               <td className="py-3 px-2 text-center">
-                <HoverCard>
-                  <HoverCardTrigger asChild>
-                    <Button variant="ghost" size="sm" className="h-11 w-11 p-0 md:h-8 md:w-8">
-                      <Info className="h-4 w-4 text-slate-400" />
-                    </Button>
-                  </HoverCardTrigger>
-                  <HoverCardContent className="w-96 p-4 text-left" side="left">
+                <Popover>
+                  <HoverCard>
+                    <HoverCardTrigger asChild>
+                      <PopoverTrigger asChild>
+                        <Button variant="ghost" size="sm" className="h-11 w-11 p-0 md:h-8 md:w-8">
+                          <Info className="h-4 w-4 text-slate-400" />
+                        </Button>
+                      </PopoverTrigger>
+                    </HoverCardTrigger>
+                    <HoverCardContent className="w-96 p-4 text-left" side="left">
+                      <div className="space-y-3 text-left">
+                        <div>
+                          <h4 className="font-semibold text-slate-800 mb-2 text-left">{biomarker.name}</h4>
+                          <p className="text-sm text-slate-600 leading-relaxed text-left">{biomarker.description}</p>
+                        </div>
+                        
+                        {biomarker.clinicalNotes && (
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-1 flex items-center gap-1">
+                              <BookOpen className="h-3 w-3" />
+                              Clinical Notes
+                              {biomarker.expertSource && (
+                                <Badge variant="outline" className="ml-1 text-xs">
+                                  {biomarker.expertSource}
+                                </Badge>
+                              )}
+                            </h5>
+                            <p className="text-xs text-slate-600 leading-relaxed text-left">{biomarker.clinicalNotes}</p>
+                          </div>
+                        )}
+                        
+                        {biomarker.factors && (
+                          <div>
+                            <h5 className="font-medium text-slate-700 mb-1">Key Factors</h5>
+                            <ul className="text-xs text-slate-600 space-y-1">
+                              {biomarker.factors.map((factor, idx) => (
+                                <li key={idx} className="flex items-start gap-1">
+                                  <span className="text-emerald-500 mt-0.5">•</span>
+                                  <span>{factor}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+                    </HoverCardContent>
+                  </HoverCard>
+                  <PopoverContent className="w-96 p-4 text-left" side="left">
                     <div className="space-y-3 text-left">
                       <div>
                         <h4 className="font-semibold text-slate-800 mb-2 text-left">{biomarker.name}</h4>
@@ -1451,8 +1493,8 @@ const ReferenceValues = () => {
                         </div>
                       )}
                     </div>
-                  </HoverCardContent>
-                </HoverCard>
+                  </PopoverContent>
+                </Popover>
               </td>
             </tr>
           ))}
