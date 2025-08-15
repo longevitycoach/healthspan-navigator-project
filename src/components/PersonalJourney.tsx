@@ -59,7 +59,29 @@ const PersonalJourney = () => {
     {
       year: "Q3/2025",
       title: "Community Launch",
-      description: "Publish LinkedIn articles. Public Speaking on conferences. Launch platform for early adopters and begin building a community of health optimizers. Active participation in the Liv longevity community and New Zapiens community. Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.",
+      description: (
+        <>
+          Publish LinkedIn articles. Public Speaking on conferences. Launch platform for early adopters and begin building a community of health optimizers. Active participation in the{" "}
+          <a 
+            href="https://www.linkedin.com/company/livlongevitylabs/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            Liv longevity community
+          </a>{" "}
+          and{" "}
+          <a 
+            href="https://newzapiens.com/community/users/matthias-buchhorn" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline"
+          >
+            New Zapiens community
+          </a>
+          . Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.
+        </>
+      ),
       status: "current",
       metrics: ["Beta Testing", "User Feedback", "Feature Development", "Community Building", "Liv Longevity Labs", "New Zapiens"]
     },
