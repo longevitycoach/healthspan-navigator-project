@@ -97,7 +97,7 @@ const PersonalJourney = () => {
             <div>
               <h5 className="font-medium text-slate-800 mb-2">Charité Partnership Opportunity</h5>
               <p className="text-sm">
-                The <a href="https://cardiovascular-prevention.charite.de" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Friede Springer Cardiovascular Prevention Center</a> (€70M initiative) offers prime collaboration potential. Their focus on personalized prevention, digital health, and patient adherence aligns perfectly with longevity coaching. Position coaching as the behavioral change component complementing their clinical protocols.
+                The <a href="https://fs-cpc.de/en/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Friede Springer Cardiovascular Prevention Center</a> (€70M initiative) offers prime collaboration potential. Their focus on personalized prevention, digital health, and patient adherence aligns perfectly with longevity coaching. Position coaching as the behavioral change component complementing their clinical protocols.
               </p>
             </div>
           </div>
