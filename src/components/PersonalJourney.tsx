@@ -86,7 +86,7 @@ const PersonalJourney = () => {
               <h4 className="font-semibold text-slate-800 mb-3">Berlin Longevity Ecosystem</h4>
               <p className="text-sm mb-3">
                 Berlin hosts Germany's first longevity clinic (
-                <a href="https://aiva.clinic" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">AIVA</a>
+                <a href="https://aiva-institut.de/aesthetik-longevity-center-berlin/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">AIVA</a>
                 ) and key organizations: 
                 <a href="https://zelar.city" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Zelar.city</a> (permanent longevity hub), 
                 <a href="https://www.lifesummit.berlin/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Life Summit</a> (premier events), 
