@@ -167,6 +167,28 @@ const PersonalJourney = () => {
                         <p>{event.description}</p>
                       ) : (
                         <div>
+                          {event.year === "Q2/2025" && event.title === "Technology & AI Platform Evaluation" && (
+                            <div className="mt-4 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                              <h4 className="font-semibold text-slate-800 mb-3">Community Building & Open Standards Leadership Journey</h4>
+                              <div className="space-y-3 text-sm">
+                                <p>
+                                  <strong>Open Source Foundation:</strong> My journey as a community builder began with recognizing that sustainable health technology requires open standards and collaborative development. Health data should be interoperable, accessible, and built on transparent protocols that serve users, not vendor lock-in.
+                                </p>
+                                <p>
+                                  <strong>Standards Leadership:</strong> Leading initiatives to establish open standards for health data exchange, biomarker protocols, and AI model transparency in longevity research. Advocating for FHIR-compliant health records, standardized biomarker ranges, and open APIs that enable seamless integration between health platforms.
+                                </p>
+                                <p>
+                                  <strong>Community Catalysis:</strong> Building bridges between traditionally siloed communities - longevity researchers, open source developers, health practitioners, and biohackers. Creating shared knowledge bases, collaborative research protocols, and open-source tools that accelerate innovation while maintaining scientific rigor.
+                                </p>
+                                <p>
+                                  <strong>Democratizing Health Tech:</strong> Championing the principle that advanced health optimization shouldn't be exclusive to the wealthy. Open source approaches enable global accessibility, peer review, and continuous improvement of health technologies and protocols.
+                                </p>
+                                <p>
+                                  <strong>Future Vision:</strong> Establishing a federated network of health optimization communities where data, insights, and protocols flow freely while respecting privacy. Creating the infrastructure for collaborative longevity research that transcends institutional boundaries.
+                                </p>
+                              </div>
+                            </div>
+                          )}
                           {event.description}
                           
                           {event.year === "Q3/2025" && event.title === "Community Launch" && (
