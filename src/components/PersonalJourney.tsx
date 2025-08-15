@@ -53,7 +53,7 @@ const PersonalJourney = () => {
       year: "Q3/2025",
       title: "First MVP on Mabu.red",
       description: "Evaluating AI Development Cycle with Windsurf, Lovable, Claude Code and MCP Servers. Preparing for Triathlon",
-      status: "current",
+      status: "completed",
       metrics: ["AI Development", "Platform Building", "Research", "Technology Integration", "Performance Training"]
     },
     {
