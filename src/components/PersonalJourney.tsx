@@ -59,9 +59,9 @@ const PersonalJourney = () => {
     {
       year: "Q3/2025",
       title: "Community Launch",
-      description: "Publish LinkedIn articles. Public Speaking on conferences. Launch platform for early adopters and begin building a community of health optimizers. Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.",
+      description: "Publish LinkedIn articles. Public Speaking on conferences. Launch platform for early adopters and begin building a community of health optimizers. Active participation in the Liv longevity community and New Zapiens community. Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.",
       status: "current",
-      metrics: ["Beta Testing", "User Feedback", "Feature Development", "Community Building"]
+      metrics: ["Beta Testing", "User Feedback", "Feature Development", "Community Building", "Liv Longevity Labs", "New Zapiens"]
     },
     {
       year: "Q4/2024",
