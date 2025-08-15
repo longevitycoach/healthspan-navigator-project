@@ -46,7 +46,7 @@ const PersonalJourney = () => {
       year: "Q2/2025",
       title: "Technology & AI Platform Evaluation",
       description: "Comprehensive evaluation of cutting-edge technologies and AI agent platforms for personalized health optimization. Testing various monitoring devices, advanced blood testing protocols, and building knowledge bases in epigenetic and molecular medicine to create the foundation for precision longevity interventions.",
-      status: "current",
+      status: "completed",
       metrics: ["AI Systems", "Knowledge Base", "Research", "Technology Testing", "Protocol Development"]
     },
     {
