@@ -98,6 +98,10 @@ const PersonalJourney = () => {
                  <a href="https://www.lifesummit.berlin/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> Life Summit</a> (premier events), and 
                  <a href="https://www.antispaces.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> ANTI</a> (holistic health community on Telegram). This ecosystem provides the perfect foundation for collaborative innovation in personalized health optimization.
               </p>
+              
+              <p className="text-sm mb-3">
+                <strong>International Expansion:</strong> Join the <a href="https://www.planetir.org/the-gathering-2025" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Planitir event in Prague</a> to exchange with other entrepreneurs and discuss data sharing concepts, expanding the network beyond Berlin to create a pan-European longevity innovation community.
+              </p>
             </div>
             
             <div>
