@@ -80,6 +80,30 @@ const PersonalJourney = () => {
             New Zapiens community
           </a>
           . Focus on user onboarding, feedback collection, and iterative feature development based on real-world usage patterns.
+          
+          <div className="mt-4 space-y-3">
+            <div>
+              <h4 className="font-semibold text-slate-800 mb-2">Berlin Longevity Ecosystem</h4>
+              <p className="text-sm mb-2">
+                Berlin hosts Germany's first longevity clinic (
+                <a href="https://aiva.clinic" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">AIVA</a>
+                ) and key organizations:
+                <a href="https://zelar.city" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> Zelar.city</a> (permanent longevity hub),
+                <a href="https://lifesummit.de" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> Life Summit</a> (premier events), and
+                <a href="https://anti.so" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> ANTI</a> (holistic health community).
+              </p>
+            </div>
+            
+            <div>
+              <h5 className="font-medium text-slate-800 mb-1">Charité Partnership Opportunity</h5>
+              <p className="text-sm">
+                The
+                <a href="https://cardiovascular-prevention.charite.de" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
+                  Friede Springer Cardiovascular Prevention Center
+                </a> (€70M initiative) offers prime collaboration potential. Their focus on personalized prevention, digital health, and patient adherence aligns perfectly with longevity coaching. Position coaching as the behavioral change component complementing their clinical protocols.
+              </p>
+            </div>
+          </div>
         </>
       ),
       status: "current",
@@ -190,32 +214,6 @@ const PersonalJourney = () => {
                             </div>
                           )}
                           {event.description}
-                          
-                          {event.year === "Q3/2025" && event.title === "Community Launch" && (
-                            <div className="mt-4 space-y-3">
-                              <div>
-                                <h4 className="font-semibold text-slate-800 mb-2">Berlin Longevity Ecosystem</h4>
-                                <p className="text-sm mb-2">
-                                  Berlin hosts Germany's first longevity clinic (
-                                  <a href="https://aiva.clinic" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">AIVA</a>
-                                  ) and key organizations:
-                                  <a href="https://zelar.city" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> Zelar.city</a> (permanent longevity hub),
-                                  <a href="https://lifesummit.de" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> Life Summit</a> (premier events), and
-                                  <a href="https://anti.so" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline"> ANTI</a> (holistic health community).
-                                </p>
-                              </div>
-                              
-                              <div>
-                                <h5 className="font-medium text-slate-800 mb-1">Charité Partnership Opportunity</h5>
-                                <p className="text-sm">
-                                  The
-                                  <a href="https://cardiovascular-prevention.charite.de" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">
-                                    Friede Springer Cardiovascular Prevention Center
-                                  </a> (€70M initiative) offers prime collaboration potential. Their focus on personalized prevention, digital health, and patient adherence aligns perfectly with longevity coaching. Position coaching as the behavioral change component complementing their clinical protocols.
-                                </p>
-                              </div>
-                            </div>
-                          )}
                         </div>
                       )}
                     </div>
