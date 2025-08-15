@@ -12,49 +12,49 @@ const PersonalJourney = () => {
       title: "Health Awakening",
       description: "Started tracking basic health metrics after realizing the importance of preventive care. Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time gym, Wim Hof Breathing.",
       status: "completed",
-      metrics: ["Weight", "Blood Pressure"]
+      metrics: ["Health Tracking", "Exercise Habits"]
     },
     {
       year: "2019",
       title: "Comprehensive Testing",
       description: "Began annual comprehensive blood panels to establish baseline health markers. Corona, daily 5k run or 10k walks",
       status: "completed", 
-      metrics: ["Lipid Panel", "HbA1c", "Vitamin D", "Inflammatory Markers"]
+      metrics: ["Biomarker Testing", "Cardiovascular Health", "Metabolic Health", "Nutrition Tracking"]
     },
     {
       year: "2024",
       title: "Advanced Biomarkers",
       description: "Expanded testing to include advanced longevity and metabolic health markers.",
       status: "completed",
-      metrics: ["Microbiom Analysis", "Amminogramm", "Homocysteine", "Advanced Lipids", "Micronutrients"]
+      metrics: ["Advanced Testing", "Microbiome Analysis", "Metabolic Health", "Nutrition Optimization"]
     },
     {
       year: "2024",
       title: "Lifestyle Optimization",
       description: "Listening Podcasts, Watching YouTube channels, and reading books of leading epi-genetic and molecular medicine experts. Implemented targeted interventions based on biomarker insights and genetic data. Start intermediate fasten.",
       status: "completed",
-      metrics: ["Podcasts", "Expert Books", "Exercise Protocol", "Nutrition Plan", "Supplement Regimen"]
+      metrics: ["Education", "Research", "Exercise Protocol", "Nutrition Protocol", "Supplementation"]
     },
     {
       year: "Q1/2025",
       title: "Nutration and Technology Integration",
       description: "Change to ketogene Nutrition, continuous monitoring for real-time health insights with Apple watch and glycose and keto device. Weekly habbit of a mix of HIIT, Strenght, endurance, recovery",
       status: "completed",
-      metrics: ["Nutation", "HRV Monitoring", "Sleep Tracking", "Recovery Metrics", "Vo2Max", "No Sugar", "Low Carb"]
+      metrics: ["Nutrition Protocol", "Health Monitoring", "Sleep Optimization", "Recovery Tracking", "Performance Metrics"]
     },
     {
       year: "Q2/2025",
       title: "Technology & AI Platform Evaluation",
       description: "Comprehensive evaluation of cutting-edge technologies and AI agent platforms for personalized health optimization. Testing various monitoring devices, advanced blood testing protocols, and building knowledge bases in epigenetic and molecular medicine to create the foundation for precision longevity interventions.",
       status: "current",
-      metrics: ["AI Agent Systems", "Epigenetic Knowledge Base", "Molecular Medicine", "Device Testing", "Blood Test Protocols"]
+      metrics: ["AI Systems", "Knowledge Base", "Research", "Technology Testing", "Protocol Development"]
     },
     {
       year: "Q3/2025",
       title: "First MVP on Mabu.red",
       description: "Evaluating AI Development Cycle with Windsurf, Lovable, Claude Code and MCP Servers. Preparing for Triathlon",
       status: "current",
-      metrics: ["AI Agent Systems", "Epigenetic Knowledge Base", "Molecular Medicine", "Device Testing", "Blood Test Protocols"]
+      metrics: ["AI Development", "Platform Building", "Research", "Technology Integration", "Performance Training"]
     },
     {
       year: "Q3/2025",
@@ -104,14 +104,14 @@ const PersonalJourney = () => {
         </>
       ),
       status: "current",
-      metrics: ["Beta Testing", "User Feedback", "Feature Development", "Community Building", "Liv Longevity Labs", "New Zapiens"]
+      metrics: ["Beta Testing", "User Feedback", "Platform Development", "Community Building", "Partnership Networks"]
     },
     {
       year: "Q4/2024",
       title: "Platform Development",
       description: "Full Lifestyle and Longevity platform development with advanced features, AI-powered insights, and comprehensive health optimization MCP Servers.",
       status: "planned",
-      metrics: ["AI Integration", "Advanced Analytics", "User Dashboard", "Mobile App"]
+      metrics: ["AI Integration", "Advanced Analytics", "Platform Development", "Technology Integration"]
     }
   ];
 
