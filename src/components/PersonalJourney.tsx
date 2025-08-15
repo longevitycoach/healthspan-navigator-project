@@ -162,7 +162,101 @@ const PersonalJourney = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-slate-600 mb-4">{event.description}</p>
+                    <div className="text-slate-600 mb-4">
+                      {typeof event.description === 'string' ? (
+                        <p>{event.description}</p>
+                      ) : (
+                        <div>
+                          {event.description}
+                          
+                          {event.year === "Q3/2025" && event.title === "Community Launch" && (
+                            <div className="mt-4 space-y-4">
+                              <div>
+                                <h4 className="font-semibold text-slate-800 mb-2">Berlin Longevity Ecosystem</h4>
+                                <p className="mb-3">
+                                  Berlin has emerged as a significant longevity hub in Europe, with several key organizations creating a vibrant ecosystem. The city hosts Germany's first longevity clinic (
+                                  <a 
+                                    href="https://aiva.clinic" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    AIVA in Biesdorf
+                                  </a>
+                                  ), and is becoming a central meeting point for longevity entrepreneurs, scientists, and investors.
+                                </p>
+                              </div>
+                              
+                              <div>
+                                <h5 className="font-medium text-slate-800 mb-2">Key Berlin Organizations</h5>
+                                <p className="mb-3">
+                                  <a 
+                                    href="https://aiva.clinic" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    AIVA Clinic
+                                  </a> represents the clinical side of longevity medicine in Berlin, offering hyperbaric oxygen therapy and preventive treatments. 
+                                  <a 
+                                    href="https://zelar.city" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    Zelar.city
+                                  </a> is establishing a permanent longevity hub after successful popup village programs, focusing on entrepreneurs and scientists working to "solve aging entirely". The 
+                                  <a 
+                                    href="https://lifesummit.de" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    Life Summit
+                                  </a> is a regular premier longevity event in Germany, while 
+                                  <a 
+                                    href="https://anti.so" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    ANTI
+                                  </a> operates as a holistic health community in a Brutalist building in Mitte.
+                                </p>
+                              </div>
+                              
+                              <div>
+                                <h5 className="font-medium text-slate-800 mb-2">Charité Prevention Initiative: Prime Partnership Opportunity</h5>
+                                <p className="mb-3">
+                                  The 
+                                  <a 
+                                    href="https://cardiovascular-prevention.charite.de" 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="text-blue-600 hover:text-blue-800 underline"
+                                  >
+                                    Friede Springer Cardiovascular Prevention Center at Charité
+                                  </a> represents the most significant collaboration opportunity for your project. This €70 million initiative focuses on cardiovascular disease prevention and represents a paradigm shift toward preventive medicine at Germany's largest university hospital.
+                                </p>
+                              </div>
+                              
+                              <div>
+                                <h5 className="font-medium text-slate-800 mb-2">Collaboration Framework with Charité</h5>
+                                <p className="mb-2">
+                                  <strong>Direct Partnership Potential:</strong> The center's focus on personalized prevention strategies, digital health technologies, and patient adherence aligns perfectly with longevity coaching services. Their emphasis on "education, motivation and comprehensive support" as crucial for long-term effectiveness creates clear integration points for coaching interventions.
+                                </p>
+                                <p className="mb-2">
+                                  <strong>Value Proposition:</strong> Position your longevity coaching as the lifestyle and behavioral change component that complements their clinical prevention protocols. The center already recognizes that patient adherence to preventive measures depends heavily on education and motivation—exactly what longevity coaching provides.
+                                </p>
+                                <p>
+                                  <strong>Research Integration:</strong> The center's development of "digital twins" and AI-supported personalized care approaches could incorporate coaching outcome data to improve precision prevention strategies.
+                                </p>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
                     <div className="flex flex-wrap gap-2">
                       {event.metrics.map((metric, metricIndex) => (
                         <Badge key={metricIndex} variant="outline" className="text-xs">
