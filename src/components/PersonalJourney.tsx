@@ -63,9 +63,36 @@ const PersonalJourney = () => {
     {
       year: "Q3/2025",
       title: "First MVP on Mabu.red",
-      description: "Comprehensive evaluation of AI development methodologies following principles from Springer's Advanced Software Engineering frameworks. Implementing the BMAD (Build-Measure-Analyze-Deploy) method integrated into the Software Development Life Cycle (SDLC) process using cutting-edge tools: Windsurf for collaborative development, Lovable for rapid prototyping, Claude Code for AI-assisted programming, and MCP Servers for scalable backend architecture. Simultaneously preparing for triathlon competition with advanced performance monitoring including VO2 max testing, Heart Rate Variability (HRV) analysis, pre-seasonal lung function assessment, and body plethysmography for comprehensive respiratory evaluation.",
+      description: (
+        <>
+          <p className="mb-4">
+            Launched the first functional prototype at{" "}
+            <a 
+              href="https://mabu.red/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline font-semibold"
+            >
+              mabu.red
+            </a>
+            , marking the transition from research to real-world application. This MVP demonstrates the power of combining comprehensive health data analysis with AI-driven insights, serving as both a validation of the platform concept and a personal tool for optimizing my own health journey.
+          </p>
+          
+          <p className="mb-4">
+            Applied cutting-edge AI development methodologies following Springer's Advanced Software Engineering frameworks, implementing the BMAD (Build-Measure-Analyze-Deploy) method integrated into the SDLC process. Leveraged Windsurf for collaborative development, Lovable for rapid prototyping, Claude Code for AI-assisted programming, and MCP Servers for scalable backend architecture.
+          </p>
+          
+          <p className="mb-4">
+            <strong>Personal Health Optimization Through Platform Development:</strong> Used my triathlon preparation as the ultimate real-world testing ground for the platform. Conducted comprehensive performance assessments including VO2 max testing, Heart Rate Variability (HRV) analysis, pre-seasonal lung function evaluation, and body plethysmography for respiratory assessment. This created a powerful feedback loop where my personal health optimization directly informed platform development, ensuring the tools built are grounded in real athlete needs and validated through personal experience.
+          </p>
+          
+          <p>
+            The convergence of building technology and personal athletic performance created invaluable insights: every feature developed was immediately tested on my own training data, every algorithm refined through personal biomarker tracking, and every user interface decision validated through my daily health optimization routine.
+          </p>
+        </>
+      ),
       status: "completed",
-      metrics: ["AI Development", "Platform Building", "Research", "Technology Integration", "Performance Training", "BMAD Method", "SDLC Integration", "VO2 Max Testing", "HRV Analysis", "Respiratory Assessment"]
+      metrics: ["AI Development", "Platform Building", "Research", "Technology Integration", "Performance Training", "BMAD Method", "SDLC Integration", "VO2 Max Testing", "HRV Analysis", "Respiratory Assessment", "MVP Launch", "Real-world Validation"]
     },
     {
       year: "Q3/2025",
