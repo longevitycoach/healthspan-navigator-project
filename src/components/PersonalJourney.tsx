@@ -48,8 +48,29 @@ const PersonalJourney = () => {
     },
     {
       year: "Q1/2025",
-      title: "Nutration and Technology Integration",
-      description: "Change to ketogene Nutrition, continuous monitoring for real-time health insights with Apple watch and glycose and keto device. Weekly habbit of a mix of HIIT, Strenght, endurance, recovery",
+      title: "Nutrition & Technology Integration",
+      description: (
+        <>
+          Transitioned to a ketogenic nutrition protocol for metabolic optimization and enhanced fat adaptation. Implemented continuous health monitoring using Apple Watch for comprehensive biometric tracking alongside specialized glucose and ketone monitoring devices for real-time metabolic insights.
+          
+          <br /><br />
+          
+          Established a structured weekly training protocol combining High-Intensity Interval Training (HIIT) for metabolic conditioning, strength training for muscle preservation and power development, endurance sessions for cardiovascular adaptation, and dedicated recovery protocols for optimal adaptation and injury prevention.
+          
+          <br /><br />
+          
+          This integrated approach to nutrition and training optimization is detailed in my LinkedIn article:{" "}
+          <a 
+            href="https://www.linkedin.com/pulse/build-personalized-health-coach-based-current-state-buchhorn-roth-ptyfe/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-blue-600 hover:text-blue-800 underline font-medium"
+          >
+            "Build a Personalized Health Coach Based on Current State"
+          </a>
+          , which outlines the systematic approach to creating data-driven health optimization strategies.
+        </>
+      ),
       status: "completed",
       metrics: ["Nutrition Protocol", "Health Monitoring", "Sleep Optimization", "Recovery Tracking", "Performance Metrics"]
     },
