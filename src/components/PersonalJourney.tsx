@@ -63,9 +63,9 @@ const PersonalJourney = () => {
     {
       year: "Q3/2025",
       title: "First MVP on Mabu.red",
-      description: "Evaluating AI Development Cycle with Windsurf, Lovable, Claude Code and MCP Servers. Preparing for Triathlon",
+      description: "Comprehensive evaluation of AI development methodologies following principles from Springer's Advanced Software Engineering frameworks. Implementing the BMAD (Build-Measure-Analyze-Deploy) method integrated into the Software Development Life Cycle (SDLC) process using cutting-edge tools: Windsurf for collaborative development, Lovable for rapid prototyping, Claude Code for AI-assisted programming, and MCP Servers for scalable backend architecture. Simultaneously preparing for triathlon competition with advanced performance monitoring including VO2 max testing, Heart Rate Variability (HRV) analysis, pre-seasonal lung function assessment, and body plethysmography for comprehensive respiratory evaluation.",
       status: "completed",
-      metrics: ["AI Development", "Platform Building", "Research", "Technology Integration", "Performance Training"]
+      metrics: ["AI Development", "Platform Building", "Research", "Technology Integration", "Performance Training", "BMAD Method", "SDLC Integration", "VO2 Max Testing", "HRV Analysis", "Respiratory Assessment"]
     },
     {
       year: "Q3/2025",
