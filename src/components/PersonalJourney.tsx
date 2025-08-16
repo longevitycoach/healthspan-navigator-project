@@ -31,7 +31,7 @@ const PersonalJourney = () => {
     {
       year: "2024",
       title: "Lifestyle Optimization",
-      description: "Listening Podcasts, Watching YouTube channels, and reading books of leading epi-genetic and molecular medicine experts. Implemented targeted interventions based on biomarker insights and genetic data. Start intermediate fasten.",
+      description: "Listening to podcasts, watching YouTube channels, and reading books from leading epigenetic and molecular medicine experts. Implemented targeted interventions based on biomarker insights and genetic data. Started 16:8 intermittent fasting protocol for metabolic optimization.",
       status: "completed",
       metrics: ["Education", "Research", "Exercise Protocol", "Nutrition Protocol", "Supplementation"]
     },
