@@ -62,7 +62,7 @@ const PersonalJourney = () => {
     },
     {
       year: "Q3/2025",
-      title: "First MVP on Mabu.red",
+      title: "Platform Launch & Athletic Performance Convergence",
       description: (
         <>
           <p className="mb-4">
