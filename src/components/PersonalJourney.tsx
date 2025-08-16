@@ -195,7 +195,17 @@ const PersonalJourney = () => {
                   <CardContent>
                     <div className="text-slate-600 mb-4">
                       {typeof event.description === 'string' ? (
-                        <p>{event.description}</p>
+                        <p>
+                          {event.description}
+                          {" "}
+                          <a 
+                            href="/resources" 
+                            className="text-blue-600 hover:text-blue-800 underline"
+                          >
+                            Explore our comprehensive resources section
+                          </a>
+                          {" "}for detailed insights and tools.
+                        </p>
                       ) : (
                         <div>
                           {event.year === "Q2/2025" && event.title === "Technology & AI Platform Evaluation" && (
