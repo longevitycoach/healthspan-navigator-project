@@ -77,7 +77,7 @@ const PersonalJourney = () => {
     {
       year: "Q2/2025",
       title: "Technology & AI Platform Evaluation",
-      description: "Comprehensive evaluation of cutting-edge technologies and AI agent platforms for personalized health optimization. Testing various monitoring devices, advanced blood testing protocols, and building knowledge bases in epigenetic and molecular medicine to create the foundation for precision longevity interventions.",
+      description: "Comprehensive evaluation of cutting-edge technologies and AI agent platforms for personalized health optimization. Testing various monitoring devices, advanced blood testing protocols, and building knowledge bases in epigenetic and molecular medicine to create the foundation for precision longevity interventions. Extensively evaluated Model Context Protocol (MCP) for seamless AI-human collaboration, agentic systems including Dust for workflow automation, N8N for no-code integrations, and Microsoft AI Foundation for enterprise-grade AI capabilities. Implemented RAG (Retrieval-Augmented Generation) vector databases to create intelligent knowledge retrieval systems that combine scientific literature, personal biomarker data, and evidence-based protocols for personalized health recommendations.",
       status: "completed",
       metrics: ["AI Systems", "Knowledge Base", "Research", "Technology Testing", "Protocol Development"]
     },
