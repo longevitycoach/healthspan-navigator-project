@@ -100,7 +100,7 @@ const PersonalJourney = () => {
           </p>
           
           <p className="mb-4">
-            Applied cutting-edge AI development methodologies following Springer's Advanced Software Engineering frameworks, implementing the BMAD (Build-Measure-Analyze-Deploy) method integrated into the SDLC process. Leveraged Windsurf for collaborative development, Lovable for rapid prototyping, Claude Code for AI-assisted programming, and MCP Servers for scalable backend architecture.
+            Applied cutting-edge AI development methodologies following agile DevOps based Software Development Life Cycle (SDLC), implementing the BMAD (Build-Measure-Analyze-Deploy) method integrated into the SDLC process. Leveraged Windsurf for collaborative development, Lovable for rapid prototyping, Claude Code for AI-assisted programming, and MCP Servers for scalable backend architecture.
           </p>
           
           <p className="mb-4">
