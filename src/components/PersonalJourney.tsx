@@ -10,9 +10,9 @@ const PersonalJourney = () => {
     {
       year: "2018",
       title: "Health Awakening",
-      description: "Started tracking basic health metrics after realizing the importance of preventive care. Start daily habits: morning sport, running, cycling to work, always take the stairs, cold shower, one time gym, Wim Hof Breathing.",
+      description: "Started tracking basic health metrics after realizing the importance of preventive care. Applied Atomic Habits principles: focused on getting 1% better every day, used habit stacking (cold shower after morning sport), designed environment for success (bike by the door, stairs instead of elevator), and shifted identity from 'person trying to be healthy' to 'athlete who prioritizes wellness.' The compound effect of small daily improvements: morning sport, running, cycling to work, always take the stairs, cold shower, weekly gym sessions, Wim Hof Breathing.",
       status: "completed",
-      metrics: ["Health Tracking", "Exercise Habits"]
+      metrics: ["Health Tracking", "Exercise Habits", "Habit Formation", "Identity Change"]
     },
     {
       year: "2019",
