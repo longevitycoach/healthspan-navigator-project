@@ -10,9 +10,27 @@ const PersonalJourney = () => {
     {
       year: "2018",
       title: "Health Awakening",
-      description: "Started tracking basic health metrics after realizing the importance of preventive care. Applied Atomic Habits principles: focused on getting 1% better every day, used habit stacking (cold shower after morning sport), designed environment for success (bike by the door, stairs instead of elevator), and shifted identity from 'person trying to be healthy' to 'athlete who prioritizes wellness.' The compound effect of small daily improvements: morning sport, running, cycling to work, always take the stairs, cold shower, weekly gym sessions, Wim Hof Breathing.",
+      description: (
+        <>
+          <p className="mb-4">
+            <strong>Foundation: Atomic Habits by James Clear</strong> - This book became my health optimization Bible and personal mantra. As Peter Attia emphasizes in his recommendation, habits form 40-50% of our behavior, making them the cornerstone of lasting health transformation. The book's four laws (Make it Obvious, Make it Attractive, Make it Easy, Make it Satisfying) provided the systematic framework that turned sporadic health efforts into sustainable lifestyle change.
+          </p>
+          
+          <p className="mb-4">
+            <strong>Why Atomic Habits is Critical for Health Success:</strong> Most people fail at health goals because they focus on outcomes rather than systems. Atomic Habits teaches that your current results are a lagging measure of your habits - you don't rise to the level of your goals, you fall to the level of your systems. This insight revolutionized my approach: instead of hoping for dramatic changes, I focused on 1% daily improvements that compound exponentially over time.
+          </p>
+          
+          <p className="mb-4">
+            Applied the four laws systematically: <strong>Made it obvious</strong> by placing my bike by the door and workout clothes visible; <strong>Made it attractive</strong> by habit stacking (cold shower after morning sport creates anticipation); <strong>Made it easy</strong> by choosing stairs over elevators (no extra time needed); <strong>Made it satisfying</strong> by tracking progress and celebrating small wins. Most importantly, I shifted identity from "person trying to be healthy" to "athlete who prioritizes wellness" - because every action is a vote for the type of person you believe yourself to be.
+          </p>
+          
+          <p>
+            The compound effect of these atomic habits: morning sport, running, cycling to work, always taking stairs, cold showers, weekly gym sessions, and Wim Hof breathing. Each habit was small and manageable, but together they created an exponential health transformation that continues to this day.
+          </p>
+        </>
+      ),
       status: "completed",
-      metrics: ["Health Tracking", "Exercise Habits", "Habit Formation", "Identity Change"]
+      metrics: ["Atomic Habits Framework", "Health Tracking", "Exercise Habits", "Habit Formation", "Identity Change", "Systems Thinking"]
     },
     {
       year: "2019",
