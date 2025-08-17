@@ -24,7 +24,7 @@ const PersonalJourney = () => {
     {
       year: "2024",
       title: "Advanced Biomarkers",
-      description: "Expanded testing to include advanced longevity and metabolic health markers.",
+      description: "Partnered with Aware and Forever Young clinic for comprehensive advanced testing including amino acid profiles, microbiome analysis, and extensive biomarker panels covering 66 key health markers for longevity optimization and metabolic health assessment.",
       status: "completed",
       metrics: ["Advanced Testing", "Microbiome Analysis", "Metabolic Health", "Nutrition Optimization"]
     },
