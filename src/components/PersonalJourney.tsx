@@ -17,7 +17,7 @@ const PersonalJourney = () => {
     {
       year: "2019",
       title: "Comprehensive Testing",
-      description: "Began annual comprehensive blood panels to establish baseline health markers. Corona, daily 5k run or 10k walks",
+      description: "Established consistent half marathon training with 3-5 weekly 8k runs, building cardiovascular endurance and metabolic fitness. During Corona lockdowns, adapted with long walks of 10-15km to maintain activity levels. Began comprehensive annual blood panels that revealed elevated cholesterol values, prompting a strategic nutrition transition to plant-based eating with fish emphasis (limiting meat to once per week and increasing fish intake for optimal omega-3 profiles).",
       status: "completed", 
       metrics: ["Biomarker Testing", "Cardiovascular Health", "Metabolic Health", "Nutrition Tracking"]
     },
