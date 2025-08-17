@@ -10,9 +10,9 @@ const PersonalJourney = () => {
     {
       year: "2018",
       title: "Health Awakening",
-      description: "Started tracking basic health metrics after realizing the importance of preventive care. Applied Atomic Habits principles: focused on getting 1% better every day, used habit stacking (cold shower after morning sport), designed environment for success (bike by the door, stairs instead of elevator), and shifted identity from 'person trying to be healthy' to 'athlete who prioritizes wellness.' Established consistent half marathon training and 3-5 weekly 8k runs. During Corona, adapted with long walks of 10-15km for sustained cardiovascular health. First comprehensive blood tests revealed high cholesterol values, triggering a nutrition transformation to plant-based eating (limiting meat to once per week, increasing fish consumption). The compound effect of small daily improvements: morning sport, running, cycling to work, always take the stairs, cold shower, weekly gym sessions, Wim Hof Breathing.",
+      description: "Started tracking basic health metrics after realizing the importance of preventive care. Applied Atomic Habits principles: focused on getting 1% better every day, used habit stacking (cold shower after morning sport), designed environment for success (bike by the door, stairs instead of elevator), and shifted identity from 'person trying to be healthy' to 'athlete who prioritizes wellness.' The compound effect of small daily improvements: morning sport, running, cycling to work, always take the stairs, cold shower, weekly gym sessions, Wim Hof Breathing.",
       status: "completed",
-      metrics: ["Health Tracking", "Exercise Habits", "Habit Formation", "Identity Change", "Blood Testing", "Nutrition Optimization"]
+      metrics: ["Health Tracking", "Exercise Habits", "Habit Formation", "Identity Change"]
     },
     {
       year: "2019",
