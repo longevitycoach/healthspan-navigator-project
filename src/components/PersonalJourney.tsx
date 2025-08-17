@@ -194,11 +194,51 @@ const PersonalJourney = () => {
       metrics: ["Beta Testing", "User Feedback", "Platform Development", "Community Building", "Partnership Networks"]
     },
     {
-      year: "Q4/2024",
-      title: "Platform Development",
-      description: "Full Lifestyle and Longevity platform development with advanced features, AI-powered insights, and comprehensive health optimization MCP Servers.",
+      year: "Q4/2025",
+      title: "Scalable Expert Knowledge Activation & Insurance Partnerships",
+      description: (
+        <>
+          <p className="mb-4">
+            <strong>Expert Knowledge Democratization:</strong> Developing scalable prototypes for functional medicine expert knowledge activation, following the successful{" "}
+            <a 
+              href="https://github.com/longevitycoach/StrunzKnowledge" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline font-medium"
+            >
+              StrunzKnowledge prototype
+            </a>
+            . This comprehensive, searchable knowledge base demonstrates how to digitize and make accessible the expertise of leading functional medicine practitioners through LLM-powered MCP protocol integration.
+          </p>
+          
+          <p className="mb-4">
+            <strong>Healthcare System Integration:</strong> Launching health awareness initiatives targeting both private and public health insurance sectors through the{" "}
+            <a 
+              href="https://gesund.longevitycoa.ch/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline font-medium"
+            >
+              health awareness platform
+            </a>
+            . Addressing the critical reality that in Germany, despite 81-year life expectancy, only 50% maintain good health in aging, with 20% experiencing severe health decline requiring long-term care.
+          </p>
+          
+          <p className="mb-4">
+            <strong>Strategic Partnership Development:</strong> Establishing collaborations with functional medicine practitioners, longevity clinics, and insurance providers to create sustainable business models that reward prevention over treatment. Focus on demonstrating measurable health outcomes and cost reductions through personalized longevity coaching and expert knowledge activation systems.
+          </p>
+          
+          <p className="mb-4">
+            <strong>Knowledge Base Expansion:</strong> Systematically digitizing expertise from multiple functional medicine experts beyond Dr. Strunz, creating a federated network of specialized knowledge bases covering orthomolecular medicine, metabolic health, hormetic stress protocols, and precision nutrition. Each expert knowledge base will be accessible through standardized MCP protocols for seamless integration.
+          </p>
+          
+          <p>
+            <strong>Insurance Innovation Pipeline:</strong> Developing predictive health models and intervention protocols that demonstrate clear ROI for insurance providers through reduced claims, delayed onset of chronic diseases, and improved healthspan metrics. Creating the evidence base for insurance-covered longevity coaching and preventive interventions.
+          </p>
+        </>
+      ),
       status: "planned",
-      metrics: ["AI Integration", "Advanced Analytics", "Platform Development", "Technology Integration"]
+      metrics: ["Expert Knowledge Systems", "Insurance Partnerships", "Preventive Care Models", "MCP Protocol Integration", "Healthcare ROI", "Functional Medicine Digitization", "Public Health Innovation"]
     }
   ];
 
