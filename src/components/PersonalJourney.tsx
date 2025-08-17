@@ -13,7 +13,7 @@ const PersonalJourney = () => {
       description: (
         <>
           <p className="mb-4">
-            <strong>Foundation: Atomic Habits by James Clear</strong> - This book became my health optimization Bible and personal mantra. As Peter Attia emphasizes in his recommendation, habits form 40-50% of our behavior, making them the cornerstone of lasting health transformation. The book's four laws (Make it Obvious, Make it Attractive, Make it Easy, Make it Satisfying) provided the systematic framework that turned sporadic health efforts into sustainable lifestyle change.
+            <strong>Foundation: Atomic Habits by James Clear</strong> - This book became my health optimization Bible and personal mantra. As <a href="https://peterattiamd.com/atomic-habits-for-health-goals/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 underline">Peter Attia emphasizes in his recommendation</a>, habits form 40-50% of our behavior, making them the cornerstone of lasting health transformation. The book's four laws (Make it Obvious, Make it Attractive, Make it Easy, Make it Satisfying) provided the systematic framework that turned sporadic health efforts into sustainable lifestyle change.
           </p>
           
           <p className="mb-4">
