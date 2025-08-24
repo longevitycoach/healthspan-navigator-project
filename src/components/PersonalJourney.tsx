@@ -232,8 +232,12 @@ const PersonalJourney = () => {
             <strong>Knowledge Base Expansion:</strong> Systematically digitizing expertise from multiple functional medicine experts beyond Dr. Strunz, creating a federated network of specialized knowledge bases covering orthomolecular medicine, metabolic health, hormetic stress protocols, and precision nutrition. Each expert knowledge base will be accessible through standardized MCP protocols for seamless integration.
           </p>
           
-          <p>
+          <p className="mb-4">
             <strong>Insurance Innovation Pipeline:</strong> Developing predictive health models and intervention protocols that demonstrate clear ROI for insurance providers through reduced claims, delayed onset of chronic diseases, and improved healthspan metrics. Creating the evidence base for insurance-covered longevity coaching and preventive interventions.
+          </p>
+          
+          <p>
+            <strong>German Digital Health Integration (ePA & DiPa):</strong> Leveraging Germany's electronic patient record (ePA) and digital health applications (DiPa) infrastructure to integrate our expert knowledge prototypes into insurance-covered digital therapeutics. The StrunzKnowledge prototype demonstrates how functional medicine expertise can be transformed into evidence-based digital health interventions eligible for health insurance reimbursement under the Digital Healthcare Act (DVG). By connecting personalized longevity coaching with standardized medical data through ePA integration and meeting DiPa certification requirements, these prototypes can become prescription-eligible digital therapeutics, making personalized functional medicine accessible to millions of German patients through their statutory health insurance coverage.
           </p>
         </>
       ),
