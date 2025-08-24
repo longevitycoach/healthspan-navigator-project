@@ -202,6 +202,159 @@ const BusinessPlan = () => {
         </div>
   }, {
     id: 2,
+    title: "Why Now - German Digital Health Revolution",
+    icon: <Zap className="w-8 h-8 text-blue-600" />,
+    content: <div className="space-y-6">
+          <div className="text-center mb-6">
+            <h3 className="text-2xl font-bold text-slate-900 mb-2 flex items-center justify-center gap-3">
+              <Zap className="w-8 h-8 text-blue-600" />
+              The Time is Now
+            </h3>
+            <p className="text-base text-slate-600">Germany's Digital Health Infrastructure Creates Perfect Timing</p>
+          </div>
+
+          {/* German Digital Health Ecosystem */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            {/* ePA Integration */}
+            <div className="group bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Database className="w-12 h-12 text-green-600 mx-auto mb-3" />
+                <h4 className="font-bold text-green-900 text-lg">ePA Integration</h4>
+                <p className="text-sm text-green-700 mt-2">Electronic Patient Records</p>
+              </div>
+              <div className="absolute inset-0 bg-green-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center">ePA Ready Architecture</h4>
+                <div className="text-sm space-y-2">
+                  <p>• Seamless integration with Germany's electronic patient record system</p>
+                  <p>• Real-time access to comprehensive health data</p>
+                  <p>• GDPR-compliant data processing</p>
+                  <p>• Standardized data formats (HL7 FHIR)</p>
+                </div>
+              </div>
+            </div>
+
+            {/* DiGA Certification */}
+            <div className="group bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg transition-all duration-300 hover:scale-105 cursor-pointer relative">
+              <div className="text-center">
+                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-3" />
+                <h4 className="font-bold text-blue-900 text-lg">DiGA Certification</h4>
+                <p className="text-sm text-blue-700 mt-2">Digital Health Applications</p>
+              </div>
+              <div className="absolute inset-0 bg-blue-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center">
+                <h4 className="font-bold mb-3 text-center">Insurance Reimbursement</h4>
+                <div className="text-sm space-y-2">
+                  <p>• BfArM certification pathway established</p>
+                  <p>• Health insurance coverage guaranteed</p>
+                  <p>• Regulated by Digital Healthcare Act (DVG)</p>
+                  <p>• €500M+ market for digital therapeutics</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Our Prototypes Fit */}
+          <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-lg">
+            <h4 className="font-bold text-orange-900 text-xl mb-4 flex items-center gap-2">
+              <Rocket className="w-6 h-6" />
+              Perfect Timing for Our Prototypes
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="space-y-3">
+                <h5 className="font-semibold text-orange-800">StrunzKnowledge Expansion</h5>
+                <ul className="text-sm text-orange-700 space-y-1">
+                  <li>• Expert knowledge activation systems</li>
+                  <li>• Functional medicine protocols</li>
+                  <li>• Evidence-based recommendations</li>
+                  <li>• Scalable AI-driven personalization</li>
+                </ul>
+              </div>
+              <div className="space-y-3">
+                <h5 className="font-semibold text-orange-800">Insurance Integration Ready</h5>
+                <ul className="text-sm text-orange-700 space-y-1">
+                  <li>• Meets DiGA medical device requirements</li>
+                  <li>• Clinical evidence for longevity protocols</li>
+                  <li>• Cost-effective prevention focus</li>
+                  <li>• Measurable health outcomes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* German Health System Benefits */}
+          <div className="bg-gradient-to-r from-purple-50 to-indigo-50 p-6 rounded-lg">
+            <h4 className="font-bold text-purple-900 text-xl mb-4 flex items-center gap-2">
+              <Heart className="w-6 h-6" />
+              Health System Impact
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="text-center p-4">
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                  <TrendingUp className="w-8 h-8 text-purple-600" />
+                </div>
+                <h5 className="font-semibold text-purple-800 mb-2">Cost Reduction</h5>
+                <p className="text-sm text-purple-700">Prevention-focused care reduces long-term healthcare costs by early intervention</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="bg-indigo-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                  <Users className="w-8 h-8 text-indigo-600" />
+                </div>
+                <h5 className="font-semibold text-indigo-800 mb-2">Population Health</h5>
+                <p className="text-sm text-indigo-700">Scalable personalized medicine for Germany's aging population</p>
+              </div>
+              <div className="text-center p-4">
+                <div className="bg-pink-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-3">
+                  <Award className="w-8 h-8 text-pink-600" />
+                </div>
+                <h5 className="font-semibold text-pink-800 mb-2">Innovation Leadership</h5>
+                <p className="text-sm text-pink-700">Positions Germany as leader in digital health innovation</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Links and Resources */}
+          <div className="bg-slate-100 p-6 rounded-lg">
+            <h4 className="font-bold text-slate-800 text-lg mb-4 flex items-center gap-2">
+              <Globe className="w-5 h-5" />
+              Key Resources & Partnerships
+            </h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="space-y-2">
+                <a 
+                  href="https://www.bfarm.de/EN/Medical-devices/Tasks/DiGA-and-DiPA/Digital-Health-Applications/_node.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1 transition-colors"
+                >
+                  <Globe className="w-4 h-4" />
+                  BfArM DiGA Guidelines →
+                </a>
+                <a 
+                  href="https://github.com/longevitycoach/StrunzKnowledge"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1 transition-colors"
+                >
+                  <Github className="w-4 h-4" />
+                  StrunzKnowledge Prototype →
+                </a>
+              </div>
+              <div className="space-y-2">
+                <a 
+                  href="https://gesund.longevitycoa.ch/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center gap-1 transition-colors"
+                >
+                  <Heart className="w-4 h-4" />
+                  Health Awareness Platform →
+                </a>
+                <p className="text-sm text-slate-600">Partnership opportunities with German health insurers and medical institutions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+  }, {
+    id: 3,
     title: "Problem & Solution",
     icon: <Target className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
@@ -306,7 +459,7 @@ const BusinessPlan = () => {
           </div>
         </div>
   }, {
-    id: 3,
+    id: 4,
     title: "Business Model",
     icon: <DollarSign className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
@@ -494,7 +647,7 @@ const BusinessPlan = () => {
           </div>
         </div>
   }, {
-    id: 4,
+    id: 5,
     title: "Competitive Advantage",
     icon: <Award className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
@@ -598,7 +751,7 @@ const BusinessPlan = () => {
           </div>
         </div>
   }, {
-    id: 5,
+    id: 6,
     title: "Financial Projections",
     icon: <TrendingUp className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
@@ -939,7 +1092,7 @@ const BusinessPlan = () => {
           </div>
         </div>
   }, {
-    id: 6,
+    id: 7,
     title: "Team & Expertise",
     icon: <Users className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
@@ -1227,7 +1380,7 @@ const BusinessPlan = () => {
           </div>
         </div>
   }, {
-    id: 7,
+    id: 8,
     title: "Call to Action",
     icon: <Phone className="w-8 h-8 text-blue-600" />,
     content: <div className="space-y-6">
