@@ -546,7 +546,11 @@ const BusinessPlan = () => {
                 <h4 className="font-bold text-orange-900 text-lg">German</h4>
               </div>
               <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex items-center justify-center">
-                <p className="text-sm text-center">Built with German precision and privacy standards, ensuring data security and algorithm reliability.</p>
+                <div className="text-sm text-center">
+                  <p className="mb-2">Built with German precision and privacy standards, ensuring data security and algorithm reliability.</p>
+                  <p className="font-semibold">ePA & DiPa Ready:</p>
+                  <p>Designed for integration with Germany's electronic patient record (ePA) and digital health applications (DiPa) framework, positioning our prototypes for health insurance reimbursement under the Digital Healthcare Act (DVG).</p>
+                </div>
               </div>
             </div>
 
@@ -742,43 +746,48 @@ const BusinessPlan = () => {
               
               {/* Hover Overlay */}
               <div className="absolute inset-0 bg-orange-600 text-white p-4 rounded-lg opacity-0 group-hover:opacity-95 transition-all duration-300 flex flex-col justify-center overflow-y-auto">
-                <h4 className="font-bold mb-3 text-center text-lg">Funding Allocation</h4>
+                <h4 className="font-bold mb-3 text-center text-lg">German Digital Health Funding Strategy</h4>
                 <div className="space-y-2 text-sm">
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Product:</span><span>€450K (30%)</span>
+                       <span>ePA Integration:</span><span>€150K (30%)</span>
                      </div>
                      <div className="text-xs mt-1">
-                       AI
+                       Electronic patient record compliance & API development for seamless data integration
                      </div>
                   </div>
                   
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Marketing:</span><span>€450K (30%)</span>
+                       <span>DiPa Certification:</span><span>€150K (30%)</span>
                      </div>
                      <div className="text-xs mt-1">
-                       Growth
+                       Digital health app certification for insurance reimbursement under DVG framework
                      </div>
                   </div>
                   
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Team:</span><span>€450K (30%)</span>
+                       <span>Prototype Development:</span><span>€150K (30%)</span>
                      </div>
                     <div className="text-xs mt-1">
-                      Engineering
+                      Expert knowledge activation systems (StrunzKnowledge expansion)
                     </div>
                   </div>
                   
                   <div className="bg-orange-500 p-2 rounded">
                      <div className="flex justify-between font-semibold">
-                       <span>Operations:</span><span>€150K (10%)</span>
+                       <span>Regulatory & Legal:</span><span>€50K (10%)</span>
                      </div>
                     <div className="text-xs mt-1">
-                      Legal
+                      Medical device regulation compliance & insurance partnership legal framework
                     </div>
                   </div>
+                </div>
+                <div className="mt-3 pt-2 border-t border-orange-500">
+                  <p className="text-xs text-center">
+                    <strong>German Health Insurance Model:</strong> Our functional medicine prototypes can become prescription-eligible digital therapeutics, making personalized longevity coaching accessible through statutory health insurance coverage, creating sustainable revenue through insurance reimbursements.
+                  </p>
                 </div>
               </div>
             </div>
