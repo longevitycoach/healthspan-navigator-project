@@ -65,13 +65,21 @@ const App = () => (
               </LazyWrapper>
             } 
           />
-          <Route 
-            path="/prototypes" 
+          <Route
+            path="/prototypes"
             element={
               <LazyWrapper>
                 <PrototypesPage />
               </LazyWrapper>
-            } 
+            }
+          />
+          <Route
+            path="/projects"
+            element={
+              <LazyWrapper>
+                <PrototypesPage />
+              </LazyWrapper>
+            }
           />
           <Route 
             path="/impress" 

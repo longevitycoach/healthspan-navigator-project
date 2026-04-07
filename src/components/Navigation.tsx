@@ -119,7 +119,7 @@ const Navigation = () => {
                   location.pathname === '/prototypes' ? 'ring-2 ring-blue-300' : ''
                 }`}
               >
-                Early Access
+                Health Projects
               </Button>
             </div>
           </div>
@@ -206,7 +206,7 @@ const Navigation = () => {
                     location.pathname === '/prototypes' ? 'ring-2 ring-blue-300' : ''
                   }`}
                 >
-                  Early Access
+                  Health Projects
                 </Button>
               </div>
             </div>

@@ -15,7 +15,7 @@ const PrototypesPage = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-              Current Prototypes
+              Health Projects
             </h1>
             <div className="w-full bg-gradient-to-r from-blue-50 to-emerald-50 rounded-xl p-6 border border-slate-200/50">
               <p className="text-lg text-slate-700 leading-relaxed">
@@ -99,6 +99,79 @@ const PrototypesPage = () => {
             </div>
           </div>
           
+          {/* Featured Health Projects */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {/* TwoBreath */}
+            <div className="rounded-xl border border-teal-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-br from-teal-800 to-teal-600 p-8 flex items-center justify-center min-h-[160px]">
+                <div className="text-center">
+                  <div className="flex gap-3 justify-center mb-2">
+                    <div className="w-10 h-10 rounded-full bg-teal-400/40 border-2 border-teal-300" />
+                    <div className="w-10 h-10 rounded-full bg-amber-400/40 border-2 border-amber-300 -ml-4" />
+                  </div>
+                  <p className="text-teal-100 text-xs tracking-widest uppercase mt-2">Couples Breathing Ritual</p>
+                </div>
+              </div>
+              <div className="p-6 bg-white">
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="text-xl font-bold text-slate-800">TwoBreath</h2>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Beta</span>
+                </div>
+                <p className="text-sm font-medium text-teal-700 mb-3">Couples Breathing Ritual App</p>
+                <p className="text-slate-600 text-sm mb-4">
+                  A daily breathing ritual app for couples that uses Apple Watch to measure physiological synchrony — tracking heart rate, HRV, and respiratory alignment between partners.
+                </p>
+                <ul className="text-sm text-slate-600 space-y-1 mb-5">
+                  {["Apple Watch HRV & sync score", "Multi-language: EN, DE, JP", "CGM & biomarker integration (beta)", "Audio-first, breath-led design"].map(f => (
+                    <li key={f} className="flex items-start gap-2"><span className="text-teal-500 mt-0.5">✦</span>{f}</li>
+                  ))}
+                </ul>
+                <a href="https://www.twobreath.com/" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800 transition-colors text-sm font-medium">
+                  <ExternalLink size={14} /> twobreath.com
+                </a>
+              </div>
+            </div>
+
+            {/* EHDS Demo */}
+            <div className="rounded-xl border border-blue-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+              <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-8 flex items-center justify-center min-h-[160px]">
+                <div className="text-center">
+                  <div className="flex gap-2 justify-center mb-2">
+                    {["AT","DE","FR","PL","ES"].map(c => (
+                      <span key={c} className="px-2 py-1 bg-white/10 rounded text-white text-xs font-mono">{c}</span>
+                    ))}
+                  </div>
+                  <p className="text-blue-200 text-xs tracking-widest uppercase mt-2">European Health Data Space</p>
+                </div>
+              </div>
+              <div className="p-6 bg-white">
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="text-xl font-bold text-slate-800">EHDS Demo</h2>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">Live</span>
+                </div>
+                <p className="text-sm font-medium text-blue-700 mb-3">EU Cross-Border Health Data Platform</p>
+                <p className="text-slate-600 text-sm mb-4">
+                  An interactive reference implementation of the European Health Data Space regulation — simulating cross-border health data sharing across EU member states with FHIR R4 and OMOP CDM standards.
+                </p>
+                <ul className="text-sm text-slate-600 space-y-1 mb-5">
+                  {["7 demo personas, 127 synthetic patients", "5,300+ knowledge graph nodes (Neo4j)", "FHIR R4 & OMOP CDM compliant", "EHDS Art. 3–51 regulation coverage"].map(f => (
+                    <li key={f} className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">✦</span>{f}</li>
+                  ))}
+                </ul>
+                <a href="https://ma3u.github.io/ehds" target="_blank" rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-colors text-sm font-medium">
+                  <ExternalLink size={14} /> Open Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-slate-700">Prototypes & Experiments</h2>
+            <p className="text-slate-500 text-sm mt-2">Earlier-stage MVPs validating core health optimization hypotheses</p>
+          </div>
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
             {/* Blood Test Oracle */}
             <div id="blood-test-oracle" className="space-y-6 scroll-mt-32 bg-emerald-50 border border-emerald-200 rounded-xl p-6">
