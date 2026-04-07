@@ -195,14 +195,14 @@ const PersonalJourney = () => {
     },
     {
       year: "Q4/2025",
-      title: "Scalable Expert Knowledge Activation & Insurance Partnerships",
+      title: "Scalable Expert Knowledge Activation",
       description: (
         <>
           <p className="mb-4">
             <strong>Expert Knowledge Democratization:</strong> Developing scalable prototypes for functional medicine expert knowledge activation, following the successful{" "}
-            <a 
-              href="https://github.com/longevitycoach/StrunzKnowledge" 
-              target="_blank" 
+            <a
+              href="https://github.com/longevitycoach/StrunzKnowledge"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline font-medium"
             >
@@ -210,12 +210,11 @@ const PersonalJourney = () => {
             </a>
             . This comprehensive, searchable knowledge base demonstrates how to digitize and make accessible the expertise of leading functional medicine practitioners through LLM-powered MCP protocol integration.
           </p>
-          
-          <p className="mb-4">
+          <p>
             <strong>Healthcare System Integration:</strong> Launching health awareness initiatives targeting both private and public health insurance sectors through the{" "}
-            <a 
-              href="https://gesund.longevitycoa.ch/" 
-              target="_blank" 
+            <a
+              href="https://gesund.longevitycoa.ch/"
+              target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline font-medium"
             >
@@ -223,26 +222,72 @@ const PersonalJourney = () => {
             </a>
             . Addressing the critical reality that in Germany, despite 81-year life expectancy, only 50% maintain good health in aging, with 20% experiencing severe health decline requiring long-term care.
           </p>
-          
+        </>
+      ),
+      status: "completed",
+      metrics: ["Expert Knowledge Systems", "MCP Protocol Integration", "Functional Medicine Digitization", "Public Health Innovation"]
+    },
+    {
+      year: "Q1/2026",
+      title: "European Health Data Space — A Patient's Perspective",
+      description: (
+        <>
           <p className="mb-4">
-            <strong>Strategic Partnership Development:</strong> Establishing collaborations with functional medicine practitioners, longevity clinics, and insurance providers to create sustainable business models that reward prevention over treatment. Focus on demonstrating measurable health outcomes and cost reductions through personalized longevity coaching and expert knowledge activation systems.
+            The{" "}
+            <a
+              href="https://ma3u.github.io/MinimumViableHealthDataspacev2/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline font-medium"
+            >
+              European Health Data Space (EHDS)
+            </a>{" "}
+            represents a fundamental shift in who controls health data — and I've been building a reference implementation to explore what this means in practice.
           </p>
-          
           <p className="mb-4">
-            <strong>Knowledge Base Expansion:</strong> Systematically digitizing expertise from multiple functional medicine experts beyond Dr. Strunz, creating a federated network of specialized knowledge bases covering orthomolecular medicine, metabolic health, hormetic stress protocols, and precision nutrition. Each expert knowledge base will be accessible through standardized MCP protocols for seamless integration.
+            <strong>From passive subject to active stakeholder:</strong> For most of my health journey, my data lived in silos — different labs, clinics, apps — with no way to connect them. EHDS changes this. As a patient, I can now access my Electronic Health Records from any EU provider, see exactly which researchers use my data, and revoke consent at any time. My records travel with me across borders, not locked to a specific provider.
           </p>
-          
           <p className="mb-4">
-            <strong>Insurance Innovation Pipeline:</strong> Developing predictive health models and intervention protocols that demonstrate clear ROI for insurance providers through reduced claims, delayed onset of chronic diseases, and improved healthspan metrics. Creating the evidence base for insurance-covered longevity coaching and preventive interventions.
+            <strong>What I built:</strong> A Minimum Viable Health Dataspace demo showing the two-pillar framework in action: primary use (patients controlling their own records) and secondary use (anonymized data for research). The implementation uses FHIR R4 standards, a Neo4j knowledge graph with 5,300+ nodes, and 127 synthetic patient profiles across 7 EU personas — demonstrating how cross-border data exchange actually works under EHDS Articles 3–51.
           </p>
-          
           <p>
-            <strong>German Digital Health Integration (ePA & DiPa):</strong> Leveraging Germany's electronic patient record (ePA) and digital health applications (DiPa) infrastructure to integrate our expert knowledge prototypes into insurance-covered digital therapeutics. The StrunzKnowledge prototype demonstrates how functional medicine expertise can be transformed into evidence-based digital health interventions eligible for health insurance reimbursement under the Digital Healthcare Act (DVG). By connecting personalized longevity coaching with standardized medical data through ePA integration and meeting DiPa certification requirements, these prototypes can become prescription-eligible digital therapeutics, making personalized functional medicine accessible to millions of German patients through their statutory health insurance coverage.
+            <strong>Why this matters for longevity:</strong> The greatest bottleneck in personalized medicine isn't the science — it's data fragmentation. When my biomarker history, genetic data, and lifestyle metrics can flow securely between my GP in Berlin, a specialist in Vienna, and a longevity researcher in Amsterdam, the quality of personalized interventions improves dramatically. EHDS is the infrastructure layer that makes precision longevity medicine scalable across Europe.
           </p>
         </>
       ),
-      status: "planned",
-      metrics: ["Expert Knowledge Systems", "Insurance Partnerships", "Preventive Care Models", "MCP Protocol Integration", "Healthcare ROI", "Functional Medicine Digitization", "Public Health Innovation"]
+      status: "current",
+      metrics: ["EHDS", "FHIR R4", "Patient Data Rights", "Cross-Border Health", "Open Standards", "Neo4j", "Privacy by Design"]
+    },
+    {
+      year: "Q1/2026",
+      title: "TwoBreath — Building a Freemium App with My Partner",
+      description: (
+        <>
+          <p className="mb-4">
+            The most personal project I've built started with a simple observation: my partner and I were both deeply into biometrics and breathwork — separately. I'd track my HRV after morning breathing sessions, she'd do her own practice. We were optimizing individually, but the research on physiological synchrony between couples kept pulling at me.
+          </p>
+          <p className="mb-4">
+            <strong>The hypothesis:</strong> When two people breathe together intentionally, their heart rates and HRV begin to align. This isn't mysticism — it's measurable with Apple Watch. Couples who practice co-regulation show lower cortisol, better sleep quality, and higher relationship satisfaction in the literature. But no app was making this easy and beautiful to do daily.
+          </p>
+          <p className="mb-4">
+            So we built{" "}
+            <a
+              href="https://www.twobreath.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline font-medium"
+            >
+              TwoBreath
+            </a>
+            {" "}— a daily breathing ritual app for couples that uses Apple Watch to measure physiological synchrony in real time. Guided 7–15 minute sessions with animated breathing visualization, shared poetry, and eye-contact rituals. We built the first version as a couple: I handled the architecture and biometric integration, my partner shaped the experience, the poetry, and the emotional design.
+          </p>
+          <p>
+            <strong>Freemium model:</strong> Core rituals free forever. Premium unlocks HRV sync scores, CGM & biomarker integration (in beta), multi-language support (EN, DE, JP), and advanced session analytics. What drives me isn't the business model — it's proving that the most powerful health technology isn't always the most complex. Sometimes it's just two people breathing together, measured well.
+          </p>
+        </>
+      ),
+      status: "current",
+      metrics: ["TwoBreath", "Apple Watch", "HRV Sync", "Couples Health", "Freemium", "Breathwork", "Physiological Synchrony", "Product Building"]
     }
   ];
 
@@ -263,10 +308,10 @@ const PersonalJourney = () => {
             </Avatar>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-4">
-            My Personal Journey
+            My Health & Builder Journey
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-6">
-            From basic health tracking to building a comprehensive longevity platform
+            From personal health optimization to building products that help others live better
           </p>
           
           <p className="text-slate-600 mb-4">
@@ -363,18 +408,18 @@ const PersonalJourney = () => {
         <div id="prototypes" className="mt-16 pt-16 border-t border-slate-200">
           <div className="text-center mb-8">
             <h3 className="text-2xl sm:text-3xl font-bold text-slate-800 mb-4">
-              Current Prototypes
+              Health Projects
             </h3>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
-              Exploring what brings the most benefit for health and longevity enthusiasts in the discovery phase.
+              Real-world tools at the intersection of health science and technology — moving beyond research into products that help people live better.
             </p>
-            <Button 
+            <Button
               asChild
               size="lg"
               className="bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white px-8 py-3 text-lg font-semibold"
             >
               <a href="/prototypes">
-                View All Prototypes →
+                View Health Projects →
               </a>
             </Button>
           </div>
