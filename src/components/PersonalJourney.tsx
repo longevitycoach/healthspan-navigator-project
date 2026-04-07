@@ -228,7 +228,7 @@ const PersonalJourney = () => {
       metrics: ["Expert Knowledge Systems", "MCP Protocol Integration", "Functional Medicine Digitization", "Public Health Innovation"]
     },
     {
-      year: "Q1/2026",
+      year: "Q4/2025",
       title: "European Health Data Space — A Patient's Perspective",
       description: (
         <>
@@ -242,7 +242,15 @@ const PersonalJourney = () => {
             >
               European Health Data Space (EHDS)
             </a>{" "}
-            represents a fundamental shift in who controls health data — and I've been building a reference implementation to explore what this means in practice.
+            represents a fundamental shift in who controls health data — and I've been building a reference implementation as part of the Dataspace adoption forum initiated by the{" "}
+            <a
+              href="https://internationaldataspaces.org/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline"
+            >
+              International Data Spaces Association (IDSA)
+            </a>.
           </p>
           <p className="mb-4">
             <strong>From passive subject to active stakeholder:</strong> For most of my health journey, my data lived in silos — different labs, clinics, apps — with no way to connect them. EHDS changes this. As a patient, I can now access my Electronic Health Records from any EU provider, see exactly which researchers use my data, and revoke consent at any time. My records travel with me across borders, not locked to a specific provider.
@@ -259,7 +267,7 @@ const PersonalJourney = () => {
       metrics: ["EHDS", "FHIR R4", "Patient Data Rights", "Cross-Border Health", "Open Standards", "Neo4j", "Privacy by Design"]
     },
     {
-      year: "Q1/2026",
+      year: "Q2/2026",
       title: "TwoBreath — Building a Freemium App with My Partner",
       description: (
         <>
@@ -282,7 +290,7 @@ const PersonalJourney = () => {
             {" "}— a daily breathing ritual app for couples that uses Apple Watch to measure physiological synchrony in real time. Guided 7–15 minute sessions with animated breathing visualization, shared poetry, and eye-contact rituals. We built the first version as a couple: I handled the architecture and biometric integration, my partner shaped the experience, the poetry, and the emotional design.
           </p>
           <p>
-            <strong>Freemium model:</strong> Core rituals free forever. Premium unlocks HRV sync scores, CGM & biomarker integration (in beta), multi-language support (EN, DE, JP), and advanced session analytics. What drives me isn't the business model — it's proving that the most powerful health technology isn't always the most complex. Sometimes it's just two people breathing together, measured well.
+            <strong>Freemium:</strong> TwoBreath is free — HRV sync scores, guided sessions, CGM & biomarker integration (in beta), multi-language support (EN, DE, JP). What drives me isn't monetization — it's proving that the most powerful health technology isn't always the most complex. Sometimes it's just two people breathing together, measured well.
           </p>
         </>
       ),
