@@ -13,6 +13,7 @@ const Resources = lazy(() => import("./pages/Resources"));
 const ReferenceValuesPage = lazy(() => import("./pages/ReferenceValuesPage"));
 const BusinessPlanPage = lazy(() => import("./pages/BusinessPlanPage"));
 const PrototypesPage = lazy(() => import("./pages/PrototypesPage"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
 const ImpressPage = lazy(() => import("./pages/ImpressPage"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
@@ -81,13 +82,21 @@ const App = () => (
               </LazyWrapper>
             }
           />
-          <Route 
-            path="/impress" 
+          <Route
+            path="/contact"
+            element={
+              <LazyWrapper>
+                <ContactPage />
+              </LazyWrapper>
+            }
+          />
+          <Route
+            path="/impress"
             element={
               <LazyWrapper>
                 <ImpressPage />
               </LazyWrapper>
-            } 
+            }
           />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route 

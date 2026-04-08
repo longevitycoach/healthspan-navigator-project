@@ -280,7 +280,7 @@ const PersonalJourney = () => {
           <p className="mb-4">
             So we built{" "}
             <a
-              href="https://www.twobreath.com/"
+              href="https://testflight.apple.com/join/ChJc5vVx"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline font-medium"

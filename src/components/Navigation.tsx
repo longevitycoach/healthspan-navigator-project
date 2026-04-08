@@ -103,11 +103,11 @@ const Navigation = () => {
               >
                 Business
               </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
+              <button
+                onClick={() => navigateToPage('/contact')}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                  location.pathname === '/' 
-                    ? 'text-blue-600 bg-blue-50' 
+                  location.pathname === '/contact'
+                    ? 'text-blue-600 bg-blue-50 font-semibold'
                     : 'text-slate-600 hover:text-blue-600'
                 }`}
               >
@@ -189,11 +189,11 @@ const Navigation = () => {
               >
                 Business Plan
               </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
+              <button
+                onClick={() => navigateToPage('/contact')}
                 className={`block w-full text-left px-3 py-2 rounded-md text-base font-medium transition-colors ${
-                  location.pathname === '/' 
-                    ? 'text-blue-600 bg-blue-50' 
+                  location.pathname === '/contact'
+                    ? 'text-blue-600 bg-blue-50 font-semibold'
                     : 'text-slate-600 hover:text-blue-600'
                 }`}
               >

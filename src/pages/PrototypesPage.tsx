@@ -126,9 +126,9 @@ const PrototypesPage = () => {
                     <li key={f} className="flex items-start gap-2"><span className="text-teal-500 mt-0.5">✦</span>{f}</li>
                   ))}
                 </ul>
-                <a href="https://www.twobreath.com/" target="_blank" rel="noopener noreferrer"
+                <a href="https://testflight.apple.com/join/ChJc5vVx" target="_blank" rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800 transition-colors text-sm font-medium">
-                  <ExternalLink size={14} /> twobreath.com
+                  <ExternalLink size={14} /> Join Public Beta
                 </a>
               </div>
             </div>
