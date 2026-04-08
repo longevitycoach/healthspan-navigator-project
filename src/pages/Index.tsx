@@ -7,14 +7,11 @@ import HeroSection from "@/components/HeroSection";
 import PersonalJourney from "@/components/PersonalJourney";
 import ContactSection from "@/components/ContactSection";
 import Navigation from "@/components/Navigation";
-import FeatureShowcase from "@/components/FeatureShowcase";
-
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-emerald-50">
       <Navigation />
       <HeroSection />
-      <FeatureShowcase />
       <PersonalJourney />
       
       {/* LinkedIn Article Reference */}
