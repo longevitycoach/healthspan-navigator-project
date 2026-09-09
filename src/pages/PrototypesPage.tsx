@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Github, ExternalLink } from "lucide-react";
+import { Github, ExternalLink, Trophy } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import StrunzChatWidget from "@/components/StrunzChatWidget";
 
@@ -26,6 +26,20 @@ const PrototypesPage = () => {
             {/* Modern Horizontal Navigation */}
             <div className="mt-6 bg-white/80 backdrop-blur-sm rounded-xl shadow-sm border border-slate-200/50 p-4">
               <nav className="flex flex-wrap justify-center gap-2 sm:gap-4">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <a
+                      href="#healthgraph-agent"
+                      className="px-4 py-2 text-sm font-medium text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 rounded-lg transition-all duration-200 border border-transparent hover:border-cyan-200"
+                    >
+                      HealthGraph Agent
+                    </a>
+                  </TooltipTrigger>
+                  <TooltipContent className="max-w-xs">
+                    <p><strong>Hypothesis:</strong> Modelling Apple Health data as a knowledge graph lets an AI agent reason about causality between sleep, training load and recovery — something flat time series cannot express</p>
+                  </TooltipContent>
+                </Tooltip>
+
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <a 
@@ -163,6 +177,110 @@ const PrototypesPage = () => {
                   className="inline-flex items-center gap-2 px-4 py-2 bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-colors text-sm font-medium">
                   <ExternalLink size={14} /> Open Demo
                 </a>
+              </div>
+            </div>
+          </div>
+
+          {/* HealthGraph Agent — Neo4j Aura Agent Hackathon 2026 */}
+          <div id="healthgraph-agent" className="scroll-mt-32 mb-12 rounded-xl border border-cyan-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow bg-white">
+            <div className="bg-gradient-to-br from-slate-900 via-cyan-900 to-teal-800 p-8">
+              <div className="flex flex-wrap items-center justify-center gap-3 mb-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-amber-400/20 text-amber-200 border border-amber-300/40">
+                  <Trophy size={13} /> 5th place — Neo4j Aura Agent Hackathon 2026
+                </span>
+                <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-green-400/15 text-green-200 border border-green-300/30">
+                  Live
+                </span>
+              </div>
+              <p className="text-cyan-100 text-center text-xs tracking-widest uppercase">
+                Apple Health → Neo4j Knowledge Graph → AI Agent
+              </p>
+            </div>
+
+            <div className="p-6 sm:p-8">
+              <div className="flex flex-wrap items-baseline justify-between gap-2 mb-3">
+                <h2 className="text-2xl font-bold text-slate-800">HealthGraph Agent</h2>
+                <p className="text-sm font-medium text-cyan-700">Longevity reasoning over your own health graph</p>
+              </div>
+
+              <p className="text-slate-600 text-sm mb-5 max-w-4xl">
+                Apple Health collects thousands of data points a day — heart rate, HRV, steps, sleep, workouts, VO2max —
+                but stores them as flat, disconnected time series. HealthGraph Agent turns an Apple Health export into a
+                Neo4j Aura knowledge graph that captures the relationships <em>between</em> those metrics, then puts a
+                Neo4j Aura Agent on top of it. Ask it &ldquo;am I overtraining?&rdquo; or &ldquo;how does sleep quality track with
+                workout intensity?&rdquo; and it answers with your actual numbers, grounded in Cypher.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                {[
+                  { t: "Aura Agent", d: "6 tools — Text2Cypher + 5 parameterized Cypher templates, MCP-enabled, defined as code via the Aura v2beta1 /agents API" },
+                  { t: "Aura Dashboard", d: "Whoop-style NeoDash board: 5 pages, 35 panels — Recovery, Strain, Sleep and an 8.5-year health monitor" },
+                  { t: "GraphQL Data API", d: "Curated SDL with @cypher MERGE mutations, plus a 06:30 UTC GitHub Actions job publishing a daily snapshot page" },
+                  { t: "iPhone App", d: "Swift 6 HealthGraphSync reads HealthKit on-device, uploads only the delta, and embeds an “Ask your graph” panel" },
+                ].map((c) => (
+                  <div key={c.t} className="rounded-lg bg-cyan-50/70 border border-cyan-200 p-4">
+                    <h4 className="text-sm font-semibold text-slate-800 mb-1">{c.t}</h4>
+                    <p className="text-xs text-slate-600 leading-relaxed">{c.d}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                {[
+                  {
+                    src: "/healthgraph/01-aura-agent-playground-longevity-question.png",
+                    alt: "Neo4j Aura Agent playground answering a longevity question with real metrics from the health graph",
+                    cap: "The Aura Agent grounding longevity advice in real numbers — RHR this week against a rolling 30-day baseline.",
+                  },
+                  {
+                    src: "/healthgraph/02-aura-dashboard-whoop-recovery.png",
+                    alt: "Whoop-style NeoDash Recovery dashboard running inside Neo4j Aura",
+                    cap: "Whoop-style Recovery view — one of 5 dashboard pages and 35 panels served from Aura.",
+                  },
+                  {
+                    src: "/healthgraph/10-graphql-data-api-pipeline.png",
+                    alt: "Aura GraphQL Data API schema and the daily GitHub Actions pipeline running against it",
+                    cap: "GraphQL Data API schema (top) and the daily GitHub Actions pipeline that writes to it (bottom).",
+                  },
+                  {
+                    src: "/healthgraph/09-iphone-trio-sync-ask-answer.jpeg",
+                    alt: "HealthGraphSync iPhone app: HealthKit delta upload, Ask your graph panel, and the agent answer overlay",
+                    cap: "iPhone end-to-end — HealthKit delta upload, the “Ask your graph” panel, and the agent’s answer overlay.",
+                  },
+                ].map((img) => (
+                  <figure key={img.src}>
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="rounded-lg shadow-lg border border-slate-200 w-full"
+                    />
+                    <figcaption className="mt-2 text-xs text-slate-500">{img.cap}</figcaption>
+                  </figure>
+                ))}
+              </div>
+
+              <div className="flex flex-wrap gap-3">
+                <Button asChild variant="outline" className="flex items-center gap-2 hover:bg-cyan-50">
+                  <a href="https://github.com/ma3u/healthgraph-agent" target="_blank" rel="noopener noreferrer">
+                    <Github size={16} /> HealthGraph Agent (GitHub)
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="flex items-center gap-2 hover:bg-cyan-50">
+                  <a href="https://ma3u.github.io/healthgraph-agent/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={16} /> Live Site
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="flex items-center gap-2 hover:bg-cyan-50">
+                  <a href="https://ma3u.github.io/healthgraph-agent/snapshot/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={16} /> Daily Recovery Snapshot
+                  </a>
+                </Button>
+                <Button asChild variant="outline" className="flex items-center gap-2 hover:bg-cyan-50">
+                  <a href="https://ma3u.github.io/healthgraph-agent/talk/" target="_blank" rel="noopener noreferrer">
+                    <ExternalLink size={16} /> Talk Deck
+                  </a>
+                </Button>
               </div>
             </div>
           </div>
