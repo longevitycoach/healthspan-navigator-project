@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { Github, ExternalLink, Trophy } from "lucide-react";
+import { Github, ExternalLink, Trophy, Apple } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import StrunzChatWidget from "@/components/StrunzChatWidget";
 
@@ -129,7 +129,7 @@ const PrototypesPage = () => {
               <div className="p-6 bg-white">
                 <div className="flex items-center justify-between mb-3">
                   <h2 className="text-xl font-bold text-slate-800">TwoBreath</h2>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-amber-100 text-amber-800">Beta</span>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">Live</span>
                 </div>
                 <p className="text-sm font-medium text-teal-700 mb-3">Couples Breathing Ritual App</p>
                 <p className="text-slate-600 text-sm mb-4">
@@ -156,14 +156,20 @@ const PrototypesPage = () => {
                   </figure>
                 </div>
                 <ul className="text-sm text-slate-600 space-y-1 mb-5">
-                  {["Apple Watch HRV & sync score", "Multi-language: EN, DE, JP", "CGM & biomarker integration (beta)", "Audio-first, breath-led design"].map(f => (
+                  {["Apple Watch HRV & sync score", "Multi-language: EN, DE, JP", "CGM & biomarker integration", "Audio-first, breath-led design"].map(f => (
                     <li key={f} className="flex items-start gap-2"><span className="text-teal-500 mt-0.5">✦</span>{f}</li>
                   ))}
                 </ul>
-                <a href="https://testflight.apple.com/join/ChJc5vVx" target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800 transition-colors text-sm font-medium">
-                  <ExternalLink size={14} /> Join Public Beta
-                </a>
+                <div className="flex flex-wrap gap-3">
+                  <a href="https://apps.apple.com/app/id6761666145" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 bg-teal-700 text-white rounded-md hover:bg-teal-800 transition-colors text-sm font-medium">
+                    <Apple size={14} /> Download on the App Store
+                  </a>
+                  <a href="https://www.twobreath.com/" target="_blank" rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 border border-teal-700 text-teal-700 rounded-md hover:bg-teal-50 transition-colors text-sm font-medium">
+                    <ExternalLink size={14} /> twobreath.com
+                  </a>
+                </div>
               </div>
             </div>
 
