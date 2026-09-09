@@ -114,7 +114,7 @@ const PrototypesPage = () => {
           </div>
           
           {/* Featured Health Projects */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 items-start">
             {/* TwoBreath */}
             <div className="rounded-xl border border-teal-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow">
               <div className="bg-gradient-to-br from-teal-800 to-teal-600 p-8 flex items-center justify-center min-h-[160px]">
@@ -135,6 +135,26 @@ const PrototypesPage = () => {
                 <p className="text-slate-600 text-sm mb-4">
                   A daily breathing ritual app for couples that uses Apple Watch to measure physiological synchrony — tracking heart rate, HRV, and respiratory alignment between partners.
                 </p>
+                <div className="grid grid-cols-2 gap-3 mb-5">
+                  <figure>
+                    <img
+                      src="/twobreath/twobreath-home.jpeg"
+                      alt="TwoBreath iPhone home screen showing the daily ritual, streak and Start Together button"
+                      loading="lazy"
+                      className="rounded-lg border border-slate-200 shadow-sm w-full h-72 object-cover object-top"
+                    />
+                    <figcaption className="mt-1.5 text-xs text-slate-500">Daily ritual & streak</figcaption>
+                  </figure>
+                  <figure>
+                    <img
+                      src="/twobreath/twobreath-health-dashboard.jpeg"
+                      alt="TwoBreath health dashboard showing heart rate variability and resting heart rate trends"
+                      loading="lazy"
+                      className="rounded-lg border border-slate-200 shadow-sm w-full h-72 object-cover object-top"
+                    />
+                    <figcaption className="mt-1.5 text-xs text-slate-500">HRV & resting HR trends</figcaption>
+                  </figure>
+                </div>
                 <ul className="text-sm text-slate-600 space-y-1 mb-5">
                   {["Apple Watch HRV & sync score", "Multi-language: EN, DE, JP", "CGM & biomarker integration (beta)", "Audio-first, breath-led design"].map(f => (
                     <li key={f} className="flex items-start gap-2"><span className="text-teal-500 mt-0.5">✦</span>{f}</li>
@@ -168,6 +188,17 @@ const PrototypesPage = () => {
                 <p className="text-slate-600 text-sm mb-4">
                   An interactive reference implementation of the European Health Data Space regulation — simulating cross-border health data sharing across EU member states with FHIR R4 and OMOP CDM standards.
                 </p>
+                <figure className="mb-5">
+                  <img
+                    src="/ehds/ehds-knowledge-graph.png"
+                    alt="EHDS demo knowledge graph explorer showing organizations, contracts and data transfers between EU member states"
+                    loading="lazy"
+                    className="rounded-lg border border-slate-200 shadow-sm w-full"
+                  />
+                  <figcaption className="mt-1.5 text-xs text-slate-500">
+                    Knowledge graph explorer — participants, contracts and cross-border data transfers.
+                  </figcaption>
+                </figure>
                 <ul className="text-sm text-slate-600 space-y-1 mb-5">
                   {["7 demo personas, 127 synthetic patients", "5,300+ knowledge graph nodes (Neo4j)", "FHIR R4 & OMOP CDM compliant", "EHDS Art. 3–51 regulation coverage"].map(f => (
                     <li key={f} className="flex items-start gap-2"><span className="text-blue-500 mt-0.5">✦</span>{f}</li>
