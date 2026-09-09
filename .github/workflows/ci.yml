@@ -1,0 +1,44 @@
+name: CI
+
+# Build verification only. The live site at longevitycoa.ch is served by
+# Lovable and is published from there (Share -> Publish), so this workflow
+# deliberately does not deploy anything.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Build
+        run: npm run build
+
+      - name: Lint
+        # Non-blocking: the repo has pre-existing lint errors, so failing here
+        # would make every run red and hide real regressions. Remove
+        # continue-on-error once those are cleaned up.
+        continue-on-error: true
+        run: npm run lint
