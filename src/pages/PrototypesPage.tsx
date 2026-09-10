@@ -177,8 +177,8 @@ const PrototypesPage = () => {
             <div className="rounded-xl border border-blue-200 overflow-hidden shadow-md hover:shadow-lg transition-shadow">
               <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-8 flex items-center justify-center min-h-[160px]">
                 <div className="text-center">
-                  <div className="flex gap-2 justify-center mb-2">
-                    {["AT","DE","FR","PL","ES"].map(c => (
+                  <div className="flex flex-wrap gap-2 justify-center mb-2">
+                    {["FHIR R4","OMOP CDM","ODRL","HealthDCAT-AP"].map(c => (
                       <span key={c} className="px-2 py-1 bg-white/10 rounded text-white text-xs font-mono">{c}</span>
                     ))}
                   </div>
@@ -190,9 +190,9 @@ const PrototypesPage = () => {
                   <h2 className="text-xl font-bold text-slate-800">EHDS Demo</h2>
                   <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-green-100 text-green-800">Live</span>
                 </div>
-                <p className="text-sm font-medium text-blue-700 mb-3">EU Cross-Border Health Data Platform</p>
+                <p className="text-sm font-medium text-blue-700 mb-3">Interactive Demo & Integration Platform</p>
                 <p className="text-slate-600 text-sm mb-4">
-                  An interactive reference implementation of the European Health Data Space regulation — simulating cross-border health data sharing across EU member states with FHIR R4 and OMOP CDM standards.
+                  An EHDS integration platform you can run, fork, and wire into your own stack. It shows how the regulation enables secure cross-border health data sharing — publishing clinical datasets, negotiating access contracts under ODRL, and transferring FHIR / OMOP data through the Dataspace Protocol. Every flow is exposed as a REST API.
                 </p>
                 <figure className="mb-5">
                   <img
