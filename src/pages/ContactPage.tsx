@@ -12,8 +12,8 @@ const content: Record<Lang, {
   generalDesc: string;
   twobreathLabel: string;
   twobreathDesc: string;
-  betaLabel: string;
-  betaDesc: string;
+  appLabel: string;
+  appDesc: string;
   responseNote: string;
 }> = {
   en: {
@@ -23,8 +23,8 @@ const content: Record<Lang, {
     generalDesc: "Questions about the platform, health data, or partnerships.",
     twobreathLabel: "TwoBreath App",
     twobreathDesc: "Feedback, bug reports, or questions about the couples breathing app.",
-    betaLabel: "Join the TwoBreath Public Beta",
-    betaDesc: "Available on iOS via TestFlight — free to join, no invite needed.",
+    appLabel: "Get TwoBreath on the App Store",
+    appDesc: "Now available on iOS — free to download.",
     responseNote: "We typically respond within 1–2 business days.",
   },
   de: {
@@ -34,8 +34,8 @@ const content: Record<Lang, {
     generalDesc: "Fragen zur Plattform, Gesundheitsdaten oder Partnerschaften.",
     twobreathLabel: "TwoBreath App",
     twobreathDesc: "Feedback, Fehlerberichte oder Fragen zur Atemübungs-App für Paare.",
-    betaLabel: "TwoBreath Public Beta beitreten",
-    betaDesc: "Verfügbar auf iOS über TestFlight — kostenlos, keine Einladung erforderlich.",
+    appLabel: "TwoBreath im App Store laden",
+    appDesc: "Jetzt für iOS verfügbar — kostenloser Download.",
     responseNote: "Wir antworten in der Regel innerhalb von 1–2 Werktagen.",
   },
   ja: {
@@ -45,8 +45,8 @@ const content: Record<Lang, {
     generalDesc: "プラットフォーム、健康データ、またはパートナーシップに関するご質問。",
     twobreathLabel: "TwoBreathアプリ",
     twobreathDesc: "カップル向け呼吸アプリへのフィードバック、バグ報告、またはご質問。",
-    betaLabel: "TwoBreath公開ベータに参加",
-    betaDesc: "TestFlight経由でiOSで利用可能 — 無料、招待不要。",
+    appLabel: "App StoreでTwoBreathを入手",
+    appDesc: "iOSで配信中 — 無料でダウンロードいただけます。",
     responseNote: "通常1〜2営業日以内にご返答いたします。",
   },
 };
@@ -111,17 +111,17 @@ const ContactPage = () => {
                 </a>
               </div>
 
-              {/* TestFlight CTA */}
+              {/* App Store CTA */}
               <div className="rounded-lg border border-teal-300 p-5 bg-gradient-to-br from-teal-800 to-teal-600 text-white">
-                <h3 className="font-semibold mb-1">{t.betaLabel}</h3>
-                <p className="text-teal-100 text-sm mb-4">{t.betaDesc}</p>
+                <h3 className="font-semibold mb-1">{t.appLabel}</h3>
+                <p className="text-teal-100 text-sm mb-4">{t.appDesc}</p>
                 <a
-                  href="https://testflight.apple.com/join/ChJc5vVx"
+                  href="https://apps.apple.com/app/id6761666145"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-4 py-2 bg-white text-teal-800 rounded-md hover:bg-teal-50 transition-colors text-sm font-semibold"
                 >
-                  <ExternalLink size={14} /> TestFlight
+                  <ExternalLink size={14} /> App Store
                 </a>
               </div>
 

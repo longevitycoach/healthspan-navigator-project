@@ -280,7 +280,7 @@ const PersonalJourney = () => {
           <p className="mb-4">
             So we built{" "}
             <a
-              href="https://testflight.apple.com/join/ChJc5vVx"
+              href="https://apps.apple.com/app/id6761666145"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-600 hover:text-blue-800 underline font-medium"
@@ -290,7 +290,7 @@ const PersonalJourney = () => {
             {" "}— a daily breathing ritual app for couples that uses Apple Watch to measure physiological synchrony in real time. Guided 7–15 minute sessions with animated breathing visualization, shared poetry, and eye-contact rituals. We built the first version as a couple: I handled the architecture and biometric integration, my partner shaped the experience, the poetry, and the emotional design.
           </p>
           <p>
-            <strong>Freemium:</strong> TwoBreath is free — HRV sync scores, guided sessions, CGM & biomarker integration (in beta), multi-language support (EN, DE, JP). What drives me isn't monetization — it's proving that the most powerful health technology isn't always the most complex. Sometimes it's just two people breathing together, measured well.
+            <strong>Freemium:</strong> TwoBreath is free — HRV sync scores, guided sessions, CGM & biomarker integration, multi-language support (EN, DE, JP). What drives me isn't monetization — it's proving that the most powerful health technology isn't always the most complex. Sometimes it's just two people breathing together, measured well.
           </p>
         </>
       ),
